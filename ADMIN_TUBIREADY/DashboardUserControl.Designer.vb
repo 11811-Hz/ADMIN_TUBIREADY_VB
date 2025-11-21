@@ -854,7 +854,7 @@ Partial Class DashboardUserControl
         Label5.TabIndex = 13
         Label5.Text = "Sensor Status"
         ' 
-        ' DashboardUserControl1
+        ' DashboardUserControl
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
@@ -866,7 +866,7 @@ Partial Class DashboardUserControl
         Controls.Add(Guna2Panel5)
         Controls.Add(Guna2Panel6)
         MinimumSize = New Size(1235, 924)
-        Name = "DashboardUserControl1"
+        Name = "DashboardUserControl"
         Size = New Size(1235, 924)
         Guna2Panel3.ResumeLayout(False)
         Guna2Panel3.PerformLayout()
