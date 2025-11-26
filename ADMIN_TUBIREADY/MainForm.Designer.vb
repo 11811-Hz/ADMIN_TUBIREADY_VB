@@ -138,6 +138,7 @@ Partial Class MainForm
         btnReports.DisabledState.CustomBorderColor = Color.DarkGray
         btnReports.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnReports.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnReports.Enabled = False
         btnReports.FillColor = Color.Black
         btnReports.FocusedColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         btnReports.Font = New Font("Segoe UI", 11.25F, FontStyle.Bold)
@@ -186,6 +187,7 @@ Partial Class MainForm
         btnSensors.DisabledState.CustomBorderColor = Color.DarkGray
         btnSensors.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnSensors.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnSensors.Enabled = False
         btnSensors.FillColor = Color.Black
         btnSensors.FocusedColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         btnSensors.Font = New Font("Segoe UI", 11.25F, FontStyle.Bold)
@@ -234,6 +236,7 @@ Partial Class MainForm
         btnAlerts.DisabledState.CustomBorderColor = Color.DarkGray
         btnAlerts.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnAlerts.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnAlerts.Enabled = False
         btnAlerts.FillColor = Color.Black
         btnAlerts.FocusedColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         btnAlerts.Font = New Font("Segoe UI", 11.25F, FontStyle.Bold)
@@ -283,6 +286,7 @@ Partial Class MainForm
         btnEvacuation.DisabledState.CustomBorderColor = Color.DarkGray
         btnEvacuation.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnEvacuation.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnEvacuation.Enabled = False
         btnEvacuation.FillColor = Color.Black
         btnEvacuation.FocusedColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         btnEvacuation.Font = New Font("Segoe UI", 11.25F, FontStyle.Bold)

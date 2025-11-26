@@ -117,69 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Guna2PictureBox5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAATNJREFUOE/VlG1xhEAMhpGAhErAQeug5+DqABy0DqiDSqmEk3ASkEDfJ5vcZfkY
-        OtM/vWcmQzbJhiS70DwW8zx3km8JTJIvyZO78beS0X1A7M1fgcNC1lwlrcegb9FZkoyMURmg58295K2o
-        BhVW8Z7mjjvAnHrSXkDrSGBt6nlLyrpCtpgLT9p/sVWBueWE+HhhdDF5mjsy5haWkBDZ4+JpCjJ8FPuf
-        GCJZPl3a5QBiZugxiuBdEiNAz/6WhGwKzvYWR+uhmCtKJY7WeX+PIQ/b7htI37uXkOOq24Ah7tfoMYbW
-        p2I2qCIfyrITfLR+ctMaDwro4rOoRvXyQ7ThN6dezXIXBS5PPX+CyxPf/jFkFMRVCJgdQ3+WvLqeT773
-        bfsoiF8YVa0/eMf9VHtc4T+jaX4ALvk2N68uaJEAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="Guna2PictureBox6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAPlJREFUOE/tktsNgkAQRWmAAiyABmiAAigAC8ACLAD/tQAsQAuwABuwKrxnMmM2
-        ioKJiT/c5AR2dubu7CNbZBqGoRCdOIq1x1bi4LHaEufIC68JN7EVeTKGxks+S4mtFxQ+piPGGJ79Hy5W
-        MCUlPhvufIxhmH9lyPlZgYiOOp9Lt9xawRwpuRK9wJSO6Y6zPUXMU/8g76SmC6cRpcg9JXZQ+nBcSsAo
-        PfRnOL+N57IAMbb/+iYVxIxJinhzdEAMuCQ6jguy96dvunhlRiECPoEZq7+DRe256BvPC/ZmFFKADmJy
-        ijHD3oxCCsRFzMG2p28cxSO26BfKsjvbbvfanUscnwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="Guna2PictureBox7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAQZJREFUOE/tkmERgkAQhYlAA41AA41AA2xgBGxABCMYgQhGIIIR8H3rLgMexwx/
-        Hb+ZN+fuPvZuzyv+ZBnHsZRu0l3qpKOX9sPH0iDBy1fi7aYycIrEpByngpPH5084dmbIIYN96OGEUk+p
-        99Dw3ODhOjLkGj4kRi09jitYbGJgkmiE4p4irt0TI1Kf+6y+QEl2y9G6Dd9FYkxgTZt9IxO7JyMHKrG5
-        yVPbyLhoqJ9cx1XqpXguATH5xu0pKtaSjam1kuKu+JjNWqnxlT8q6qyVNVlDRU6GCdnby6E6d4tvegUJ
-        KsQflR9nhnw0hYOnlqgQDdk1TrqluN9sw/nb3KP1kX+ZongDV770KMV+RTcAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="Guna2PictureBox8.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAQVJREFUOE/tkuENgkAMhRmBDWAERnAEN9ANdAPcwBEYgREYwREcwRHO95UWASGa
-        mPiLL3mBXtt3vYNs4z+klM7STeqk0teOHu+t6Fu8ER6jZy5VFvXsvPwzKm76nlRKYX7wXFBb8RoqoLny
-        95oOgTHHBvIosA0WUZLCu3TzmOOFEdg0esa0DfEELXLp3EmYcU82YaC4kHIPY6PCwylKMAEma2Y02zF9
-        aYCcv77whjAdzPTO5GwyZ/z7cMf0Tu+RAmlsdpGATfggNKJWCuLDUQNna56jBBMD070dSWtsjknr8VWC
-        uxXMUYIGoAnTJYEZ6Bm/VjKDOVqPr/1JndefYs0MNn4gy566VuwKdEbgUwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <metadata name="filterMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>6, 26</value>
+  <metadata name="Checkbox.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
-  <data name="Guna2Button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAHhJREFUSEtjGAWjgDxgZGRUb2xs/J9cDNRfADUKE4AksWkiFgP150ONGq7AxMTE
-        ARQHhDAwOAKgWogHQI330cMUGwapg2ohHgA1BiC7EBc2NDS0h2oZScDAwEAA6P3zaGF9HyQOVUI+gBqO
-        ErkgPlUMHwWjAAoYGABiAW4K4HCd3wAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="Guna2TextBox1.IconRight" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAX9JREFUSEvtVVtxwzAQNIECSAHEn35/+ScAWgAmEAIBkAAwARMwgBaACRRUdz17
-        GXXiyFLc9is7c6PJ5U57L52TJ554GGmavtR13VVV1UM+IV+SEfpzWZaVTLeBJJDJIVgUEA44d3KLR9M0
-        J7uMhLiQWbwzE4oCIYmRTnmeH+QeDlxydC7pWUr9dQPYHmBj5Z2yLNvrr3UwejmyPEepvSiK4tUIQf7h
-        C+4HzAlEg1RBICGI5v4GBcle0FgS3XArP7OT6j5gaEMxShWFqGBhwLdEw5NU0bBS4vRPJgzmUQ4djCXA
-        33r+JtUyYPR/mZGEhogqahINegJzz1bf29ZptK2DrNankbAyQHqpguA+bAR9ltoPGEZvEG4M2I/0YVY4
-        w6sCh0sooTKaiSRxw9W2Lb9h143OaCGderqjcMO7QbkCO//YLwGXudv/rigYkl8zfIiQZYJwytxSkYDf
-        uAFnZ1teFdlG6AKXzGXUzxv8OuEaXEJmL/XfgYQgYs+dKiTJN5Vb3svw10IPAAAAAElFTkSuQmCC
-</value>
-  </data>
+  <metadata name="Role.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Address.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ContactNum.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="DateApplied.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Accept.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Reject.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>
