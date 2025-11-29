@@ -51,6 +51,10 @@ Partial Class ResidentsUserControl
         Dim CustomizableEdges54 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges25 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges26 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim CustomizableEdges51 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges52 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges31 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -100,6 +104,13 @@ Partial Class ResidentsUserControl
         Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         ResidentPanelContainer = New Guna.UI2.WinForms.Guna2Panel()
+        Guna2DataGridView1 = New Guna.UI2.WinForms.Guna2DataGridView()
+        Name = New DataGridViewTextBoxColumn()
+        Role = New DataGridViewTextBoxColumn()
+        Address = New DataGridViewTextBoxColumn()
+        Contact = New DataGridViewTextBoxColumn()
+        DateApplied = New DataGridViewTextBoxColumn()
+        Actions1 = New DataGridViewTextBoxColumn()
         Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
         Guna2Panel8 = New Guna.UI2.WinForms.Guna2Panel()
@@ -133,6 +144,8 @@ Partial Class ResidentsUserControl
         Guna2Panel24.SuspendLayout()
         CType(Guna2PictureBox8, ComponentModel.ISupportInitialize).BeginInit()
         Guna2Panel1.SuspendLayout()
+        ResidentPanelContainer.SuspendLayout()
+        CType(Guna2DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         Guna2Panel2.SuspendLayout()
         Guna2Panel5.SuspendLayout()
         Guna2Panel8.SuspendLayout()
@@ -436,6 +449,7 @@ Partial Class ResidentsUserControl
         ' ResidentPanelContainer
         ' 
         ResidentPanelContainer.BorderRadius = 10
+        ResidentPanelContainer.Controls.Add(Guna2DataGridView1)
         ResidentPanelContainer.CustomizableEdges = CustomizableEdges25
         ResidentPanelContainer.Dock = DockStyle.Bottom
         ResidentPanelContainer.Location = New Point(0, 61)
@@ -443,6 +457,103 @@ Partial Class ResidentsUserControl
         ResidentPanelContainer.ShadowDecoration.CustomizableEdges = CustomizableEdges26
         ResidentPanelContainer.Size = New Size(1164, 639)
         ResidentPanelContainer.TabIndex = 3
+        ' 
+        ' Guna2DataGridView1
+        ' 
+        Guna2DataGridView1.AllowUserToResizeRows = False
+        DataGridViewCellStyle1.BackColor = Color.White
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle1.ForeColor = SystemColors.ControlText
+        DataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        DataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        Guna2DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Guna2DataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = Color.White
+        DataGridViewCellStyle2.Font = New Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle2.ForeColor = Color.FromArgb(CByte(51), CByte(51), CByte(51))
+        DataGridViewCellStyle2.SelectionBackColor = Color.White
+        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
+        Guna2DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Guna2DataGridView1.ColumnHeadersHeight = 30
+        Guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Guna2DataGridView1.Columns.AddRange(New DataGridViewColumn() {Name, Role, Address, Contact, DateApplied, Actions1})
+        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = Color.White
+        DataGridViewCellStyle3.Font = New Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle3.ForeColor = Color.FromArgb(CByte(51), CByte(51), CByte(51))
+        DataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        DataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.False
+        Guna2DataGridView1.DefaultCellStyle = DataGridViewCellStyle3
+        Guna2DataGridView1.Dock = DockStyle.Fill
+        Guna2DataGridView1.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        Guna2DataGridView1.Location = New Point(0, 0)
+        Guna2DataGridView1.Name = "Guna2DataGridView1"
+        Guna2DataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = Color.White
+        DataGridViewCellStyle4.Font = New Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle4.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = Color.White
+        DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.True
+        Guna2DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        Guna2DataGridView1.RowHeadersVisible = False
+        Guna2DataGridView1.Size = New Size(1164, 639)
+        Guna2DataGridView1.TabIndex = 0
+        Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White
+        Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = New Font("Segoe UI", 9F)
+        Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = SystemColors.ControlText
+        Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        Guna2DataGridView1.ThemeStyle.BackColor = Color.White
+        Guna2DataGridView1.ThemeStyle.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        Guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = Color.White
+        Guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.Single
+        Guna2DataGridView1.ThemeStyle.HeaderStyle.Font = New Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = Color.FromArgb(CByte(51), CByte(51), CByte(51))
+        Guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 30
+        Guna2DataGridView1.ThemeStyle.ReadOnly = False
+        Guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = Color.White
+        Guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
+        Guna2DataGridView1.ThemeStyle.RowsStyle.Font = New Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(CByte(51), CByte(51), CByte(51))
+        Guna2DataGridView1.ThemeStyle.RowsStyle.Height = 25
+        Guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        Guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        ' 
+        ' Name
+        ' 
+        Name.HeaderText = "Name"
+        Name.Name = "Name"
+        ' 
+        ' Role
+        ' 
+        Role.HeaderText = "Role"
+        Role.Name = "Role"
+        ' 
+        ' Address
+        ' 
+        Address.HeaderText = "Address"
+        Address.Name = "Address"
+        ' 
+        ' Contact
+        ' 
+        Contact.HeaderText = "Contact No."
+        Contact.Name = "Contact"
+        ' 
+        ' DateApplied
+        ' 
+        DateApplied.HeaderText = "Date Applied"
+        DateApplied.Name = "DateApplied"
+        ' 
+        ' Actions1
+        ' 
+        Actions1.HeaderText = "Actions1"
+        Actions1.Name = "Actions1"
         ' 
         ' Guna2Panel2
         ' 
@@ -740,7 +851,6 @@ Partial Class ResidentsUserControl
         Controls.Add(Guna2Panel21)
         Controls.Add(Guna2Panel23)
         MinimumSize = New Size(1235, 924)
-        Name = "ResidentsUserControl"
         Size = New Size(1235, 924)
         Guna2Panel17.ResumeLayout(False)
         Guna2Panel17.PerformLayout()
@@ -759,6 +869,8 @@ Partial Class ResidentsUserControl
         Guna2Panel24.ResumeLayout(False)
         CType(Guna2PictureBox8, ComponentModel.ISupportInitialize).EndInit()
         Guna2Panel1.ResumeLayout(False)
+        ResidentPanelContainer.ResumeLayout(False)
+        CType(Guna2DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         Guna2Panel2.ResumeLayout(False)
         Guna2Panel5.ResumeLayout(False)
         Guna2Panel8.ResumeLayout(False)
@@ -815,5 +927,12 @@ Partial Class ResidentsUserControl
     Friend WithEvents PendingUserCount As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2Panel8 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents RegisteredUserCount As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Guna2DataGridView1 As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents Name As DataGridViewTextBoxColumn
+    Friend WithEvents Role As DataGridViewTextBoxColumn
+    Friend WithEvents Address As DataGridViewTextBoxColumn
+    Friend WithEvents Contact As DataGridViewTextBoxColumn
+    Friend WithEvents DateApplied As DataGridViewTextBoxColumn
+    Friend WithEvents Actions1 As DataGridViewTextBoxColumn
 
 End Class

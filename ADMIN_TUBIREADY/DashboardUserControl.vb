@@ -4,6 +4,9 @@ Imports System.Drawing
 Imports System.Linq
 Imports System.Windows.Forms
 Imports System.Drawing.Drawing2D
+Imports System.Net
+Imports System.Text
+Imports System.IO
 
 Public Class DashboardUserControl
 
@@ -209,4 +212,54 @@ Public Class DashboardUserControl
         New SensorSimulation With {.Name = "Alley 18 Station", .s1Water = 1.0, .s2Water = 1.0},
         New SensorSimulation With {.Name = "Entry 1 (Upstream)", .s1Water = 1.2, .s2Water = 1.2}
     }
+
+    Private Sub SendCommandToESP(endpoint As String)
+        Try
+            Dim espIP As String = "http://10.237.203.199"  ' your receiver IP
+            Dim url As String = espIP & endpoint
+
+            Dim request As HttpWebRequest = CType(WebRequest.Create(url), HttpWebRequest)
+            request.Method = "GET"
+            request.Timeout = 3000
+
+            Using response As HttpWebResponse = CType(request.GetResponse(), HttpWebResponse)
+                Using reader As New StreamReader(response.GetResponseStream())
+                    Dim result As String = reader.ReadToEnd()
+                    Console.WriteLine("ESP Response: " & result)
+                End Using
+            End Using
+
+        Catch ex As Exception
+            MessageBox.Show("Failed to send command to ESP32: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub Label12_Click(sender As Object, e As EventArgs) Handles Label12.Click
+
+    End Sub
+
+    Private buzzerState As Boolean = False
+
+    Private Sub Guna2Button11_Click(sender As Object, e As EventArgs) Handles Guna2Button11.Click
+
+        If buzzerState = False Then
+            ' Turn ON buzzer
+            SendCommandToESP("/buzzer_on")
+            Label4.Text = "Deactivate Buzzer"
+            Guna2Button11.Text = "TURN BUZZER OFF"
+            buzzerState = True
+
+        Else
+            ' Turn OFF buzzer
+            SendCommandToESP("/buzzer_off")
+            Label4.Text = "Activate Buzzer"
+            Guna2Button11.Text = "TURN BUZZER ON"
+            buzzerState = False
+
+        End If
+    End Sub
+
+    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+
+    End Sub
 End Class

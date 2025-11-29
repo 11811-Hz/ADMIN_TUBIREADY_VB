@@ -131,8 +131,8 @@ Public Class MainForm
         ActivateButton(DirectCast(sender, Guna2Button))
     End Sub
 
-    Private Sub btnLocalUpdates_Click(sender As Object, e As EventArgs) Handles btnLocalUpdates.Click
-        ShowUserControl(New LocalUpdatesUserControl())
+    Private Sub btnLocalUpdates_Click(sender As Object, e As EventArgs)
+        ShowUserControl(New LocalUpdatesUserControl)
         ActivateButton(DirectCast(sender, Guna2Button))
     End Sub
 

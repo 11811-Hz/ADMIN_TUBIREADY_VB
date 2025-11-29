@@ -37,18 +37,14 @@ Partial Class MainForm
         Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges25 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges26 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         SidebarMenu = New Panel()
         btnSettings = New Guna.UI2.WinForms.Guna2Button()
         PictureBox1 = New PictureBox()
@@ -57,7 +53,6 @@ Partial Class MainForm
         btnSensors = New Guna.UI2.WinForms.Guna2Button()
         btnDashboard = New Guna.UI2.WinForms.Guna2Button()
         btnAlerts = New Guna.UI2.WinForms.Guna2Button()
-        btnLocalUpdates = New Guna.UI2.WinForms.Guna2Button()
         btnEvacuation = New Guna.UI2.WinForms.Guna2Button()
         Guna2HtmlLabel9 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel8 = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -70,7 +65,6 @@ Partial Class MainForm
         TopBar = New Guna.UI2.WinForms.Guna2Panel()
         Guna2Button14 = New Guna.UI2.WinForms.Guna2Button()
         Guna2Button13 = New Guna.UI2.WinForms.Guna2Button()
-        Guna2Button12 = New Guna.UI2.WinForms.Guna2Button()
         TopbarTitle = New Label()
         PanelContainer = New Guna.UI2.WinForms.Guna2Panel()
         SidebarMenu.SuspendLayout()
@@ -88,7 +82,6 @@ Partial Class MainForm
         SidebarMenu.Controls.Add(btnSensors)
         SidebarMenu.Controls.Add(btnDashboard)
         SidebarMenu.Controls.Add(btnAlerts)
-        SidebarMenu.Controls.Add(btnLocalUpdates)
         SidebarMenu.Controls.Add(btnEvacuation)
         SidebarMenu.Dock = DockStyle.Left
         SidebarMenu.Location = New Point(0, 0)
@@ -112,7 +105,7 @@ Partial Class MainForm
         btnSettings.Image = CType(resources.GetObject("btnSettings.Image"), Image)
         btnSettings.ImageAlign = HorizontalAlignment.Left
         btnSettings.ImageSize = New Size(25, 25)
-        btnSettings.Location = New Point(18, 555)
+        btnSettings.Location = New Point(18, 487)
         btnSettings.Name = "btnSettings"
         btnSettings.PressedColor = Color.Blue
         btnSettings.ShadowDecoration.CustomizableEdges = CustomizableEdges2
@@ -146,7 +139,7 @@ Partial Class MainForm
         btnReports.Image = CType(resources.GetObject("btnReports.Image"), Image)
         btnReports.ImageAlign = HorizontalAlignment.Left
         btnReports.ImageSize = New Size(25, 25)
-        btnReports.Location = New Point(18, 487)
+        btnReports.Location = New Point(18, 419)
         btnReports.Name = "btnReports"
         btnReports.PressedColor = Color.Blue
         btnReports.ShadowDecoration.CustomizableEdges = CustomizableEdges4
@@ -195,7 +188,7 @@ Partial Class MainForm
         btnSensors.Image = CType(resources.GetObject("btnSensors.Image"), Image)
         btnSensors.ImageAlign = HorizontalAlignment.Left
         btnSensors.ImageSize = New Size(25, 25)
-        btnSensors.Location = New Point(18, 419)
+        btnSensors.Location = New Point(18, 351)
         btnSensors.Name = "btnSensors"
         btnSensors.PressedColor = Color.Blue
         btnSensors.ShadowDecoration.CustomizableEdges = CustomizableEdges8
@@ -236,7 +229,6 @@ Partial Class MainForm
         btnAlerts.DisabledState.CustomBorderColor = Color.DarkGray
         btnAlerts.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnAlerts.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        btnAlerts.Enabled = False
         btnAlerts.FillColor = Color.Black
         btnAlerts.FocusedColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         btnAlerts.Font = New Font("Segoe UI", 11.25F, FontStyle.Bold)
@@ -244,7 +236,7 @@ Partial Class MainForm
         btnAlerts.Image = CType(resources.GetObject("btnAlerts.Image"), Image)
         btnAlerts.ImageAlign = HorizontalAlignment.Left
         btnAlerts.ImageSize = New Size(25, 25)
-        btnAlerts.Location = New Point(18, 351)
+        btnAlerts.Location = New Point(18, 283)
         btnAlerts.Name = "btnAlerts"
         btnAlerts.PressedColor = Color.Blue
         btnAlerts.ShadowDecoration.CustomizableEdges = CustomizableEdges12
@@ -252,36 +244,11 @@ Partial Class MainForm
         btnAlerts.TabIndex = 14
         btnAlerts.Text = "Alerts"
         ' 
-        ' btnLocalUpdates
-        ' 
-        btnLocalUpdates.BackColor = Color.Black
-        btnLocalUpdates.BorderRadius = 15
-        btnLocalUpdates.CustomizableEdges = CustomizableEdges13
-        btnLocalUpdates.DisabledState.BorderColor = Color.DarkGray
-        btnLocalUpdates.DisabledState.CustomBorderColor = Color.DarkGray
-        btnLocalUpdates.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        btnLocalUpdates.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        btnLocalUpdates.FillColor = Color.Black
-        btnLocalUpdates.FocusedColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        btnLocalUpdates.Font = New Font("Segoe UI", 11.25F, FontStyle.Bold)
-        btnLocalUpdates.ForeColor = Color.White
-        btnLocalUpdates.Image = CType(resources.GetObject("btnLocalUpdates.Image"), Image)
-        btnLocalUpdates.ImageAlign = HorizontalAlignment.Left
-        btnLocalUpdates.ImageSize = New Size(25, 25)
-        btnLocalUpdates.Location = New Point(18, 215)
-        btnLocalUpdates.Name = "btnLocalUpdates"
-        btnLocalUpdates.Padding = New Padding(20, 0, 0, 0)
-        btnLocalUpdates.PressedColor = Color.Blue
-        btnLocalUpdates.ShadowDecoration.CustomizableEdges = CustomizableEdges14
-        btnLocalUpdates.Size = New Size(170, 62)
-        btnLocalUpdates.TabIndex = 12
-        btnLocalUpdates.Text = "Local Updates"
-        ' 
         ' btnEvacuation
         ' 
         btnEvacuation.BackColor = Color.Black
         btnEvacuation.BorderRadius = 15
-        btnEvacuation.CustomizableEdges = CustomizableEdges15
+        btnEvacuation.CustomizableEdges = CustomizableEdges13
         btnEvacuation.DisabledState.BorderColor = Color.DarkGray
         btnEvacuation.DisabledState.CustomBorderColor = Color.DarkGray
         btnEvacuation.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -294,10 +261,10 @@ Partial Class MainForm
         btnEvacuation.Image = CType(resources.GetObject("btnEvacuation.Image"), Image)
         btnEvacuation.ImageAlign = HorizontalAlignment.Left
         btnEvacuation.ImageSize = New Size(25, 25)
-        btnEvacuation.Location = New Point(18, 283)
+        btnEvacuation.Location = New Point(18, 215)
         btnEvacuation.Name = "btnEvacuation"
         btnEvacuation.PressedColor = Color.Blue
-        btnEvacuation.ShadowDecoration.CustomizableEdges = CustomizableEdges16
+        btnEvacuation.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         btnEvacuation.Size = New Size(170, 62)
         btnEvacuation.TabIndex = 13
         btnEvacuation.Text = "Evacuation"
@@ -396,14 +363,13 @@ Partial Class MainForm
         TopBar.BorderThickness = 1
         TopBar.Controls.Add(Guna2Button14)
         TopBar.Controls.Add(Guna2Button13)
-        TopBar.Controls.Add(Guna2Button12)
         TopBar.Controls.Add(TopbarTitle)
-        TopBar.CustomizableEdges = CustomizableEdges23
+        TopBar.CustomizableEdges = CustomizableEdges19
         TopBar.Dock = DockStyle.Top
         TopBar.FillColor = Color.White
         TopBar.Location = New Point(219, 0)
         TopBar.Name = "TopBar"
-        TopBar.ShadowDecoration.CustomizableEdges = CustomizableEdges24
+        TopBar.ShadowDecoration.CustomizableEdges = CustomizableEdges20
         TopBar.Size = New Size(1235, 61)
         TopBar.TabIndex = 17
         ' 
@@ -415,7 +381,7 @@ Partial Class MainForm
         Guna2Button14.BorderRadius = 19
         Guna2Button14.BorderThickness = 1
         Guna2Button14.Cursor = Cursors.Hand
-        Guna2Button14.CustomizableEdges = CustomizableEdges17
+        Guna2Button14.CustomizableEdges = CustomizableEdges15
         Guna2Button14.DisabledState.BorderColor = Color.DarkGray
         Guna2Button14.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button14.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -429,7 +395,7 @@ Partial Class MainForm
         Guna2Button14.Location = New Point(1029, 8)
         Guna2Button14.Name = "Guna2Button14"
         Guna2Button14.PressedColor = Color.Transparent
-        Guna2Button14.ShadowDecoration.CustomizableEdges = CustomizableEdges18
+        Guna2Button14.ShadowDecoration.CustomizableEdges = CustomizableEdges16
         Guna2Button14.Size = New Size(167, 40)
         Guna2Button14.TabIndex = 18
         Guna2Button14.Text = "      Admin"
@@ -442,7 +408,7 @@ Partial Class MainForm
         Guna2Button13.BorderRadius = 19
         Guna2Button13.BorderThickness = 1
         Guna2Button13.Cursor = Cursors.Hand
-        Guna2Button13.CustomizableEdges = CustomizableEdges19
+        Guna2Button13.CustomizableEdges = CustomizableEdges17
         Guna2Button13.DisabledState.BorderColor = Color.DarkGray
         Guna2Button13.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button13.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -455,34 +421,9 @@ Partial Class MainForm
         Guna2Button13.Location = New Point(983, 9)
         Guna2Button13.Name = "Guna2Button13"
         Guna2Button13.PressedColor = Color.Transparent
-        Guna2Button13.ShadowDecoration.CustomizableEdges = CustomizableEdges20
+        Guna2Button13.ShadowDecoration.CustomizableEdges = CustomizableEdges18
         Guna2Button13.Size = New Size(40, 40)
         Guna2Button13.TabIndex = 17
-        ' 
-        ' Guna2Button12
-        ' 
-        Guna2Button12.AutoRoundedCorners = True
-        Guna2Button12.BackColor = Color.Transparent
-        Guna2Button12.BorderColor = Color.Transparent
-        Guna2Button12.BorderRadius = 19
-        Guna2Button12.BorderThickness = 1
-        Guna2Button12.Cursor = Cursors.Hand
-        Guna2Button12.CustomizableEdges = CustomizableEdges21
-        Guna2Button12.DisabledState.BorderColor = Color.DarkGray
-        Guna2Button12.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2Button12.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2Button12.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        Guna2Button12.FillColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
-        Guna2Button12.Font = New Font("Segoe UI", 9F)
-        Guna2Button12.ForeColor = Color.White
-        Guna2Button12.Image = CType(resources.GetObject("Guna2Button12.Image"), Image)
-        Guna2Button12.ImageSize = New Size(27, 27)
-        Guna2Button12.Location = New Point(937, 9)
-        Guna2Button12.Name = "Guna2Button12"
-        Guna2Button12.PressedColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
-        Guna2Button12.ShadowDecoration.CustomizableEdges = CustomizableEdges22
-        Guna2Button12.Size = New Size(40, 40)
-        Guna2Button12.TabIndex = 16
         ' 
         ' TopbarTitle
         ' 
@@ -499,11 +440,11 @@ Partial Class MainForm
         ' 
         ' PanelContainer
         ' 
-        PanelContainer.CustomizableEdges = CustomizableEdges25
+        PanelContainer.CustomizableEdges = CustomizableEdges21
         PanelContainer.Dock = DockStyle.Fill
         PanelContainer.Location = New Point(219, 61)
         PanelContainer.Name = "PanelContainer"
-        PanelContainer.ShadowDecoration.CustomizableEdges = CustomizableEdges26
+        PanelContainer.ShadowDecoration.CustomizableEdges = CustomizableEdges22
         PanelContainer.Size = New Size(1235, 924)
         PanelContainer.TabIndex = 18
         ' 
@@ -516,6 +457,8 @@ Partial Class MainForm
         Controls.Add(PanelContainer)
         Controls.Add(TopBar)
         Controls.Add(SidebarMenu)
+        MaximizeBox = False
+        MinimizeBox = False
         Name = "MainForm"
         Text = "TubiReady"
         SidebarMenu.ResumeLayout(False)
@@ -529,7 +472,6 @@ Partial Class MainForm
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btnDashboard As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnResidents As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents btnLocalUpdates As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnEvacuation As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnAlerts As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnSensors As Guna.UI2.WinForms.Guna2Button
@@ -546,7 +488,6 @@ Partial Class MainForm
     Friend WithEvents TopBar As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2Button14 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Button13 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2Button12 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents TopbarTitle As Label
     Friend WithEvents PanelContainer As Guna.UI2.WinForms.Guna2Panel
 
