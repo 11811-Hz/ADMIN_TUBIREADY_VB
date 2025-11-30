@@ -692,9 +692,9 @@ Partial Class DashboardUserControl
         Guna2HtmlLabel2.IsSelectionEnabled = False
         Guna2HtmlLabel2.Location = New Point(135, 53)
         Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-        Guna2HtmlLabel2.Size = New Size(56, 42)
+        Guna2HtmlLabel2.Size = New Size(31, 42)
         Guna2HtmlLabel2.TabIndex = 1
-        Guna2HtmlLabel2.Text = "feet"
+        Guna2HtmlLabel2.Text = "M"
         ' 
         ' lbl_waterlevel
         ' 

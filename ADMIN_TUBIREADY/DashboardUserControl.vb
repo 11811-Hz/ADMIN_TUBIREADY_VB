@@ -234,10 +234,6 @@ Public Class DashboardUserControl
         End Try
     End Sub
 
-    Private Sub Label12_Click(sender As Object, e As EventArgs) Handles Label12.Click
-
-    End Sub
-
     Private buzzerState As Boolean = False
 
     Private Sub Guna2Button11_Click(sender As Object, e As EventArgs) Handles Guna2Button11.Click
@@ -259,7 +255,7 @@ Public Class DashboardUserControl
         End If
     End Sub
 
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+    Private Sub lbl_waterlevel_Click(sender As Object, e As EventArgs) Handles lbl_waterlevel.Click
 
     End Sub
 End Class

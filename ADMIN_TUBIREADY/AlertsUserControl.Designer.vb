@@ -331,12 +331,12 @@ Partial Class AlertsUserControl
         Guna2Button1.Image = CType(resources.GetObject("Guna2Button1.Image"), Image)
         Guna2Button1.ImageAlign = HorizontalAlignment.Left
         Guna2Button1.ImageOffset = New Point(-4, 0)
-        Guna2Button1.Location = New Point(292, 37)
+        Guna2Button1.Location = New Point(301, 35)
         Guna2Button1.Name = "Guna2Button1"
         Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         Guna2Button1.Size = New Size(83, 29)
         Guna2Button1.TabIndex = 2
-        Guna2Button1.Text = " Clear"
+        Guna2Button1.Text = "    Clear"
         ' 
         ' Label2
         ' 
@@ -412,6 +412,7 @@ Partial Class AlertsUserControl
         ' 
         ' Guna2Button6
         ' 
+        Guna2Button6.BorderRadius = 10
         Guna2Button6.CustomizableEdges = CustomizableEdges17
         Guna2Button6.DisabledState.BorderColor = Color.DarkGray
         Guna2Button6.DisabledState.CustomBorderColor = Color.DarkGray
@@ -441,6 +442,7 @@ Partial Class AlertsUserControl
         ' 
         ' Guna2Button5
         ' 
+        Guna2Button5.BorderRadius = 10
         Guna2Button5.CustomizableEdges = CustomizableEdges19
         Guna2Button5.DisabledState.BorderColor = Color.DarkGray
         Guna2Button5.DisabledState.CustomBorderColor = Color.DarkGray
