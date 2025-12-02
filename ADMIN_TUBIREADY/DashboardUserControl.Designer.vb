@@ -247,7 +247,7 @@ Partial Class DashboardUserControl
         Label11.AutoSize = True
         Label11.Font = New Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label11.ForeColor = Color.FromArgb(CByte(51), CByte(51), CByte(51))
-        Label11.Location = New Point(36, 15)
+        Label11.Location = New Point(23, 15)
         Label11.Margin = New Padding(0)
         Label11.Name = "Label11"
         Label11.Size = New Size(161, 23)
@@ -257,12 +257,12 @@ Partial Class DashboardUserControl
         ' lbl_unsafe_residents
         ' 
         lbl_unsafe_residents.BackColor = Color.Transparent
-        lbl_unsafe_residents.Font = New Font("Calibri", 54.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lbl_unsafe_residents.Font = New Font("Calibri", 48F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lbl_unsafe_residents.ForeColor = Color.FromArgb(CByte(216), CByte(26), CByte(6))
         lbl_unsafe_residents.IsSelectionEnabled = False
-        lbl_unsafe_residents.Location = New Point(23, 20)
+        lbl_unsafe_residents.Location = New Point(23, 28)
         lbl_unsafe_residents.Name = "lbl_unsafe_residents"
-        lbl_unsafe_residents.Size = New Size(40, 92)
+        lbl_unsafe_residents.Size = New Size(35, 80)
         lbl_unsafe_residents.TabIndex = 3
         lbl_unsafe_residents.Text = "0"
         ' 
@@ -511,7 +511,7 @@ Partial Class DashboardUserControl
         Label10.AutoSize = True
         Label10.Font = New Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label10.ForeColor = Color.FromArgb(CByte(51), CByte(51), CByte(51))
-        Label10.Location = New Point(35, 15)
+        Label10.Location = New Point(20, 15)
         Label10.Margin = New Padding(0)
         Label10.Name = "Label10"
         Label10.Size = New Size(137, 23)
@@ -521,12 +521,12 @@ Partial Class DashboardUserControl
         ' lbl_safe_residents
         ' 
         lbl_safe_residents.BackColor = Color.Transparent
-        lbl_safe_residents.Font = New Font("Calibri", 54.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lbl_safe_residents.Font = New Font("Calibri", 48F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lbl_safe_residents.ForeColor = Color.FromArgb(CByte(0), CByte(203), CByte(43))
         lbl_safe_residents.IsSelectionEnabled = False
-        lbl_safe_residents.Location = New Point(20, 16)
+        lbl_safe_residents.Location = New Point(20, 28)
         lbl_safe_residents.Name = "lbl_safe_residents"
-        lbl_safe_residents.Size = New Size(40, 92)
+        lbl_safe_residents.Size = New Size(35, 80)
         lbl_safe_residents.TabIndex = 2
         lbl_safe_residents.Text = "0"
         ' 
@@ -699,12 +699,12 @@ Partial Class DashboardUserControl
         ' lbl_waterlevel
         ' 
         lbl_waterlevel.BackColor = Color.Transparent
-        lbl_waterlevel.Font = New Font("Calibri", 54.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lbl_waterlevel.Font = New Font("Calibri", 48F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lbl_waterlevel.ForeColor = Color.FromArgb(CByte(10), CByte(53), CByte(164))
         lbl_waterlevel.IsSelectionEnabled = False
-        lbl_waterlevel.Location = New Point(32, 20)
+        lbl_waterlevel.Location = New Point(15, 28)
         lbl_waterlevel.Name = "lbl_waterlevel"
-        lbl_waterlevel.Size = New Size(97, 92)
+        lbl_waterlevel.Size = New Size(84, 80)
         lbl_waterlevel.TabIndex = 1
         lbl_waterlevel.Text = "0.0"
         ' 

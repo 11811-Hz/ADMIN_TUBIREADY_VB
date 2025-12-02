@@ -22,27 +22,27 @@ Partial Class UserControlAlerts
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Guna2CheckBox1 = New Guna.UI2.WinForms.Guna2CheckBox()
+        ckcAlerts = New Guna.UI2.WinForms.Guna2CheckBox()
         lblAlertsName = New Label()
         lblAlertsNumber = New Label()
         SuspendLayout()
         ' 
-        ' Guna2CheckBox1
+        ' ckcAlerts
         ' 
-        Guna2CheckBox1.AutoSize = True
-        Guna2CheckBox1.CheckedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2CheckBox1.CheckedState.BorderRadius = 0
-        Guna2CheckBox1.CheckedState.BorderThickness = 0
-        Guna2CheckBox1.CheckedState.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2CheckBox1.ForeColor = SystemColors.ControlText
-        Guna2CheckBox1.Location = New Point(13, 16)
-        Guna2CheckBox1.Name = "Guna2CheckBox1"
-        Guna2CheckBox1.Size = New Size(15, 14)
-        Guna2CheckBox1.TabIndex = 0
-        Guna2CheckBox1.UncheckedState.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        Guna2CheckBox1.UncheckedState.BorderRadius = 0
-        Guna2CheckBox1.UncheckedState.BorderThickness = 0
-        Guna2CheckBox1.UncheckedState.FillColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        ckcAlerts.AutoSize = True
+        ckcAlerts.CheckedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        ckcAlerts.CheckedState.BorderRadius = 0
+        ckcAlerts.CheckedState.BorderThickness = 0
+        ckcAlerts.CheckedState.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        ckcAlerts.ForeColor = SystemColors.ControlText
+        ckcAlerts.Location = New Point(13, 16)
+        ckcAlerts.Name = "ckcAlerts"
+        ckcAlerts.Size = New Size(15, 14)
+        ckcAlerts.TabIndex = 0
+        ckcAlerts.UncheckedState.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        ckcAlerts.UncheckedState.BorderRadius = 0
+        ckcAlerts.UncheckedState.BorderThickness = 0
+        ckcAlerts.UncheckedState.FillColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         ' 
         ' lblAlertsName
         ' 
@@ -71,14 +71,14 @@ Partial Class UserControlAlerts
         AutoScaleMode = AutoScaleMode.Font
         Controls.Add(lblAlertsNumber)
         Controls.Add(lblAlertsName)
-        Controls.Add(Guna2CheckBox1)
+        Controls.Add(ckcAlerts)
         Name = "UserControlAlerts"
         Size = New Size(257, 52)
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
-    Friend WithEvents Guna2CheckBox1 As Guna.UI2.WinForms.Guna2CheckBox
+    Friend WithEvents ckcAlerts As Guna.UI2.WinForms.Guna2CheckBox
     Friend WithEvents lblAlertsName As Label
     Friend WithEvents lblAlertsNumber As Label
 

@@ -7,8 +7,15 @@ Imports System.Drawing.Drawing2D
 Imports System.Net
 Imports System.Text
 Imports System.IO
+Imports System.Net.Http
+Imports System.Threading.Tasks
 
 Public Class DashboardUserControl
+
+    ' Add a shared HttpClient (reuse to avoid socket exhaustion)
+    Private Shared ReadOnly httpClient As New HttpClient() With {
+        .Timeout = TimeSpan.FromSeconds(2)
+    }
 
     ' ---------------- SENSOR CLASS (simulation only for status/signal) ----------------
     Public Class SensorSimulation
@@ -31,10 +38,15 @@ Public Class DashboardUserControl
 
             ' Signal variations
             Dim s = rand.Next(0, 100)
-            If s > 75 Then Signal = "Strong"
-            If s > 50 AndAlso s <= 75 Then Signal = "Medium"
-            If s > 25 AndAlso s <= 50 Then Signal = "Weak"
-            If s <= 25 Then Signal = "Low"
+            If s > 75 Then
+                Signal = "Strong"
+            ElseIf s > 50 Then
+                Signal = "Medium"
+            ElseIf s > 25 Then
+                Signal = "Weak"
+            Else
+                Signal = "Low"
+            End If
         End Sub
     End Class
 
@@ -44,54 +56,70 @@ Public Class DashboardUserControl
 
 
     ' ---------------- TIMER LOOP ----------------
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-
+    ' Make the Tick handler async and await the network call
+    Private Async Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        ' quick local updates
         For Each s In sensors
             s.Tick()
         Next
 
-        UpdateDashboard()
+        ' do network I/O off the UI-blocking path
+        Dim waterTuple = Await GetWaterDataFromReceiverAsync()
+
+        ' then update UI (runs on UI context)
+        UpdateDashboardWithWater(waterTuple.Item1, waterTuple.Item2)
     End Sub
 
 
     ' ---------------- MAIN DASHBOARD UPDATE ----------------
-    Private Sub UpdateDashboard()
-
-        Dim activeCount = sensors.Where(Function(s) s.IsActive).Count()
-        Dim offlineCount = sensors.Count - activeCount
+    ' small refactor: UpdateDashboard that accepts water result (keeps UI updates on UI thread)
+    Private Sub UpdateDashboardWithWater(level As Double, status As String)
+        ' use Where().Count() to avoid ambiguity with Count overloads
+        Dim activeCount As Integer = sensors.Where(Function(s) s.IsActive).Count()
+        Dim offlineCount As Integer = sensors.Count - activeCount
 
         lbl_sensors_active.Text = activeCount.ToString()
         lbl_sensors_offline.Text = offlineCount.ToString()
-
         lblTimestamp.Text = "As of " & DateTime.Now.ToString("h:mm tt, MMMM d, yyyy")
 
-
-        ' ---------------- REAL WATER LEVEL FROM RECEIVER ----------------
-        Dim water = GetWaterDataFromReceiver()
-
-        Dim meter As Double = water.level / 1000.0
+        Dim meter As Double = level / 1000.0
         lbl_waterlevel.Text = meter.ToString("0.00")
-
-        lblOverallWaterStatus.Text = water.status
+        lblOverallWaterStatus.Text = status
         lblOverallWaterStatus.ForeColor =
-            If(water.status = "SAFE", Color.Green,
-            If(water.status = "WARNING", Color.Orange, Color.Red))
+            If(status = "SAFE", Color.Green, If(status = "WARNING", Color.Orange, Color.Red))
 
 
         ' ---------------- Dummy population ----------------
+        ' Implement cap on "safe". Stop population simulation when cap is reached.
+        Const SAFE_CAP As Integer = 100
         Static safe As Integer = 0
-        Static unsafe As Integer = 30
-        safe += 1
-        unsafe -= 1
-        If unsafe < 0 Then unsafe = 0
+        Static unsafe As Integer = 100
+        Static populationSimulationStopped As Boolean = False
+
+        If Not populationSimulationStopped Then
+            If safe < SAFE_CAP Then
+                safe += 1
+                unsafe -= 1
+                If unsafe < 0 Then unsafe = 0
+
+                If safe >= SAFE_CAP Then
+                    populationSimulationStopped = True
+                End If
+            End If
+        End If
 
         lbl_safe_residents.Text = safe.ToString()
         lbl_unsafe_residents.Text = unsafe.ToString()
 
 
         ' ---------------- Update sensor cards ----------------
-        UpdateSensorCard(sensors(0), lblS1Status, lblS1Signal, lblS1Battery, dotS1)
-        UpdateSensorCard(sensors(1), lblS2Status, lblS2Signal, lblS2Battery, dotS2)
+        ' Guard against missing sensors
+        If sensors.Count > 0 Then
+            UpdateSensorCard(sensors(0), lblS1Status, lblS1Signal, lblS1Battery, dotS1)
+        End If
+        If sensors.Count > 1 Then
+            UpdateSensorCard(sensors(1), lblS2Status, lblS2Signal, lblS2Battery, dotS2)
+        End If
 
     End Sub
 
@@ -100,6 +128,7 @@ Public Class DashboardUserControl
     Private dotPaintAttached As New HashSet(Of Control)()
 
     Private Sub SetDotFillColor(dotControl As Control, fillColor As Color)
+        'Store fill color in Tag property
         dotControl.Tag = fillColor
 
         If Not dotPaintAttached.Contains(dotControl) Then
@@ -116,6 +145,7 @@ Public Class DashboardUserControl
     End Sub
 
     Private Sub DotControl_Paint(sender As Object, e As PaintEventArgs)
+        'This function is literally just drawing a colored circle since Control.fillColor() doesn't work on controls fym bro
         Dim c = TryCast(sender, Control)
         If c Is Nothing Then Return
 
@@ -164,101 +194,70 @@ Public Class DashboardUserControl
 
 
     ' ---------------- SEND BUZZER COMMAND ----------------
-    Private Sub SendCommandToESP(endpoint As String)
+    Private Async Function SendCommandToESPAsync(endpoint As String) As Task
         Try
-            Dim espIP As String = "http://10.237.203.199"
-            Dim url As String = espIP & endpoint
-
-            Dim request As HttpWebRequest = CType(WebRequest.Create(url), HttpWebRequest)
-            request.Method = "GET"
-            request.Timeout = 3000
-
-            Using response As HttpWebResponse = CType(request.GetResponse(), HttpWebResponse)
-                Using reader As New StreamReader(response.GetResponseStream())
-                    Console.WriteLine("ESP Response: " & reader.ReadToEnd())
-                End Using
-            End Using
-
+            Dim baseUrl As String = "http://10.237.203.199"
+            Dim url As String = If(endpoint.StartsWith("/"), baseUrl & endpoint, baseUrl & "/" & endpoint)
+            Dim resp = Await httpClient.GetAsync(url)
+            Dim body = Await resp.Content.ReadAsStringAsync()
+            Console.WriteLine("ESP Response: " & body)
         Catch ex As Exception
             MessageBox.Show("Failed to send command to ESP32: " & ex.Message)
         End Try
-    End Sub
-
+    End Function
 
     Private buzzerState As Boolean = False
 
-    Private Sub Guna2Button11_Click(sender As Object, e As EventArgs) Handles Guna2Button11.Click
-
-        If buzzerState = False Then
-            SendCommandToESP("/buzzer_on")
+    Private Async Sub Guna2Button11_Click(sender As Object, e As EventArgs) Handles Guna2Button11.Click
+        If Not buzzerState Then
+            Await SendCommandToESPAsync("/buzzer_on")
             Label4.Text = "Deactivate Buzzer"
             Guna2Button11.Text = "TURN BUZZER OFF"
             buzzerState = True
-
         Else
-            SendCommandToESP("/buzzer_off")
+            Await SendCommandToESPAsync("/buzzer_off")
             Label4.Text = "Activate Buzzer"
             Guna2Button11.Text = "TURN BUZZER ON"
             buzzerState = False
-
         End If
     End Sub
 
 
-
     ' ---------------- GET WATER LEVEL FROM RECEIVER ----------------
-    Private Function GetWaterDataFromReceiver() As (level As Double, status As String)
+    ' Return Tuple(Of Double, String) to maximize compatibility
+    Private Async Function GetWaterDataFromReceiverAsync() As Task(Of Tuple(Of Double, String))
         Try
-            Dim espIP As String = "http://10.237.203.199"
-            Dim url As String = espIP & "/waterlevel"
+            Dim url As String = "http://10.237.203.199/waterlevel"
+            Dim raw As String = (Await httpClient.GetStringAsync(url)).Trim()
 
-            Dim request As HttpWebRequest = CType(WebRequest.Create(url), HttpWebRequest)
-            request.Method = "GET"
-            request.Timeout = 2000
+            Dim level As Double = 0
+            Dim status As String = "SAFE"
 
-            Using response As HttpWebResponse = CType(request.GetResponse(), HttpWebResponse)
-                Using reader As New StreamReader(response.GetResponseStream())
-
-                    Dim raw As String = reader.ReadToEnd().Trim()
-                    ' Example raw receiver output:
-                    ' "RX Water -> L:3488 meter | RSSI:-89 | SNR: 8"
-
-                    Dim level As Double = 0
-                    Dim status As String = "SAFE"
-
-                    ' ---------- Extract number after "L:" ----------
-                    Dim pos = raw.IndexOf("L:")
-                    If pos >= 0 Then
-                        Dim numStr As String = ""
-
-                        For i = pos + 2 To raw.Length - 1
-                            If Char.IsDigit(raw(i)) Then
-                                numStr &= raw(i)
-                            Else
-                                Exit For
-                            End If
-                        Next
-
-                        level = Val(numStr)
-                    End If
-
-                    ' ---------- Determine status based on level ----------
-                    If level < 2000 Then
-                        status = "SAFE"
-                    ElseIf level < 4000 Then
-                        status = "WARNING"
+            Dim pos = raw.IndexOf("L:")
+            If pos >= 0 Then
+                Dim sb As New Text.StringBuilder()
+                For i As Integer = pos + 2 To raw.Length - 1
+                    If Char.IsDigit(raw(i)) Then
+                        sb.Append(raw(i))
                     Else
-                        status = "DANGER"
+                        Exit For
                     End If
+                Next
+                Double.TryParse(sb.ToString(), level)
+            End If
 
-                    Return (level, status)
+            If level < 2000 Then
+                status = "SAFE"
+            ElseIf level < 4000 Then
+                status = "WARNING"
+            Else
+                status = "DANGER"
+            End If
 
-                End Using
-            End Using
-
+            Return Tuple.Create(level, status)
         Catch ex As Exception
             Console.WriteLine("Receiver error: " & ex.Message)
-            Return (0, "UNKNOWN")
+            Return Tuple.Create(0.0, "UNKNOWN")
         End Try
     End Function
 
