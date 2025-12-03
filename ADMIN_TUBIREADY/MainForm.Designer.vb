@@ -458,7 +458,6 @@ Partial Class MainForm
         Controls.Add(TopBar)
         Controls.Add(SidebarMenu)
         MaximizeBox = False
-        MinimizeBox = False
         Name = "MainForm"
         Text = "TubiReady"
         SidebarMenu.ResumeLayout(False)

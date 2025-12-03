@@ -261,4 +261,11 @@ Public Class DashboardUserControl
         End Try
     End Function
 
+    Private Sub btnWaterLevelALley_Click(sender As Object, e As EventArgs) Handles btnWaterLevelAlley.Click
+        lblWaterLevel.Text = "ALLEY WATER LEVEL"
+    End Sub
+
+    Private Sub btnWaterLevelEntry_Click(sender As Object, e As EventArgs) Handles btnWaterLevelEntry.Click
+        lblWaterLevel.Text = "ENTRY WATER LEVEL"
+    End Sub
 End Class
