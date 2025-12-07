@@ -22,12 +22,21 @@ Partial Class SensorsUserControl
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges43 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges44 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges41 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges42 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges35 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges36 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges32 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges33 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges34 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges39 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges40 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges45 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges46 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim ChartFont1 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
         Dim ChartFont2 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
         Dim ChartFont3 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
@@ -43,30 +52,130 @@ Partial Class SensorsUserControl
         Dim ChartFont7 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
         Dim Tick3 As Guna.Charts.WinForms.Tick = New Guna.Charts.WinForms.Tick()
         Dim ChartFont8 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
-        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges53 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges54 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges51 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges52 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim CustomizableEdges37 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges38 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges30 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges31 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges28 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges29 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges26 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges27 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges25 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges49 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges50 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SensorsUserControl))
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges47 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges48 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Label1 = New Label()
         Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
+        Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
+        Guna2Panel7 = New Guna.UI2.WinForms.Guna2Panel()
+        Label8 = New Label()
+        Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Label7 = New Label()
+        Guna2CircleButton1 = New Guna.UI2.WinForms.Guna2CircleButton()
+        Guna2Panel6 = New Guna.UI2.WinForms.Guna2Panel()
+        Label6 = New Label()
+        Label5 = New Label()
         Label4 = New Label()
         Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
         GunaChart1 = New Guna.Charts.WinForms.GunaChart()
         Label3 = New Label()
         Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         btnViewRiverActivity = New Guna.UI2.WinForms.Guna2Button()
-        Guna2DataGridView1 = New Guna.UI2.WinForms.Guna2DataGridView()
+        dgvRiverActivityHistory = New Guna.UI2.WinForms.Guna2DataGridView()
         Label2 = New Label()
         GunaAreaDataset1 = New Guna.Charts.WinForms.GunaAreaDataset()
+        Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Guna2Panel8 = New Guna.UI2.WinForms.Guna2Panel()
+        Label9 = New Label()
+        Guna2PictureBox3 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Label10 = New Label()
+        Guna2Panel9 = New Guna.UI2.WinForms.Guna2Panel()
+        Label11 = New Label()
+        Guna2PictureBox4 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Label12 = New Label()
+        Guna2Panel10 = New Guna.UI2.WinForms.Guna2Panel()
+        Guna2Panel11 = New Guna.UI2.WinForms.Guna2Panel()
+        Label13 = New Label()
+        Guna2PictureBox5 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Label14 = New Label()
+        Guna2Panel12 = New Guna.UI2.WinForms.Guna2Panel()
+        Label15 = New Label()
+        Guna2PictureBox6 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Label16 = New Label()
+        Guna2Panel13 = New Guna.UI2.WinForms.Guna2Panel()
+        Label17 = New Label()
+        Guna2PictureBox7 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Label18 = New Label()
+        Guna2CircleButton2 = New Guna.UI2.WinForms.Guna2CircleButton()
+        Guna2Panel14 = New Guna.UI2.WinForms.Guna2Panel()
+        Label19 = New Label()
+        Guna2PictureBox8 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Label20 = New Label()
+        Guna2Panel15 = New Guna.UI2.WinForms.Guna2Panel()
+        Time = New DataGridViewTextBoxColumn()
+        WaterLevel = New DataGridViewTextBoxColumn()
+        Status = New DataGridViewTextBoxColumn()
+        Guna2PictureBox9 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Guna2PictureBox10 = New Guna.UI2.WinForms.Guna2PictureBox()
         Guna2Panel1.SuspendLayout()
         Guna2Panel3.SuspendLayout()
+        Guna2Panel5.SuspendLayout()
+        Guna2Panel7.SuspendLayout()
+        CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        Guna2Panel6.SuspendLayout()
         Guna2Panel4.SuspendLayout()
         Guna2Panel2.SuspendLayout()
-        CType(Guna2DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(dgvRiverActivityHistory, ComponentModel.ISupportInitialize).BeginInit()
+        CType(Guna2PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
+        Guna2Panel8.SuspendLayout()
+        CType(Guna2PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
+        Guna2Panel9.SuspendLayout()
+        CType(Guna2PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
+        Guna2Panel10.SuspendLayout()
+        Guna2Panel11.SuspendLayout()
+        CType(Guna2PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
+        Guna2Panel12.SuspendLayout()
+        CType(Guna2PictureBox6, ComponentModel.ISupportInitialize).BeginInit()
+        Guna2Panel13.SuspendLayout()
+        CType(Guna2PictureBox7, ComponentModel.ISupportInitialize).BeginInit()
+        Guna2Panel14.SuspendLayout()
+        CType(Guna2PictureBox8, ComponentModel.ISupportInitialize).BeginInit()
+        Guna2Panel15.SuspendLayout()
+        CType(Guna2PictureBox9, ComponentModel.ISupportInitialize).BeginInit()
+        CType(Guna2PictureBox10, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Guna2Panel1
@@ -74,12 +183,13 @@ Partial Class SensorsUserControl
         Guna2Panel1.BorderColor = Color.FromArgb(CByte(204), CByte(204), CByte(204))
         Guna2Panel1.BorderRadius = 10
         Guna2Panel1.BorderThickness = 1
+        Guna2Panel1.Controls.Add(Guna2PictureBox9)
         Guna2Panel1.Controls.Add(Label1)
-        Guna2Panel1.CustomizableEdges = CustomizableEdges1
+        Guna2Panel1.CustomizableEdges = CustomizableEdges3
         Guna2Panel1.FillColor = Color.White
         Guna2Panel1.Location = New Point(18, 17)
         Guna2Panel1.Name = "Guna2Panel1"
-        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         Guna2Panel1.Size = New Size(734, 52)
         Guna2Panel1.TabIndex = 0
         ' 
@@ -87,10 +197,10 @@ Partial Class SensorsUserControl
         ' 
         Label1.AutoSize = True
         Label1.BackColor = Color.White
-        Label1.Font = New Font("Calibri", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(114, 14)
+        Label1.Font = New Font("Calibri", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Location = New Point(194, 12)
         Label1.Name = "Label1"
-        Label1.Size = New Size(357, 26)
+        Label1.Size = New Size(403, 29)
         Label1.TabIndex = 0
         Label1.Text = "Tuesday, November 11, 2025 – 1:13 PM"
         ' 
@@ -99,14 +209,133 @@ Partial Class SensorsUserControl
         Guna2Panel3.BorderColor = Color.FromArgb(CByte(204), CByte(204), CByte(204))
         Guna2Panel3.BorderRadius = 10
         Guna2Panel3.BorderThickness = 1
+        Guna2Panel3.Controls.Add(Guna2Panel10)
+        Guna2Panel3.Controls.Add(Guna2Panel5)
         Guna2Panel3.Controls.Add(Label4)
-        Guna2Panel3.CustomizableEdges = CustomizableEdges3
+        Guna2Panel3.CustomizableEdges = CustomizableEdges43
         Guna2Panel3.FillColor = Color.White
         Guna2Panel3.Location = New Point(18, 548)
         Guna2Panel3.Name = "Guna2Panel3"
-        Guna2Panel3.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        Guna2Panel3.Size = New Size(1200, 354)
+        Guna2Panel3.ShadowDecoration.CustomizableEdges = CustomizableEdges44
+        Guna2Panel3.Size = New Size(734, 354)
         Guna2Panel3.TabIndex = 3
+        ' 
+        ' Guna2Panel5
+        ' 
+        Guna2Panel5.BackColor = Color.Transparent
+        Guna2Panel5.BorderColor = Color.FromArgb(CByte(204), CByte(204), CByte(204))
+        Guna2Panel5.BorderRadius = 10
+        Guna2Panel5.Controls.Add(Guna2Panel9)
+        Guna2Panel5.Controls.Add(Guna2Panel8)
+        Guna2Panel5.Controls.Add(Guna2Panel7)
+        Guna2Panel5.Controls.Add(Guna2Panel6)
+        Guna2Panel5.CustomizableEdges = CustomizableEdges41
+        Guna2Panel5.FillColor = Color.White
+        Guna2Panel5.Location = New Point(29, 67)
+        Guna2Panel5.Name = "Guna2Panel5"
+        Guna2Panel5.ShadowDecoration.CustomizableEdges = CustomizableEdges42
+        Guna2Panel5.Size = New Size(330, 258)
+        Guna2Panel5.TabIndex = 4
+        ' 
+        ' Guna2Panel7
+        ' 
+        Guna2Panel7.Controls.Add(Label8)
+        Guna2Panel7.Controls.Add(Guna2PictureBox1)
+        Guna2Panel7.Controls.Add(Label7)
+        Guna2Panel7.Controls.Add(Guna2CircleButton1)
+        Guna2Panel7.CustomizableEdges = CustomizableEdges35
+        Guna2Panel7.Dock = DockStyle.Top
+        Guna2Panel7.Location = New Point(0, 0)
+        Guna2Panel7.Name = "Guna2Panel7"
+        Guna2Panel7.ShadowDecoration.CustomizableEdges = CustomizableEdges36
+        Guna2Panel7.Size = New Size(330, 46)
+        Guna2Panel7.TabIndex = 1
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.Font = New Font("Calibri", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label8.Location = New Point(265, 14)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(48, 23)
+        Label8.TabIndex = 3
+        Label8.Text = "92 %"
+        ' 
+        ' Guna2PictureBox1
+        ' 
+        Guna2PictureBox1.CustomizableEdges = CustomizableEdges32
+        Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), Image)
+        Guna2PictureBox1.ImageRotate = 0F
+        Guna2PictureBox1.Location = New Point(221, 8)
+        Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges33
+        Guna2PictureBox1.Size = New Size(38, 29)
+        Guna2PictureBox1.TabIndex = 2
+        Guna2PictureBox1.TabStop = False
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Font = New Font("Calibri", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label7.Location = New Point(34, 12)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(135, 23)
+        Label7.TabIndex = 1
+        Label7.Text = "Alley 18 Station"
+        ' 
+        ' Guna2CircleButton1
+        ' 
+        Guna2CircleButton1.DisabledState.BorderColor = Color.DarkGray
+        Guna2CircleButton1.DisabledState.CustomBorderColor = Color.DarkGray
+        Guna2CircleButton1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        Guna2CircleButton1.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        Guna2CircleButton1.FillColor = Color.LimeGreen
+        Guna2CircleButton1.Font = New Font("Segoe UI", 9F)
+        Guna2CircleButton1.ForeColor = Color.White
+        Guna2CircleButton1.Location = New Point(13, 17)
+        Guna2CircleButton1.Name = "Guna2CircleButton1"
+        Guna2CircleButton1.ShadowDecoration.CustomizableEdges = CustomizableEdges34
+        Guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Guna2CircleButton1.Size = New Size(15, 15)
+        Guna2CircleButton1.TabIndex = 0
+        Guna2CircleButton1.Text = "Guna2CircleButton1"
+        ' 
+        ' Guna2Panel6
+        ' 
+        Guna2Panel6.BackColor = Color.Transparent
+        Guna2Panel6.BorderColor = Color.FromArgb(CByte(204), CByte(204), CByte(204))
+        Guna2Panel6.BorderRadius = 10
+        Guna2Panel6.Controls.Add(Label5)
+        Guna2Panel6.Controls.Add(Guna2PictureBox2)
+        Guna2Panel6.Controls.Add(Label6)
+        Guna2Panel6.CustomizableEdges = CustomizableEdges39
+        Guna2Panel6.FillColor = Color.White
+        Guna2Panel6.Location = New Point(22, 68)
+        Guna2Panel6.Name = "Guna2Panel6"
+        Guna2Panel6.ShadowDecoration.CustomizableEdges = CustomizableEdges40
+        Guna2Panel6.Size = New Size(291, 42)
+        Guna2Panel6.TabIndex = 0
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Font = New Font("Calibri", 12F, FontStyle.Bold)
+        Label6.ForeColor = SystemColors.HotTrack
+        Label6.Location = New Point(227, 14)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(55, 19)
+        Label6.TabIndex = 1
+        Label6.Text = "Strong"
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Font = New Font("Calibri", 14.25F)
+        Label5.Location = New Point(41, 11)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(134, 23)
+        Label5.TabIndex = 0
+        Label5.Text = "Signal Strength :"
         ' 
         ' Label4
         ' 
@@ -126,11 +355,11 @@ Partial Class SensorsUserControl
         Guna2Panel4.BorderThickness = 1
         Guna2Panel4.Controls.Add(GunaChart1)
         Guna2Panel4.Controls.Add(Label3)
-        Guna2Panel4.CustomizableEdges = CustomizableEdges5
+        Guna2Panel4.CustomizableEdges = CustomizableEdges45
         Guna2Panel4.FillColor = Color.White
         Guna2Panel4.Location = New Point(19, 85)
         Guna2Panel4.Name = "Guna2Panel4"
-        Guna2Panel4.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        Guna2Panel4.ShadowDecoration.CustomizableEdges = CustomizableEdges46
         Guna2Panel4.Size = New Size(733, 431)
         Guna2Panel4.TabIndex = 4
         ' 
@@ -184,15 +413,16 @@ Partial Class SensorsUserControl
         Guna2Panel2.BorderColor = Color.FromArgb(CByte(204), CByte(204), CByte(204))
         Guna2Panel2.BorderRadius = 10
         Guna2Panel2.BorderThickness = 1
+        Guna2Panel2.Controls.Add(Guna2PictureBox10)
+        Guna2Panel2.Controls.Add(Guna2Panel15)
         Guna2Panel2.Controls.Add(btnViewRiverActivity)
-        Guna2Panel2.Controls.Add(Guna2DataGridView1)
         Guna2Panel2.Controls.Add(Label2)
-        Guna2Panel2.CustomizableEdges = CustomizableEdges9
+        Guna2Panel2.CustomizableEdges = CustomizableEdges53
         Guna2Panel2.FillColor = Color.White
         Guna2Panel2.Location = New Point(779, 17)
         Guna2Panel2.Name = "Guna2Panel2"
-        Guna2Panel2.ShadowDecoration.CustomizableEdges = CustomizableEdges10
-        Guna2Panel2.Size = New Size(439, 499)
+        Guna2Panel2.ShadowDecoration.CustomizableEdges = CustomizableEdges54
+        Guna2Panel2.Size = New Size(439, 885)
         Guna2Panel2.TabIndex = 5
         ' 
         ' btnViewRiverActivity
@@ -200,7 +430,7 @@ Partial Class SensorsUserControl
         btnViewRiverActivity.BorderColor = Color.DimGray
         btnViewRiverActivity.BorderRadius = 5
         btnViewRiverActivity.BorderThickness = 1
-        btnViewRiverActivity.CustomizableEdges = CustomizableEdges7
+        btnViewRiverActivity.CustomizableEdges = CustomizableEdges51
         btnViewRiverActivity.DisabledState.BorderColor = Color.DarkGray
         btnViewRiverActivity.DisabledState.CustomBorderColor = Color.DarkGray
         btnViewRiverActivity.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -208,71 +438,87 @@ Partial Class SensorsUserControl
         btnViewRiverActivity.FillColor = Color.LightGray
         btnViewRiverActivity.Font = New Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnViewRiverActivity.ForeColor = Color.Black
-        btnViewRiverActivity.Location = New Point(323, 438)
+        btnViewRiverActivity.Location = New Point(323, 824)
         btnViewRiverActivity.Name = "btnViewRiverActivity"
-        btnViewRiverActivity.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        btnViewRiverActivity.ShadowDecoration.CustomizableEdges = CustomizableEdges52
         btnViewRiverActivity.Size = New Size(90, 32)
         btnViewRiverActivity.TabIndex = 3
         btnViewRiverActivity.Text = "View All"
         ' 
-        ' Guna2DataGridView1
+        ' dgvRiverActivityHistory
         ' 
+        dgvRiverActivityHistory.AllowUserToResizeRows = False
         DataGridViewCellStyle1.BackColor = Color.White
-        Guna2DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle1.Font = New Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle1.ForeColor = SystemColors.ControlText
+        DataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        DataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        dgvRiverActivityHistory.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
-        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle2.ForeColor = Color.White
-        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle2.BackColor = Color.White
+        DataGridViewCellStyle2.Font = New Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle2.ForeColor = Color.Black
+        DataGridViewCellStyle2.SelectionBackColor = Color.White
         DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
-        Guna2DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Guna2DataGridView1.ColumnHeadersHeight = 4
-        Guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        dgvRiverActivityHistory.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        dgvRiverActivityHistory.ColumnHeadersHeight = 25
+        dgvRiverActivityHistory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        dgvRiverActivityHistory.Columns.AddRange(New DataGridViewColumn() {Time, WaterLevel, Status})
         DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = Color.White
-        DataGridViewCellStyle3.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle3.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        DataGridViewCellStyle3.Font = New Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle3.ForeColor = Color.Black
         DataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
         DataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
         DataGridViewCellStyle3.WrapMode = DataGridViewTriState.False
-        Guna2DataGridView1.DefaultCellStyle = DataGridViewCellStyle3
-        Guna2DataGridView1.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
-        Guna2DataGridView1.Location = New Point(24, 68)
-        Guna2DataGridView1.Name = "Guna2DataGridView1"
-        Guna2DataGridView1.RowHeadersVisible = False
-        Guna2DataGridView1.Size = New Size(389, 330)
-        Guna2DataGridView1.TabIndex = 2
-        Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White
-        Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = Nothing
-        Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty
-        Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty
-        Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty
-        Guna2DataGridView1.ThemeStyle.BackColor = Color.White
-        Guna2DataGridView1.ThemeStyle.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
-        Guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
-        Guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None
-        Guna2DataGridView1.ThemeStyle.HeaderStyle.Font = New Font("Segoe UI", 9F)
-        Guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = Color.White
-        Guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        Guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4
-        Guna2DataGridView1.ThemeStyle.ReadOnly = False
-        Guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = Color.White
-        Guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
-        Guna2DataGridView1.ThemeStyle.RowsStyle.Font = New Font("Segoe UI", 9F)
-        Guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
-        Guna2DataGridView1.ThemeStyle.RowsStyle.Height = 25
-        Guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
-        Guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        dgvRiverActivityHistory.DefaultCellStyle = DataGridViewCellStyle3
+        dgvRiverActivityHistory.Dock = DockStyle.Fill
+        dgvRiverActivityHistory.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        dgvRiverActivityHistory.Location = New Point(0, 0)
+        dgvRiverActivityHistory.Name = "dgvRiverActivityHistory"
+        dgvRiverActivityHistory.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = Color.White
+        DataGridViewCellStyle4.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle4.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = Color.White
+        DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.True
+        dgvRiverActivityHistory.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        dgvRiverActivityHistory.RowHeadersVisible = False
+        dgvRiverActivityHistory.Size = New Size(393, 737)
+        dgvRiverActivityHistory.TabIndex = 2
+        dgvRiverActivityHistory.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White
+        dgvRiverActivityHistory.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        dgvRiverActivityHistory.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty
+        dgvRiverActivityHistory.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty
+        dgvRiverActivityHistory.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty
+        dgvRiverActivityHistory.ThemeStyle.BackColor = Color.White
+        dgvRiverActivityHistory.ThemeStyle.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        dgvRiverActivityHistory.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
+        dgvRiverActivityHistory.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None
+        dgvRiverActivityHistory.ThemeStyle.HeaderStyle.Font = New Font("Segoe UI", 9F)
+        dgvRiverActivityHistory.ThemeStyle.HeaderStyle.ForeColor = Color.White
+        dgvRiverActivityHistory.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        dgvRiverActivityHistory.ThemeStyle.HeaderStyle.Height = 25
+        dgvRiverActivityHistory.ThemeStyle.ReadOnly = False
+        dgvRiverActivityHistory.ThemeStyle.RowsStyle.BackColor = Color.White
+        dgvRiverActivityHistory.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
+        dgvRiverActivityHistory.ThemeStyle.RowsStyle.Font = New Font("Segoe UI", 9F)
+        dgvRiverActivityHistory.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        dgvRiverActivityHistory.ThemeStyle.RowsStyle.Height = 25
+        dgvRiverActivityHistory.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        dgvRiverActivityHistory.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
         Label2.BackColor = Color.White
-        Label2.Font = New Font("Calibri", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(150, 14)
+        Label2.Font = New Font("Calibri", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.Location = New Point(67, 14)
         Label2.Name = "Label2"
-        Label2.Size = New Size(194, 26)
+        Label2.Size = New Size(222, 29)
         Label2.TabIndex = 1
         Label2.Text = "River Activity History"
         ' 
@@ -281,6 +527,394 @@ Partial Class SensorsUserControl
         GunaAreaDataset1.BorderColor = Color.Empty
         GunaAreaDataset1.FillColor = Color.Empty
         GunaAreaDataset1.Label = "Area1"
+        ' 
+        ' Guna2PictureBox2
+        ' 
+        Guna2PictureBox2.CustomizableEdges = CustomizableEdges37
+        Guna2PictureBox2.Image = CType(resources.GetObject("Guna2PictureBox2.Image"), Image)
+        Guna2PictureBox2.ImageRotate = 0F
+        Guna2PictureBox2.Location = New Point(7, 8)
+        Guna2PictureBox2.Name = "Guna2PictureBox2"
+        Guna2PictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges38
+        Guna2PictureBox2.Size = New Size(37, 29)
+        Guna2PictureBox2.TabIndex = 2
+        Guna2PictureBox2.TabStop = False
+        ' 
+        ' Guna2Panel8
+        ' 
+        Guna2Panel8.BackColor = Color.Transparent
+        Guna2Panel8.BorderColor = Color.FromArgb(CByte(204), CByte(204), CByte(204))
+        Guna2Panel8.BorderRadius = 10
+        Guna2Panel8.Controls.Add(Label9)
+        Guna2Panel8.Controls.Add(Guna2PictureBox3)
+        Guna2Panel8.Controls.Add(Label10)
+        Guna2Panel8.CustomizableEdges = CustomizableEdges30
+        Guna2Panel8.FillColor = Color.White
+        Guna2Panel8.Location = New Point(22, 130)
+        Guna2Panel8.Name = "Guna2Panel8"
+        Guna2Panel8.ShadowDecoration.CustomizableEdges = CustomizableEdges31
+        Guna2Panel8.Size = New Size(291, 42)
+        Guna2Panel8.TabIndex = 2
+        ' 
+        ' Label9
+        ' 
+        Label9.AutoSize = True
+        Label9.Font = New Font("Calibri", 14.25F)
+        Label9.Location = New Point(41, 11)
+        Label9.Name = "Label9"
+        Label9.Size = New Size(117, 23)
+        Label9.TabIndex = 0
+        Label9.Text = "Temperature :"
+        ' 
+        ' Guna2PictureBox3
+        ' 
+        Guna2PictureBox3.CustomizableEdges = CustomizableEdges28
+        Guna2PictureBox3.Image = CType(resources.GetObject("Guna2PictureBox3.Image"), Image)
+        Guna2PictureBox3.ImageRotate = 0F
+        Guna2PictureBox3.Location = New Point(6, 6)
+        Guna2PictureBox3.Name = "Guna2PictureBox3"
+        Guna2PictureBox3.ShadowDecoration.CustomizableEdges = CustomizableEdges29
+        Guna2PictureBox3.Size = New Size(37, 32)
+        Guna2PictureBox3.TabIndex = 2
+        Guna2PictureBox3.TabStop = False
+        ' 
+        ' Label10
+        ' 
+        Label10.AutoSize = True
+        Label10.Font = New Font("Calibri", 12F, FontStyle.Bold)
+        Label10.ForeColor = SystemColors.HotTrack
+        Label10.Location = New Point(233, 15)
+        Label10.Name = "Label10"
+        Label10.Size = New Size(49, 19)
+        Label10.TabIndex = 1
+        Label10.Text = "38.8 C"
+        ' 
+        ' Guna2Panel9
+        ' 
+        Guna2Panel9.BackColor = Color.Transparent
+        Guna2Panel9.BorderColor = Color.FromArgb(CByte(204), CByte(204), CByte(204))
+        Guna2Panel9.BorderRadius = 10
+        Guna2Panel9.Controls.Add(Label11)
+        Guna2Panel9.Controls.Add(Guna2PictureBox4)
+        Guna2Panel9.Controls.Add(Label12)
+        Guna2Panel9.CustomizableEdges = CustomizableEdges26
+        Guna2Panel9.FillColor = Color.White
+        Guna2Panel9.Location = New Point(22, 190)
+        Guna2Panel9.Name = "Guna2Panel9"
+        Guna2Panel9.ShadowDecoration.CustomizableEdges = CustomizableEdges27
+        Guna2Panel9.Size = New Size(291, 42)
+        Guna2Panel9.TabIndex = 3
+        ' 
+        ' Label11
+        ' 
+        Label11.AutoSize = True
+        Label11.Font = New Font("Calibri", 14.25F)
+        Label11.Location = New Point(41, 11)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(163, 23)
+        Label11.TabIndex = 0
+        Label11.Text = "Solar Panel Output :"
+        ' 
+        ' Guna2PictureBox4
+        ' 
+        Guna2PictureBox4.CustomizableEdges = CustomizableEdges24
+        Guna2PictureBox4.Image = CType(resources.GetObject("Guna2PictureBox4.Image"), Image)
+        Guna2PictureBox4.ImageRotate = 0F
+        Guna2PictureBox4.Location = New Point(7, 7)
+        Guna2PictureBox4.Name = "Guna2PictureBox4"
+        Guna2PictureBox4.ShadowDecoration.CustomizableEdges = CustomizableEdges25
+        Guna2PictureBox4.Size = New Size(37, 29)
+        Guna2PictureBox4.TabIndex = 2
+        Guna2PictureBox4.TabStop = False
+        ' 
+        ' Label12
+        ' 
+        Label12.AutoSize = True
+        Label12.Font = New Font("Calibri", 12F, FontStyle.Bold)
+        Label12.ForeColor = SystemColors.HotTrack
+        Label12.Location = New Point(203, 14)
+        Label12.Name = "Label12"
+        Label12.Size = New Size(79, 19)
+        Label12.TabIndex = 1
+        Label12.Text = "26V/180W"
+        ' 
+        ' Guna2Panel10
+        ' 
+        Guna2Panel10.BackColor = Color.Transparent
+        Guna2Panel10.BorderColor = Color.FromArgb(CByte(204), CByte(204), CByte(204))
+        Guna2Panel10.BorderRadius = 10
+        Guna2Panel10.Controls.Add(Guna2Panel11)
+        Guna2Panel10.Controls.Add(Guna2Panel12)
+        Guna2Panel10.Controls.Add(Guna2Panel13)
+        Guna2Panel10.Controls.Add(Guna2Panel14)
+        Guna2Panel10.CustomizableEdges = CustomizableEdges22
+        Guna2Panel10.FillColor = Color.White
+        Guna2Panel10.Location = New Point(383, 67)
+        Guna2Panel10.Name = "Guna2Panel10"
+        Guna2Panel10.ShadowDecoration.CustomizableEdges = CustomizableEdges23
+        Guna2Panel10.Size = New Size(330, 258)
+        Guna2Panel10.TabIndex = 5
+        ' 
+        ' Guna2Panel11
+        ' 
+        Guna2Panel11.BackColor = Color.Transparent
+        Guna2Panel11.BorderColor = Color.FromArgb(CByte(204), CByte(204), CByte(204))
+        Guna2Panel11.BorderRadius = 10
+        Guna2Panel11.Controls.Add(Label13)
+        Guna2Panel11.Controls.Add(Guna2PictureBox5)
+        Guna2Panel11.Controls.Add(Label14)
+        Guna2Panel11.CustomizableEdges = CustomizableEdges7
+        Guna2Panel11.FillColor = Color.White
+        Guna2Panel11.Location = New Point(22, 190)
+        Guna2Panel11.Name = "Guna2Panel11"
+        Guna2Panel11.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        Guna2Panel11.Size = New Size(291, 42)
+        Guna2Panel11.TabIndex = 3
+        ' 
+        ' Label13
+        ' 
+        Label13.AutoSize = True
+        Label13.Font = New Font("Calibri", 14.25F)
+        Label13.Location = New Point(41, 11)
+        Label13.Name = "Label13"
+        Label13.Size = New Size(163, 23)
+        Label13.TabIndex = 0
+        Label13.Text = "Solar Panel Output :"
+        ' 
+        ' Guna2PictureBox5
+        ' 
+        Guna2PictureBox5.CustomizableEdges = CustomizableEdges5
+        Guna2PictureBox5.Image = CType(resources.GetObject("Guna2PictureBox5.Image"), Image)
+        Guna2PictureBox5.ImageRotate = 0F
+        Guna2PictureBox5.Location = New Point(7, 7)
+        Guna2PictureBox5.Name = "Guna2PictureBox5"
+        Guna2PictureBox5.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        Guna2PictureBox5.Size = New Size(37, 29)
+        Guna2PictureBox5.TabIndex = 2
+        Guna2PictureBox5.TabStop = False
+        ' 
+        ' Label14
+        ' 
+        Label14.AutoSize = True
+        Label14.Font = New Font("Calibri", 12F, FontStyle.Bold)
+        Label14.ForeColor = SystemColors.HotTrack
+        Label14.Location = New Point(203, 14)
+        Label14.Name = "Label14"
+        Label14.Size = New Size(79, 19)
+        Label14.TabIndex = 1
+        Label14.Text = "26V/180W"
+        ' 
+        ' Guna2Panel12
+        ' 
+        Guna2Panel12.BackColor = Color.Transparent
+        Guna2Panel12.BorderColor = Color.FromArgb(CByte(204), CByte(204), CByte(204))
+        Guna2Panel12.BorderRadius = 10
+        Guna2Panel12.Controls.Add(Label15)
+        Guna2Panel12.Controls.Add(Guna2PictureBox6)
+        Guna2Panel12.Controls.Add(Label16)
+        Guna2Panel12.CustomizableEdges = CustomizableEdges11
+        Guna2Panel12.FillColor = Color.White
+        Guna2Panel12.Location = New Point(22, 130)
+        Guna2Panel12.Name = "Guna2Panel12"
+        Guna2Panel12.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        Guna2Panel12.Size = New Size(291, 42)
+        Guna2Panel12.TabIndex = 2
+        ' 
+        ' Label15
+        ' 
+        Label15.AutoSize = True
+        Label15.Font = New Font("Calibri", 14.25F)
+        Label15.Location = New Point(41, 11)
+        Label15.Name = "Label15"
+        Label15.Size = New Size(117, 23)
+        Label15.TabIndex = 0
+        Label15.Text = "Temperature :"
+        ' 
+        ' Guna2PictureBox6
+        ' 
+        Guna2PictureBox6.CustomizableEdges = CustomizableEdges9
+        Guna2PictureBox6.Image = CType(resources.GetObject("Guna2PictureBox6.Image"), Image)
+        Guna2PictureBox6.ImageRotate = 0F
+        Guna2PictureBox6.Location = New Point(6, 6)
+        Guna2PictureBox6.Name = "Guna2PictureBox6"
+        Guna2PictureBox6.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        Guna2PictureBox6.Size = New Size(37, 32)
+        Guna2PictureBox6.TabIndex = 2
+        Guna2PictureBox6.TabStop = False
+        ' 
+        ' Label16
+        ' 
+        Label16.AutoSize = True
+        Label16.Font = New Font("Calibri", 12F, FontStyle.Bold)
+        Label16.ForeColor = SystemColors.HotTrack
+        Label16.Location = New Point(233, 15)
+        Label16.Name = "Label16"
+        Label16.Size = New Size(49, 19)
+        Label16.TabIndex = 1
+        Label16.Text = "38.8 C"
+        ' 
+        ' Guna2Panel13
+        ' 
+        Guna2Panel13.Controls.Add(Label17)
+        Guna2Panel13.Controls.Add(Guna2PictureBox7)
+        Guna2Panel13.Controls.Add(Label18)
+        Guna2Panel13.Controls.Add(Guna2CircleButton2)
+        Guna2Panel13.CustomizableEdges = CustomizableEdges16
+        Guna2Panel13.Dock = DockStyle.Top
+        Guna2Panel13.Location = New Point(0, 0)
+        Guna2Panel13.Name = "Guna2Panel13"
+        Guna2Panel13.ShadowDecoration.CustomizableEdges = CustomizableEdges17
+        Guna2Panel13.Size = New Size(330, 46)
+        Guna2Panel13.TabIndex = 1
+        ' 
+        ' Label17
+        ' 
+        Label17.AutoSize = True
+        Label17.Font = New Font("Calibri", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label17.Location = New Point(265, 14)
+        Label17.Name = "Label17"
+        Label17.Size = New Size(48, 23)
+        Label17.TabIndex = 3
+        Label17.Text = "92 %"
+        ' 
+        ' Guna2PictureBox7
+        ' 
+        Guna2PictureBox7.CustomizableEdges = CustomizableEdges13
+        Guna2PictureBox7.Image = CType(resources.GetObject("Guna2PictureBox7.Image"), Image)
+        Guna2PictureBox7.ImageRotate = 0F
+        Guna2PictureBox7.Location = New Point(221, 8)
+        Guna2PictureBox7.Name = "Guna2PictureBox7"
+        Guna2PictureBox7.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        Guna2PictureBox7.Size = New Size(38, 29)
+        Guna2PictureBox7.TabIndex = 2
+        Guna2PictureBox7.TabStop = False
+        ' 
+        ' Label18
+        ' 
+        Label18.AutoSize = True
+        Label18.Font = New Font("Calibri", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label18.Location = New Point(34, 12)
+        Label18.Name = "Label18"
+        Label18.Size = New Size(126, 23)
+        Label18.TabIndex = 1
+        Label18.Text = "Entry 1 Station"
+        ' 
+        ' Guna2CircleButton2
+        ' 
+        Guna2CircleButton2.DisabledState.BorderColor = Color.DarkGray
+        Guna2CircleButton2.DisabledState.CustomBorderColor = Color.DarkGray
+        Guna2CircleButton2.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        Guna2CircleButton2.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        Guna2CircleButton2.FillColor = Color.LimeGreen
+        Guna2CircleButton2.Font = New Font("Segoe UI", 9F)
+        Guna2CircleButton2.ForeColor = Color.White
+        Guna2CircleButton2.Location = New Point(13, 17)
+        Guna2CircleButton2.Name = "Guna2CircleButton2"
+        Guna2CircleButton2.ShadowDecoration.CustomizableEdges = CustomizableEdges15
+        Guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Guna2CircleButton2.Size = New Size(15, 15)
+        Guna2CircleButton2.TabIndex = 0
+        Guna2CircleButton2.Text = "Guna2CircleButton2"
+        ' 
+        ' Guna2Panel14
+        ' 
+        Guna2Panel14.BackColor = Color.Transparent
+        Guna2Panel14.BorderColor = Color.FromArgb(CByte(204), CByte(204), CByte(204))
+        Guna2Panel14.BorderRadius = 10
+        Guna2Panel14.Controls.Add(Label19)
+        Guna2Panel14.Controls.Add(Guna2PictureBox8)
+        Guna2Panel14.Controls.Add(Label20)
+        Guna2Panel14.CustomizableEdges = CustomizableEdges20
+        Guna2Panel14.FillColor = Color.White
+        Guna2Panel14.Location = New Point(22, 68)
+        Guna2Panel14.Name = "Guna2Panel14"
+        Guna2Panel14.ShadowDecoration.CustomizableEdges = CustomizableEdges21
+        Guna2Panel14.Size = New Size(291, 42)
+        Guna2Panel14.TabIndex = 0
+        ' 
+        ' Label19
+        ' 
+        Label19.AutoSize = True
+        Label19.Font = New Font("Calibri", 14.25F)
+        Label19.Location = New Point(41, 11)
+        Label19.Name = "Label19"
+        Label19.Size = New Size(134, 23)
+        Label19.TabIndex = 0
+        Label19.Text = "Signal Strength :"
+        ' 
+        ' Guna2PictureBox8
+        ' 
+        Guna2PictureBox8.CustomizableEdges = CustomizableEdges18
+        Guna2PictureBox8.Image = CType(resources.GetObject("Guna2PictureBox8.Image"), Image)
+        Guna2PictureBox8.ImageRotate = 0F
+        Guna2PictureBox8.Location = New Point(7, 8)
+        Guna2PictureBox8.Name = "Guna2PictureBox8"
+        Guna2PictureBox8.ShadowDecoration.CustomizableEdges = CustomizableEdges19
+        Guna2PictureBox8.Size = New Size(37, 29)
+        Guna2PictureBox8.TabIndex = 2
+        Guna2PictureBox8.TabStop = False
+        ' 
+        ' Label20
+        ' 
+        Label20.AutoSize = True
+        Label20.Font = New Font("Calibri", 12F, FontStyle.Bold)
+        Label20.ForeColor = SystemColors.HotTrack
+        Label20.Location = New Point(227, 14)
+        Label20.Name = "Label20"
+        Label20.Size = New Size(55, 19)
+        Label20.TabIndex = 1
+        Label20.Text = "Strong"
+        ' 
+        ' Guna2Panel15
+        ' 
+        Guna2Panel15.Controls.Add(dgvRiverActivityHistory)
+        Guna2Panel15.CustomizableEdges = CustomizableEdges49
+        Guna2Panel15.Location = New Point(20, 59)
+        Guna2Panel15.Name = "Guna2Panel15"
+        Guna2Panel15.ShadowDecoration.CustomizableEdges = CustomizableEdges50
+        Guna2Panel15.Size = New Size(393, 737)
+        Guna2Panel15.TabIndex = 4
+        ' 
+        ' Time
+        ' 
+        Time.HeaderText = "Time"
+        Time.Name = "Time"
+        ' 
+        ' WaterLevel
+        ' 
+        WaterLevel.HeaderText = "Level (ft)"
+        WaterLevel.Name = "WaterLevel"
+        ' 
+        ' Status
+        ' 
+        Status.HeaderText = "Status"
+        Status.Name = "Status"
+        ' 
+        ' Guna2PictureBox9
+        ' 
+        Guna2PictureBox9.BackColor = Color.Transparent
+        Guna2PictureBox9.CustomizableEdges = CustomizableEdges1
+        Guna2PictureBox9.Image = CType(resources.GetObject("Guna2PictureBox9.Image"), Image)
+        Guna2PictureBox9.ImageRotate = 0F
+        Guna2PictureBox9.Location = New Point(161, 8)
+        Guna2PictureBox9.Name = "Guna2PictureBox9"
+        Guna2PictureBox9.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        Guna2PictureBox9.Size = New Size(37, 35)
+        Guna2PictureBox9.TabIndex = 1
+        Guna2PictureBox9.TabStop = False
+        ' 
+        ' Guna2PictureBox10
+        ' 
+        Guna2PictureBox10.BackColor = Color.Transparent
+        Guna2PictureBox10.CustomizableEdges = CustomizableEdges47
+        Guna2PictureBox10.Image = CType(resources.GetObject("Guna2PictureBox10.Image"), Image)
+        Guna2PictureBox10.ImageRotate = 0F
+        Guna2PictureBox10.Location = New Point(20, 12)
+        Guna2PictureBox10.Name = "Guna2PictureBox10"
+        Guna2PictureBox10.ShadowDecoration.CustomizableEdges = CustomizableEdges48
+        Guna2PictureBox10.Size = New Size(41, 41)
+        Guna2PictureBox10.TabIndex = 5
+        Guna2PictureBox10.TabStop = False
         ' 
         ' SensorsUserControl
         ' 
@@ -296,11 +930,40 @@ Partial Class SensorsUserControl
         Guna2Panel1.PerformLayout()
         Guna2Panel3.ResumeLayout(False)
         Guna2Panel3.PerformLayout()
+        Guna2Panel5.ResumeLayout(False)
+        Guna2Panel7.ResumeLayout(False)
+        Guna2Panel7.PerformLayout()
+        CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        Guna2Panel6.ResumeLayout(False)
+        Guna2Panel6.PerformLayout()
         Guna2Panel4.ResumeLayout(False)
         Guna2Panel4.PerformLayout()
         Guna2Panel2.ResumeLayout(False)
         Guna2Panel2.PerformLayout()
-        CType(Guna2DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        CType(dgvRiverActivityHistory, ComponentModel.ISupportInitialize).EndInit()
+        CType(Guna2PictureBox2, ComponentModel.ISupportInitialize).EndInit()
+        Guna2Panel8.ResumeLayout(False)
+        Guna2Panel8.PerformLayout()
+        CType(Guna2PictureBox3, ComponentModel.ISupportInitialize).EndInit()
+        Guna2Panel9.ResumeLayout(False)
+        Guna2Panel9.PerformLayout()
+        CType(Guna2PictureBox4, ComponentModel.ISupportInitialize).EndInit()
+        Guna2Panel10.ResumeLayout(False)
+        Guna2Panel11.ResumeLayout(False)
+        Guna2Panel11.PerformLayout()
+        CType(Guna2PictureBox5, ComponentModel.ISupportInitialize).EndInit()
+        Guna2Panel12.ResumeLayout(False)
+        Guna2Panel12.PerformLayout()
+        CType(Guna2PictureBox6, ComponentModel.ISupportInitialize).EndInit()
+        Guna2Panel13.ResumeLayout(False)
+        Guna2Panel13.PerformLayout()
+        CType(Guna2PictureBox7, ComponentModel.ISupportInitialize).EndInit()
+        Guna2Panel14.ResumeLayout(False)
+        Guna2Panel14.PerformLayout()
+        CType(Guna2PictureBox8, ComponentModel.ISupportInitialize).EndInit()
+        Guna2Panel15.ResumeLayout(False)
+        CType(Guna2PictureBox9, ComponentModel.ISupportInitialize).EndInit()
+        CType(Guna2PictureBox10, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -313,8 +976,50 @@ Partial Class SensorsUserControl
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents GunaChart1 As Guna.Charts.WinForms.GunaChart
-    Friend WithEvents Guna2DataGridView1 As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents dgvRiverActivityHistory As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents GunaAreaDataset1 As Guna.Charts.WinForms.GunaAreaDataset
     Friend WithEvents btnViewRiverActivity As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2Panel5 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Guna2Panel6 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Guna2Panel7 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Guna2CircleButton1 As Guna.UI2.WinForms.Guna2CircleButton
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Guna2Panel9 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Guna2PictureBox4 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Guna2Panel8 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Guna2PictureBox3 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Guna2PictureBox2 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents Guna2Panel10 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Guna2Panel11 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Guna2PictureBox5 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Guna2Panel12 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Guna2PictureBox6 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Guna2Panel13 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Guna2PictureBox7 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents Label18 As Label
+    Friend WithEvents Guna2CircleButton2 As Guna.UI2.WinForms.Guna2CircleButton
+    Friend WithEvents Guna2Panel14 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Label19 As Label
+    Friend WithEvents Guna2PictureBox8 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents Label20 As Label
+    Friend WithEvents Guna2Panel15 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Time As DataGridViewTextBoxColumn
+    Friend WithEvents WaterLevel As DataGridViewTextBoxColumn
+    Friend WithEvents Status As DataGridViewTextBoxColumn
+    Friend WithEvents Guna2PictureBox9 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents Guna2PictureBox10 As Guna.UI2.WinForms.Guna2PictureBox
 
 End Class
