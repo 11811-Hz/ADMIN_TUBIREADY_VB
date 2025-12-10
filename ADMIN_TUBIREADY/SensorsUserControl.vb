@@ -20,18 +20,20 @@ Public Class SensorsUserControl
             Dim temp As String = Await GetDataAsync("temp")
             Dim humid As String = Await GetDataAsync("humidity")
 
-            ' Update UI
-            Me.Invoke(Sub()
-                          lblTemp.Text = temp & "°C"
-                          lblHumid.Text = humid & "%"
-                      End Sub)
+            If Me.IsHandleCreated Then
+                Me.BeginInvoke(Sub()
+                                   lblTemp.Text = temp & "°C"
+                                   lblHumid.Text = humid & "%"
+                               End Sub)
+            End If
 
         Catch ex As Exception
-            ' Error fallback
-            Me.Invoke(Sub()
-                          lblTemp.Text = "ERR"
-                          lblHumid.Text = "ERR"
-                      End Sub)
+            If Me.IsHandleCreated Then
+                Me.BeginInvoke(Sub()
+                                   lblTemp.Text = "ERR"
+                                   lblHumid.Text = "ERR"
+                               End Sub)
+            End If
         End Try
     End Sub
 
@@ -43,8 +45,4 @@ Public Class SensorsUserControl
         Dim content As String = Await response.Content.ReadAsStringAsync()
         Return content.Trim()
     End Function
-
-    Private Sub GunaChart1_Load(sender As Object, e As EventArgs) Handles GunaChart1.Load
-
-    End Sub
 End Class

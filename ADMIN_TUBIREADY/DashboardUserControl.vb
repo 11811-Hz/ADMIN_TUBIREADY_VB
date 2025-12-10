@@ -1,17 +1,25 @@
 ﻿Imports System
 Imports System.Collections.Generic
+Imports System.Data.SqlClient
 Imports System.Drawing
-Imports System.Linq
-Imports System.Windows.Forms
 Imports System.Drawing.Drawing2D
-Imports System.Net
-Imports System.Text
 Imports System.IO
+Imports System.Linq
+Imports System.Net
 Imports System.Net.Http
+Imports System.Text
 Imports System.Threading.Tasks
-Imports MySql.Data.MySqlClient
+Imports System.Windows.Forms
+Imports Microsoft.Data.SqlClient
+
 
 Public Class DashboardUserControl
+
+    Private connectionString As String = "server=10.148.172.193\SQLEXPRESS,1433;user id=TubiReadyAdmin;password=123456789;database=TubiReadyDB;TrustServerCertificate=True;"
+
+    ' === NEW: 5-minute database interval ===
+    Private lastSaveTime As DateTime = DateTime.MinValue
+    Private saveInterval As TimeSpan = TimeSpan.FromMinutes(5)
 
     ' Add a shared HttpClient (reuse to avoid socket exhaustion)
     Private Shared ReadOnly httpClient As New HttpClient() With {
@@ -51,11 +59,37 @@ Public Class DashboardUserControl
         End Sub
     End Class
 
-
     Private Sub DashboardUserControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 
+    ' new line for database 
+
+    Private Sub SaveWaterLevelToDatabase(waterLevel As Double, severity As String)
+        Try
+            Using conn As New SqlConnection(connectionString)
+                conn.Open()
+
+                Dim query As String =
+                "INSERT INTO Ultrasonic (ReadingTime, WaterLevel, Severity, Is_Synced) 
+                 VALUES (@ReadingTime, @WaterLevel, @Severity, @Is_Synced)"
+
+                Using cmd As New SqlCommand(query, conn)
+                    cmd.Parameters.AddWithValue("@ReadingTime", DateTime.Now)
+                    cmd.Parameters.AddWithValue("@WaterLevel", waterLevel)
+                    cmd.Parameters.AddWithValue("@Severity", severity)
+                    cmd.Parameters.AddWithValue("@Is_Synced", "false")
+
+                    cmd.ExecuteNonQuery()
+                End Using
+            End Using
+
+            Console.WriteLine("Water level saved to SQL Server.")
+
+        Catch ex As Exception
+            MessageBox.Show("Database error: " & ex.Message)
+        End Try
+    End Sub
 
     ' ---------------- TIMER LOOP ----------------
     ' Make the Tick handler async and await the network call
@@ -77,10 +111,15 @@ Public Class DashboardUserControl
         ' do network I/O off the UI-blocking path
         Dim waterTuple = Await GetWaterDataFromReceiverAsync()
 
+        ' === SAVE TO DATABASE EVERY 5 MINUTES ===
+        If (DateTime.Now - lastSaveTime) >= saveInterval Then
+            SaveWaterLevelToDatabase(waterTuple.Item1, waterTuple.Item2)
+            lastSaveTime = DateTime.Now
+        End If
+
         ' then update UI (runs on UI context)
         UpdateDashboardWithWater(waterTuple.Item1, waterTuple.Item2)
     End Sub
-
 
     ' ---------------- MAIN DASHBOARD UPDATE ----------------
     ' small refactor: UpdateDashboard that accepts water result (keeps UI updates on UI thread)
@@ -122,7 +161,6 @@ Public Class DashboardUserControl
         lbl_safe_residents.Text = safe.ToString()
         lbl_unsafe_residents.Text = unsafe.ToString()
 
-
         ' ---------------- Update sensor cards ----------------
         ' Guard against missing sensors
         If sensors.Count > 0 Then
@@ -131,9 +169,7 @@ Public Class DashboardUserControl
         If sensors.Count > 1 Then
             UpdateSensorCard(sensors(1), lblS2Status, lblS2Signal, lblS2Battery, dotS2)
         End If
-
     End Sub
-
 
     ' ---------------- DOT RENDERING ----------------
     Private dotPaintAttached As New HashSet(Of Control)()
@@ -216,8 +252,6 @@ Public Class DashboardUserControl
         End Using
     End Sub
 
-
-
     ' ---------------- SENSOR CARD UPDATE ----------------
     Private Sub UpdateSensorCard(s As SensorSimulation,
                                  lblStatus As Label,
@@ -242,15 +276,11 @@ Public Class DashboardUserControl
         End If
     End Sub
 
-
-
     ' ---------------- SENSOR SIM LIST ----------------
     Private sensors As New List(Of SensorSimulation) From {
         New SensorSimulation With {.Name = "Alley 18 Station"},
         New SensorSimulation With {.Name = "Entry 1 (Upstream)"}
     }
-
-
 
     ' ---------------- SEND BUZZER COMMAND ----------------
     Private Async Function SendCommandToESPAsync(endpoint As String) As Task
@@ -267,24 +297,33 @@ Public Class DashboardUserControl
 
     Private buzzerState As Boolean = False
 
-    Private Async Sub Guna2Button11_Click(sender As Object, e As EventArgs) Handles Guna2Button11.Click
+    Private Sub Guna2Button11_Click(sender As Object, e As EventArgs) Handles Guna2Button11.Click
         If Not buzzerState Then
-            Await SendCommandToESPAsync("/buzzer_on")
+
+            Task.Run(Async Function()
+                         Await SendCommandToESPAsync("/buzzer_on")
+                     End Function)
+
             Label4.Text = "Deactivate Buzzer"
             Guna2Button11.Text = "TURN BUZZER OFF"
             buzzerState = True
             Guna2Button11.FillColor = Color.Red
             MessageBox.Show("Siren Activated")
+
         Else
-            Await SendCommandToESPAsync("/buzzer_off")
+
+            Task.Run(Async Function()
+                         Await SendCommandToESPAsync("/buzzer_off")
+                     End Function)
+
             Label4.Text = "Activate Buzzer"
             Guna2Button11.Text = "TURN BUZZER ON"
             buzzerState = False
             Guna2Button11.FillColor = Color.White
             MessageBox.Show("Siren Deactivated")
+
         End If
     End Sub
-
 
     ' ---------------- GET WATER LEVEL FROM RECEIVER ----------------
     ' Return Tuple(Of Double, String) to maximize compatibility
