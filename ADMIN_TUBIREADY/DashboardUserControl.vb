@@ -93,32 +93,23 @@ Public Class DashboardUserControl
 
     ' ---------------- TIMER LOOP ----------------
     ' Make the Tick handler async and await the network call
+    Private savingInProgress As Boolean = False
+
     Private Async Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        ' quick local updates (sensor simulation)
-        For Each s In sensors
-            s.Tick()
-        Next
-
-        ' Render sensor cards/dots immediately and safely BEFORE any awaited network I/O.
-        ' This ensures the dot is drawn even if the user navigates panels or network is slow.
-        If sensors.Count > 0 Then
-            UpdateSensorCard(sensors(0), lblS1Status, lblS1Signal, lblS1Battery, dotS1)
-        End If
-        If sensors.Count > 1 Then
-            UpdateSensorCard(sensors(1), lblS2Status, lblS2Signal, lblS2Battery, dotS2)
-        End If
-
-        ' do network I/O off the UI-blocking path
-        Dim waterTuple = Await GetWaterDataFromReceiverAsync()
-
-        ' === SAVE TO DATABASE EVERY 5 MINUTES ===
-        If (DateTime.Now - lastSaveTime) >= saveInterval Then
-            SaveWaterLevelToDatabase(waterTuple.Item1, waterTuple.Item2)
-            lastSaveTime = DateTime.Now
-        End If
-
-        ' then update UI (runs on UI context)
-        UpdateDashboardWithWater(waterTuple.Item1, waterTuple.Item2)
+        If savingInProgress Then Return
+        savingInProgress = True
+        Try
+            For Each s In sensors : s.Tick() : Next
+            Dim waterTuple = Await GetWaterDataFromReceiverAsync()
+            If (DateTime.Now - lastSaveTime) >= saveInterval Then
+                ' Run DB save off the UI thread and avoid modal dialogs there
+                Await Task.Run(Sub() SaveWaterLevelToDatabase(waterTuple.Item1, waterTuple.Item2))
+                lastSaveTime = DateTime.Now
+            End If
+            UpdateDashboardWithWater(waterTuple.Item1, waterTuple.Item2)
+        Finally
+            savingInProgress = False
+        End Try
     End Sub
 
     ' ---------------- MAIN DASHBOARD UPDATE ----------------
