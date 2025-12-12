@@ -7,43 +7,59 @@ Public Class AlertsUserControl
     Public Async Function SendOtpSMS(phone As String, otp As String) As Task(Of Boolean)
         Dim baseUrl As String = "https://www.iprogsms.com/api/v1/sms_messages"
 
-        ' Construct the query params
-        Dim apiToken As String = "8391dc35a8be121f396e2d1756cbf2f2999a2e59"
-        Dim query As String =
-    $"api_token={Uri.EscapeDataString(apiToken)}" &
-    $"&phone_number=63{phone}" &
-    $"&message={Uri.EscapeDataString("Your verification code is: " & otp)}" &
-    $"&sms_provider=0"
+        ' Normalize phone: remove spaces, +, leading zeros, then prefix country code 63
+        Dim fullNumber As String = NormalizePhone(phone)
 
-        Dim url As String = $"{baseUrl}?{query}"
+        Dim apiToken As String = "8391dc35a8be121f396e2d1756cbf2f2999a2e59"
+        Dim messageText As String = $"Your verification code is: {otp}"
+
+        Dim values = New List(Of KeyValuePair(Of String, String)) From {
+            New KeyValuePair(Of String, String)("api_token", apiToken),
+            New KeyValuePair(Of String, String)("phone_number", fullNumber),
+            New KeyValuePair(Of String, String)("message", messageText),
+            New KeyValuePair(Of String, String)("sms_provider", "0")
+        }
 
         Using client As New HttpClient()
-            Dim response As HttpResponseMessage = Await client.PostAsync(url, Nothing)
+            Dim content = New FormUrlEncodedContent(values)
+            Dim response = Await client.PostAsync(baseUrl, content)
+
             Dim json As String = Await response.Content.ReadAsStringAsync()
+            ' Log raw response for debugging
+            Debug.WriteLine("IPROG response status: " & response.StatusCode.ToString())
+            Debug.WriteLine("IPROG response body: " & json)
 
-            Dim data As JObject = JObject.Parse(json)
+            If Not response.IsSuccessStatusCode Then
+                Throw New Exception($"HTTP {(CInt(response.StatusCode))}: {response.ReasonPhrase} - {json}")
+            End If
 
-            Dim statusObj = data("status")
+            Dim data As JObject = Nothing
+            Try
+                data = JObject.Parse(json)
+            Catch ex As Exception
+                Throw New Exception("Failed to parse IPROG response JSON: " & ex.Message)
+            End Try
 
-            Dim status As Integer = -1
-            If Integer.TryParse(statusObj.ToString(), status) Then
-                ' status is numeric
+            ' Handle status that might be number or string
+            Dim statusToken = data("status")
+            If statusToken Is Nothing Then
+                Throw New Exception("IPROG response missing 'status': " & json)
+            End If
+
+            Dim statusInt As Integer = -1
+            If Integer.TryParse(statusToken.ToString(), statusInt) Then
+                If statusInt <> 200 Then
+                    Throw New Exception(data("message")?.ToString() Or $"IPROG returned status {statusInt}")
+                End If
             Else
-                ' API returned a string error
-                Throw New Exception(statusObj.ToString())
-
+                ' If API returns a non-numeric status, treat non-success as error
+                Dim statusStr = statusToken.ToString()
+                If Not statusStr.Equals("success", StringComparison.OrdinalIgnoreCase) AndAlso Not statusStr.Equals("ok", StringComparison.OrdinalIgnoreCase) Then
+                    Throw New Exception("IPROG returned status: " & statusStr & " - " & (data("message")?.ToString() Or json))
+                End If
             End If
 
-            If status <> 200 Then
-                Throw New Exception(data("message")?.ToString())
-            End If
-
-            If data("status") Is Nothing OrElse data("status").ToObject(Of Integer)() <> 200 Then
-                Throw New Exception(data("message")?.ToString() Or "IPROG SMS failed")
-
-            End If
-
-            Console.WriteLine("SMS sent successfully: " & data("message_id")?.ToString())
+            Debug.WriteLine("SMS sent id: " & (data("message_id")?.ToString()))
             Return True
         End Using
     End Function
@@ -99,4 +115,14 @@ Public Class AlertsUserControl
             MessageBox.Show("Error: " & ex.Message)
         End Try
     End Sub
+
+    Private Function NormalizePhone(phone As String) As String
+        If String.IsNullOrWhiteSpace(phone) Then
+            Throw New ArgumentException("Phone is required", NameOf(phone))
+        End If
+        Dim normalized = phone.Trim().Replace(" "c, "")
+        If normalized.StartsWith("+") Then normalized = normalized.Substring(1)
+        If normalized.StartsWith("0") Then normalized = normalized.TrimStart("0"c)
+        Return "63" & normalized
+    End Function
 End Class
