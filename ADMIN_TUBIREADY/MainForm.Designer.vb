@@ -252,7 +252,6 @@ Partial Class MainForm
         btnEvacuation.DisabledState.CustomBorderColor = Color.DarkGray
         btnEvacuation.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnEvacuation.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        btnEvacuation.Enabled = False
         btnEvacuation.FillColor = Color.Black
         btnEvacuation.FocusedColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         btnEvacuation.Font = New Font("Segoe UI", 11.25F, FontStyle.Bold)
