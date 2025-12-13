@@ -13,7 +13,11 @@ Public Class SensorsUserControl
         sensorTimer = New System.Timers.Timer(3000)
         AddHandler sensorTimer.Elapsed, AddressOf UpdateSensorData
         sensorTimer.Start()
+
+        ' ts is for the label, this does not need to be changed so don't remove it plz. if you do, i will find you.
+        lblDateTime.Text = DateTime.Now.ToString("dddd, MMMM dd, yyyy — hh:mm tt")
     End Sub
+
 
     Private Async Sub UpdateSensorData(source As Object, e As ElapsedEventArgs)
         Try
@@ -45,4 +49,8 @@ Public Class SensorsUserControl
         Dim content As String = Await response.Content.ReadAsStringAsync()
         Return content.Trim()
     End Function
+
+    Private Sub updateTimer_Tick(sender As Object, e As EventArgs) Handles updateTimer.Tick
+        lblDateTime.Text = DateTime.Now.ToString("dddd, MMMM dd, yyyy — hh:mm tt")
+    End Sub
 End Class

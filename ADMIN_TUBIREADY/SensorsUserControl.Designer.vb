@@ -85,18 +85,20 @@ Partial Class SensorsUserControl
         Dim ChartFont7 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
         Dim Tick3 As Guna.Charts.WinForms.Tick = New Guna.Charts.WinForms.Tick()
         Dim ChartFont8 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
-        Dim CustomizableEdges53 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges54 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges47 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges48 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges55 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges56 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges49 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges50 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges47 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges48 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges51 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges52 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim CustomizableEdges51 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges52 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges53 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges54 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Guna2PictureBox9 = New Guna.UI2.WinForms.Guna2PictureBox()
         lblDateTime = New Label()
@@ -143,14 +145,15 @@ Partial Class SensorsUserControl
         GunaChart1 = New Guna.Charts.WinForms.GunaChart()
         Label3 = New Label()
         Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
+        Guna2Panel16 = New Guna.UI2.WinForms.Guna2Panel()
         Guna2PictureBox10 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Label2 = New Label()
         Guna2Panel15 = New Guna.UI2.WinForms.Guna2Panel()
         dgvRiverActivityHistory = New Guna.UI2.WinForms.Guna2DataGridView()
         Time = New DataGridViewTextBoxColumn()
         WaterLevel = New DataGridViewTextBoxColumn()
         Status = New DataGridViewTextBoxColumn()
         btnViewRiverActivity = New Guna.UI2.WinForms.Guna2Button()
-        Label2 = New Label()
         GunaAreaDataset1 = New Guna.Charts.WinForms.GunaAreaDataset()
         updateTimer = New Timer(components)
         Guna2Panel1.SuspendLayout()
@@ -176,6 +179,7 @@ Partial Class SensorsUserControl
         CType(Guna2PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         Guna2Panel4.SuspendLayout()
         Guna2Panel2.SuspendLayout()
+        Guna2Panel16.SuspendLayout()
         CType(Guna2PictureBox10, ComponentModel.ISupportInitialize).BeginInit()
         Guna2Panel15.SuspendLayout()
         CType(dgvRiverActivityHistory, ComponentModel.ISupportInitialize).BeginInit()
@@ -202,10 +206,11 @@ Partial Class SensorsUserControl
         Guna2PictureBox9.CustomizableEdges = CustomizableEdges1
         Guna2PictureBox9.Image = CType(resources.GetObject("Guna2PictureBox9.Image"), Image)
         Guna2PictureBox9.ImageRotate = 0F
-        Guna2PictureBox9.Location = New Point(161, 8)
+        Guna2PictureBox9.Location = New Point(146, 10)
         Guna2PictureBox9.Name = "Guna2PictureBox9"
         Guna2PictureBox9.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        Guna2PictureBox9.Size = New Size(37, 35)
+        Guna2PictureBox9.Size = New Size(32, 32)
+        Guna2PictureBox9.SizeMode = PictureBoxSizeMode.AutoSize
         Guna2PictureBox9.TabIndex = 1
         Guna2PictureBox9.TabStop = False
         ' 
@@ -214,7 +219,7 @@ Partial Class SensorsUserControl
         lblDateTime.AutoSize = True
         lblDateTime.BackColor = Color.White
         lblDateTime.Font = New Font("Calibri", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblDateTime.Location = New Point(194, 12)
+        lblDateTime.Location = New Point(184, 10)
         lblDateTime.Name = "lblDateTime"
         lblDateTime.Size = New Size(403, 29)
         lblDateTime.TabIndex = 0
@@ -241,6 +246,7 @@ Partial Class SensorsUserControl
         Guna2Panel10.BackColor = Color.Transparent
         Guna2Panel10.BorderColor = Color.FromArgb(CByte(204), CByte(204), CByte(204))
         Guna2Panel10.BorderRadius = 10
+        Guna2Panel10.BorderThickness = 1
         Guna2Panel10.Controls.Add(Guna2Panel11)
         Guna2Panel10.Controls.Add(Guna2Panel12)
         Guna2Panel10.Controls.Add(Guna2Panel13)
@@ -355,10 +361,15 @@ Partial Class SensorsUserControl
         ' 
         ' Guna2Panel13
         ' 
+        Guna2Panel13.BorderColor = Color.FromArgb(CByte(204), CByte(204), CByte(204))
+        Guna2Panel13.BorderRadius = 10
+        Guna2Panel13.BorderThickness = 1
         Guna2Panel13.Controls.Add(Label17)
         Guna2Panel13.Controls.Add(Guna2PictureBox7)
         Guna2Panel13.Controls.Add(Label18)
         Guna2Panel13.Controls.Add(Guna2CircleButton2)
+        CustomizableEdges16.BottomLeft = False
+        CustomizableEdges16.BottomRight = False
         Guna2Panel13.CustomizableEdges = CustomizableEdges16
         Guna2Panel13.Dock = DockStyle.Top
         Guna2Panel13.Location = New Point(0, 0)
@@ -471,6 +482,7 @@ Partial Class SensorsUserControl
         Guna2Panel5.BackColor = Color.Transparent
         Guna2Panel5.BorderColor = Color.FromArgb(CByte(204), CByte(204), CByte(204))
         Guna2Panel5.BorderRadius = 10
+        Guna2Panel5.BorderThickness = 1
         Guna2Panel5.Controls.Add(Guna2Panel9)
         Guna2Panel5.Controls.Add(Guna2Panel8)
         Guna2Panel5.Controls.Add(Guna2Panel7)
@@ -585,10 +597,15 @@ Partial Class SensorsUserControl
         ' 
         ' Guna2Panel7
         ' 
+        Guna2Panel7.BorderColor = Color.FromArgb(CByte(204), CByte(204), CByte(204))
+        Guna2Panel7.BorderRadius = 10
+        Guna2Panel7.BorderThickness = 1
         Guna2Panel7.Controls.Add(Label8)
         Guna2Panel7.Controls.Add(Guna2PictureBox1)
         Guna2Panel7.Controls.Add(Label7)
         Guna2Panel7.Controls.Add(btnStatusAlley)
+        CustomizableEdges35.BottomLeft = False
+        CustomizableEdges35.BottomRight = False
         Guna2Panel7.CustomizableEdges = CustomizableEdges35
         Guna2Panel7.Dock = DockStyle.Top
         Guna2Panel7.Location = New Point(0, 0)
@@ -785,17 +802,35 @@ Partial Class SensorsUserControl
         Guna2Panel2.BorderColor = Color.FromArgb(CByte(204), CByte(204), CByte(204))
         Guna2Panel2.BorderRadius = 10
         Guna2Panel2.BorderThickness = 1
-        Guna2Panel2.Controls.Add(Guna2PictureBox10)
+        Guna2Panel2.Controls.Add(Guna2Panel16)
         Guna2Panel2.Controls.Add(Guna2Panel15)
         Guna2Panel2.Controls.Add(btnViewRiverActivity)
-        Guna2Panel2.Controls.Add(Label2)
-        Guna2Panel2.CustomizableEdges = CustomizableEdges53
+        Guna2Panel2.CustomizableEdges = CustomizableEdges55
         Guna2Panel2.FillColor = Color.White
         Guna2Panel2.Location = New Point(779, 17)
         Guna2Panel2.Name = "Guna2Panel2"
-        Guna2Panel2.ShadowDecoration.CustomizableEdges = CustomizableEdges54
+        Guna2Panel2.ShadowDecoration.CustomizableEdges = CustomizableEdges56
         Guna2Panel2.Size = New Size(439, 885)
         Guna2Panel2.TabIndex = 5
+        ' 
+        ' Guna2Panel16
+        ' 
+        Guna2Panel16.BorderColor = Color.FromArgb(CByte(204), CByte(204), CByte(204))
+        Guna2Panel16.BorderRadius = 10
+        Guna2Panel16.BorderThickness = 1
+        Guna2Panel16.Controls.Add(Guna2PictureBox10)
+        Guna2Panel16.Controls.Add(Label2)
+        Guna2Panel16.CustomBorderColor = Color.FromArgb(CByte(204), CByte(204), CByte(204))
+        CustomizableEdges49.BottomLeft = False
+        CustomizableEdges49.BottomRight = False
+        Guna2Panel16.CustomizableEdges = CustomizableEdges49
+        Guna2Panel16.Dock = DockStyle.Top
+        Guna2Panel16.FillColor = Color.White
+        Guna2Panel16.Location = New Point(0, 0)
+        Guna2Panel16.Name = "Guna2Panel16"
+        Guna2Panel16.ShadowDecoration.CustomizableEdges = CustomizableEdges50
+        Guna2Panel16.Size = New Size(439, 52)
+        Guna2Panel16.TabIndex = 6
         ' 
         ' Guna2PictureBox10
         ' 
@@ -803,23 +838,35 @@ Partial Class SensorsUserControl
         Guna2PictureBox10.CustomizableEdges = CustomizableEdges47
         Guna2PictureBox10.Image = CType(resources.GetObject("Guna2PictureBox10.Image"), Image)
         Guna2PictureBox10.ImageRotate = 0F
-        Guna2PictureBox10.Location = New Point(20, 12)
+        Guna2PictureBox10.Location = New Point(29, 10)
         Guna2PictureBox10.Name = "Guna2PictureBox10"
         Guna2PictureBox10.ShadowDecoration.CustomizableEdges = CustomizableEdges48
-        Guna2PictureBox10.Size = New Size(41, 41)
+        Guna2PictureBox10.Size = New Size(32, 32)
+        Guna2PictureBox10.SizeMode = PictureBoxSizeMode.AutoSize
         Guna2PictureBox10.TabIndex = 5
         Guna2PictureBox10.TabStop = False
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.BackColor = Color.White
+        Label2.Font = New Font("Calibri", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.Location = New Point(67, 10)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(222, 29)
+        Label2.TabIndex = 1
+        Label2.Text = "River Activity History"
         ' 
         ' Guna2Panel15
         ' 
         Guna2Panel15.BorderColor = Color.FromArgb(CByte(204), CByte(204), CByte(204))
         Guna2Panel15.BorderRadius = 2
         Guna2Panel15.Controls.Add(dgvRiverActivityHistory)
-        Guna2Panel15.CustomizableEdges = CustomizableEdges49
-        Guna2Panel15.Location = New Point(20, 59)
+        Guna2Panel15.CustomizableEdges = CustomizableEdges51
+        Guna2Panel15.Location = New Point(20, 92)
         Guna2Panel15.Name = "Guna2Panel15"
-        Guna2Panel15.ShadowDecoration.CustomizableEdges = CustomizableEdges50
-        Guna2Panel15.Size = New Size(393, 737)
+        Guna2Panel15.ShadowDecoration.CustomizableEdges = CustomizableEdges52
+        Guna2Panel15.Size = New Size(393, 704)
         Guna2Panel15.TabIndex = 4
         ' 
         ' dgvRiverActivityHistory
@@ -864,7 +911,7 @@ Partial Class SensorsUserControl
         DataGridViewCellStyle4.WrapMode = DataGridViewTriState.True
         dgvRiverActivityHistory.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         dgvRiverActivityHistory.RowHeadersVisible = False
-        dgvRiverActivityHistory.Size = New Size(393, 737)
+        dgvRiverActivityHistory.Size = New Size(393, 704)
         dgvRiverActivityHistory.TabIndex = 2
         dgvRiverActivityHistory.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White
         dgvRiverActivityHistory.ThemeStyle.AlternatingRowsStyle.Font = Nothing
@@ -908,7 +955,7 @@ Partial Class SensorsUserControl
         btnViewRiverActivity.BorderColor = Color.DimGray
         btnViewRiverActivity.BorderRadius = 5
         btnViewRiverActivity.BorderThickness = 1
-        btnViewRiverActivity.CustomizableEdges = CustomizableEdges51
+        btnViewRiverActivity.CustomizableEdges = CustomizableEdges53
         btnViewRiverActivity.DisabledState.BorderColor = Color.DarkGray
         btnViewRiverActivity.DisabledState.CustomBorderColor = Color.DarkGray
         btnViewRiverActivity.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -918,21 +965,10 @@ Partial Class SensorsUserControl
         btnViewRiverActivity.ForeColor = Color.Black
         btnViewRiverActivity.Location = New Point(323, 824)
         btnViewRiverActivity.Name = "btnViewRiverActivity"
-        btnViewRiverActivity.ShadowDecoration.CustomizableEdges = CustomizableEdges52
+        btnViewRiverActivity.ShadowDecoration.CustomizableEdges = CustomizableEdges54
         btnViewRiverActivity.Size = New Size(90, 32)
         btnViewRiverActivity.TabIndex = 3
         btnViewRiverActivity.Text = "View All"
-        ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.BackColor = Color.White
-        Label2.Font = New Font("Calibri", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(67, 14)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(222, 29)
-        Label2.TabIndex = 1
-        Label2.Text = "River Activity History"
         ' 
         ' GunaAreaDataset1
         ' 
@@ -942,7 +978,8 @@ Partial Class SensorsUserControl
         ' 
         ' updateTimer
         ' 
-        updateTimer.Interval = 1000
+        updateTimer.Enabled = True
+        updateTimer.Interval = 60000
         ' 
         ' SensorsUserControl
         ' 
@@ -988,7 +1025,8 @@ Partial Class SensorsUserControl
         Guna2Panel4.ResumeLayout(False)
         Guna2Panel4.PerformLayout()
         Guna2Panel2.ResumeLayout(False)
-        Guna2Panel2.PerformLayout()
+        Guna2Panel16.ResumeLayout(False)
+        Guna2Panel16.PerformLayout()
         CType(Guna2PictureBox10, ComponentModel.ISupportInitialize).EndInit()
         Guna2Panel15.ResumeLayout(False)
         CType(dgvRiverActivityHistory, ComponentModel.ISupportInitialize).EndInit()
@@ -1052,5 +1090,6 @@ Partial Class SensorsUserControl
     Friend WithEvents Label21 As Label
     Friend WithEvents tmrUpdate As Timer
     Friend WithEvents updateTimer As Timer
+    Friend WithEvents Guna2Panel16 As Guna.UI2.WinForms.Guna2Panel
 
 End Class
