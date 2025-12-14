@@ -45,8 +45,13 @@ Partial Class EvacuationUserControl
         Dim CustomizableEdges56 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges34 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges35 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges25 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges27 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -64,6 +69,8 @@ Partial Class EvacuationUserControl
         Dim CustomizableEdges36 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges43 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges44 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges39 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges40 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges41 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges42 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges46 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -74,13 +81,6 @@ Partial Class EvacuationUserControl
         Dim CustomizableEdges48 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges51 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges52 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges39 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges40 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         pnlMain = New Guna.UI2.WinForms.Guna2Panel()
         Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
@@ -108,7 +108,12 @@ Partial Class EvacuationUserControl
         Label1 = New Label()
         Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
         Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
+        Guna2Panel16 = New Guna.UI2.WinForms.Guna2Panel()
+        Label30 = New Label()
+        Guna2CircleButton2 = New Guna.UI2.WinForms.Guna2CircleButton()
         Guna2Panel13 = New Guna.UI2.WinForms.Guna2Panel()
+        Guna2PictureBox5 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Label29 = New Label()
         Guna2ProgressBar2 = New Guna.UI2.WinForms.Guna2ProgressBar()
         Label24 = New Label()
         TableLayoutPanel3 = New TableLayoutPanel()
@@ -130,6 +135,8 @@ Partial Class EvacuationUserControl
         Label21 = New Label()
         Guna2CircleButton1 = New Guna.UI2.WinForms.Guna2CircleButton()
         Guna2Panel12 = New Guna.UI2.WinForms.Guna2Panel()
+        Guna2PictureBox4 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Label22 = New Label()
         Guna2ProgressBar1 = New Guna.UI2.WinForms.Guna2ProgressBar()
         Label23 = New Label()
         TableLayoutPanel2 = New TableLayoutPanel()
@@ -145,13 +152,6 @@ Partial Class EvacuationUserControl
         Label16 = New Label()
         Label15 = New Label()
         SqlCommandBuilder1 = New Microsoft.Data.SqlClient.SqlCommandBuilder()
-        Label22 = New Label()
-        Label29 = New Label()
-        Guna2PictureBox4 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Guna2PictureBox5 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Guna2Panel16 = New Guna.UI2.WinForms.Guna2Panel()
-        Label30 = New Label()
-        Guna2CircleButton2 = New Guna.UI2.WinForms.Guna2CircleButton()
         pnlMain.SuspendLayout()
         Guna2Panel1.SuspendLayout()
         Guna2Panel8.SuspendLayout()
@@ -165,7 +165,9 @@ Partial Class EvacuationUserControl
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         Guna2Panel4.SuspendLayout()
         Guna2Panel3.SuspendLayout()
+        Guna2Panel16.SuspendLayout()
         Guna2Panel13.SuspendLayout()
+        CType(Guna2PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
         TableLayoutPanel3.SuspendLayout()
         Guna2Panel14.SuspendLayout()
         Guna2Panel15.SuspendLayout()
@@ -173,13 +175,11 @@ Partial Class EvacuationUserControl
         Guna2Panel2.SuspendLayout()
         Guna2Panel11.SuspendLayout()
         Guna2Panel12.SuspendLayout()
+        CType(Guna2PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
         TableLayoutPanel2.SuspendLayout()
         Guna2Panel9.SuspendLayout()
         Guna2Panel10.SuspendLayout()
         CType(Guna2PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
-        CType(Guna2PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
-        CType(Guna2PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
-        Guna2Panel16.SuspendLayout()
         SuspendLayout()
         ' 
         ' pnlMain
@@ -247,10 +247,10 @@ Partial Class EvacuationUserControl
         Guna2Panel8.Controls.Add(Label13)
         Guna2Panel8.CustomizableEdges = CustomizableEdges7
         Guna2Panel8.FillColor = Color.White
-        Guna2Panel8.Location = New Point(658, 28)
+        Guna2Panel8.Location = New Point(684, 28)
         Guna2Panel8.Name = "Guna2Panel8"
         Guna2Panel8.ShadowDecoration.CustomizableEdges = CustomizableEdges8
-        Guna2Panel8.Size = New Size(331, 44)
+        Guna2Panel8.Size = New Size(305, 44)
         Guna2Panel8.TabIndex = 3
         ' 
         ' Guna2ToggleSwitch1
@@ -263,7 +263,7 @@ Partial Class EvacuationUserControl
         Guna2ToggleSwitch1.CheckedState.InnerBorderRadius = 11
         Guna2ToggleSwitch1.CheckedState.InnerColor = Color.White
         Guna2ToggleSwitch1.CustomizableEdges = CustomizableEdges3
-        Guna2ToggleSwitch1.Location = New Point(252, 6)
+        Guna2ToggleSwitch1.Location = New Point(218, 6)
         Guna2ToggleSwitch1.Name = "Guna2ToggleSwitch1"
         Guna2ToggleSwitch1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         Guna2ToggleSwitch1.Size = New Size(65, 32)
@@ -281,7 +281,7 @@ Partial Class EvacuationUserControl
         Guna2PictureBox1.CustomizableEdges = CustomizableEdges5
         Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), Image)
         Guna2PictureBox1.ImageRotate = 0F
-        Guna2PictureBox1.Location = New Point(14, 6)
+        Guna2PictureBox1.Location = New Point(12, 6)
         Guna2PictureBox1.Name = "Guna2PictureBox1"
         Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         Guna2PictureBox1.Size = New Size(32, 32)
@@ -293,11 +293,11 @@ Partial Class EvacuationUserControl
         ' 
         Label13.AutoSize = True
         Label13.BackColor = Color.Transparent
-        Label13.Font = New Font("Calibri", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label13.Font = New Font("Calibri", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label13.ImageAlign = ContentAlignment.MiddleLeft
-        Label13.Location = New Point(68, 12)
+        Label13.Location = New Point(50, 12)
         Label13.Name = "Label13"
-        Label13.Size = New Size(178, 26)
+        Label13.Size = New Size(162, 23)
         Label13.TabIndex = 1
         Label13.Text = "Flood Safety Status"
         ' 
@@ -574,6 +574,50 @@ Partial Class EvacuationUserControl
         Guna2Panel3.Size = New Size(1132, 259)
         Guna2Panel3.TabIndex = 4
         ' 
+        ' Guna2Panel16
+        ' 
+        Guna2Panel16.BackColor = Color.Transparent
+        Guna2Panel16.BorderColor = Color.Transparent
+        Guna2Panel16.BorderRadius = 15
+        Guna2Panel16.Controls.Add(Label30)
+        Guna2Panel16.Controls.Add(Guna2CircleButton2)
+        Guna2Panel16.CustomizableEdges = CustomizableEdges18
+        Guna2Panel16.FillColor = Color.FromArgb(CByte(230), CByte(245), CByte(240))
+        Guna2Panel16.Location = New Point(1010, 18)
+        Guna2Panel16.Name = "Guna2Panel16"
+        Guna2Panel16.ShadowDecoration.CustomizableEdges = CustomizableEdges19
+        Guna2Panel16.Size = New Size(100, 30)
+        Guna2Panel16.TabIndex = 8
+        ' 
+        ' Label30
+        ' 
+        Label30.AutoSize = True
+        Label30.BackColor = Color.Transparent
+        Label30.Font = New Font("Calibri Light", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label30.ForeColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
+        Label30.Location = New Point(27, 6)
+        Label30.Name = "Label30"
+        Label30.Size = New Size(61, 18)
+        Label30.TabIndex = 4
+        Label30.Text = "Available"
+        ' 
+        ' Guna2CircleButton2
+        ' 
+        Guna2CircleButton2.DisabledState.BorderColor = Color.DarkGray
+        Guna2CircleButton2.DisabledState.CustomBorderColor = Color.DarkGray
+        Guna2CircleButton2.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        Guna2CircleButton2.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        Guna2CircleButton2.FillColor = Color.LimeGreen
+        Guna2CircleButton2.Font = New Font("Segoe UI", 9F)
+        Guna2CircleButton2.ForeColor = Color.White
+        Guna2CircleButton2.Location = New Point(10, 9)
+        Guna2CircleButton2.Name = "Guna2CircleButton2"
+        Guna2CircleButton2.ShadowDecoration.CustomizableEdges = CustomizableEdges17
+        Guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Guna2CircleButton2.Size = New Size(12, 12)
+        Guna2CircleButton2.TabIndex = 0
+        Guna2CircleButton2.Text = "Guna2CircleButton2"
+        ' 
         ' Guna2Panel13
         ' 
         Guna2Panel13.BackColor = Color.Transparent
@@ -591,13 +635,37 @@ Partial Class EvacuationUserControl
         Guna2Panel13.Size = New Size(1079, 82)
         Guna2Panel13.TabIndex = 6
         ' 
+        ' Guna2PictureBox5
+        ' 
+        Guna2PictureBox5.CustomizableEdges = CustomizableEdges20
+        Guna2PictureBox5.Image = CType(resources.GetObject("Guna2PictureBox5.Image"), Image)
+        Guna2PictureBox5.ImageRotate = 0F
+        Guna2PictureBox5.Location = New Point(938, 59)
+        Guna2PictureBox5.Name = "Guna2PictureBox5"
+        Guna2PictureBox5.ShadowDecoration.CustomizableEdges = CustomizableEdges21
+        Guna2PictureBox5.Size = New Size(16, 16)
+        Guna2PictureBox5.SizeMode = PictureBoxSizeMode.AutoSize
+        Guna2PictureBox5.TabIndex = 8
+        Guna2PictureBox5.TabStop = False
+        ' 
+        ' Label29
+        ' 
+        Label29.AutoSize = True
+        Label29.Font = New Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label29.Location = New Point(954, 56)
+        Label29.Name = "Label29"
+        Label29.Size = New Size(114, 19)
+        Label29.TabIndex = 6
+        Label29.Text = "Occupancy Rate"
+        ' 
         ' Guna2ProgressBar2
         ' 
         Guna2ProgressBar2.BorderRadius = 10
         Guna2ProgressBar2.CustomizableEdges = CustomizableEdges22
-        Guna2ProgressBar2.FillColor = Color.FromArgb(CByte(241), CByte(177), CByte(0))
+        Guna2ProgressBar2.FillColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         Guna2ProgressBar2.Location = New Point(17, 36)
         Guna2ProgressBar2.Name = "Guna2ProgressBar2"
+        Guna2ProgressBar2.ProgressColor = Color.FromArgb(CByte(241), CByte(177), CByte(0))
         Guna2ProgressBar2.ShadowDecoration.CustomizableEdges = CustomizableEdges23
         Guna2ProgressBar2.Size = New Size(1054, 17)
         Guna2ProgressBar2.TabIndex = 5
@@ -874,13 +942,37 @@ Partial Class EvacuationUserControl
         Guna2Panel12.Size = New Size(1079, 82)
         Guna2Panel12.TabIndex = 6
         ' 
+        ' Guna2PictureBox4
+        ' 
+        Guna2PictureBox4.CustomizableEdges = CustomizableEdges39
+        Guna2PictureBox4.Image = CType(resources.GetObject("Guna2PictureBox4.Image"), Image)
+        Guna2PictureBox4.ImageRotate = 0F
+        Guna2PictureBox4.Location = New Point(942, 59)
+        Guna2PictureBox4.Name = "Guna2PictureBox4"
+        Guna2PictureBox4.ShadowDecoration.CustomizableEdges = CustomizableEdges40
+        Guna2PictureBox4.Size = New Size(16, 16)
+        Guna2PictureBox4.SizeMode = PictureBoxSizeMode.AutoSize
+        Guna2PictureBox4.TabIndex = 7
+        Guna2PictureBox4.TabStop = False
+        ' 
+        ' Label22
+        ' 
+        Label22.AutoSize = True
+        Label22.Font = New Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label22.Location = New Point(957, 56)
+        Label22.Name = "Label22"
+        Label22.Size = New Size(114, 19)
+        Label22.TabIndex = 6
+        Label22.Text = "Occupancy Rate"
+        ' 
         ' Guna2ProgressBar1
         ' 
         Guna2ProgressBar1.BorderRadius = 10
         Guna2ProgressBar1.CustomizableEdges = CustomizableEdges41
-        Guna2ProgressBar1.FillColor = Color.FromArgb(CByte(241), CByte(177), CByte(0))
+        Guna2ProgressBar1.FillColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         Guna2ProgressBar1.Location = New Point(17, 36)
         Guna2ProgressBar1.Name = "Guna2ProgressBar1"
+        Guna2ProgressBar1.ProgressColor = Color.FromArgb(CByte(241), CByte(177), CByte(0))
         Guna2ProgressBar1.ShadowDecoration.CustomizableEdges = CustomizableEdges42
         Guna2ProgressBar1.Size = New Size(1054, 17)
         Guna2ProgressBar1.TabIndex = 5
@@ -1052,96 +1144,6 @@ Partial Class EvacuationUserControl
         Label15.TabIndex = 2
         Label15.Text = "Barangay Bagong Pag-asa Covered Court"
         ' 
-        ' Label22
-        ' 
-        Label22.AutoSize = True
-        Label22.Font = New Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label22.Location = New Point(957, 56)
-        Label22.Name = "Label22"
-        Label22.Size = New Size(114, 19)
-        Label22.TabIndex = 6
-        Label22.Text = "Occupancy Rate"
-        ' 
-        ' Label29
-        ' 
-        Label29.AutoSize = True
-        Label29.Font = New Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label29.Location = New Point(954, 56)
-        Label29.Name = "Label29"
-        Label29.Size = New Size(114, 19)
-        Label29.TabIndex = 6
-        Label29.Text = "Occupancy Rate"
-        ' 
-        ' Guna2PictureBox4
-        ' 
-        Guna2PictureBox4.CustomizableEdges = CustomizableEdges39
-        Guna2PictureBox4.Image = CType(resources.GetObject("Guna2PictureBox4.Image"), Image)
-        Guna2PictureBox4.ImageRotate = 0F
-        Guna2PictureBox4.Location = New Point(942, 59)
-        Guna2PictureBox4.Name = "Guna2PictureBox4"
-        Guna2PictureBox4.ShadowDecoration.CustomizableEdges = CustomizableEdges40
-        Guna2PictureBox4.Size = New Size(16, 16)
-        Guna2PictureBox4.SizeMode = PictureBoxSizeMode.AutoSize
-        Guna2PictureBox4.TabIndex = 7
-        Guna2PictureBox4.TabStop = False
-        ' 
-        ' Guna2PictureBox5
-        ' 
-        Guna2PictureBox5.CustomizableEdges = CustomizableEdges20
-        Guna2PictureBox5.Image = CType(resources.GetObject("Guna2PictureBox5.Image"), Image)
-        Guna2PictureBox5.ImageRotate = 0F
-        Guna2PictureBox5.Location = New Point(938, 59)
-        Guna2PictureBox5.Name = "Guna2PictureBox5"
-        Guna2PictureBox5.ShadowDecoration.CustomizableEdges = CustomizableEdges21
-        Guna2PictureBox5.Size = New Size(16, 16)
-        Guna2PictureBox5.SizeMode = PictureBoxSizeMode.AutoSize
-        Guna2PictureBox5.TabIndex = 8
-        Guna2PictureBox5.TabStop = False
-        ' 
-        ' Guna2Panel16
-        ' 
-        Guna2Panel16.BackColor = Color.Transparent
-        Guna2Panel16.BorderColor = Color.Transparent
-        Guna2Panel16.BorderRadius = 15
-        Guna2Panel16.Controls.Add(Label30)
-        Guna2Panel16.Controls.Add(Guna2CircleButton2)
-        Guna2Panel16.CustomizableEdges = CustomizableEdges18
-        Guna2Panel16.FillColor = Color.FromArgb(CByte(230), CByte(245), CByte(240))
-        Guna2Panel16.Location = New Point(1010, 18)
-        Guna2Panel16.Name = "Guna2Panel16"
-        Guna2Panel16.ShadowDecoration.CustomizableEdges = CustomizableEdges19
-        Guna2Panel16.Size = New Size(100, 30)
-        Guna2Panel16.TabIndex = 8
-        ' 
-        ' Label30
-        ' 
-        Label30.AutoSize = True
-        Label30.BackColor = Color.Transparent
-        Label30.Font = New Font("Calibri Light", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label30.ForeColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
-        Label30.Location = New Point(27, 6)
-        Label30.Name = "Label30"
-        Label30.Size = New Size(61, 18)
-        Label30.TabIndex = 4
-        Label30.Text = "Available"
-        ' 
-        ' Guna2CircleButton2
-        ' 
-        Guna2CircleButton2.DisabledState.BorderColor = Color.DarkGray
-        Guna2CircleButton2.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2CircleButton2.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2CircleButton2.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        Guna2CircleButton2.FillColor = Color.LimeGreen
-        Guna2CircleButton2.Font = New Font("Segoe UI", 9F)
-        Guna2CircleButton2.ForeColor = Color.White
-        Guna2CircleButton2.Location = New Point(10, 9)
-        Guna2CircleButton2.Name = "Guna2CircleButton2"
-        Guna2CircleButton2.ShadowDecoration.CustomizableEdges = CustomizableEdges17
-        Guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Guna2CircleButton2.Size = New Size(12, 12)
-        Guna2CircleButton2.TabIndex = 0
-        Guna2CircleButton2.Text = "Guna2CircleButton2"
-        ' 
         ' EvacuationUserControl
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -1169,8 +1171,11 @@ Partial Class EvacuationUserControl
         Guna2Panel4.PerformLayout()
         Guna2Panel3.ResumeLayout(False)
         Guna2Panel3.PerformLayout()
+        Guna2Panel16.ResumeLayout(False)
+        Guna2Panel16.PerformLayout()
         Guna2Panel13.ResumeLayout(False)
         Guna2Panel13.PerformLayout()
+        CType(Guna2PictureBox5, ComponentModel.ISupportInitialize).EndInit()
         TableLayoutPanel3.ResumeLayout(False)
         Guna2Panel14.ResumeLayout(False)
         Guna2Panel14.PerformLayout()
@@ -1183,16 +1188,13 @@ Partial Class EvacuationUserControl
         Guna2Panel11.PerformLayout()
         Guna2Panel12.ResumeLayout(False)
         Guna2Panel12.PerformLayout()
+        CType(Guna2PictureBox4, ComponentModel.ISupportInitialize).EndInit()
         TableLayoutPanel2.ResumeLayout(False)
         Guna2Panel9.ResumeLayout(False)
         Guna2Panel9.PerformLayout()
         Guna2Panel10.ResumeLayout(False)
         Guna2Panel10.PerformLayout()
         CType(Guna2PictureBox2, ComponentModel.ISupportInitialize).EndInit()
-        CType(Guna2PictureBox4, ComponentModel.ISupportInitialize).EndInit()
-        CType(Guna2PictureBox5, ComponentModel.ISupportInitialize).EndInit()
-        Guna2Panel16.ResumeLayout(False)
-        Guna2Panel16.PerformLayout()
         ResumeLayout(False)
     End Sub
 
