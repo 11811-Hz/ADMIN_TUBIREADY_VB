@@ -1,6 +1,5 @@
 ﻿Imports System
 Imports System.Collections.Generic
-Imports System.Data.SqlClient
 Imports System.Drawing
 Imports System.Drawing.Drawing2D
 Imports System.IO
@@ -10,10 +9,34 @@ Imports System.Net.Http
 Imports System.Text
 Imports System.Threading.Tasks
 Imports System.Windows.Forms
+Imports Guna.Charts.Interfaces
+Imports Guna.Charts.WinForms ' Required for Guna Charts
 Imports Microsoft.Data.SqlClient
+Imports ADMIN_TUBIREADY.ChartHandler
 
 
 Public Class DashboardUserControl
+
+    ' 1. DEFINE THE DATASET MANUALLY HERE
+    Private MyAreaDataset As New Guna.Charts.WinForms.GunaAreaDataset()
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' 2. CONFIGURE AND LINK IT ON LOAD
+
+        ' Give it a name for the legend
+        MyAreaDataset.Label = "Water Level"
+
+        ' Optional: Style it (Blue color)
+        MyAreaDataset.FillColor = Color.FromArgb(50, 0, 120, 215)
+        MyAreaDataset.BorderColor = Color.FromArgb(0, 120, 215)
+
+        ' 3. CRITICAL: Add it to the Chart manually
+        GunaChart1.Datasets.Add(MyAreaDataset)
+
+        ' Start your timer here if you haven't already
+        Timer1.Start()
+    End Sub
+
 
     Private connectionString As String = "server=10.148.172.193\SQLEXPRESS,1433;user id=TubiReadyAdmin;password=123456789;database=TubiReadyDB;TrustServerCertificate=True;"
 
@@ -60,7 +83,20 @@ Public Class DashboardUserControl
     End Class
 
     Private Sub DashboardUserControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Setup Alley 18
+        Alley18Dataset.Label = "Alley 18 Level"
+        Alley18Dataset.FillColor = Color.FromArgb(100, 50, 150, 255)
+        GunaChart1.Datasets.Clear()
+        GunaChart1.Datasets.Add(Alley18Dataset)
 
+        ' Setup Entry 1 (If you have a second chart, e.g. GunaChart2)
+        ' Entry1Dataset.Label = "Entry 1 Level"
+        ' Entry1Dataset.FillColor = Color.Red
+        ' GunaChart2.Datasets.Clear()
+        ' GunaChart2.Datasets.Add(Entry1Dataset)
+
+        Timer1.Interval = 2000
+        Timer1.Start()
     End Sub
 
     ' new line for database 
@@ -96,6 +132,18 @@ Public Class DashboardUserControl
     Private savingInProgress As Boolean = False
 
     Private Async Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        ' ---------------------------------------------------------
+        ' ONE LINE OF CODE PER CHART NOW!
+        ' ---------------------------------------------------------
+
+        ' 1. Update Alley 18
+        Dim query1 As String = "SELECT TOP 10 ReadingTime, WaterLevel FROM dbo.Ultrasonic ORDER BY ReadingTime DESC"
+        ChartHandler.FeedChart(GunaChart1, Alley18Dataset, query1, "ReadingTime", "WaterLevel")
+
+        ' 2. Update Entry 1 (Example for when you are ready)
+        ' Dim query2 As String = "SELECT TOP 10 ReadingTime, WaterLevel FROM dbo.Ultrasonic WHERE Station='Entry1' ORDER BY ReadingTime DESC"
+        ' ChartHandler.FeedChart(GunaChart2, Entry1Dataset, query2, "ReadingTime", "WaterLevel")
+        ' ---------------------------------------------------------
         If savingInProgress Then Return
         savingInProgress = True
         Try
