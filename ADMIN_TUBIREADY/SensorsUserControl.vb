@@ -1,7 +1,9 @@
-﻿Imports System.Net
+﻿Imports System.Data.SqlClient
+Imports System.Net
 Imports System.Net.Http
 Imports System.Timers
 Imports ADMIN_TUBIREADY.ChartHandler
+Imports Microsoft.Data.SqlClient
 
 Public Class SensorsUserControl
 
@@ -20,6 +22,7 @@ Public Class SensorsUserControl
 
     Private Sub SensorsUserControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         UpdateChart()
+        LoadRiverData()
         ' 1. Configure Alley 18 Dataset (Blue style)
         Alley18Dataset.Label = "Alley 18 Water Level"
         Alley18Dataset.FillColor = Color.FromArgb(100, 50, 150, 255)
@@ -43,6 +46,34 @@ Public Class SensorsUserControl
 
         ' ts is for the label, this does not need to be changed so don't remove it plz. if you do, i will find you.
         lblDateTime.Text = DateTime.Now.ToString("dddd, MMMM dd, yyyy — hh:mm tt")
+    End Sub
+
+    Private Sub LoadRiverData()
+        ' REPLACE THIS with your actual connection string
+        Dim connectionString As String = "Data Source=DESKTOP-RT61FIB\SQLEXPRESS;Initial Catalog=TubiReadyDB;Integrated Security=True;TrustServerCertificate=True"
+
+        ' This query selects the columns matching your UI
+        Dim query As String = "SELECT TOP 15 ReadingTime, WaterLevel, Severity FROM ultrasonic ORDER BY ReadingTime DESC"
+
+        Using conn As New SqlConnection(connectionString)
+            Try
+                conn.Open()
+
+                Dim da As New SqlDataAdapter(query, conn)
+                Dim dt As New DataTable()
+                da.Fill(dt)
+
+                ' PREVENT DUPLICATES: 
+                ' Since you already created columns in the designer, turn off auto-generation
+                dgvRiverActivityHistory.AutoGenerateColumns = False
+
+                ' Bind the data
+                dgvRiverActivityHistory.DataSource = dt
+
+            Catch ex As Exception
+                MessageBox.Show("Error loading data: " & ex.Message)
+            End Try
+        End Using
     End Sub
 
     Private Sub SwitchToAlley18()
