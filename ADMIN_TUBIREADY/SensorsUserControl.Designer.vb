@@ -880,10 +880,10 @@ Partial Class SensorsUserControl
         Guna2Panel15.BorderRadius = 2
         Guna2Panel15.Controls.Add(dgvRiverActivityHistory)
         Guna2Panel15.CustomizableEdges = CustomizableEdges53
-        Guna2Panel15.Location = New Point(20, 92)
+        Guna2Panel15.Location = New Point(20, 68)
         Guna2Panel15.Name = "Guna2Panel15"
         Guna2Panel15.ShadowDecoration.CustomizableEdges = CustomizableEdges54
-        Guna2Panel15.Size = New Size(393, 704)
+        Guna2Panel15.Size = New Size(393, 728)
         Guna2Panel15.TabIndex = 4
         ' 
         ' dgvRiverActivityHistory
@@ -928,7 +928,7 @@ Partial Class SensorsUserControl
         DataGridViewCellStyle4.WrapMode = DataGridViewTriState.True
         dgvRiverActivityHistory.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         dgvRiverActivityHistory.RowHeadersVisible = False
-        dgvRiverActivityHistory.Size = New Size(393, 704)
+        dgvRiverActivityHistory.Size = New Size(393, 728)
         dgvRiverActivityHistory.TabIndex = 2
         dgvRiverActivityHistory.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White
         dgvRiverActivityHistory.ThemeStyle.AlternatingRowsStyle.Font = Nothing
@@ -954,16 +954,19 @@ Partial Class SensorsUserControl
         ' 
         ' Time
         ' 
+        Time.DataPropertyName = "ReadingTime"
         Time.HeaderText = "Time"
         Time.Name = "Time"
         ' 
         ' WaterLevel
         ' 
+        WaterLevel.DataPropertyName = "WaterLevel"
         WaterLevel.HeaderText = "Level (ft)"
         WaterLevel.Name = "WaterLevel"
         ' 
         ' Status
         ' 
+        Status.DataPropertyName = "Severity"
         Status.HeaderText = "Status"
         Status.Name = "Status"
         ' 
@@ -1111,9 +1114,6 @@ Partial Class SensorsUserControl
     Friend WithEvents Guna2PictureBox8 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Label20 As Label
     Friend WithEvents Guna2Panel15 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Time As DataGridViewTextBoxColumn
-    Friend WithEvents WaterLevel As DataGridViewTextBoxColumn
-    Friend WithEvents Status As DataGridViewTextBoxColumn
     Friend WithEvents Guna2PictureBox9 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2PictureBox10 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Label21 As Label
@@ -1123,5 +1123,8 @@ Partial Class SensorsUserControl
     Friend WithEvents Guna2Panel17 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Entry1Dataset As Guna.Charts.WinForms.GunaAreaDataset
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents Time As DataGridViewTextBoxColumn
+    Friend WithEvents WaterLevel As DataGridViewTextBoxColumn
+    Friend WithEvents Status As DataGridViewTextBoxColumn
 
 End Class

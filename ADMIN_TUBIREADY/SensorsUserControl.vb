@@ -1,7 +1,9 @@
-﻿Imports System.Net
+﻿Imports System.Data.SqlClient
+Imports System.Net
 Imports System.Net.Http
 Imports System.Timers
 Imports ADMIN_TUBIREADY.ChartHandler
+Imports Microsoft.Data.SqlClient
 
 Public Class SensorsUserControl
 
@@ -13,22 +15,23 @@ Public Class SensorsUserControl
 
     Private CurrentStation As String = "Alley18"
 
-    ' Keep two styled datasets ready to go
+    ' Keep two styled datasets ready to go (consistent names)
     Private AlleyDataset As New Guna.Charts.WinForms.GunaAreaDataset()
     Private EntryDataset As New Guna.Charts.WinForms.GunaAreaDataset()
 
 
     Private Sub SensorsUserControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         UpdateChart()
-        ' 1. Configure Alley 18 Dataset (Blue style)
-        Alley18Dataset.Label = "Alley 18 Water Level"
-        Alley18Dataset.FillColor = Color.FromArgb(100, 50, 150, 255)
-        Alley18Dataset.BorderColor = Color.FromArgb(0, 120, 215)
+        LoadRiverData()
+        ' 1. Configure Alley Dataset (Blue style)
+        AlleyDataset.Label = "Alley 18 Water Level"
+        AlleyDataset.FillColor = Color.FromArgb(100, 50, 150, 255)
+        AlleyDataset.BorderColor = Color.FromArgb(0, 120, 215)
 
-        ' 2. Configure Entry 1 Dataset (Green style to match your UI icons)
-        Entry1Dataset.Label = "Entry 1 Water Level"
-        Entry1Dataset.FillColor = Color.FromArgb(100, 46, 204, 113)
-        Entry1Dataset.BorderColor = Color.FromArgb(39, 174, 96)
+        ' 2. Configure Entry Dataset (Green style to match your UI icons)
+        EntryDataset.Label = "Entry 1 Water Level"
+        EntryDataset.FillColor = Color.FromArgb(100, 46, 204, 113)
+        EntryDataset.BorderColor = Color.FromArgb(39, 174, 96)
 
         ' 3. Load default (Alley 18)
         SwitchToAlley18()
@@ -45,12 +48,40 @@ Public Class SensorsUserControl
         lblDateTime.Text = DateTime.Now.ToString("dddd, MMMM dd, yyyy — hh:mm tt")
     End Sub
 
+    Private Sub LoadRiverData()
+        ' REPLACE THIS with your actual connection string
+        Dim connectionString As String = "Data Source=DESKTOP-RT61FIB\SQLEXPRESS;Initial Catalog=TubiReadyDB;Integrated Security=True;TrustServerCertificate=True"
+
+        ' This query selects the columns matching your UI
+        Dim query As String = "SELECT TOP 15 ReadingTime, WaterLevel, Severity FROM ultrasonic ORDER BY ReadingTime DESC"
+
+        Using conn As New SqlConnection(connectionString)
+            Try
+                conn.Open()
+
+                Dim da As New SqlDataAdapter(query, conn)
+                Dim dt As New DataTable()
+                da.Fill(dt)
+
+                ' PREVENT DUPLICATES: 
+                ' Since you already created columns in the designer, turn off auto-generation
+                dgvRiverActivityHistory.AutoGenerateColumns = False
+
+                ' Bind the data
+                dgvRiverActivityHistory.DataSource = dt
+
+            Catch ex As Exception
+                MessageBox.Show("Error loading data: " & ex.Message)
+            End Try
+        End Using
+    End Sub
+
     Private Sub SwitchToAlley18()
         CurrentStation = "Alley18"
 
         ' Swap the chart dataset
         GunaChart1.Datasets.Clear()
-        GunaChart1.Datasets.Add(Alley18Dataset)
+        GunaChart1.Datasets.Add(AlleyDataset)
 
         ' Optional: Highlight the card (assuming your panels are named GunaPanelAlley and GunaPanelEntry)
         ' GunaPanelAlley.BorderColor = Color.Blue
@@ -65,7 +96,7 @@ Public Class SensorsUserControl
 
         ' Swap the chart dataset
         GunaChart1.Datasets.Clear()
-        GunaChart1.Datasets.Add(Entry1Dataset)
+        GunaChart1.Datasets.Add(EntryDataset)
 
         ' GunaPanelAlley.BorderColor = Color.Transparent
         ' GunaPanelEntry.BorderColor = Color.Green
@@ -75,28 +106,46 @@ Public Class SensorsUserControl
     End Sub
 
     Private Sub UpdateChart()
-        ' 1. DEFINE YOUR QUERIES
-        ' We sort by ReadingTime DESC to get the newest, then TOP 10 to keep it readable
+        ' Use a subquery to get the latest 10 rows then order them ascending for proper chronological plotting.
+        Dim queryAlley As String = "
+SELECT *
+FROM (
+    SELECT TOP 10 ReadingTime, WaterLevel
+    FROM dbo.Ultrasonic
+    ORDER BY ReadingTime DESC
+) AS t
+ORDER BY ReadingTime ASC"
 
-        ' Query for Alley 18
-        ' REPLACE 'StationID' with your actual column name!
-        Dim queryAlley As String = "SELECT TOP 10 ReadingTime, WaterLevel FROM dbo.Ultrasonic ORDER BY ReadingTime DESC"
+        Dim queryEntry As String = "
+SELECT *
+FROM (
+    SELECT TOP 10 ReadingTime, WaterLevel
+    FROM dbo.Ultrasonic
+    ORDER BY ReadingTime DESC
+) AS t
+ORDER BY ReadingTime ASC"
 
-        ' Query for Entry 1
-        Dim queryEntry As String = "SELECT TOP 10 ReadingTime, WaterLevel FROM dbo.Ultrasonic ORDER BY ReadingTime DESC"
+        Try
+            If CurrentStation = "Alley18" Then
+                ' Use the Module to feed the Alley Dataset
+                ChartHandler.FeedChart(GunaChart1, AlleyDataset, queryAlley, "ReadingTime", "WaterLevel")
+            ElseIf CurrentStation = "Entry1" Then
+                ' Use the Module to feed the Entry Dataset
+                ChartHandler.FeedChart(GunaChart1, EntryDataset, queryEntry, "ReadingTime", "WaterLevel")
+            End If
 
-        ' 2. CHECK WHICH STATION IS ACTIVE AND FETCH DATA
-        If CurrentStation = "Alley18" Then
-            ' Use the Module to feed the Alley Dataset
-            ChartHandler.FeedChart(GunaChart1, AlleyDataset, queryAlley, "ReadingTime", "WaterLevel")
-
-        ElseIf CurrentStation = "Entry1" Then
-            ' Use the Module to feed the Entry Dataset
-            ChartHandler.FeedChart(GunaChart1, EntryDataset, queryEntry, "ReadingTime", "WaterLevel")
-        End If
-
-        ' 3. REFRESH THE CHART VISUALLY
-        GunaChart1.Update()
+        Catch ex As Exception
+            ' Fail silently or log - prevent UI crash if feed fails
+            ' Optionally you can show a message or write to a log here
+            Debug.WriteLine("UpdateChart error: " & ex.Message)
+        Finally
+            ' Ensure the chart refreshes visually
+            Try
+                GunaChart1.Update()
+            Catch
+                ' ignore update errors
+            End Try
+        End Try
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
