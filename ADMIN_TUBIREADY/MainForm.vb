@@ -152,12 +152,17 @@ Public Class MainForm
     End Sub
 
     Private Sub btnReports_Click(sender As Object, e As EventArgs) Handles btnReports.Click
-        ShowUserControl(New ReportsUserControl())
+        ShowUserControl(New ReportsUserControl)
         ActivateButton(DirectCast(sender, Guna2Button))
     End Sub
 
     Private Sub btnSettings_Click(sender As Object, e As EventArgs) Handles btnSettings.Click
         ShowUserControl(New SettingsUserControl())
+        ActivateButton(DirectCast(sender, Guna2Button))
+    End Sub
+
+    Private Sub btnMappingGuna_CLick(sender As Object, e As EventArgs) Handles btnMappingGuna.Click
+        ShowUserControl(New MappingUserControl())
         ActivateButton(DirectCast(sender, Guna2Button))
     End Sub
 End Class

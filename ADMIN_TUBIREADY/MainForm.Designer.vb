@@ -23,9 +23,9 @@ Partial Class MainForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
         Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -37,15 +37,18 @@ Partial Class MainForm
         Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         SidebarMenu = New Panel()
+        btnMappingGuna = New Guna.UI2.WinForms.Guna2Button()
         btnSettings = New Guna.UI2.WinForms.Guna2Button()
         PictureBox1 = New PictureBox()
         btnReports = New Guna.UI2.WinForms.Guna2Button()
@@ -75,6 +78,7 @@ Partial Class MainForm
         ' SidebarMenu
         ' 
         SidebarMenu.BackColor = Color.Black
+        SidebarMenu.Controls.Add(btnMappingGuna)
         SidebarMenu.Controls.Add(btnSettings)
         SidebarMenu.Controls.Add(PictureBox1)
         SidebarMenu.Controls.Add(btnReports)
@@ -89,11 +93,35 @@ Partial Class MainForm
         SidebarMenu.Size = New Size(219, 985)
         SidebarMenu.TabIndex = 0
         ' 
+        ' btnMappingGuna
+        ' 
+        btnMappingGuna.BackColor = Color.Black
+        btnMappingGuna.BorderRadius = 15
+        btnMappingGuna.CustomizableEdges = CustomizableEdges1
+        btnMappingGuna.DisabledState.BorderColor = Color.DarkGray
+        btnMappingGuna.DisabledState.CustomBorderColor = Color.DarkGray
+        btnMappingGuna.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnMappingGuna.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnMappingGuna.FillColor = Color.Black
+        btnMappingGuna.FocusedColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        btnMappingGuna.Font = New Font("Segoe UI", 11.25F, FontStyle.Bold)
+        btnMappingGuna.ForeColor = Color.White
+        btnMappingGuna.Image = My.Resources.Resources.mapteh
+        btnMappingGuna.ImageAlign = HorizontalAlignment.Left
+        btnMappingGuna.ImageSize = New Size(25, 25)
+        btnMappingGuna.Location = New Point(18, 487)
+        btnMappingGuna.Name = "btnMappingGuna"
+        btnMappingGuna.PressedColor = Color.Blue
+        btnMappingGuna.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        btnMappingGuna.Size = New Size(170, 62)
+        btnMappingGuna.TabIndex = 18
+        btnMappingGuna.Text = "Mapping"
+        ' 
         ' btnSettings
         ' 
         btnSettings.BackColor = Color.Black
         btnSettings.BorderRadius = 15
-        btnSettings.CustomizableEdges = CustomizableEdges1
+        btnSettings.CustomizableEdges = CustomizableEdges3
         btnSettings.DisabledState.BorderColor = Color.DarkGray
         btnSettings.DisabledState.CustomBorderColor = Color.DarkGray
         btnSettings.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -105,10 +133,10 @@ Partial Class MainForm
         btnSettings.Image = CType(resources.GetObject("btnSettings.Image"), Image)
         btnSettings.ImageAlign = HorizontalAlignment.Left
         btnSettings.ImageSize = New Size(25, 25)
-        btnSettings.Location = New Point(18, 487)
+        btnSettings.Location = New Point(18, 555)
         btnSettings.Name = "btnSettings"
         btnSettings.PressedColor = Color.Blue
-        btnSettings.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        btnSettings.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         btnSettings.Size = New Size(170, 62)
         btnSettings.TabIndex = 17
         btnSettings.Text = "Settings"
@@ -126,7 +154,7 @@ Partial Class MainForm
         ' 
         btnReports.BackColor = Color.Black
         btnReports.BorderRadius = 15
-        btnReports.CustomizableEdges = CustomizableEdges3
+        btnReports.CustomizableEdges = CustomizableEdges5
         btnReports.DisabledState.BorderColor = Color.DarkGray
         btnReports.DisabledState.CustomBorderColor = Color.DarkGray
         btnReports.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -142,7 +170,7 @@ Partial Class MainForm
         btnReports.Location = New Point(18, 419)
         btnReports.Name = "btnReports"
         btnReports.PressedColor = Color.Blue
-        btnReports.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        btnReports.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         btnReports.Size = New Size(170, 62)
         btnReports.TabIndex = 16
         btnReports.Text = "Reports"
@@ -151,7 +179,7 @@ Partial Class MainForm
         ' 
         btnResidents.BackColor = Color.Black
         btnResidents.BorderRadius = 15
-        btnResidents.CustomizableEdges = CustomizableEdges5
+        btnResidents.CustomizableEdges = CustomizableEdges7
         btnResidents.DisabledState.BorderColor = Color.DarkGray
         btnResidents.DisabledState.CustomBorderColor = Color.DarkGray
         btnResidents.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -166,7 +194,7 @@ Partial Class MainForm
         btnResidents.Location = New Point(18, 147)
         btnResidents.Name = "btnResidents"
         btnResidents.PressedColor = Color.Blue
-        btnResidents.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        btnResidents.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         btnResidents.Size = New Size(170, 62)
         btnResidents.TabIndex = 11
         btnResidents.Text = "Residents"
@@ -175,7 +203,7 @@ Partial Class MainForm
         ' 
         btnSensors.BackColor = Color.Black
         btnSensors.BorderRadius = 15
-        btnSensors.CustomizableEdges = CustomizableEdges7
+        btnSensors.CustomizableEdges = CustomizableEdges9
         btnSensors.DisabledState.BorderColor = Color.DarkGray
         btnSensors.DisabledState.CustomBorderColor = Color.DarkGray
         btnSensors.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -190,7 +218,7 @@ Partial Class MainForm
         btnSensors.Location = New Point(18, 351)
         btnSensors.Name = "btnSensors"
         btnSensors.PressedColor = Color.Blue
-        btnSensors.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        btnSensors.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         btnSensors.Size = New Size(170, 62)
         btnSensors.TabIndex = 15
         btnSensors.Text = "Sensors"
@@ -199,7 +227,7 @@ Partial Class MainForm
         ' 
         btnDashboard.BackColor = Color.Black
         btnDashboard.BorderRadius = 15
-        btnDashboard.CustomizableEdges = CustomizableEdges9
+        btnDashboard.CustomizableEdges = CustomizableEdges11
         btnDashboard.DisabledState.BorderColor = Color.DarkGray
         btnDashboard.DisabledState.CustomBorderColor = Color.DarkGray
         btnDashboard.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -214,7 +242,7 @@ Partial Class MainForm
         btnDashboard.Location = New Point(18, 79)
         btnDashboard.Name = "btnDashboard"
         btnDashboard.PressedColor = Color.Transparent
-        btnDashboard.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        btnDashboard.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         btnDashboard.Size = New Size(170, 62)
         btnDashboard.TabIndex = 10
         btnDashboard.Text = "Dashboard"
@@ -223,7 +251,7 @@ Partial Class MainForm
         ' 
         btnAlerts.BackColor = Color.Black
         btnAlerts.BorderRadius = 15
-        btnAlerts.CustomizableEdges = CustomizableEdges11
+        btnAlerts.CustomizableEdges = CustomizableEdges13
         btnAlerts.DisabledState.BorderColor = Color.DarkGray
         btnAlerts.DisabledState.CustomBorderColor = Color.DarkGray
         btnAlerts.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -238,7 +266,7 @@ Partial Class MainForm
         btnAlerts.Location = New Point(18, 283)
         btnAlerts.Name = "btnAlerts"
         btnAlerts.PressedColor = Color.Blue
-        btnAlerts.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        btnAlerts.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         btnAlerts.Size = New Size(170, 62)
         btnAlerts.TabIndex = 14
         btnAlerts.Text = "Alerts"
@@ -247,7 +275,7 @@ Partial Class MainForm
         ' 
         btnEvacuation.BackColor = Color.Black
         btnEvacuation.BorderRadius = 15
-        btnEvacuation.CustomizableEdges = CustomizableEdges13
+        btnEvacuation.CustomizableEdges = CustomizableEdges15
         btnEvacuation.DisabledState.BorderColor = Color.DarkGray
         btnEvacuation.DisabledState.CustomBorderColor = Color.DarkGray
         btnEvacuation.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -262,7 +290,7 @@ Partial Class MainForm
         btnEvacuation.Location = New Point(18, 215)
         btnEvacuation.Name = "btnEvacuation"
         btnEvacuation.PressedColor = Color.Blue
-        btnEvacuation.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        btnEvacuation.ShadowDecoration.CustomizableEdges = CustomizableEdges16
         btnEvacuation.Size = New Size(170, 62)
         btnEvacuation.TabIndex = 13
         btnEvacuation.Text = "Evacuation"
@@ -362,12 +390,12 @@ Partial Class MainForm
         TopBar.Controls.Add(Guna2Button14)
         TopBar.Controls.Add(Guna2Button13)
         TopBar.Controls.Add(TopbarTitle)
-        TopBar.CustomizableEdges = CustomizableEdges19
+        TopBar.CustomizableEdges = CustomizableEdges21
         TopBar.Dock = DockStyle.Top
         TopBar.FillColor = Color.White
         TopBar.Location = New Point(219, 0)
         TopBar.Name = "TopBar"
-        TopBar.ShadowDecoration.CustomizableEdges = CustomizableEdges20
+        TopBar.ShadowDecoration.CustomizableEdges = CustomizableEdges22
         TopBar.Size = New Size(1235, 61)
         TopBar.TabIndex = 17
         ' 
@@ -379,7 +407,7 @@ Partial Class MainForm
         Guna2Button14.BorderRadius = 19
         Guna2Button14.BorderThickness = 1
         Guna2Button14.Cursor = Cursors.Hand
-        Guna2Button14.CustomizableEdges = CustomizableEdges15
+        Guna2Button14.CustomizableEdges = CustomizableEdges17
         Guna2Button14.DisabledState.BorderColor = Color.DarkGray
         Guna2Button14.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button14.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -393,7 +421,7 @@ Partial Class MainForm
         Guna2Button14.Location = New Point(1029, 8)
         Guna2Button14.Name = "Guna2Button14"
         Guna2Button14.PressedColor = Color.Transparent
-        Guna2Button14.ShadowDecoration.CustomizableEdges = CustomizableEdges16
+        Guna2Button14.ShadowDecoration.CustomizableEdges = CustomizableEdges18
         Guna2Button14.Size = New Size(167, 40)
         Guna2Button14.TabIndex = 18
         Guna2Button14.Text = "      Admin"
@@ -406,7 +434,7 @@ Partial Class MainForm
         Guna2Button13.BorderRadius = 19
         Guna2Button13.BorderThickness = 1
         Guna2Button13.Cursor = Cursors.Hand
-        Guna2Button13.CustomizableEdges = CustomizableEdges17
+        Guna2Button13.CustomizableEdges = CustomizableEdges19
         Guna2Button13.DisabledState.BorderColor = Color.DarkGray
         Guna2Button13.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button13.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -419,7 +447,7 @@ Partial Class MainForm
         Guna2Button13.Location = New Point(983, 9)
         Guna2Button13.Name = "Guna2Button13"
         Guna2Button13.PressedColor = Color.Transparent
-        Guna2Button13.ShadowDecoration.CustomizableEdges = CustomizableEdges18
+        Guna2Button13.ShadowDecoration.CustomizableEdges = CustomizableEdges20
         Guna2Button13.Size = New Size(40, 40)
         Guna2Button13.TabIndex = 17
         ' 
@@ -438,11 +466,11 @@ Partial Class MainForm
         ' 
         ' PanelContainer
         ' 
-        PanelContainer.CustomizableEdges = CustomizableEdges21
+        PanelContainer.CustomizableEdges = CustomizableEdges23
         PanelContainer.Dock = DockStyle.Fill
         PanelContainer.Location = New Point(219, 61)
         PanelContainer.Name = "PanelContainer"
-        PanelContainer.ShadowDecoration.CustomizableEdges = CustomizableEdges22
+        PanelContainer.ShadowDecoration.CustomizableEdges = CustomizableEdges24
         PanelContainer.Size = New Size(1235, 924)
         PanelContainer.TabIndex = 18
         ' 
@@ -488,5 +516,6 @@ Partial Class MainForm
     Friend WithEvents Guna2Button13 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents TopbarTitle As Label
     Friend WithEvents PanelContainer As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents btnMappingGuna As Guna.UI2.WinForms.Guna2Button
 
 End Class
