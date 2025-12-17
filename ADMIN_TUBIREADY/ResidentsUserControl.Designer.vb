@@ -105,7 +105,7 @@ Partial Class ResidentsUserControl
         Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         ResidentPanelContainer = New Guna.UI2.WinForms.Guna2Panel()
         Guna2DataGridView1 = New Guna.UI2.WinForms.Guna2DataGridView()
-        Name = New DataGridViewTextBoxColumn()
+        colName = New DataGridViewTextBoxColumn()
         Role = New DataGridViewTextBoxColumn()
         Address = New DataGridViewTextBoxColumn()
         Contact = New DataGridViewTextBoxColumn()
@@ -478,7 +478,7 @@ Partial Class ResidentsUserControl
         Guna2DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Guna2DataGridView1.ColumnHeadersHeight = 30
         Guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        Guna2DataGridView1.Columns.AddRange(New DataGridViewColumn() {Name, Role, Address, Contact, DateApplied, Actions1})
+        Guna2DataGridView1.Columns.AddRange(New DataGridViewColumn() {colName, Role, Address, Contact, DateApplied, Actions1})
         DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = Color.White
         DataGridViewCellStyle3.Font = New Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
@@ -527,8 +527,8 @@ Partial Class ResidentsUserControl
         ' 
         ' Name
         ' 
-        Name.HeaderText = "Name"
-        Name.Name = "Name"
+        colName.HeaderText = "Name"
+        colName.Name = "Name"
         ' 
         ' Role
         ' 
@@ -928,7 +928,7 @@ Partial Class ResidentsUserControl
     Friend WithEvents Guna2Panel8 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents RegisteredUserCount As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2DataGridView1 As Guna.UI2.WinForms.Guna2DataGridView
-    Friend WithEvents Name As DataGridViewTextBoxColumn
+    Friend WithEvents colName As DataGridViewTextBoxColumn
     Friend WithEvents Role As DataGridViewTextBoxColumn
     Friend WithEvents Address As DataGridViewTextBoxColumn
     Friend WithEvents Contact As DataGridViewTextBoxColumn
