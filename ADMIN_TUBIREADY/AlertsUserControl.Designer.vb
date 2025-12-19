@@ -56,7 +56,7 @@ Partial Class AlertsUserControl
         Guna2CheckBox1 = New Guna.UI2.WinForms.Guna2CheckBox()
         Guna2ComboBox4 = New Guna.UI2.WinForms.Guna2ComboBox()
         Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
-        Guna2ComboBox1 = New Guna.UI2.WinForms.Guna2ComboBox()
+        cboStreet = New Guna.UI2.WinForms.Guna2ComboBox()
         Label6 = New Label()
         Label3 = New Label()
         Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
@@ -87,7 +87,7 @@ Partial Class AlertsUserControl
         Guna2Panel1.Controls.Add(Panel1)
         Guna2Panel1.Controls.Add(Guna2ComboBox4)
         Guna2Panel1.Controls.Add(Guna2TextBox1)
-        Guna2Panel1.Controls.Add(Guna2ComboBox1)
+        Guna2Panel1.Controls.Add(cboStreet)
         Guna2Panel1.Controls.Add(Label6)
         Guna2Panel1.Controls.Add(Label3)
         Guna2Panel1.Controls.Add(Guna2Button1)
@@ -212,25 +212,25 @@ Partial Class AlertsUserControl
         Guna2TextBox1.Size = New Size(201, 36)
         Guna2TextBox1.TabIndex = 10
         ' 
-        ' Guna2ComboBox1
+        ' cboStreet
         ' 
-        Guna2ComboBox1.BackColor = Color.Transparent
-        Guna2ComboBox1.CustomizableEdges = CustomizableEdges5
-        Guna2ComboBox1.DrawMode = DrawMode.OwnerDrawFixed
-        Guna2ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList
-        Guna2ComboBox1.FillColor = Color.WhiteSmoke
-        Guna2ComboBox1.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2ComboBox1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2ComboBox1.Font = New Font("Calibri Light", 12F)
-        Guna2ComboBox1.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
-        Guna2ComboBox1.ItemHeight = 30
-        Guna2ComboBox1.Items.AddRange(New Object() {"Alley 18", "Palawan", "Road 8", "Road 10"})
-        Guna2ComboBox1.Location = New Point(34, 136)
-        Guna2ComboBox1.Name = "Guna2ComboBox1"
-        Guna2ComboBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        Guna2ComboBox1.Size = New Size(350, 36)
-        Guna2ComboBox1.StartIndex = 1
-        Guna2ComboBox1.TabIndex = 7
+        cboStreet.BackColor = Color.Transparent
+        cboStreet.CustomizableEdges = CustomizableEdges5
+        cboStreet.DrawMode = DrawMode.OwnerDrawFixed
+        cboStreet.DropDownStyle = ComboBoxStyle.DropDownList
+        cboStreet.FillColor = Color.WhiteSmoke
+        cboStreet.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        cboStreet.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        cboStreet.Font = New Font("Calibri Light", 12F)
+        cboStreet.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
+        cboStreet.ItemHeight = 30
+        cboStreet.Items.AddRange(New Object() {"Alley 18", "Palawan", "Road 8", "Road 10"})
+        cboStreet.Location = New Point(34, 136)
+        cboStreet.Name = "cboStreet"
+        cboStreet.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        cboStreet.Size = New Size(350, 36)
+        cboStreet.StartIndex = 1
+        cboStreet.TabIndex = 7
         ' 
         ' Label6
         ' 
@@ -507,7 +507,7 @@ Partial Class AlertsUserControl
     Friend WithEvents Guna2CheckBox1 As Guna.UI2.WinForms.Guna2CheckBox
     Friend WithEvents Guna2ComboBox4 As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2ComboBox1 As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents cboStreet As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label7 As Label
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel

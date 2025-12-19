@@ -270,7 +270,6 @@ Partial Class SensorsUserControl
         Guna2Panel11.BackColor = Color.Transparent
         Guna2Panel11.BorderColor = Color.FromArgb(CByte(204), CByte(204), CByte(204))
         Guna2Panel11.BorderRadius = 10
-        Guna2Panel11.BorderThickness = 1
         Guna2Panel11.Controls.Add(Label13)
         Guna2Panel11.Controls.Add(Guna2PictureBox5)
         Guna2Panel11.Controls.Add(Label14)
@@ -320,7 +319,6 @@ Partial Class SensorsUserControl
         Guna2Panel12.BackColor = Color.Transparent
         Guna2Panel12.BorderColor = Color.FromArgb(CByte(204), CByte(204), CByte(204))
         Guna2Panel12.BorderRadius = 10
-        Guna2Panel12.BorderThickness = 1
         Guna2Panel12.Controls.Add(Label15)
         Guna2Panel12.Controls.Add(Guna2PictureBox6)
         Guna2Panel12.Controls.Add(Label16)
@@ -438,7 +436,6 @@ Partial Class SensorsUserControl
         Guna2Panel14.BackColor = Color.Transparent
         Guna2Panel14.BorderColor = Color.FromArgb(CByte(204), CByte(204), CByte(204))
         Guna2Panel14.BorderRadius = 10
-        Guna2Panel14.BorderThickness = 1
         Guna2Panel14.Controls.Add(Label19)
         Guna2Panel14.Controls.Add(Guna2PictureBox8)
         Guna2Panel14.Controls.Add(Label20)
@@ -506,7 +503,6 @@ Partial Class SensorsUserControl
         Guna2Panel9.BackColor = Color.Transparent
         Guna2Panel9.BorderColor = Color.FromArgb(CByte(204), CByte(204), CByte(204))
         Guna2Panel9.BorderRadius = 10
-        Guna2Panel9.BorderThickness = 1
         Guna2Panel9.Controls.Add(Label11)
         Guna2Panel9.Controls.Add(Guna2PictureBox4)
         Guna2Panel9.Controls.Add(lblHumid)
@@ -556,7 +552,6 @@ Partial Class SensorsUserControl
         Guna2Panel8.BackColor = Color.Transparent
         Guna2Panel8.BorderColor = Color.FromArgb(CByte(204), CByte(204), CByte(204))
         Guna2Panel8.BorderRadius = 10
-        Guna2Panel8.BorderThickness = 1
         Guna2Panel8.Controls.Add(Label9)
         Guna2Panel8.Controls.Add(Guna2PictureBox3)
         Guna2Panel8.Controls.Add(lblTemp)
@@ -674,7 +669,6 @@ Partial Class SensorsUserControl
         Guna2Panel6.BackColor = Color.Transparent
         Guna2Panel6.BorderColor = Color.FromArgb(CByte(204), CByte(204), CByte(204))
         Guna2Panel6.BorderRadius = 10
-        Guna2Panel6.BorderThickness = 1
         Guna2Panel6.Controls.Add(Label5)
         Guna2Panel6.Controls.Add(Guna2PictureBox2)
         Guna2Panel6.Controls.Add(Label6)
