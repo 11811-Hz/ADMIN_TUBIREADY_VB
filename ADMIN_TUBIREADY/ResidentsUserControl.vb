@@ -1,7 +1,4 @@
-﻿Imports Microsoft.Data.SqlClient
-
-Public Class ResidentsUserControl
-
+﻿Public Class ResidentsUserControl
 
     Private Sub ResidentsUserControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Default to Pending view and set indicator lights
@@ -89,7 +86,7 @@ Public Class ResidentsUserControl
         End Try
     End Sub
 
-    Private Sub Guna2DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvResidents.CellContentClick
+    Private Sub Guna2DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Guna2DataGridView1.CellContentClick
 
     End Sub
 End Class
