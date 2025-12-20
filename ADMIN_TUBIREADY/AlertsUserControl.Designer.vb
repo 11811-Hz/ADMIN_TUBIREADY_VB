@@ -52,10 +52,10 @@ Partial Class AlertsUserControl
         Guna2vScrollBar1 = New Guna.UI2.WinForms.Guna2VScrollBar()
         flpContact = New FlowLayoutPanel()
         Panel1 = New Panel()
-        Label7 = New Label()
-        Guna2CheckBox1 = New Guna.UI2.WinForms.Guna2CheckBox()
-        Guna2ComboBox4 = New Guna.UI2.WinForms.Guna2ComboBox()
-        Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
+        lblCount = New Label()
+        chkSelectAll = New Guna.UI2.WinForms.Guna2CheckBox()
+        cboSearchBy = New Guna.UI2.WinForms.Guna2ComboBox()
+        txtSearch = New Guna.UI2.WinForms.Guna2TextBox()
         cboStreet = New Guna.UI2.WinForms.Guna2ComboBox()
         Label6 = New Label()
         Label3 = New Label()
@@ -63,10 +63,10 @@ Partial Class AlertsUserControl
         Label2 = New Label()
         Label1 = New Label()
         Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
-        txtBroadcastMessage = New Guna.UI2.WinForms.Guna2TextBox()
+        txtMessage = New Guna.UI2.WinForms.Guna2TextBox()
         Guna2Button6 = New Guna.UI2.WinForms.Guna2Button()
         Label9 = New Label()
-        Guna2Button5 = New Guna.UI2.WinForms.Guna2Button()
+        btnSendBroadcast = New Guna.UI2.WinForms.Guna2Button()
         Label8 = New Label()
         lblCharCount = New Label()
         Guna2Button4 = New Guna.UI2.WinForms.Guna2Button()
@@ -85,8 +85,8 @@ Partial Class AlertsUserControl
         Guna2Panel1.BorderThickness = 1
         Guna2Panel1.Controls.Add(Panel2)
         Guna2Panel1.Controls.Add(Panel1)
-        Guna2Panel1.Controls.Add(Guna2ComboBox4)
-        Guna2Panel1.Controls.Add(Guna2TextBox1)
+        Guna2Panel1.Controls.Add(cboSearchBy)
+        Guna2Panel1.Controls.Add(txtSearch)
         Guna2Panel1.Controls.Add(cboStreet)
         Guna2Panel1.Controls.Add(Label6)
         Guna2Panel1.Controls.Add(Label3)
@@ -136,81 +136,81 @@ Partial Class AlertsUserControl
         ' 
         ' Panel1
         ' 
-        Panel1.Controls.Add(Label7)
-        Panel1.Controls.Add(Guna2CheckBox1)
+        Panel1.Controls.Add(lblCount)
+        Panel1.Controls.Add(chkSelectAll)
         Panel1.Font = New Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Panel1.Location = New Point(34, 274)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(347, 43)
         Panel1.TabIndex = 12
         ' 
-        ' Label7
+        ' lblCount
         ' 
-        Label7.AutoSize = True
-        Label7.Location = New Point(314, 13)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(28, 18)
-        Label7.TabIndex = 1
-        Label7.Text = "0/3"
+        lblCount.AutoSize = True
+        lblCount.Location = New Point(296, 13)
+        lblCount.Name = "lblCount"
+        lblCount.Size = New Size(28, 18)
+        lblCount.TabIndex = 1
+        lblCount.Text = "0/3"
         ' 
-        ' Guna2CheckBox1
+        ' chkSelectAll
         ' 
-        Guna2CheckBox1.AutoSize = True
-        Guna2CheckBox1.CheckedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2CheckBox1.CheckedState.BorderRadius = 0
-        Guna2CheckBox1.CheckedState.BorderThickness = 0
-        Guna2CheckBox1.CheckedState.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2CheckBox1.Location = New Point(13, 13)
-        Guna2CheckBox1.Name = "Guna2CheckBox1"
-        Guna2CheckBox1.Size = New Size(85, 22)
-        Guna2CheckBox1.TabIndex = 0
-        Guna2CheckBox1.Text = "Select All"
-        Guna2CheckBox1.UncheckedState.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        Guna2CheckBox1.UncheckedState.BorderRadius = 0
-        Guna2CheckBox1.UncheckedState.BorderThickness = 0
-        Guna2CheckBox1.UncheckedState.FillColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        chkSelectAll.AutoSize = True
+        chkSelectAll.CheckedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        chkSelectAll.CheckedState.BorderRadius = 0
+        chkSelectAll.CheckedState.BorderThickness = 0
+        chkSelectAll.CheckedState.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        chkSelectAll.Location = New Point(13, 13)
+        chkSelectAll.Name = "chkSelectAll"
+        chkSelectAll.Size = New Size(85, 22)
+        chkSelectAll.TabIndex = 0
+        chkSelectAll.Text = "Select All"
+        chkSelectAll.UncheckedState.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        chkSelectAll.UncheckedState.BorderRadius = 0
+        chkSelectAll.UncheckedState.BorderThickness = 0
+        chkSelectAll.UncheckedState.FillColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         ' 
-        ' Guna2ComboBox4
+        ' cboSearchBy
         ' 
-        Guna2ComboBox4.BackColor = Color.Transparent
-        Guna2ComboBox4.CustomizableEdges = CustomizableEdges25
-        Guna2ComboBox4.DrawMode = DrawMode.OwnerDrawFixed
-        Guna2ComboBox4.DropDownStyle = ComboBoxStyle.DropDownList
-        Guna2ComboBox4.FillColor = Color.WhiteSmoke
-        Guna2ComboBox4.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2ComboBox4.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2ComboBox4.Font = New Font("Calibri Light", 12F)
-        Guna2ComboBox4.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
-        Guna2ComboBox4.ItemHeight = 30
-        Guna2ComboBox4.Items.AddRange(New Object() {"Contact", "Surname"})
-        Guna2ComboBox4.Location = New Point(240, 217)
-        Guna2ComboBox4.Name = "Guna2ComboBox4"
-        Guna2ComboBox4.ShadowDecoration.CustomizableEdges = CustomizableEdges26
-        Guna2ComboBox4.Size = New Size(140, 36)
-        Guna2ComboBox4.StartIndex = 1
-        Guna2ComboBox4.TabIndex = 11
+        cboSearchBy.BackColor = Color.Transparent
+        cboSearchBy.CustomizableEdges = CustomizableEdges25
+        cboSearchBy.DrawMode = DrawMode.OwnerDrawFixed
+        cboSearchBy.DropDownStyle = ComboBoxStyle.DropDownList
+        cboSearchBy.FillColor = Color.WhiteSmoke
+        cboSearchBy.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        cboSearchBy.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        cboSearchBy.Font = New Font("Calibri Light", 12F)
+        cboSearchBy.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
+        cboSearchBy.ItemHeight = 30
+        cboSearchBy.Items.AddRange(New Object() {"Contact", "First Name", "Surname"})
+        cboSearchBy.Location = New Point(240, 217)
+        cboSearchBy.Name = "cboSearchBy"
+        cboSearchBy.ShadowDecoration.CustomizableEdges = CustomizableEdges26
+        cboSearchBy.Size = New Size(140, 36)
+        cboSearchBy.StartIndex = 0
+        cboSearchBy.TabIndex = 11
         ' 
-        ' Guna2TextBox1
+        ' txtSearch
         ' 
-        Guna2TextBox1.CustomizableEdges = CustomizableEdges27
-        Guna2TextBox1.DefaultText = ""
-        Guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        Guna2TextBox1.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        Guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox1.FillColor = Color.WhiteSmoke
-        Guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox1.Font = New Font("Calibri Light", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Guna2TextBox1.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox1.Location = New Point(33, 217)
-        Guna2TextBox1.Margin = New Padding(3, 4, 3, 4)
-        Guna2TextBox1.Name = "Guna2TextBox1"
-        Guna2TextBox1.PlaceholderForeColor = Color.Gray
-        Guna2TextBox1.PlaceholderText = "Search By..."
-        Guna2TextBox1.SelectedText = ""
-        Guna2TextBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges28
-        Guna2TextBox1.Size = New Size(201, 36)
-        Guna2TextBox1.TabIndex = 10
+        txtSearch.CustomizableEdges = CustomizableEdges27
+        txtSearch.DefaultText = ""
+        txtSearch.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        txtSearch.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        txtSearch.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        txtSearch.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        txtSearch.FillColor = Color.WhiteSmoke
+        txtSearch.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        txtSearch.Font = New Font("Calibri Light", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtSearch.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        txtSearch.Location = New Point(33, 217)
+        txtSearch.Margin = New Padding(3, 4, 3, 4)
+        txtSearch.Name = "txtSearch"
+        txtSearch.PlaceholderForeColor = Color.Gray
+        txtSearch.PlaceholderText = "Search By..."
+        txtSearch.SelectedText = ""
+        txtSearch.ShadowDecoration.CustomizableEdges = CustomizableEdges28
+        txtSearch.Size = New Size(201, 36)
+        txtSearch.TabIndex = 10
         ' 
         ' cboStreet
         ' 
@@ -306,10 +306,10 @@ Partial Class AlertsUserControl
         Guna2Panel2.BorderColor = Color.FromArgb(CByte(204), CByte(204), CByte(204))
         Guna2Panel2.BorderRadius = 10
         Guna2Panel2.BorderThickness = 1
-        Guna2Panel2.Controls.Add(txtBroadcastMessage)
+        Guna2Panel2.Controls.Add(txtMessage)
         Guna2Panel2.Controls.Add(Guna2Button6)
         Guna2Panel2.Controls.Add(Label9)
-        Guna2Panel2.Controls.Add(Guna2Button5)
+        Guna2Panel2.Controls.Add(btnSendBroadcast)
         Guna2Panel2.Controls.Add(Label8)
         Guna2Panel2.Controls.Add(lblCharCount)
         Guna2Panel2.Controls.Add(Guna2Button4)
@@ -324,31 +324,31 @@ Partial Class AlertsUserControl
         Guna2Panel2.Size = New Size(741, 890)
         Guna2Panel2.TabIndex = 2
         ' 
-        ' txtBroadcastMessage
+        ' txtMessage
         ' 
-        txtBroadcastMessage.AcceptsReturn = True
-        txtBroadcastMessage.BackColor = Color.Transparent
-        txtBroadcastMessage.BorderRadius = 10
-        txtBroadcastMessage.CustomizableEdges = CustomizableEdges35
-        txtBroadcastMessage.DefaultText = ""
-        txtBroadcastMessage.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        txtBroadcastMessage.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        txtBroadcastMessage.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        txtBroadcastMessage.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        txtBroadcastMessage.FillColor = Color.WhiteSmoke
-        txtBroadcastMessage.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtBroadcastMessage.Font = New Font("Calibri Light", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtBroadcastMessage.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtBroadcastMessage.Location = New Point(29, 138)
-        txtBroadcastMessage.Margin = New Padding(3, 5, 3, 5)
-        txtBroadcastMessage.Multiline = True
-        txtBroadcastMessage.Name = "txtBroadcastMessage"
-        txtBroadcastMessage.PlaceholderForeColor = Color.Gray
-        txtBroadcastMessage.PlaceholderText = "Type your message here..."
-        txtBroadcastMessage.SelectedText = ""
-        txtBroadcastMessage.ShadowDecoration.CustomizableEdges = CustomizableEdges36
-        txtBroadcastMessage.Size = New Size(687, 596)
-        txtBroadcastMessage.TabIndex = 8
+        txtMessage.AcceptsReturn = True
+        txtMessage.BackColor = Color.Transparent
+        txtMessage.BorderRadius = 10
+        txtMessage.CustomizableEdges = CustomizableEdges35
+        txtMessage.DefaultText = ""
+        txtMessage.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        txtMessage.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        txtMessage.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        txtMessage.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        txtMessage.FillColor = Color.WhiteSmoke
+        txtMessage.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        txtMessage.Font = New Font("Calibri Light", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtMessage.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        txtMessage.Location = New Point(29, 138)
+        txtMessage.Margin = New Padding(3, 5, 3, 5)
+        txtMessage.Multiline = True
+        txtMessage.Name = "txtMessage"
+        txtMessage.PlaceholderForeColor = Color.Gray
+        txtMessage.PlaceholderText = "Type your message here..."
+        txtMessage.SelectedText = ""
+        txtMessage.ShadowDecoration.CustomizableEdges = CustomizableEdges36
+        txtMessage.Size = New Size(687, 596)
+        txtMessage.TabIndex = 8
         ' 
         ' Guna2Button6
         ' 
@@ -380,24 +380,23 @@ Partial Class AlertsUserControl
         Label9.TabIndex = 1
         Label9.Text = "Write your broadcast message"
         ' 
-        ' Guna2Button5
+        ' btnSendBroadcast
         ' 
-        Guna2Button5.BorderRadius = 10
-        Guna2Button5.CustomizableEdges = CustomizableEdges39
-        Guna2Button5.DisabledState.BorderColor = Color.DarkGray
-        Guna2Button5.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2Button5.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2Button5.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        Guna2Button5.FillColor = Color.FromArgb(CByte(3), CByte(83), CByte(164))
-        Guna2Button5.Font = New Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Guna2Button5.ForeColor = Color.White
-        Guna2Button5.Image = CType(resources.GetObject("Guna2Button5.Image"), Image)
-        Guna2Button5.Location = New Point(525, 826)
-        Guna2Button5.Name = "Guna2Button5"
-        Guna2Button5.ShadowDecoration.CustomizableEdges = CustomizableEdges40
-        Guna2Button5.Size = New Size(191, 35)
-        Guna2Button5.TabIndex = 0
-        Guna2Button5.Text = "Send X to Recepients"
+        btnSendBroadcast.BorderRadius = 10
+        btnSendBroadcast.CustomizableEdges = CustomizableEdges39
+        btnSendBroadcast.DisabledState.BorderColor = Color.DarkGray
+        btnSendBroadcast.DisabledState.CustomBorderColor = Color.DarkGray
+        btnSendBroadcast.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnSendBroadcast.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnSendBroadcast.FillColor = Color.FromArgb(CByte(3), CByte(83), CByte(164))
+        btnSendBroadcast.Font = New Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnSendBroadcast.ForeColor = Color.White
+        btnSendBroadcast.Location = New Point(525, 826)
+        btnSendBroadcast.Name = "btnSendBroadcast"
+        btnSendBroadcast.ShadowDecoration.CustomizableEdges = CustomizableEdges40
+        btnSendBroadcast.Size = New Size(191, 35)
+        btnSendBroadcast.TabIndex = 0
+        btnSendBroadcast.Text = "Send X to Recepients"
         ' 
         ' Label8
         ' 
@@ -504,17 +503,17 @@ Partial Class AlertsUserControl
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Guna2CheckBox1 As Guna.UI2.WinForms.Guna2CheckBox
-    Friend WithEvents Guna2ComboBox4 As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents chkSelectAll As Guna.UI2.WinForms.Guna2CheckBox
+    Friend WithEvents cboSearchBy As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents txtSearch As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents cboStreet As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Label7 As Label
+    Friend WithEvents lblCount As Label
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents txtBroadcastMessage As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtMessage As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2Button6 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Label9 As Label
-    Friend WithEvents Guna2Button5 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnSendBroadcast As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Label8 As Label
     Friend WithEvents lblCharCount As Label
     Friend WithEvents Guna2Button4 As Guna.UI2.WinForms.Guna2Button

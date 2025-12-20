@@ -22,64 +22,64 @@ Partial Class UserControlAlerts
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        ckcAlerts = New Guna.UI2.WinForms.Guna2CheckBox()
-        lblAlertsName = New Label()
-        lblAlertsNumber = New Label()
+        chkResidents = New Guna.UI2.WinForms.Guna2CheckBox()
+        lblName = New Label()
+        lblNumber = New Label()
         SuspendLayout()
         ' 
-        ' ckcAlerts
+        ' chkResidents
         ' 
-        ckcAlerts.AutoSize = True
-        ckcAlerts.CheckedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        ckcAlerts.CheckedState.BorderRadius = 0
-        ckcAlerts.CheckedState.BorderThickness = 0
-        ckcAlerts.CheckedState.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        ckcAlerts.ForeColor = SystemColors.ControlText
-        ckcAlerts.Location = New Point(13, 16)
-        ckcAlerts.Name = "ckcAlerts"
-        ckcAlerts.Size = New Size(15, 14)
-        ckcAlerts.TabIndex = 0
-        ckcAlerts.UncheckedState.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        ckcAlerts.UncheckedState.BorderRadius = 0
-        ckcAlerts.UncheckedState.BorderThickness = 0
-        ckcAlerts.UncheckedState.FillColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        chkResidents.AutoSize = True
+        chkResidents.CheckedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        chkResidents.CheckedState.BorderRadius = 0
+        chkResidents.CheckedState.BorderThickness = 0
+        chkResidents.CheckedState.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        chkResidents.ForeColor = SystemColors.ControlText
+        chkResidents.Location = New Point(13, 16)
+        chkResidents.Name = "chkResidents"
+        chkResidents.Size = New Size(15, 14)
+        chkResidents.TabIndex = 0
+        chkResidents.UncheckedState.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        chkResidents.UncheckedState.BorderRadius = 0
+        chkResidents.UncheckedState.BorderThickness = 0
+        chkResidents.UncheckedState.FillColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         ' 
-        ' lblAlertsName
+        ' lblName
         ' 
-        lblAlertsName.AutoSize = True
-        lblAlertsName.Font = New Font("Calibri", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblAlertsName.Location = New Point(40, 7)
-        lblAlertsName.Name = "lblAlertsName"
-        lblAlertsName.Size = New Size(45, 18)
-        lblAlertsName.TabIndex = 1
-        lblAlertsName.Text = "Name"
+        lblName.AutoSize = True
+        lblName.Font = New Font("Calibri", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblName.Location = New Point(40, 7)
+        lblName.Name = "lblName"
+        lblName.Size = New Size(45, 18)
+        lblName.TabIndex = 1
+        lblName.Text = "Name"
         ' 
-        ' lblAlertsNumber
+        ' lblNumber
         ' 
-        lblAlertsNumber.AutoSize = True
-        lblAlertsNumber.Font = New Font("Calibri", 11.25F)
-        lblAlertsNumber.ForeColor = Color.Gray
-        lblAlertsNumber.Location = New Point(40, 23)
-        lblAlertsNumber.Name = "lblAlertsNumber"
-        lblAlertsNumber.Size = New Size(59, 18)
-        lblAlertsNumber.TabIndex = 2
-        lblAlertsNumber.Text = "Number"
+        lblNumber.AutoSize = True
+        lblNumber.Font = New Font("Calibri", 11.25F)
+        lblNumber.ForeColor = Color.Gray
+        lblNumber.Location = New Point(40, 23)
+        lblNumber.Name = "lblNumber"
+        lblNumber.Size = New Size(59, 18)
+        lblNumber.TabIndex = 2
+        lblNumber.Text = "Number"
         ' 
         ' UserControlAlerts
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        Controls.Add(lblAlertsNumber)
-        Controls.Add(lblAlertsName)
-        Controls.Add(ckcAlerts)
+        Controls.Add(lblNumber)
+        Controls.Add(lblName)
+        Controls.Add(chkResidents)
         Name = "UserControlAlerts"
         Size = New Size(257, 52)
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
-    Friend WithEvents ckcAlerts As Guna.UI2.WinForms.Guna2CheckBox
-    Friend WithEvents lblAlertsName As Label
-    Friend WithEvents lblAlertsNumber As Label
+    Friend WithEvents chkResidents As Guna.UI2.WinForms.Guna2CheckBox
+    Friend WithEvents lblName As Label
+    Friend WithEvents lblNumber As Label
 
 End Class
