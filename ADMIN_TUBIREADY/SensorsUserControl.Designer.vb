@@ -146,7 +146,7 @@ Partial Class SensorsUserControl
         Label21 = New Label()
         Label3 = New Label()
         Guna2Panel17 = New Guna.UI2.WinForms.Guna2Panel()
-        GunaChart1 = New Guna.Charts.WinForms.GunaChart()
+        GunaChartLvlWater = New Guna.Charts.WinForms.GunaChart()
         Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Guna2Panel16 = New Guna.UI2.WinForms.Guna2Panel()
         Guna2PictureBox10 = New Guna.UI2.WinForms.Guna2PictureBox()
@@ -361,9 +361,9 @@ Partial Class SensorsUserControl
         Label16.ForeColor = SystemColors.HotTrack
         Label16.Location = New Point(233, 15)
         Label16.Name = "Label16"
-        Label16.Size = New Size(49, 19)
+        Label16.Size = New Size(24, 19)
         Label16.TabIndex = 1
-        Label16.Text = "38.8 C"
+        Label16.Text = "---"
         ' 
         ' Guna2Panel13
         ' 
@@ -597,9 +597,9 @@ Partial Class SensorsUserControl
         lblTemp.ForeColor = SystemColors.HotTrack
         lblTemp.Location = New Point(233, 15)
         lblTemp.Name = "lblTemp"
-        lblTemp.Size = New Size(49, 19)
+        lblTemp.Size = New Size(24, 19)
         lblTemp.TabIndex = 1
-        lblTemp.Text = "38.8 C"
+        lblTemp.Text = "---"
         ' 
         ' Guna2Panel7
         ' 
@@ -771,7 +771,7 @@ Partial Class SensorsUserControl
         ' 
         ' Guna2Panel17
         ' 
-        Guna2Panel17.Controls.Add(GunaChart1)
+        Guna2Panel17.Controls.Add(GunaChartLvlWater)
         Guna2Panel17.CustomizableEdges = CustomizableEdges45
         Guna2Panel17.Location = New Point(37, 88)
         Guna2Panel17.Name = "Guna2Panel17"
@@ -779,40 +779,40 @@ Partial Class SensorsUserControl
         Guna2Panel17.Size = New Size(649, 324)
         Guna2Panel17.TabIndex = 5
         ' 
-        ' GunaChart1
+        ' GunaChartLvlWater
         ' 
-        GunaChart1.Dock = DockStyle.Fill
+        GunaChartLvlWater.Dock = DockStyle.Fill
         ChartFont1.FontName = "Arial"
-        GunaChart1.Legend.LabelFont = ChartFont1
-        GunaChart1.Location = New Point(0, 0)
-        GunaChart1.Name = "GunaChart1"
-        GunaChart1.Size = New Size(649, 324)
-        GunaChart1.TabIndex = 3
+        GunaChartLvlWater.Legend.LabelFont = ChartFont1
+        GunaChartLvlWater.Location = New Point(0, 0)
+        GunaChartLvlWater.Name = "GunaChartLvlWater"
+        GunaChartLvlWater.Size = New Size(649, 324)
+        GunaChartLvlWater.TabIndex = 3
         ChartFont2.FontName = "Arial"
         ChartFont2.Size = 12
         ChartFont2.Style = Guna.Charts.WinForms.ChartFontStyle.Bold
-        GunaChart1.Title.Font = ChartFont2
+        GunaChartLvlWater.Title.Font = ChartFont2
         ChartFont3.FontName = "Arial"
-        GunaChart1.Tooltips.BodyFont = ChartFont3
+        GunaChartLvlWater.Tooltips.BodyFont = ChartFont3
         ChartFont4.FontName = "Arial"
         ChartFont4.Size = 9
         ChartFont4.Style = Guna.Charts.WinForms.ChartFontStyle.Bold
-        GunaChart1.Tooltips.TitleFont = ChartFont4
-        GunaChart1.XAxes.GridLines = Grid1
+        GunaChartLvlWater.Tooltips.TitleFont = ChartFont4
+        GunaChartLvlWater.XAxes.GridLines = Grid1
         ChartFont5.FontName = "Arial"
         Tick1.Font = ChartFont5
-        GunaChart1.XAxes.Ticks = Tick1
-        GunaChart1.YAxes.GridLines = Grid2
+        GunaChartLvlWater.XAxes.Ticks = Tick1
+        GunaChartLvlWater.YAxes.GridLines = Grid2
         ChartFont6.FontName = "Arial"
         Tick2.Font = ChartFont6
-        GunaChart1.YAxes.Ticks = Tick2
-        GunaChart1.ZAxes.GridLines = Grid3
+        GunaChartLvlWater.YAxes.Ticks = Tick2
+        GunaChartLvlWater.ZAxes.GridLines = Grid3
         ChartFont7.FontName = "Arial"
         PointLabel1.Font = ChartFont7
-        GunaChart1.ZAxes.PointLabels = PointLabel1
+        GunaChartLvlWater.ZAxes.PointLabels = PointLabel1
         ChartFont8.FontName = "Arial"
         Tick3.Font = ChartFont8
-        GunaChart1.ZAxes.Ticks = Tick3
+        GunaChartLvlWater.ZAxes.Ticks = Tick3
         ' 
         ' Guna2Panel2
         ' 
@@ -1073,7 +1073,7 @@ Partial Class SensorsUserControl
     Friend WithEvents Label2 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents GunaChart1 As Guna.Charts.WinForms.GunaChart
+    Friend WithEvents GunaChartLvlWater As Guna.Charts.WinForms.GunaChart
     Friend WithEvents dgvRiverActivityHistory As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents Alley18Dataset As Guna.Charts.WinForms.GunaAreaDataset
     Friend WithEvents btnViewRiverActivity As Guna.UI2.WinForms.Guna2Button

@@ -5,7 +5,7 @@ Imports MongoDB.Driver.Core.Configuration
 Imports Newtonsoft.Json.Linq
 
 Public Class AlertsUserControl
-    Public connectionString As String = "Data Source=DESKTOP-RT61FIB\SQLEXPRESS;Initial Catalog=TubiReadyDB;Integrated Security=True;TrustServerCertificate=True"
+    Public connectionString As String = "server=DESKTOP-011N7DN;user id=TubiReadyAdmin;password=123456789;database=TubiReadyDB;TrustServerCertificate=True"
     ' Changed "otp" to "messageContent"
     Public Async Function SendGeneralSMS(phone As String, messageContent As String) As Task(Of Boolean)
         Dim baseUrl As String = "https://www.iprogsms.com/api/v1/sms_messages"
