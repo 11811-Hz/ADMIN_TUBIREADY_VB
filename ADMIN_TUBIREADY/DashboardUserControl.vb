@@ -89,17 +89,16 @@ Public Class DashboardUserControl
         GunaChart1.Datasets.Clear()
         GunaChart1.Datasets.Add(Alley18Dataset)
 
-        ' Setup Entry 1 (If you have a second chart, e.g. GunaChart2)
-        ' Entry1Dataset.Label = "Entry 1 Level"
-        ' Entry1Dataset.FillColor = Color.Red
-        ' GunaChart2.Datasets.Clear()
-        ' GunaChart2.Datasets.Add(Entry1Dataset)
+        'Setup Entry 1 (If you have a second chart, e.g.GunaChart2)
+        Entry1Dataset.Label = "Entry 1 Level"
+        Entry1Dataset.FillColor = Color.FromArgb(100, 46, 204, 113)
+        GunaChart2.Datasets.Clear()
+        GunaChart2.Datasets.Add(Entry1Dataset)
 
         Timer1.Interval = 2000
         Timer1.Start()
     End Sub
 
-    ' new line for database 
 
     Private Sub SaveWaterLevelToDatabase(waterLevel As Double, severity As String)
         Try
@@ -137,12 +136,12 @@ Public Class DashboardUserControl
         ' ---------------------------------------------------------
 
         ' 1. Update Alley 18
-        Dim query1 As String = "SELECT TOP 10 ReadingTime, WaterLevel FROM dbo.Ultrasonic ORDER BY ReadingTime DESC"
+        Dim query1 As String = "SELECT TOP 10 ReadingTime, WaterLevel FROM dbo.Ultrasonic WHERE Sensor_ID ='1' ORDER BY ReadingTime DESC"
         ChartHandler.FeedChart(GunaChart1, Alley18Dataset, query1, "ReadingTime", "WaterLevel")
 
         ' 2. Update Entry 1 (Example for when you are ready)
-        ' Dim query2 As String = "SELECT TOP 10 ReadingTime, WaterLevel FROM dbo.Ultrasonic WHERE Station='Entry1' ORDER BY ReadingTime DESC"
-        ' ChartHandler.FeedChart(GunaChart2, Entry1Dataset, query2, "ReadingTime", "WaterLevel")
+        Dim query2 As String = "SELECT TOP 10 ReadingTime, WaterLevel FROM dbo.Ultrasonic WHERE Sensor_ID ='2' ORDER BY ReadingTime DESC"
+        ChartHandler.FeedChart(GunaChart2, Entry1Dataset, query2, "ReadingTime", "WaterLevel")
         ' ---------------------------------------------------------
         If savingInProgress Then Return
         savingInProgress = True
