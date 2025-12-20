@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class SensorsUserControl
     Inherits System.Windows.Forms.UserControl
 
     'UserControl overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class SensorsUserControl
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
         Dim CustomizableEdges61 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -146,7 +146,7 @@ Partial Class SensorsUserControl
         Label21 = New Label()
         Label3 = New Label()
         Guna2Panel17 = New Guna.UI2.WinForms.Guna2Panel()
-        GunaChart1 = New Guna.Charts.WinForms.GunaChart()
+        GunaChartLvlWater = New Guna.Charts.WinForms.GunaChart()
         Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Guna2Panel16 = New Guna.UI2.WinForms.Guna2Panel()
         Guna2PictureBox10 = New Guna.UI2.WinForms.Guna2PictureBox()
@@ -224,7 +224,7 @@ Partial Class SensorsUserControl
         ' 
         lblDateTime.AutoSize = True
         lblDateTime.BackColor = Color.White
-        lblDateTime.Font = New Font("Calibri", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblDateTime.Font = New Font("Calibri", 18.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblDateTime.Location = New Point(184, 10)
         lblDateTime.Name = "lblDateTime"
         lblDateTime.Size = New Size(403, 29)
@@ -307,7 +307,7 @@ Partial Class SensorsUserControl
         ' Label14
         ' 
         Label14.AutoSize = True
-        Label14.Font = New Font("Calibri", 12F, FontStyle.Bold)
+        Label14.Font = New Font("Calibri", 12.0F, FontStyle.Bold)
         Label14.ForeColor = SystemColors.HotTrack
         Label14.Location = New Point(233, 11)
         Label14.Name = "Label14"
@@ -357,13 +357,13 @@ Partial Class SensorsUserControl
         ' Label16
         ' 
         Label16.AutoSize = True
-        Label16.Font = New Font("Calibri", 12F, FontStyle.Bold)
+        Label16.Font = New Font("Calibri", 12.0F, FontStyle.Bold)
         Label16.ForeColor = SystemColors.HotTrack
         Label16.Location = New Point(233, 15)
         Label16.Name = "Label16"
-        Label16.Size = New Size(49, 19)
+        Label16.Size = New Size(24, 19)
         Label16.TabIndex = 1
-        Label16.Text = "38.8 C"
+        Label16.Text = "---"
         ' 
         ' Guna2Panel13
         ' 
@@ -423,7 +423,7 @@ Partial Class SensorsUserControl
         Guna2CircleButton2.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         Guna2CircleButton2.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2CircleButton2.FillColor = Color.LimeGreen
-        Guna2CircleButton2.Font = New Font("Segoe UI", 9F)
+        Guna2CircleButton2.Font = New Font("Segoe UI", 9.0F)
         Guna2CircleButton2.ForeColor = Color.White
         Guna2CircleButton2.Location = New Point(13, 17)
         Guna2CircleButton2.Name = "Guna2CircleButton2"
@@ -475,7 +475,7 @@ Partial Class SensorsUserControl
         ' Label20
         ' 
         Label20.AutoSize = True
-        Label20.Font = New Font("Calibri", 12F, FontStyle.Bold)
+        Label20.Font = New Font("Calibri", 12.0F, FontStyle.Bold)
         Label20.ForeColor = SystemColors.HotTrack
         Label20.Location = New Point(227, 14)
         Label20.Name = "Label20"
@@ -543,7 +543,7 @@ Partial Class SensorsUserControl
         ' lblHumid
         ' 
         lblHumid.AutoSize = True
-        lblHumid.Font = New Font("Calibri", 12F, FontStyle.Bold)
+        lblHumid.Font = New Font("Calibri", 12.0F, FontStyle.Bold)
         lblHumid.ForeColor = SystemColors.HotTrack
         lblHumid.Location = New Point(233, 14)
         lblHumid.Name = "lblHumid"
@@ -593,13 +593,13 @@ Partial Class SensorsUserControl
         ' lblTemp
         ' 
         lblTemp.AutoSize = True
-        lblTemp.Font = New Font("Calibri", 12F, FontStyle.Bold)
+        lblTemp.Font = New Font("Calibri", 12.0F, FontStyle.Bold)
         lblTemp.ForeColor = SystemColors.HotTrack
         lblTemp.Location = New Point(233, 15)
         lblTemp.Name = "lblTemp"
-        lblTemp.Size = New Size(49, 19)
+        lblTemp.Size = New Size(24, 19)
         lblTemp.TabIndex = 1
-        lblTemp.Text = "38.8 C"
+        lblTemp.Text = "---"
         ' 
         ' Guna2Panel7
         ' 
@@ -659,7 +659,7 @@ Partial Class SensorsUserControl
         btnStatusAlley.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnStatusAlley.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnStatusAlley.FillColor = Color.LimeGreen
-        btnStatusAlley.Font = New Font("Segoe UI", 9F)
+        btnStatusAlley.Font = New Font("Segoe UI", 9.0F)
         btnStatusAlley.ForeColor = Color.White
         btnStatusAlley.Location = New Point(13, 17)
         btnStatusAlley.Name = "btnStatusAlley"
@@ -711,7 +711,7 @@ Partial Class SensorsUserControl
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Calibri", 12F, FontStyle.Bold)
+        Label6.Font = New Font("Calibri", 12.0F, FontStyle.Bold)
         Label6.ForeColor = SystemColors.HotTrack
         Label6.Location = New Point(227, 14)
         Label6.Name = "Label6"
@@ -750,7 +750,7 @@ Partial Class SensorsUserControl
         ' 
         Label21.AutoSize = True
         Label21.BackColor = Color.Transparent
-        Label21.Font = New Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label21.Font = New Font("Calibri", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label21.ForeColor = Color.IndianRed
         Label21.Location = New Point(25, 50)
         Label21.Name = "Label21"
@@ -762,7 +762,7 @@ Partial Class SensorsUserControl
         ' 
         Label3.AutoSize = True
         Label3.BackColor = Color.White
-        Label3.Font = New Font("Calibri", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Calibri", 18.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label3.Location = New Point(24, 24)
         Label3.Name = "Label3"
         Label3.Size = New Size(251, 29)
@@ -779,7 +779,7 @@ Partial Class SensorsUserControl
         Guna2Panel17.Size = New Size(649, 324)
         Guna2Panel17.TabIndex = 5
         ' 
-        ' GunaChart1
+        ' GunaChartLvlWater
         ' 
         GunaChart1.Dock = DockStyle.Fill
         ChartFont9.FontName = "Arial"
@@ -867,7 +867,7 @@ Partial Class SensorsUserControl
         ' 
         Label2.AutoSize = True
         Label2.BackColor = Color.White
-        Label2.Font = New Font("Calibri", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Calibri", 18.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.Location = New Point(67, 10)
         Label2.Name = "Label2"
         Label2.Size = New Size(222, 29)
@@ -890,14 +890,14 @@ Partial Class SensorsUserControl
         ' 
         dgvRiverActivityHistory.AllowUserToResizeRows = False
         DataGridViewCellStyle5.BackColor = Color.White
-        DataGridViewCellStyle5.Font = New Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle5.Font = New Font("Calibri", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         DataGridViewCellStyle5.ForeColor = SystemColors.ControlText
         DataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
         DataGridViewCellStyle5.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
         dgvRiverActivityHistory.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
         DataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle6.BackColor = Color.White
-        DataGridViewCellStyle6.Font = New Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle6.Font = New Font("Calibri", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         DataGridViewCellStyle6.ForeColor = Color.Black
         DataGridViewCellStyle6.SelectionBackColor = Color.White
         DataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText
@@ -908,7 +908,7 @@ Partial Class SensorsUserControl
         dgvRiverActivityHistory.Columns.AddRange(New DataGridViewColumn() {Time, WaterLevel, Status})
         DataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle7.BackColor = Color.White
-        DataGridViewCellStyle7.Font = New Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle7.Font = New Font("Calibri", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         DataGridViewCellStyle7.ForeColor = Color.Black
         DataGridViewCellStyle7.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
         DataGridViewCellStyle7.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
@@ -921,7 +921,7 @@ Partial Class SensorsUserControl
         dgvRiverActivityHistory.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle8.BackColor = Color.White
-        DataGridViewCellStyle8.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle8.Font = New Font("Segoe UI", 9.0F)
         DataGridViewCellStyle8.ForeColor = SystemColors.WindowText
         DataGridViewCellStyle8.SelectionBackColor = Color.White
         DataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText
@@ -939,14 +939,14 @@ Partial Class SensorsUserControl
         dgvRiverActivityHistory.ThemeStyle.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
         dgvRiverActivityHistory.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
         dgvRiverActivityHistory.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None
-        dgvRiverActivityHistory.ThemeStyle.HeaderStyle.Font = New Font("Segoe UI", 9F)
+        dgvRiverActivityHistory.ThemeStyle.HeaderStyle.Font = New Font("Segoe UI", 9.0F)
         dgvRiverActivityHistory.ThemeStyle.HeaderStyle.ForeColor = Color.White
         dgvRiverActivityHistory.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
         dgvRiverActivityHistory.ThemeStyle.HeaderStyle.Height = 25
         dgvRiverActivityHistory.ThemeStyle.ReadOnly = False
         dgvRiverActivityHistory.ThemeStyle.RowsStyle.BackColor = Color.White
         dgvRiverActivityHistory.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
-        dgvRiverActivityHistory.ThemeStyle.RowsStyle.Font = New Font("Segoe UI", 9F)
+        dgvRiverActivityHistory.ThemeStyle.RowsStyle.Font = New Font("Segoe UI", 9.0F)
         dgvRiverActivityHistory.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
         dgvRiverActivityHistory.ThemeStyle.RowsStyle.Height = 25
         dgvRiverActivityHistory.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
@@ -981,7 +981,7 @@ Partial Class SensorsUserControl
         btnViewRiverActivity.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnViewRiverActivity.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnViewRiverActivity.FillColor = Color.LightGray
-        btnViewRiverActivity.Font = New Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnViewRiverActivity.Font = New Font("Calibri", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnViewRiverActivity.ForeColor = Color.Black
         btnViewRiverActivity.Location = New Point(323, 824)
         btnViewRiverActivity.Name = "btnViewRiverActivity"
@@ -1014,7 +1014,7 @@ Partial Class SensorsUserControl
         ' 
         ' SensorsUserControl
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         Controls.Add(Guna2Panel2)
         Controls.Add(Guna2Panel4)
@@ -1073,7 +1073,7 @@ Partial Class SensorsUserControl
     Friend WithEvents Label2 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents GunaChart1 As Guna.Charts.WinForms.GunaChart
+    Friend WithEvents GunaChartLvlWater As Guna.Charts.WinForms.GunaChart
     Friend WithEvents dgvRiverActivityHistory As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents Alley18Dataset As Guna.Charts.WinForms.GunaAreaDataset
     Friend WithEvents btnViewRiverActivity As Guna.UI2.WinForms.Guna2Button

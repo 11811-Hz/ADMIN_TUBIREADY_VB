@@ -8,9 +8,7 @@ Imports Guna.UI2.WinForms
 
 Public Class SensorsUserControl
 
-    ' --- IF NOT USING DESKTOP-RT61FIB ---
-    ' Change as needed for deployment
-    Private MasterConnString As String = "server=10.148.172.193\SQLEXPRESS,1433;user id=TubiReadyAdmin;password=123456789;database=TubiReadyDB;TrustServerCertificate=True;"
+    Private connectionString As String = "server=DESKTOP-011N7DN;user id=TubiReadyAdmin;password=123456789;database=TubiReadyDB;TrustServerCertificate=True"
 
     Private sensorTimer As System.Timers.Timer
     Private receiverIP As String = "10.148.172.199" ' Receiver IP

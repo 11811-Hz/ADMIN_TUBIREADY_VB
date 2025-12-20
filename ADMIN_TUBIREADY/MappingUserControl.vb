@@ -68,9 +68,7 @@ Public Class MappingUserControl
             lblDeclaredBy.Text = msg("declaredby").ToString()
 
         End Sub
-
         LoadMap()
-
     End Sub
 
     Private Sub Guna2PanelMapContainer_Resize(sender As Object, e As EventArgs) _

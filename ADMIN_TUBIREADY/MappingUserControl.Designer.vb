@@ -43,6 +43,10 @@ Partial Class MappingUserControl
         Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2Panel11 = New Guna.UI2.WinForms.Guna2Panel()
+        lblETA = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Guna2HtmlLabel10 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        lblDistance = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Guna2HtmlLabel8 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         GunaPanelDetailsFam = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
         btnDirections = New Guna.UI2.WinForms.Guna2Button()
         btnClear = New Guna.UI2.WinForms.Guna2Button()
@@ -70,13 +74,9 @@ Partial Class MappingUserControl
         Guna2ImageButton1 = New Guna.UI2.WinForms.Guna2ImageButton()
         Label7 = New Label()
         GunaPanelMapping = New Guna.UI2.WinForms.Guna2Panel()
+        WebView2Mapping = New Microsoft.Web.WebView2.WinForms.WebView2()
         GunaAreaDataset1 = New Guna.Charts.WinForms.GunaAreaDataset()
         GunaLineDataset1 = New Guna.Charts.WinForms.GunaLineDataset()
-        WebView2Mapping = New Microsoft.Web.WebView2.WinForms.WebView2()
-        Guna2HtmlLabel8 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        lblDistance = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        lblETA = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel10 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2Panel11.SuspendLayout()
         GunaPanelDetailsFam.SuspendLayout()
         GunaPanelMapping.SuspendLayout()
@@ -105,6 +105,46 @@ Partial Class MappingUserControl
         Guna2Panel11.Size = New Size(1229, 918)
         Guna2Panel11.TabIndex = 21
         Guna2Panel11.UseTransparentBackground = True
+        ' 
+        ' lblETA
+        ' 
+        lblETA.BackColor = Color.Transparent
+        lblETA.Font = New Font("Segoe UI", 10F)
+        lblETA.Location = New Point(186, 5)
+        lblETA.Name = "lblETA"
+        lblETA.Size = New Size(31, 19)
+        lblETA.TabIndex = 8
+        lblETA.Text = "0000"
+        ' 
+        ' Guna2HtmlLabel10
+        ' 
+        Guna2HtmlLabel10.BackColor = Color.Transparent
+        Guna2HtmlLabel10.Font = New Font("Segoe UI", 10F)
+        Guna2HtmlLabel10.Location = New Point(148, 5)
+        Guna2HtmlLabel10.Name = "Guna2HtmlLabel10"
+        Guna2HtmlLabel10.Size = New Size(32, 19)
+        Guna2HtmlLabel10.TabIndex = 7
+        Guna2HtmlLabel10.Text = "ETA :"
+        ' 
+        ' lblDistance
+        ' 
+        lblDistance.BackColor = Color.Transparent
+        lblDistance.Font = New Font("Segoe UI", 10F)
+        lblDistance.Location = New Point(71, 5)
+        lblDistance.Name = "lblDistance"
+        lblDistance.Size = New Size(31, 19)
+        lblDistance.TabIndex = 6
+        lblDistance.Text = "0000"
+        ' 
+        ' Guna2HtmlLabel8
+        ' 
+        Guna2HtmlLabel8.BackColor = Color.Transparent
+        Guna2HtmlLabel8.Font = New Font("Segoe UI", 10F)
+        Guna2HtmlLabel8.Location = New Point(6, 5)
+        Guna2HtmlLabel8.Name = "Guna2HtmlLabel8"
+        Guna2HtmlLabel8.Size = New Size(59, 19)
+        Guna2HtmlLabel8.TabIndex = 5
+        Guna2HtmlLabel8.Text = "Distance : "
         ' 
         ' GunaPanelDetailsFam
         ' 
@@ -470,18 +510,6 @@ Partial Class MappingUserControl
         GunaPanelMapping.Size = New Size(1223, 511)
         GunaPanelMapping.TabIndex = 1
         ' 
-        ' GunaAreaDataset1
-        ' 
-        GunaAreaDataset1.BorderColor = Color.Empty
-        GunaAreaDataset1.FillColor = Color.Empty
-        GunaAreaDataset1.Label = "Area1"
-        ' 
-        ' GunaLineDataset1
-        ' 
-        GunaLineDataset1.BorderColor = Color.Empty
-        GunaLineDataset1.FillColor = Color.Empty
-        GunaLineDataset1.Label = "Line1"
-        ' 
         ' WebView2Mapping
         ' 
         WebView2Mapping.AllowExternalDrop = True
@@ -494,45 +522,17 @@ Partial Class MappingUserControl
         WebView2Mapping.TabIndex = 0
         WebView2Mapping.ZoomFactor = 1R
         ' 
-        ' Guna2HtmlLabel8
+        ' GunaAreaDataset1
         ' 
-        Guna2HtmlLabel8.BackColor = Color.Transparent
-        Guna2HtmlLabel8.Font = New Font("Segoe UI", 10F)
-        Guna2HtmlLabel8.Location = New Point(6, 5)
-        Guna2HtmlLabel8.Name = "Guna2HtmlLabel8"
-        Guna2HtmlLabel8.Size = New Size(59, 19)
-        Guna2HtmlLabel8.TabIndex = 5
-        Guna2HtmlLabel8.Text = "Distance : "
+        GunaAreaDataset1.BorderColor = Color.Empty
+        GunaAreaDataset1.FillColor = Color.Empty
+        GunaAreaDataset1.Label = "Area1"
         ' 
-        ' lblDistance
+        ' GunaLineDataset1
         ' 
-        lblDistance.BackColor = Color.Transparent
-        lblDistance.Font = New Font("Segoe UI", 10F)
-        lblDistance.Location = New Point(71, 5)
-        lblDistance.Name = "lblDistance"
-        lblDistance.Size = New Size(31, 19)
-        lblDistance.TabIndex = 6
-        lblDistance.Text = "0000"
-        ' 
-        ' lblETA
-        ' 
-        lblETA.BackColor = Color.Transparent
-        lblETA.Font = New Font("Segoe UI", 10F)
-        lblETA.Location = New Point(186, 5)
-        lblETA.Name = "lblETA"
-        lblETA.Size = New Size(31, 19)
-        lblETA.TabIndex = 8
-        lblETA.Text = "0000"
-        ' 
-        ' Guna2HtmlLabel10
-        ' 
-        Guna2HtmlLabel10.BackColor = Color.Transparent
-        Guna2HtmlLabel10.Font = New Font("Segoe UI", 10F)
-        Guna2HtmlLabel10.Location = New Point(148, 5)
-        Guna2HtmlLabel10.Name = "Guna2HtmlLabel10"
-        Guna2HtmlLabel10.Size = New Size(32, 19)
-        Guna2HtmlLabel10.TabIndex = 7
-        Guna2HtmlLabel10.Text = "ETA :"
+        GunaLineDataset1.BorderColor = Color.Empty
+        GunaLineDataset1.FillColor = Color.Empty
+        GunaLineDataset1.Label = "Line1"
         ' 
         ' MappingUserControl
         ' 
