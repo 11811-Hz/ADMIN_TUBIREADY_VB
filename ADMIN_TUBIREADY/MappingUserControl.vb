@@ -8,6 +8,8 @@ Imports Microsoft.Web.WebView2.Core
 
 Imports Microsoft.Web.WebView2.WinForms
 
+Imports System.Drawing.Drawing2D
+
 Public Class MappingUserControl
 
     Private mapLoaded As Boolean = False
@@ -21,8 +23,14 @@ Public Class MappingUserControl
 
     Private pinSelected As Boolean = False
 
+    Private Const MAP_BORDER_RADIUS As Integer = 10
+
+    Private ReadOnly defaultLat As Double = 14.662315
+    Private ReadOnly defaultLng As Double = 121.034256
+    Private ReadOnly defaultZoom As Integer = 15
+
     Private connectionString As String =
-        "Server=10.69.185.193\SQLEXPRESS,1433;" &
+        "Server=DESKTOP-011N7DN;" &
         "Database=TubiReadyDB;" &
         "User ID=TubiReadyAdmin;" &
         "Password=123456789;" &
@@ -46,19 +54,55 @@ Public Class MappingUserControl
             selectedLat = CDbl(msg("lat"))
             selectedLng = CDbl(msg("lng"))
             pinSelected = True
-            routingActive = True
 
-            ' 📝 Populate textboxes
-            txtFamID.Text = msg("familyID").ToString()
-            txtSurName.Text = msg("lastName").ToString()
-            txtFamAdd.Text = msg("address").ToString()
-            txtTimStamp.Text = msg("statusDate").ToString()
-            txtStatus.Text = msg("status").ToString()
+            ' ❌ REMOVE THIS LINE
+            ' routingActive = True
+
+            ' Populate labels
+            lblFamID.Text = msg("familyID").ToString()
+            lblSurName.Text = msg("lastName").ToString()
+            lblFamAdd.Text = msg("address").ToString()
+            lblTimStamp.Text = msg("statusDate").ToString()
+            lblStatus.Text = msg("status").ToString()
+            lblContactNo.Text = msg("contactno").ToString()
+            lblDeclaredBy.Text = msg("declaredby").ToString()
 
         End Sub
 
         LoadMap()
 
+    End Sub
+
+    Private Sub Guna2PanelMapContainer_Resize(sender As Object, e As EventArgs) _
+    Handles GunaPanelMapping.Resize ' Ensure you link this handler in your designer!
+        ClipWebView2(GunaPanelMapping, MAP_BORDER_RADIUS)
+    End Sub
+
+    ''' <summary>
+    ''' Clips the region of the WebView2 control to match the parent Guna2Panel's rounded corners.
+    ''' </summary>
+    Private Sub ClipWebView2(parentPanel As Control, radius As Integer)
+        If parentPanel.Controls.Contains(WebView2Mapping) Then
+
+            Dim path As New GraphicsPath()
+            Dim rect As Rectangle = parentPanel.ClientRectangle
+
+            ' Adjust rectangle dimensions for accurate clipping
+            rect.Width -= 1
+            rect.Height -= 1
+
+            ' Define the rounded rectangle path
+            path.AddArc(rect.X, rect.Y, radius * 2, radius * 2, 180, 90) ' Top-Left
+            path.AddArc(rect.Width - radius * 2, rect.Y, radius * 2, radius * 2, 270, 90) ' Top-Right
+            path.AddArc(rect.Width - radius * 2, rect.Height - radius * 2, radius * 2, radius * 2, 0, 90) ' Bottom-Right
+            path.AddArc(rect.X, rect.Height - radius * 2, radius * 2, radius * 2, 90, 90) ' Bottom-Left
+            path.CloseAllFigures()
+
+            ' Apply the region to the WebView2 control
+            WebView2Mapping.Region = New Region(path)
+
+            path.Dispose()
+        End If
     End Sub
 
     ' ================= LOAD MAP =================
@@ -94,8 +138,8 @@ html, body {
 <div id='map'></div>
 
 <script>
-    // Default center: Barangay Bagong Pag-asa (Based on your request)
-    window.map = L.map('map').setView([14.6550586, 121.0251324], 15);
+    // Default center: Barangay Bagong Pag-asa
+    window.map = L.map('map').setView([14.6623054, 121.0341577], 15);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors'
@@ -172,7 +216,7 @@ window.blueIcon = L.icon({
             con.Open()
 
             Dim sql As String =
-            "SELECT FamilyID, LastName, Address, Latitude, Longitude, StatusDate, Status " &
+            "SELECT FamilyID, LastName, Address, Latitude, Longitude, StatusDate, Status, ContactNum, DeclaredBy " &
             "FROM SafeStatus " &
             "WHERE Status = 0"
 
@@ -198,7 +242,11 @@ window.blueIcon = L.icon({
                         Convert.ToDateTime(dr("StatusDate")).ToString("yyyy-MM-dd HH:mm")
 
                         Dim statusText As String =
-                        If(CBool(dr("Status")) = False, "Unsafe", "Safe")
+                        If(CBool(dr("Status")) = False, "Need Help", "Safe")
+
+                        Dim contactno As String = dr("ContactNum").ToString()
+
+                        Dim declaredby As String = dr("DeclaredBy").ToString()
 
                         AddUnsafePin(
                         familyID,
@@ -207,7 +255,9 @@ window.blueIcon = L.icon({
                         lat,
                         lng,
                         statusDate,
-                        statusText
+                        statusText,
+                        contactno,
+                        declaredby
                     )
 
                     End While
@@ -227,7 +277,9 @@ window.blueIcon = L.icon({
     lat As String,
     lng As String,
     statusDate As String,
-    statusText As String
+    statusText As String,
+    contactno As String,
+    declaredby As String
 )
 
         If WebView2Mapping.CoreWebView2 Is Nothing Then Exit Sub
@@ -258,7 +310,9 @@ marker.on('click', function (e) {{
         lastName: '{lastName}',
         address: '{address}',
         statusDate: '{statusDate}',
-        status: '{statusText}'
+        status: '{statusText}',
+        contactno: '{contactno}',
+        declaredby: '{declaredby}'
     }});
 
     if (window.selectedMarker) {{
@@ -281,25 +335,36 @@ marker.on('click', function (e) {{
             Exit Sub
         End If
 
-        routingActive = True
-
-        Dim startLat = 14.662315
-        Dim startLng = 121.034256
+        Dim startLat = defaultLat
+        Dim startLng = defaultLng
         Dim endLat = selectedLat
         Dim endLng = selectedLng
 
-        Dim url = $"https://router.project-osrm.org/route/v1/driving/{startLng},{startLat};{endLng},{endLat}?overview=full&geometries=geojson"
+        Dim url =
+        $"https://router.project-osrm.org/route/v1/driving/{startLng},{startLat};{endLng},{endLat}?overview=full&geometries=geojson"
 
         Using http As New Net.Http.HttpClient()
             Dim json = Await http.GetStringAsync(url)
-
             Dim obj = Newtonsoft.Json.Linq.JObject.Parse(json)
-            Dim coords = obj("routes")(0)("geometry")("coordinates")
 
+            ' 🧮 DISTANCE & ETA
+            Dim distanceMeters = CDbl(obj("routes")(0)("distance"))
+            Dim durationSeconds = CDbl(obj("routes")(0)("duration"))
+
+            Dim distanceKm = Math.Round(distanceMeters / 1000, 2)
+            Dim etaMinutes = Math.Round(durationSeconds / 60, 1)
+
+            lblDistance.Text = $"{distanceKm} km"
+            lblETA.Text = $"{etaMinutes} mins"
+
+            ' 🗺️ ROUTE LINE
+            Dim coords = obj("routes")(0)("geometry")("coordinates")
             Dim jsCoords As New Text.StringBuilder("[")
+
             For Each c In coords
                 jsCoords.Append($"[{c(1)},{c(0)}],")
             Next
+
             jsCoords.Length -= 1
             jsCoords.Append("]")
 
@@ -322,6 +387,18 @@ window.map.fitBounds(window.routeLine.getBounds());
             Await WebView2Mapping.ExecuteScriptAsync(js)
         End Using
 
+    End Sub
+
+    Private Async Sub ResetMapView()
+
+        If WebView2Mapping.CoreWebView2 Is Nothing Then Exit Sub
+
+        Await WebView2Mapping.ExecuteScriptAsync(
+    $"
+    if (window.map) {{
+        window.map.setView([{defaultLat},{defaultLng}], {defaultZoom});
+    }}
+    ")
     End Sub
 
     Private Async Sub ClearPins()
@@ -350,56 +427,109 @@ Handles refreshTimer.Tick
 
     End Sub
 
-    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles btnDirection.Click
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs)
         DrawRoute()
+    End Sub
+
+    Private Sub btnDirections_Click(sender As Object, e As EventArgs) Handles btnDirections.Click
+
+        If Not pinSelected Then
+            MessageBox.Show("Please select a pin first.", "No Pin Selected")
+            Exit Sub
+        End If
+
+        routingActive = True
+
+        DrawRoute()
+
+        btnClear.Visible = True
+        btnDirections.Visible = False
+        btnDone.Visible = True
     End Sub
 
     Private Async Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
 
         routingActive = False
         pinSelected = False
+
         selectedLat = Nothing
         selectedLng = Nothing
+
+        lblDistance.Text = ""
+        lblETA.Text = ""
 
         If WebView2Mapping.CoreWebView2 Is Nothing Then Exit Sub
 
         Await WebView2Mapping.ExecuteScriptAsync(
-        "
-    // Remove route
+    "
     if (window.routeLine) {
         window.map.removeLayer(window.routeLine);
         window.routeLine = null;
     }
 
-    // Reset selected marker color
     if (window.selectedMarker) {
         window.selectedMarker.setIcon(window.redIcon);
         window.selectedMarker = null;
     }
-
-    // 🔍 ZOOM OUT + RECENTER MAP
-    window.map.setView([14.6550586, 121.0251324], 15);
     ")
 
+        ResetMapView()
+
+        btnClear.Visible = False
+        btnDone.Visible = True
+        btnDirections.Visible = True
     End Sub
 
-    Private Sub txtFamID_TextChanged(sender As Object, e As EventArgs) Handles txtFamID.TextChanged
+    Private Sub btnDone_Click(sender As Object, e As EventArgs) Handles btnDone.Click
 
-    End Sub
+        If Not pinSelected Then
+            MessageBox.Show("Please select a pin first.", "No Pin Selected")
+            Exit Sub
+        End If
 
-    Private Sub txtSurName_TextChanged(sender As Object, e As EventArgs) Handles txtSurName.TextChanged
+        If lblFamID.Text = "" Then Exit Sub
 
-    End Sub
+        Using con As New SqlConnection(connectionString)
+            con.Open()
 
-    Private Sub txtFamAdd_TextChanged(sender As Object, e As EventArgs) Handles txtFamAdd.TextChanged
+            Dim sql As String =
+            "UPDATE SafeStatus SET Status = 1 WHERE FamilyID = @id"
 
-    End Sub
+            Using cmd As New SqlCommand(sql, con)
+                cmd.Parameters.AddWithValue("@id", lblFamID.Text)
+                cmd.ExecuteNonQuery()
+            End Using
+        End Using
 
-    Private Sub txtTimStamp_TextChanged(sender As Object, e As EventArgs) Handles txtTimStamp.TextChanged
+        ' Reset UI
+        lblFamID.Text = ""
+        lblSurName.Text = ""
+        lblFamAdd.Text = ""
+        lblTimStamp.Text = ""
+        lblStatus.Text = ""
+        lblContactNo.Text = ""
+        lblDeclaredBy.Text = ""
+        lblDistance.Text = ""
+        lblETA.Text = ""
 
-    End Sub
+        routingActive = False
+        pinSelected = False
 
-    Private Sub txtStatus_TextChanged(sender As Object, e As EventArgs) Handles txtStatus.TextChanged
+        ' Remove route + reset map
+        btnClear.PerformClick()
+        ResetMapView()
 
+        ' Refresh map
+        ClearPins()
+        LoadUnsafePins()
+
+        btnClear.Visible = False
+        btnDone.Visible = True
+        btnDirections.Visible = True
+
+        If Not pinSelected Then
+            MessageBox.Show("Resident successfully rescued and marked as safe.")
+            Exit Sub
+        End If
     End Sub
 End Class
