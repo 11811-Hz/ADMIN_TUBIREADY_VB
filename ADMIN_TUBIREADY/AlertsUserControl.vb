@@ -1,9 +1,11 @@
 ﻿Imports System.Net.Http
 Imports System.Threading.Tasks
+Imports Microsoft.Data.SqlClient
+Imports MongoDB.Driver.Core.Configuration
 Imports Newtonsoft.Json.Linq
 
 Public Class AlertsUserControl
-
+    Public connectionString As String = "Data Source=DESKTOP-RT61FIB\SQLEXPRESS;Initial Catalog=TubiReadyDB;Integrated Security=True;TrustServerCertificate=True"
     Public Async Function SendOtpSMS(phone As String, otp As String) As Task(Of Boolean)
         Dim baseUrl As String = "https://www.iprogsms.com/api/v1/sms_messages"
 
@@ -64,6 +66,40 @@ Public Class AlertsUserControl
         End Using
     End Function
 
+    Private Sub LoadStreets()
+        ' 1. SQL Query to get unique streets
+        Dim query As String = "SELECT DISTINCT street FROM Residents ORDER BY street ASC"
+
+        Using conn As New SqlConnection(connectionString)
+            Try
+                conn.Open()
+                Using cmd As New SqlCommand(query, conn)
+                    Using reader As SqlDataReader = cmd.ExecuteReader()
+                        ' Clear existing items just in case
+                        cboStreet.Items.Clear()
+
+                        ' Add a default placeholder option
+                        cboStreet.Items.Add("-- Select Street --")
+
+                        ' 2. Loop through results and add to ComboBox
+                        While reader.Read()
+                            ' Check if value is not null to avoid errors
+                            If Not IsDBNull(reader("street")) Then
+                                cboStreet.Items.Add(reader("street").ToString())
+                            End If
+                        End While
+                    End Using
+                End Using
+
+                ' Set default selection to the first item ("-- Select Street --")
+                cboStreet.SelectedIndex = 0
+
+            Catch ex As Exception
+                MessageBox.Show("Error loading streets: " & ex.Message)
+            End Try
+        End Using
+    End Sub
+
 
     Private Sub txtBroadcastMessage_TextChanged(sender As Object, e As EventArgs) Handles txtBroadcastMessage.TextChanged
         ' ts just changes the character count label as you type
@@ -73,6 +109,7 @@ Public Class AlertsUserControl
     Private Sub AlertsUserControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' TODO ADD CONNECTION TO DATABASE TO PULL SEARCH RESULTS
         ' REMOVE THIS AND POPULATE WITH ACTUAL DATA FROM DATABASE
+        LoadStreets()
 
         ' Avoid running at design time
         If Me.DesignMode Then
