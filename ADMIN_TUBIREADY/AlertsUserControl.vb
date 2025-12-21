@@ -5,8 +5,9 @@ Imports MongoDB.Driver.Core.Configuration
 Imports Newtonsoft.Json.Linq
 
 Public Class AlertsUserControl
-    Public connectionString As String = "server=DESKTOP-011N7DN;user id=TubiReadyAdmin;password=123456789;database=TubiReadyDB;TrustServerCertificate=True"
-    ' Changed "otp" to "messageContent"
+    Public connectionString As String = "server=DESKTOP-RT61FIB\SQLEXPRESS;user id=TubiReadyAdmin;password=123456789;database=TubiReadyDB;TrustServerCertificate=True"
+
+    ' Send SMS via IPROG API code
     Public Async Function SendGeneralSMS(phone As String, messageContent As String) As Task(Of Boolean)
         Dim baseUrl As String = "https://www.iprogsms.com/api/v1/sms_messages"
         Dim fullNumber As String = NormalizePhone(phone)
@@ -62,6 +63,7 @@ Public Class AlertsUserControl
         End Using
     End Function
 
+    ' This feeds the combobox with unique street names from the Residents table
     Private Sub LoadStreets()
         ' 1. SQL Query to get unique streets
         Dim query As String = "SELECT DISTINCT street FROM Residents ORDER BY street ASC"
@@ -173,7 +175,7 @@ Public Class AlertsUserControl
                             searchColumn = "lastname" ' CHANGE THIS to your real column name
                         Case "First Name"
                             searchColumn = "firstname" ' CHANGE THIS to your real column name
-                        Case "Phone"
+                        Case "Contact"
                             searchColumn = "mobilenumber" ' CHANGE THIS to your real column name
                     End Select
 
@@ -239,6 +241,15 @@ Public Class AlertsUserControl
         ' Assuming your counter label is named lblCount
         lblCount.Text = selected.ToString() & "/" & total.ToString()
     End Sub
+    Private Function NormalizePhone(phone As String) As String
+        If String.IsNullOrWhiteSpace(phone) Then
+            Throw New ArgumentException("Phone is required", NameOf(phone))
+        End If
+        Dim normalized = phone.Trim().Replace(" "c, "")
+        If normalized.StartsWith("+") Then normalized = normalized.Substring(1)
+        If normalized.StartsWith("0") Then normalized = normalized.TrimStart("0"c)
+        Return "63" & normalized
+    End Function
 
     Private Sub txtBroadcastMessage_TextChanged(sender As Object, e As EventArgs) Handles txtMessage.TextChanged
         ' ts just changes the character count label as you type
@@ -246,8 +257,6 @@ Public Class AlertsUserControl
     End Sub
 
     Private Sub AlertsUserControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' TODO ADD CONNECTION TO DATABASE TO PULL SEARCH RESULTS
-        ' REMOVE THIS AND POPULATE WITH ACTUAL DATA FROM DATABASE
         LoadStreets()
     End Sub
 
@@ -319,15 +328,7 @@ Public Class AlertsUserControl
         End Try
     End Sub
 
-    Private Function NormalizePhone(phone As String) As String
-        If String.IsNullOrWhiteSpace(phone) Then
-            Throw New ArgumentException("Phone is required", NameOf(phone))
-        End If
-        Dim normalized = phone.Trim().Replace(" "c, "")
-        If normalized.StartsWith("+") Then normalized = normalized.Substring(1)
-        If normalized.StartsWith("0") Then normalized = normalized.TrimStart("0"c)
-        Return "63" & normalized
-    End Function
+
 
     Private Sub Guna2TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
         LoadResidents()

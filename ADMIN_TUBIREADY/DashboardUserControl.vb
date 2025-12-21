@@ -31,7 +31,7 @@ Public Class DashboardUserControl
         MyAreaDataset.BorderColor = Color.FromArgb(0, 120, 215)
 
         ' 3. CRITICAL: Add it to the Chart manually
-        GunaChart1.Datasets.Add(MyAreaDataset)
+        GunaChartLvlWater.Datasets.Add(MyAreaDataset)
 
         ' Start your timer here if you haven't already
         Timer1.Start()
@@ -86,8 +86,8 @@ Public Class DashboardUserControl
         ' Setup Alley 18
         Alley18Dataset.Label = "Alley 18 Level"
         Alley18Dataset.FillColor = Color.FromArgb(100, 50, 150, 255)
-        GunaChart1.Datasets.Clear()
-        GunaChart1.Datasets.Add(Alley18Dataset)
+        GunaChartLvlWater.Datasets.Clear()
+        GunaChartLvlWater.Datasets.Add(Alley18Dataset)
 
         'Setup Entry 1 (If you have a second chart, e.g.GunaChart2)
         Entry1Dataset.Label = "Entry 1 Level"
@@ -137,7 +137,7 @@ Public Class DashboardUserControl
 
         ' 1. Update Alley 18
         Dim query1 As String = "SELECT TOP 10 ReadingTime, WaterLevel FROM dbo.Ultrasonic WHERE Sensor_ID ='1' ORDER BY ReadingTime DESC"
-        ChartHandler.FeedChart(GunaChart1, Alley18Dataset, query1, "ReadingTime", "WaterLevel")
+        ChartHandler.FeedChart(GunaChartLvlWater, Alley18Dataset, query1, "ReadingTime", "WaterLevel")
 
         ' 2. Update Entry 1 (Example for when you are ready)
         Dim query2 As String = "SELECT TOP 10 ReadingTime, WaterLevel FROM dbo.Ultrasonic WHERE Sensor_ID ='2' ORDER BY ReadingTime DESC"

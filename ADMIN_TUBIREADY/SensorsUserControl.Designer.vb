@@ -771,7 +771,7 @@ Partial Class SensorsUserControl
         ' 
         ' Guna2Panel17
         ' 
-        Guna2Panel17.Controls.Add(GunaChart1)
+        Guna2Panel17.Controls.Add(GunaChartLvlWater)
         Guna2Panel17.CustomizableEdges = CustomizableEdges103
         Guna2Panel17.Location = New Point(37, 88)
         Guna2Panel17.Name = "Guna2Panel17"
@@ -781,38 +781,38 @@ Partial Class SensorsUserControl
         ' 
         ' GunaChartLvlWater
         ' 
-        GunaChart1.Dock = DockStyle.Fill
+        GunaChartLvlWater.Dock = DockStyle.Fill
         ChartFont9.FontName = "Arial"
-        GunaChart1.Legend.LabelFont = ChartFont9
-        GunaChart1.Location = New Point(0, 0)
-        GunaChart1.Name = "GunaChart1"
-        GunaChart1.Size = New Size(649, 324)
-        GunaChart1.TabIndex = 3
+        GunaChartLvlWater.Legend.LabelFont = ChartFont9
+        GunaChartLvlWater.Location = New Point(0, 0)
+        GunaChartLvlWater.Name = "GunaChartLvlWater"
+        GunaChartLvlWater.Size = New Size(649, 324)
+        GunaChartLvlWater.TabIndex = 3
         ChartFont10.FontName = "Arial"
         ChartFont10.Size = 12
         ChartFont10.Style = Guna.Charts.WinForms.ChartFontStyle.Bold
-        GunaChart1.Title.Font = ChartFont10
+        GunaChartLvlWater.Title.Font = ChartFont10
         ChartFont11.FontName = "Arial"
-        GunaChart1.Tooltips.BodyFont = ChartFont11
+        GunaChartLvlWater.Tooltips.BodyFont = ChartFont11
         ChartFont12.FontName = "Arial"
         ChartFont12.Size = 9
         ChartFont12.Style = Guna.Charts.WinForms.ChartFontStyle.Bold
-        GunaChart1.Tooltips.TitleFont = ChartFont12
-        GunaChart1.XAxes.GridLines = Grid4
+        GunaChartLvlWater.Tooltips.TitleFont = ChartFont12
+        GunaChartLvlWater.XAxes.GridLines = Grid4
         ChartFont13.FontName = "Arial"
         Tick4.Font = ChartFont13
-        GunaChart1.XAxes.Ticks = Tick4
-        GunaChart1.YAxes.GridLines = Grid5
+        GunaChartLvlWater.XAxes.Ticks = Tick4
+        GunaChartLvlWater.YAxes.GridLines = Grid5
         ChartFont14.FontName = "Arial"
         Tick5.Font = ChartFont14
-        GunaChart1.YAxes.Ticks = Tick5
-        GunaChart1.ZAxes.GridLines = Grid6
+        GunaChartLvlWater.YAxes.Ticks = Tick5
+        GunaChartLvlWater.ZAxes.GridLines = Grid6
         ChartFont15.FontName = "Arial"
         PointLabel2.Font = ChartFont15
-        GunaChart1.ZAxes.PointLabels = PointLabel2
+        GunaChartLvlWater.ZAxes.PointLabels = PointLabel2
         ChartFont16.FontName = "Arial"
         Tick6.Font = ChartFont16
-        GunaChart1.ZAxes.Ticks = Tick6
+        GunaChartLvlWater.ZAxes.Ticks = Tick6
         ' 
         ' Guna2Panel2
         ' 

@@ -143,7 +143,7 @@ Partial Class DashboardUserControl
         lbl_safe_residents = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2Panel11 = New Guna.UI2.WinForms.Guna2Panel()
         Guna2Panel17 = New Guna.UI2.WinForms.Guna2Panel()
-        GunaChart1 = New Guna.Charts.WinForms.GunaChart()
+        GunaChartLvlWater = New Guna.Charts.WinForms.GunaChart()
         Label7 = New Label()
         Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Guna2Panel15 = New Guna.UI2.WinForms.Guna2Panel()
@@ -573,7 +573,7 @@ Partial Class DashboardUserControl
         ' 
         ' Guna2Panel17
         ' 
-        Guna2Panel17.Controls.Add(GunaChart1)
+        Guna2Panel17.Controls.Add(GunaChartLvlWater)
         Guna2Panel17.CustomizableEdges = CustomizableEdges81
         Guna2Panel17.Location = New Point(32, 58)
         Guna2Panel17.Name = "Guna2Panel17"
@@ -581,40 +581,40 @@ Partial Class DashboardUserControl
         Guna2Panel17.Size = New Size(666, 192)
         Guna2Panel17.TabIndex = 1
         ' 
-        ' GunaChart1
+        ' GunaChartLvlWater
         ' 
-        GunaChart1.Dock = DockStyle.Fill
+        GunaChartLvlWater.Dock = DockStyle.Fill
         ChartFont17.FontName = "Arial"
-        GunaChart1.Legend.LabelFont = ChartFont17
-        GunaChart1.Location = New Point(0, 0)
-        GunaChart1.Name = "GunaChart1"
-        GunaChart1.Size = New Size(666, 192)
-        GunaChart1.TabIndex = 0
+        GunaChartLvlWater.Legend.LabelFont = ChartFont17
+        GunaChartLvlWater.Location = New Point(0, 0)
+        GunaChartLvlWater.Name = "GunaChartLvlWater"
+        GunaChartLvlWater.Size = New Size(666, 192)
+        GunaChartLvlWater.TabIndex = 0
         ChartFont18.FontName = "Arial"
         ChartFont18.Size = 12
         ChartFont18.Style = Guna.Charts.WinForms.ChartFontStyle.Bold
-        GunaChart1.Title.Font = ChartFont18
+        GunaChartLvlWater.Title.Font = ChartFont18
         ChartFont19.FontName = "Arial"
-        GunaChart1.Tooltips.BodyFont = ChartFont19
+        GunaChartLvlWater.Tooltips.BodyFont = ChartFont19
         ChartFont20.FontName = "Arial"
         ChartFont20.Size = 9
         ChartFont20.Style = Guna.Charts.WinForms.ChartFontStyle.Bold
-        GunaChart1.Tooltips.TitleFont = ChartFont20
-        GunaChart1.XAxes.GridLines = Grid7
+        GunaChartLvlWater.Tooltips.TitleFont = ChartFont20
+        GunaChartLvlWater.XAxes.GridLines = Grid7
         ChartFont21.FontName = "Arial"
         Tick7.Font = ChartFont21
-        GunaChart1.XAxes.Ticks = Tick7
-        GunaChart1.YAxes.GridLines = Grid8
+        GunaChartLvlWater.XAxes.Ticks = Tick7
+        GunaChartLvlWater.YAxes.GridLines = Grid8
         ChartFont22.FontName = "Arial"
         Tick8.Font = ChartFont22
-        GunaChart1.YAxes.Ticks = Tick8
-        GunaChart1.ZAxes.GridLines = Grid9
+        GunaChartLvlWater.YAxes.Ticks = Tick8
+        GunaChartLvlWater.ZAxes.GridLines = Grid9
         ChartFont23.FontName = "Arial"
         PointLabel3.Font = ChartFont23
-        GunaChart1.ZAxes.PointLabels = PointLabel3
+        GunaChartLvlWater.ZAxes.PointLabels = PointLabel3
         ChartFont24.FontName = "Arial"
         Tick9.Font = ChartFont24
-        GunaChart1.ZAxes.Ticks = Tick9
+        GunaChartLvlWater.ZAxes.Ticks = Tick9
         ' 
         ' Label7
         ' 
@@ -1487,7 +1487,7 @@ Partial Class DashboardUserControl
     Friend WithEvents Guna2Panel18 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Alley18Dataset As Guna.Charts.WinForms.GunaAreaDataset
     Friend WithEvents Entry1Dataset As Guna.Charts.WinForms.GunaAreaDataset
-    Friend WithEvents GunaChart1 As Guna.Charts.WinForms.GunaChart
+    Friend WithEvents GunaChartLvlWater As Guna.Charts.WinForms.GunaChart
     Friend WithEvents GunaChart2 As Guna.Charts.WinForms.GunaChart
 
 End Class

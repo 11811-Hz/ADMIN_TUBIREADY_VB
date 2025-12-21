@@ -8,7 +8,7 @@ Imports Guna.UI2.WinForms
 
 Public Class SensorsUserControl
 
-    Private connectionString As String = "server=DESKTOP-011N7DN;user id=TubiReadyAdmin;password=123456789;database=TubiReadyDB;TrustServerCertificate=True"
+    Private connectionString As String = "server=DESKTOP-RT61FIB\SQLEXPRESS;user id=TubiReadyAdmin;password=123456789;database=TubiReadyDB;TrustServerCertificate=True"
 
     Private sensorTimer As System.Timers.Timer
     Private receiverIP As String = "10.148.172.199" ' Receiver IP
@@ -89,7 +89,7 @@ Public Class SensorsUserControl
                               "WHERE Sensor_ID = @SensorID " &
                               "ORDER BY ReadingTime DESC"
 
-        Using conn As New SqlConnection(MasterConnString)
+        Using conn As New SqlConnection(connectionString)
             Try
                 conn.Open()
                 Dim cmd As New SqlCommand(query, conn)
@@ -132,26 +132,26 @@ Public Class SensorsUserControl
 
         Try
             If CurrentStation = "Alley18" Then
-                GunaChart1.Title.Text = "Alley 18 Real-time Level"
-                If Not GunaChart1.Datasets.Contains(AlleyDataset) Then
-                    GunaChart1.Datasets.Clear()
-                    GunaChart1.Datasets.Add(AlleyDataset)
+                GunaChartLvlWater.Title.Text = "Alley 18 Real-time Level"
+                If Not GunaChartLvlWater.Datasets.Contains(AlleyDataset) Then
+                    GunaChartLvlWater.Datasets.Clear()
+                    GunaChartLvlWater.Datasets.Add(AlleyDataset)
                 End If
-                ChartHandler.FeedChart(GunaChart1, AlleyDataset, queryAlley, "ReadingTime", "WaterLevel")
+                ChartHandler.FeedChart(GunaChartLvlWater, AlleyDataset, queryAlley, "ReadingTime", "WaterLevel")
 
             ElseIf CurrentStation = "Entry1" Then
-                GunaChart1.Title.Text = "Entry 1 Real-time Level"
-                If Not GunaChart1.Datasets.Contains(EntryDataset) Then
-                    GunaChart1.Datasets.Clear()
-                    GunaChart1.Datasets.Add(EntryDataset)
+                GunaChartLvlWater.Title.Text = "Entry 1 Real-time Level"
+                If Not GunaChartLvlWater.Datasets.Contains(EntryDataset) Then
+                    GunaChartLvlWater.Datasets.Clear()
+                    GunaChartLvlWater.Datasets.Add(EntryDataset)
                 End If
-                ChartHandler.FeedChart(GunaChart1, EntryDataset, queryEntry, "ReadingTime", "WaterLevel")
+                ChartHandler.FeedChart(GunaChartLvlWater, EntryDataset, queryEntry, "ReadingTime", "WaterLevel")
             End If
 
         Catch ex As Exception
             Debug.WriteLine("UpdateChart Error: " & ex.Message)
         Finally
-            GunaChart1.Update()
+            GunaChartLvlWater.Update()
         End Try
     End Sub
 
