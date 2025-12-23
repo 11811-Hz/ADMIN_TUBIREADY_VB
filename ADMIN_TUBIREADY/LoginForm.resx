@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Guna2TextBox2.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtPassword.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        rgAAAK4B+ff3XQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKSSURBVFhH7VNd
+        qQAAAKkBq7NRIgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKSSURBVFhH7VNd
         axNBFA36DxSLggj64KsofjwFstm0CopaMW/WNPoiUn+AsAnxg9pmI76oWCsFm91E9hcooj9CiIqPilAU
         +pHsTPrQGu+ZndlupxP/gHvgsHfOPXPv3dnZTIoUKVIkYbX5mbzPfts+e1urDXZJ2Yixxd5I3udfQcRS
         NgK1qO474i/yn5byTtgtNk2mAVhY7B+SshGWz68oL2IpG4FayoseUo5A4jxxjSaboefz2Ojxq6R9pHil
@@ -136,10 +136,10 @@
         AElFTkSuQmCC
 </value>
   </data>
-  <data name="Guna2TextBox1.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtUsername.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        rgAAAK4B+ff3XQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJISURBVFhH3ZfP
+        qQAAAKkBq7NRIgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJISURBVFhH3ZfP
         S9tgGMe7v8Dh2MVdah0bOud1MJGd9uvkEAri2Jq0dqigdyEpnsZsyrysFtGDJwX1oDMrg52GsHmZ4B+w
         44anqsmbqJtt9rz6DNI3b01W8+awL3wp7ds8nw9JmqSxf028SJ60z5o70F9QJ2h7Fkzn4RJxhtYtJ61b
         tfSmvfbqU6UFxwZLYtaQYViNHd6of6HPNyxn+IPtrW6v4mj/xGf2r8LQQxbC9u68D7S+xzjeP/ESecwD
