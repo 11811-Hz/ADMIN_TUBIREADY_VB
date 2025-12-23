@@ -22,27 +22,27 @@ Partial Class SecurityPrivacyUserControl
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges35 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges36 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges25 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges26 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges27 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges28 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges29 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges30 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges31 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges32 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges33 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges34 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges37 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SecurityPrivacyUserControl))
-        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges38 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges39 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges40 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         lblChangePass = New Label()
         pnlMain = New Guna.UI2.WinForms.Guna2Panel()
         Label11 = New Label()
@@ -51,7 +51,7 @@ Partial Class SecurityPrivacyUserControl
         PictureBox2 = New PictureBox()
         PictureBox1 = New PictureBox()
         btnRecoveryEmail = New Guna.UI2.WinForms.Guna2Button()
-        Guna2TextBox4 = New Guna.UI2.WinForms.Guna2TextBox()
+        txtRecoveryEmail = New Guna.UI2.WinForms.Guna2TextBox()
         lblRecoveryEmail = New Label()
         lblRecovery = New Label()
         txtConfirmNewPassword = New Guna.UI2.WinForms.Guna2TextBox()
@@ -110,7 +110,7 @@ Partial Class SecurityPrivacyUserControl
         pnlMain.Controls.Add(PictureBox2)
         pnlMain.Controls.Add(PictureBox1)
         pnlMain.Controls.Add(btnRecoveryEmail)
-        pnlMain.Controls.Add(Guna2TextBox4)
+        pnlMain.Controls.Add(txtRecoveryEmail)
         pnlMain.Controls.Add(lblRecoveryEmail)
         pnlMain.Controls.Add(lblRecovery)
         pnlMain.Controls.Add(txtConfirmNewPassword)
@@ -124,13 +124,13 @@ Partial Class SecurityPrivacyUserControl
         pnlMain.Controls.Add(lblCurrentPassword)
         pnlMain.Controls.Add(lblNote)
         pnlMain.Controls.Add(lblChangePass)
-        pnlMain.CustomizableEdges = CustomizableEdges19
+        pnlMain.CustomizableEdges = CustomizableEdges35
         pnlMain.Dock = DockStyle.Fill
         pnlMain.FillColor = Color.White
         pnlMain.Font = New Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         pnlMain.Location = New Point(0, 0)
         pnlMain.Name = "pnlMain"
-        pnlMain.ShadowDecoration.CustomizableEdges = CustomizableEdges20
+        pnlMain.ShadowDecoration.CustomizableEdges = CustomizableEdges36
         pnlMain.Size = New Size(938, 798)
         pnlMain.TabIndex = 2
         ' 
@@ -191,7 +191,7 @@ Partial Class SecurityPrivacyUserControl
         ' btnRecoveryEmail
         ' 
         btnRecoveryEmail.BorderRadius = 10
-        btnRecoveryEmail.CustomizableEdges = CustomizableEdges1
+        btnRecoveryEmail.CustomizableEdges = CustomizableEdges21
         btnRecoveryEmail.DisabledState.BorderColor = Color.DarkGray
         btnRecoveryEmail.DisabledState.CustomBorderColor = Color.DarkGray
         btnRecoveryEmail.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -201,32 +201,32 @@ Partial Class SecurityPrivacyUserControl
         btnRecoveryEmail.ForeColor = Color.White
         btnRecoveryEmail.Location = New Point(32, 653)
         btnRecoveryEmail.Name = "btnRecoveryEmail"
-        btnRecoveryEmail.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        btnRecoveryEmail.ShadowDecoration.CustomizableEdges = CustomizableEdges22
         btnRecoveryEmail.Size = New Size(306, 40)
         btnRecoveryEmail.TabIndex = 18
         btnRecoveryEmail.Text = "Confirm Email"
         ' 
-        ' Guna2TextBox4
+        ' txtRecoveryEmail
         ' 
-        Guna2TextBox4.BorderRadius = 10
-        Guna2TextBox4.CustomizableEdges = CustomizableEdges3
-        Guna2TextBox4.DefaultText = ""
-        Guna2TextBox4.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        Guna2TextBox4.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        Guna2TextBox4.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox4.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox4.FillColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Guna2TextBox4.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox4.Font = New Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Guna2TextBox4.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox4.Location = New Point(31, 610)
-        Guna2TextBox4.Margin = New Padding(3, 4, 3, 4)
-        Guna2TextBox4.Name = "Guna2TextBox4"
-        Guna2TextBox4.PlaceholderText = ""
-        Guna2TextBox4.SelectedText = ""
-        Guna2TextBox4.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        Guna2TextBox4.Size = New Size(306, 36)
-        Guna2TextBox4.TabIndex = 17
+        txtRecoveryEmail.BorderRadius = 10
+        txtRecoveryEmail.CustomizableEdges = CustomizableEdges23
+        txtRecoveryEmail.DefaultText = ""
+        txtRecoveryEmail.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        txtRecoveryEmail.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        txtRecoveryEmail.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        txtRecoveryEmail.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        txtRecoveryEmail.FillColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        txtRecoveryEmail.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        txtRecoveryEmail.Font = New Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtRecoveryEmail.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        txtRecoveryEmail.Location = New Point(31, 610)
+        txtRecoveryEmail.Margin = New Padding(3, 4, 3, 4)
+        txtRecoveryEmail.Name = "txtRecoveryEmail"
+        txtRecoveryEmail.PlaceholderText = ""
+        txtRecoveryEmail.SelectedText = ""
+        txtRecoveryEmail.ShadowDecoration.CustomizableEdges = CustomizableEdges24
+        txtRecoveryEmail.Size = New Size(306, 36)
+        txtRecoveryEmail.TabIndex = 17
         ' 
         ' lblRecoveryEmail
         ' 
@@ -255,7 +255,7 @@ Partial Class SecurityPrivacyUserControl
         ' 
         txtConfirmNewPassword.BorderRadius = 10
         txtConfirmNewPassword.CharacterCasing = CharacterCasing.Upper
-        txtConfirmNewPassword.CustomizableEdges = CustomizableEdges5
+        txtConfirmNewPassword.CustomizableEdges = CustomizableEdges25
         txtConfirmNewPassword.DefaultText = ""
         txtConfirmNewPassword.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txtConfirmNewPassword.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -271,7 +271,7 @@ Partial Class SecurityPrivacyUserControl
         txtConfirmNewPassword.PasswordChar = "•"c
         txtConfirmNewPassword.PlaceholderText = ""
         txtConfirmNewPassword.SelectedText = ""
-        txtConfirmNewPassword.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        txtConfirmNewPassword.ShadowDecoration.CustomizableEdges = CustomizableEdges26
         txtConfirmNewPassword.Size = New Size(306, 32)
         txtConfirmNewPassword.TabIndex = 14
         ' 
@@ -279,7 +279,7 @@ Partial Class SecurityPrivacyUserControl
         ' 
         txtNewPassword.BorderRadius = 10
         txtNewPassword.CharacterCasing = CharacterCasing.Upper
-        txtNewPassword.CustomizableEdges = CustomizableEdges7
+        txtNewPassword.CustomizableEdges = CustomizableEdges27
         txtNewPassword.DefaultText = ""
         txtNewPassword.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txtNewPassword.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -295,7 +295,7 @@ Partial Class SecurityPrivacyUserControl
         txtNewPassword.PasswordChar = "•"c
         txtNewPassword.PlaceholderText = ""
         txtNewPassword.SelectedText = ""
-        txtNewPassword.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        txtNewPassword.ShadowDecoration.CustomizableEdges = CustomizableEdges28
         txtNewPassword.Size = New Size(306, 32)
         txtNewPassword.TabIndex = 13
         ' 
@@ -303,7 +303,7 @@ Partial Class SecurityPrivacyUserControl
         ' 
         txtCurrentPassword.BorderRadius = 10
         txtCurrentPassword.CharacterCasing = CharacterCasing.Upper
-        txtCurrentPassword.CustomizableEdges = CustomizableEdges9
+        txtCurrentPassword.CustomizableEdges = CustomizableEdges29
         txtCurrentPassword.DefaultText = ""
         txtCurrentPassword.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txtCurrentPassword.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -319,14 +319,14 @@ Partial Class SecurityPrivacyUserControl
         txtCurrentPassword.PasswordChar = "•"c
         txtCurrentPassword.PlaceholderText = ""
         txtCurrentPassword.SelectedText = ""
-        txtCurrentPassword.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        txtCurrentPassword.ShadowDecoration.CustomizableEdges = CustomizableEdges30
         txtCurrentPassword.Size = New Size(302, 32)
         txtCurrentPassword.TabIndex = 12
         ' 
         ' btnUpdatePassword
         ' 
         btnUpdatePassword.BorderRadius = 10
-        btnUpdatePassword.CustomizableEdges = CustomizableEdges11
+        btnUpdatePassword.CustomizableEdges = CustomizableEdges31
         btnUpdatePassword.DisabledState.BorderColor = Color.DarkGray
         btnUpdatePassword.DisabledState.CustomBorderColor = Color.DarkGray
         btnUpdatePassword.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -336,7 +336,7 @@ Partial Class SecurityPrivacyUserControl
         btnUpdatePassword.ForeColor = Color.White
         btnUpdatePassword.Location = New Point(39, 469)
         btnUpdatePassword.Name = "btnUpdatePassword"
-        btnUpdatePassword.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        btnUpdatePassword.ShadowDecoration.CustomizableEdges = CustomizableEdges32
         btnUpdatePassword.Size = New Size(306, 40)
         btnUpdatePassword.TabIndex = 11
         btnUpdatePassword.Text = "Update Password"
@@ -354,10 +354,10 @@ Partial Class SecurityPrivacyUserControl
         Guna2Panel1.Controls.Add(Label5)
         Guna2Panel1.Controls.Add(TableLayoutPanel1)
         Guna2Panel1.Controls.Add(Label3)
-        Guna2Panel1.CustomizableEdges = CustomizableEdges17
+        Guna2Panel1.CustomizableEdges = CustomizableEdges33
         Guna2Panel1.Location = New Point(480, 26)
         Guna2Panel1.Name = "Guna2Panel1"
-        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges18
+        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges34
         Guna2Panel1.Size = New Size(429, 530)
         Guna2Panel1.TabIndex = 10
         ' 
@@ -463,12 +463,12 @@ Partial Class SecurityPrivacyUserControl
         ' 
         ' Guna2PictureBox1
         ' 
-        Guna2PictureBox1.CustomizableEdges = CustomizableEdges13
+        Guna2PictureBox1.CustomizableEdges = CustomizableEdges37
         Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), Image)
         Guna2PictureBox1.ImageRotate = 0F
         Guna2PictureBox1.Location = New Point(3, 3)
         Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges38
         Guna2PictureBox1.Size = New Size(24, 24)
         Guna2PictureBox1.SizeMode = PictureBoxSizeMode.AutoSize
         Guna2PictureBox1.TabIndex = 7
@@ -480,7 +480,7 @@ Partial Class SecurityPrivacyUserControl
         Guna2CirclePictureBox1.ImageRotate = 0F
         Guna2CirclePictureBox1.Location = New Point(3, 33)
         Guna2CirclePictureBox1.Name = "Guna2CirclePictureBox1"
-        Guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges15
+        Guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges39
         Guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         Guna2CirclePictureBox1.Size = New Size(24, 24)
         Guna2CirclePictureBox1.SizeMode = PictureBoxSizeMode.AutoSize
@@ -493,7 +493,7 @@ Partial Class SecurityPrivacyUserControl
         Guna2CirclePictureBox2.ImageRotate = 0F
         Guna2CirclePictureBox2.Location = New Point(3, 63)
         Guna2CirclePictureBox2.Name = "Guna2CirclePictureBox2"
-        Guna2CirclePictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges16
+        Guna2CirclePictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges40
         Guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         Guna2CirclePictureBox2.Size = New Size(24, 24)
         Guna2CirclePictureBox2.SizeMode = PictureBoxSizeMode.AutoSize
@@ -623,7 +623,7 @@ Partial Class SecurityPrivacyUserControl
     Friend WithEvents txtCurrentPassword As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents lblRecovery As Label
     Friend WithEvents btnRecoveryEmail As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2TextBox4 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtRecoveryEmail As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents lblRecoveryEmail As Label
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox

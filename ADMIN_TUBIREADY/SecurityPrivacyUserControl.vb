@@ -98,4 +98,37 @@ Public Class SecurityPrivacyUserControl
             End Try
         End Using
     End Sub
+
+    Private Sub btnRecoveryEmail_Click(sender As Object, e As EventArgs) Handles btnRecoveryEmail.Click
+        Dim newEmail As String = txtRecoveryEmail.Text
+        Dim username As String = "ADMIN"
+
+        ' Simple Email Regex Validation
+        If Not Regex.IsMatch(newEmail, "^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$") Then
+            MessageBox.Show("Please enter a valid email address.", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+
+        Using conn As New SqlConnection(ConnString)
+            Try
+                conn.Open()
+                Dim query As String = "UPDATE Users SET Email = @email WHERE Uname = @u"
+
+                Using cmd As New SqlCommand(query, conn)
+                    cmd.Parameters.AddWithValue("@email", newEmail)
+                    cmd.Parameters.AddWithValue("@u", username)
+
+                    Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+
+                    If rowsAffected > 0 Then
+                        MessageBox.Show("Recovery email updated.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Else
+                        MessageBox.Show("Update failed. User not found.", "Error")
+                    End If
+                End Using
+            Catch ex As Exception
+                MessageBox.Show("Error: " & ex.Message)
+            End Try
+        End Using
+    End Sub
 End Class
