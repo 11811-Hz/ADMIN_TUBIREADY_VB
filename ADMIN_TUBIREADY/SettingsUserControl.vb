@@ -2,6 +2,8 @@
 
     Private _manageControl As ManageAccountUserControl
     Private _auditControl As AuditUserControl
+    Private _securityControl As SecurityPrivacyUserControl
+    Private _accountsControl As AccountUserControl
 
     Public Sub New()
         InitializeComponent()
@@ -22,6 +24,12 @@
 
         ' Prepare audit control so Audit button can sync immediately.
         _auditControl = New AuditUserControl()
+
+        ' Prepare audit Control so Audit button can sync immediately.
+        _securityControl = New SecurityPrivacyUserControl()
+
+        ' Prepare accounts control so Accounts button can sync immediately.
+        _accountsControl = New AccountUserControl()
     End Sub
 
     Private Sub SetActiveLight(activePanel As Guna.UI2.WinForms.Guna2Panel)
@@ -66,8 +74,10 @@
     Private Sub BtnSecurity_Click(sender As Object, e As EventArgs)
         SetActiveLight(SecurityLight)
         TopBarLabel.Text = "Configure security settings, passwords, and privacy options."
-        ' No dedicated security control implemented yet — clear or add appropriate control here.
-        SettingsPanelContainer.Controls.Clear()
+        If _securityControl Is Nothing Then
+            _securityControl = New SecurityPrivacyUserControl()
+        End If
+        ShowControl(_securityControl)
     End Sub
 
     Private Sub BtnManage_Click(sender As Object, e As EventArgs)
@@ -91,5 +101,4 @@
 
         ShowControl(_auditControl)
     End Sub
-
 End Class

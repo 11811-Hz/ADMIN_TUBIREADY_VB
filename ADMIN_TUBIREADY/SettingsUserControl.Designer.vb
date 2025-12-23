@@ -238,7 +238,6 @@ Partial Class SettingsUserControl
         btnProfile.DisabledState.CustomBorderColor = Color.DarkGray
         btnProfile.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnProfile.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        btnProfile.Enabled = False
         btnProfile.FillColor = Color.White
         btnProfile.FocusedColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         btnProfile.Font = New Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
@@ -264,7 +263,6 @@ Partial Class SettingsUserControl
         btnSecurity.DisabledState.CustomBorderColor = Color.DarkGray
         btnSecurity.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnSecurity.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        btnSecurity.Enabled = False
         btnSecurity.FillColor = Color.White
         btnSecurity.FocusedColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         btnSecurity.Font = New Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
@@ -278,7 +276,7 @@ Partial Class SettingsUserControl
         btnSecurity.ShadowDecoration.CustomizableEdges = CustomizableEdges22
         btnSecurity.Size = New Size(227, 62)
         btnSecurity.TabIndex = 12
-        btnSecurity.Text = "Security && Privacy"
+        btnSecurity.Text = "Security"
         btnSecurity.TextAlign = HorizontalAlignment.Left
         ' 
         ' btnManage
