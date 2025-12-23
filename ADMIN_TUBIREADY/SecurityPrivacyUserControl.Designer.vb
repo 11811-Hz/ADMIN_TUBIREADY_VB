@@ -22,8 +22,11 @@ Partial Class SecurityPrivacyUserControl
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -33,21 +36,20 @@ Partial Class SecurityPrivacyUserControl
         Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SecurityPrivacyUserControl))
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         lblChangePass = New Label()
         pnlMain = New Guna.UI2.WinForms.Guna2Panel()
+        Label11 = New Label()
+        Label10 = New Label()
+        PictureBox3 = New PictureBox()
+        PictureBox2 = New PictureBox()
+        PictureBox1 = New PictureBox()
         btnRecoveryEmail = New Guna.UI2.WinForms.Guna2Button()
         Guna2TextBox4 = New Guna.UI2.WinForms.Guna2TextBox()
         lblRecoveryEmail = New Label()
@@ -70,15 +72,15 @@ Partial Class SecurityPrivacyUserControl
         Guna2CirclePictureBox1 = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         Guna2CirclePictureBox2 = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         Label3 = New Label()
-        Guna2CheckBox1 = New Guna.UI2.WinForms.Guna2CheckBox()
+        chkMonthlyReset = New Guna.UI2.WinForms.Guna2CheckBox()
         lblConfirmPassword = New Label()
         lblNewPassword = New Label()
         lblCurrentPassword = New Label()
         lblNote = New Label()
-        Guna2ImageButton1 = New Guna.UI2.WinForms.Guna2ImageButton()
-        Guna2ImageButton2 = New Guna.UI2.WinForms.Guna2ImageButton()
-        Guna2ImageButton3 = New Guna.UI2.WinForms.Guna2ImageButton()
         pnlMain.SuspendLayout()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Guna2Panel1.SuspendLayout()
         TableLayoutPanel1.SuspendLayout()
         CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -92,7 +94,7 @@ Partial Class SecurityPrivacyUserControl
         lblChangePass.BackColor = Color.Transparent
         lblChangePass.Font = New Font("Calibri", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblChangePass.ForeColor = Color.FromArgb(CByte(51), CByte(51), CByte(51))
-        lblChangePass.Location = New Point(30, 37)
+        lblChangePass.Location = New Point(28, 26)
         lblChangePass.Name = "lblChangePass"
         lblChangePass.Size = New Size(256, 39)
         lblChangePass.TabIndex = 1
@@ -102,9 +104,11 @@ Partial Class SecurityPrivacyUserControl
         ' 
         pnlMain.BackColor = Color.Transparent
         pnlMain.BorderRadius = 10
-        pnlMain.Controls.Add(Guna2ImageButton3)
-        pnlMain.Controls.Add(Guna2ImageButton2)
-        pnlMain.Controls.Add(Guna2ImageButton1)
+        pnlMain.Controls.Add(Label11)
+        pnlMain.Controls.Add(Label10)
+        pnlMain.Controls.Add(PictureBox3)
+        pnlMain.Controls.Add(PictureBox2)
+        pnlMain.Controls.Add(PictureBox1)
         pnlMain.Controls.Add(btnRecoveryEmail)
         pnlMain.Controls.Add(Guna2TextBox4)
         pnlMain.Controls.Add(lblRecoveryEmail)
@@ -114,26 +118,80 @@ Partial Class SecurityPrivacyUserControl
         pnlMain.Controls.Add(Guna2TextBox1)
         pnlMain.Controls.Add(btnUpdatePassword)
         pnlMain.Controls.Add(Guna2Panel1)
-        pnlMain.Controls.Add(Guna2CheckBox1)
+        pnlMain.Controls.Add(chkMonthlyReset)
         pnlMain.Controls.Add(lblConfirmPassword)
         pnlMain.Controls.Add(lblNewPassword)
         pnlMain.Controls.Add(lblCurrentPassword)
         pnlMain.Controls.Add(lblNote)
         pnlMain.Controls.Add(lblChangePass)
-        pnlMain.CustomizableEdges = CustomizableEdges22
+        pnlMain.CustomizableEdges = CustomizableEdges19
         pnlMain.Dock = DockStyle.Fill
         pnlMain.FillColor = Color.White
         pnlMain.Font = New Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         pnlMain.Location = New Point(0, 0)
         pnlMain.Name = "pnlMain"
-        pnlMain.ShadowDecoration.CustomizableEdges = CustomizableEdges23
+        pnlMain.ShadowDecoration.CustomizableEdges = CustomizableEdges20
         pnlMain.Size = New Size(938, 798)
         pnlMain.TabIndex = 2
+        ' 
+        ' Label11
+        ' 
+        Label11.AutoSize = True
+        Label11.Font = New Font("Calibri", 14.25F)
+        Label11.ForeColor = Color.Red
+        Label11.Location = New Point(39, 410)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(253, 23)
+        Label11.TabIndex = 23
+        Label11.Text = "New password does not match."
+        Label11.Visible = False
+        ' 
+        ' Label10
+        ' 
+        Label10.AutoSize = True
+        Label10.Font = New Font("Calibri", 14.25F)
+        Label10.ForeColor = Color.Red
+        Label10.Location = New Point(39, 309)
+        Label10.Name = "Label10"
+        Label10.Size = New Size(315, 23)
+        Label10.TabIndex = 22
+        Label10.Text = "Password must be at least 8 characters."
+        Label10.Visible = False
+        ' 
+        ' PictureBox3
+        ' 
+        PictureBox3.Image = My.Resources.Resources.hidden
+        PictureBox3.Location = New Point(350, 374)
+        PictureBox3.Name = "PictureBox3"
+        PictureBox3.Size = New Size(32, 32)
+        PictureBox3.SizeMode = PictureBoxSizeMode.AutoSize
+        PictureBox3.TabIndex = 21
+        PictureBox3.TabStop = False
+        ' 
+        ' PictureBox2
+        ' 
+        PictureBox2.Image = My.Resources.Resources.hidden
+        PictureBox2.Location = New Point(351, 274)
+        PictureBox2.Name = "PictureBox2"
+        PictureBox2.Size = New Size(32, 32)
+        PictureBox2.SizeMode = PictureBoxSizeMode.AutoSize
+        PictureBox2.TabIndex = 20
+        PictureBox2.TabStop = False
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Image = My.Resources.Resources.hidden
+        PictureBox1.Location = New Point(350, 169)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(32, 32)
+        PictureBox1.SizeMode = PictureBoxSizeMode.AutoSize
+        PictureBox1.TabIndex = 19
+        PictureBox1.TabStop = False
         ' 
         ' btnRecoveryEmail
         ' 
         btnRecoveryEmail.BorderRadius = 10
-        btnRecoveryEmail.CustomizableEdges = CustomizableEdges4
+        btnRecoveryEmail.CustomizableEdges = CustomizableEdges1
         btnRecoveryEmail.DisabledState.BorderColor = Color.DarkGray
         btnRecoveryEmail.DisabledState.CustomBorderColor = Color.DarkGray
         btnRecoveryEmail.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -141,9 +199,9 @@ Partial Class SecurityPrivacyUserControl
         btnRecoveryEmail.FillColor = Color.FromArgb(CByte(104), CByte(162), CByte(223))
         btnRecoveryEmail.Font = New Font("Calibri", 12F, FontStyle.Bold)
         btnRecoveryEmail.ForeColor = Color.White
-        btnRecoveryEmail.Location = New Point(39, 675)
+        btnRecoveryEmail.Location = New Point(32, 653)
         btnRecoveryEmail.Name = "btnRecoveryEmail"
-        btnRecoveryEmail.ShadowDecoration.CustomizableEdges = CustomizableEdges5
+        btnRecoveryEmail.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         btnRecoveryEmail.Size = New Size(306, 40)
         btnRecoveryEmail.TabIndex = 18
         btnRecoveryEmail.Text = "Confirm Email"
@@ -151,7 +209,7 @@ Partial Class SecurityPrivacyUserControl
         ' Guna2TextBox4
         ' 
         Guna2TextBox4.BorderRadius = 10
-        Guna2TextBox4.CustomizableEdges = CustomizableEdges6
+        Guna2TextBox4.CustomizableEdges = CustomizableEdges3
         Guna2TextBox4.DefaultText = ""
         Guna2TextBox4.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         Guna2TextBox4.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -161,13 +219,13 @@ Partial Class SecurityPrivacyUserControl
         Guna2TextBox4.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2TextBox4.Font = New Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Guna2TextBox4.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox4.Location = New Point(39, 608)
+        Guna2TextBox4.Location = New Point(31, 610)
         Guna2TextBox4.Margin = New Padding(3, 4, 3, 4)
         Guna2TextBox4.Name = "Guna2TextBox4"
         Guna2TextBox4.PlaceholderText = ""
         Guna2TextBox4.SelectedText = ""
-        Guna2TextBox4.ShadowDecoration.CustomizableEdges = CustomizableEdges7
-        Guna2TextBox4.Size = New Size(306, 46)
+        Guna2TextBox4.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        Guna2TextBox4.Size = New Size(306, 36)
         Guna2TextBox4.TabIndex = 17
         ' 
         ' lblRecoveryEmail
@@ -175,7 +233,7 @@ Partial Class SecurityPrivacyUserControl
         lblRecoveryEmail.AutoSize = True
         lblRecoveryEmail.Font = New Font("Calibri", 14.25F)
         lblRecoveryEmail.ForeColor = Color.FromArgb(CByte(51), CByte(51), CByte(51))
-        lblRecoveryEmail.Location = New Point(39, 579)
+        lblRecoveryEmail.Location = New Point(31, 581)
         lblRecoveryEmail.Name = "lblRecoveryEmail"
         lblRecoveryEmail.Size = New Size(126, 23)
         lblRecoveryEmail.TabIndex = 16
@@ -187,7 +245,7 @@ Partial Class SecurityPrivacyUserControl
         lblRecovery.BackColor = Color.Transparent
         lblRecovery.Font = New Font("Calibri", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblRecovery.ForeColor = Color.FromArgb(CByte(51), CByte(51), CByte(51))
-        lblRecovery.Location = New Point(36, 528)
+        lblRecovery.Location = New Point(28, 530)
         lblRecovery.Name = "lblRecovery"
         lblRecovery.Size = New Size(219, 39)
         lblRecovery.TabIndex = 15
@@ -196,7 +254,7 @@ Partial Class SecurityPrivacyUserControl
         ' Guna2TextBox3
         ' 
         Guna2TextBox3.BorderRadius = 10
-        Guna2TextBox3.CustomizableEdges = CustomizableEdges8
+        Guna2TextBox3.CustomizableEdges = CustomizableEdges5
         Guna2TextBox3.DefaultText = ""
         Guna2TextBox3.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         Guna2TextBox3.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -206,19 +264,20 @@ Partial Class SecurityPrivacyUserControl
         Guna2TextBox3.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2TextBox3.Font = New Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Guna2TextBox3.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox3.Location = New Point(39, 351)
+        Guna2TextBox3.Location = New Point(38, 374)
         Guna2TextBox3.Margin = New Padding(3, 4, 3, 4)
         Guna2TextBox3.Name = "Guna2TextBox3"
+        Guna2TextBox3.PasswordChar = "•"c
         Guna2TextBox3.PlaceholderText = ""
         Guna2TextBox3.SelectedText = ""
-        Guna2TextBox3.ShadowDecoration.CustomizableEdges = CustomizableEdges9
-        Guna2TextBox3.Size = New Size(306, 46)
+        Guna2TextBox3.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        Guna2TextBox3.Size = New Size(306, 32)
         Guna2TextBox3.TabIndex = 14
         ' 
         ' Guna2TextBox2
         ' 
         Guna2TextBox2.BorderRadius = 10
-        Guna2TextBox2.CustomizableEdges = CustomizableEdges10
+        Guna2TextBox2.CustomizableEdges = CustomizableEdges7
         Guna2TextBox2.DefaultText = ""
         Guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         Guna2TextBox2.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -228,19 +287,20 @@ Partial Class SecurityPrivacyUserControl
         Guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2TextBox2.Font = New Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Guna2TextBox2.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox2.Location = New Point(39, 267)
+        Guna2TextBox2.Location = New Point(39, 273)
         Guna2TextBox2.Margin = New Padding(3, 4, 3, 4)
         Guna2TextBox2.Name = "Guna2TextBox2"
+        Guna2TextBox2.PasswordChar = "•"c
         Guna2TextBox2.PlaceholderText = ""
         Guna2TextBox2.SelectedText = ""
-        Guna2TextBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges11
-        Guna2TextBox2.Size = New Size(306, 46)
+        Guna2TextBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        Guna2TextBox2.Size = New Size(306, 32)
         Guna2TextBox2.TabIndex = 13
         ' 
         ' Guna2TextBox1
         ' 
         Guna2TextBox1.BorderRadius = 10
-        Guna2TextBox1.CustomizableEdges = CustomizableEdges12
+        Guna2TextBox1.CustomizableEdges = CustomizableEdges9
         Guna2TextBox1.DefaultText = ""
         Guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         Guna2TextBox1.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -250,19 +310,20 @@ Partial Class SecurityPrivacyUserControl
         Guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2TextBox1.Font = New Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Guna2TextBox1.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox1.Location = New Point(39, 180)
+        Guna2TextBox1.Location = New Point(39, 169)
         Guna2TextBox1.Margin = New Padding(3, 4, 3, 4)
         Guna2TextBox1.Name = "Guna2TextBox1"
+        Guna2TextBox1.PasswordChar = "•"c
         Guna2TextBox1.PlaceholderText = ""
         Guna2TextBox1.SelectedText = ""
-        Guna2TextBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges13
-        Guna2TextBox1.Size = New Size(306, 46)
+        Guna2TextBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        Guna2TextBox1.Size = New Size(302, 32)
         Guna2TextBox1.TabIndex = 12
         ' 
         ' btnUpdatePassword
         ' 
         btnUpdatePassword.BorderRadius = 10
-        btnUpdatePassword.CustomizableEdges = CustomizableEdges14
+        btnUpdatePassword.CustomizableEdges = CustomizableEdges11
         btnUpdatePassword.DisabledState.BorderColor = Color.DarkGray
         btnUpdatePassword.DisabledState.CustomBorderColor = Color.DarkGray
         btnUpdatePassword.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -270,9 +331,9 @@ Partial Class SecurityPrivacyUserControl
         btnUpdatePassword.FillColor = Color.FromArgb(CByte(104), CByte(162), CByte(223))
         btnUpdatePassword.Font = New Font("Calibri", 12F, FontStyle.Bold)
         btnUpdatePassword.ForeColor = Color.White
-        btnUpdatePassword.Location = New Point(39, 467)
+        btnUpdatePassword.Location = New Point(39, 469)
         btnUpdatePassword.Name = "btnUpdatePassword"
-        btnUpdatePassword.ShadowDecoration.CustomizableEdges = CustomizableEdges15
+        btnUpdatePassword.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         btnUpdatePassword.Size = New Size(306, 40)
         btnUpdatePassword.TabIndex = 11
         btnUpdatePassword.Text = "Update Password"
@@ -290,10 +351,10 @@ Partial Class SecurityPrivacyUserControl
         Guna2Panel1.Controls.Add(Label5)
         Guna2Panel1.Controls.Add(TableLayoutPanel1)
         Guna2Panel1.Controls.Add(Label3)
-        Guna2Panel1.CustomizableEdges = CustomizableEdges20
-        Guna2Panel1.Location = New Point(480, 37)
+        Guna2Panel1.CustomizableEdges = CustomizableEdges17
+        Guna2Panel1.Location = New Point(480, 26)
         Guna2Panel1.Name = "Guna2Panel1"
-        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges21
+        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges18
         Guna2Panel1.Size = New Size(429, 530)
         Guna2Panel1.TabIndex = 10
         ' 
@@ -301,7 +362,7 @@ Partial Class SecurityPrivacyUserControl
         ' 
         Label9.AutoSize = True
         Label9.Font = New Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label9.Location = New Point(43, 390)
+        Label9.Location = New Point(41, 384)
         Label9.Name = "Label9"
         Label9.Size = New Size(359, 92)
         Label9.TabIndex = 12
@@ -399,12 +460,12 @@ Partial Class SecurityPrivacyUserControl
         ' 
         ' Guna2PictureBox1
         ' 
-        Guna2PictureBox1.CustomizableEdges = CustomizableEdges16
+        Guna2PictureBox1.CustomizableEdges = CustomizableEdges13
         Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), Image)
         Guna2PictureBox1.ImageRotate = 0F
         Guna2PictureBox1.Location = New Point(3, 3)
         Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges17
+        Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         Guna2PictureBox1.Size = New Size(24, 24)
         Guna2PictureBox1.SizeMode = PictureBoxSizeMode.AutoSize
         Guna2PictureBox1.TabIndex = 7
@@ -416,7 +477,7 @@ Partial Class SecurityPrivacyUserControl
         Guna2CirclePictureBox1.ImageRotate = 0F
         Guna2CirclePictureBox1.Location = New Point(3, 33)
         Guna2CirclePictureBox1.Name = "Guna2CirclePictureBox1"
-        Guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges18
+        Guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges15
         Guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         Guna2CirclePictureBox1.Size = New Size(24, 24)
         Guna2CirclePictureBox1.SizeMode = PictureBoxSizeMode.AutoSize
@@ -429,7 +490,7 @@ Partial Class SecurityPrivacyUserControl
         Guna2CirclePictureBox2.ImageRotate = 0F
         Guna2CirclePictureBox2.Location = New Point(3, 63)
         Guna2CirclePictureBox2.Name = "Guna2CirclePictureBox2"
-        Guna2CirclePictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges19
+        Guna2CirclePictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges16
         Guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         Guna2CirclePictureBox2.Size = New Size(24, 24)
         Guna2CirclePictureBox2.SizeMode = PictureBoxSizeMode.AutoSize
@@ -446,30 +507,32 @@ Partial Class SecurityPrivacyUserControl
         Label3.TabIndex = 3
         Label3.Text = "Para sa mas secure na password, sundan " & vbCrLf & "ang mga sumusunod:"
         ' 
-        ' Guna2CheckBox1
+        ' chkMonthlyReset
         ' 
-        Guna2CheckBox1.AutoSize = True
-        Guna2CheckBox1.CheckedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2CheckBox1.CheckedState.BorderRadius = 0
-        Guna2CheckBox1.CheckedState.BorderThickness = 0
-        Guna2CheckBox1.CheckedState.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2CheckBox1.Font = New Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Guna2CheckBox1.Location = New Point(39, 417)
-        Guna2CheckBox1.Name = "Guna2CheckBox1"
-        Guna2CheckBox1.Size = New Size(368, 27)
-        Guna2CheckBox1.TabIndex = 9
-        Guna2CheckBox1.Text = "Enable forced password reset every 30 days"
-        Guna2CheckBox1.UncheckedState.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        Guna2CheckBox1.UncheckedState.BorderRadius = 0
-        Guna2CheckBox1.UncheckedState.BorderThickness = 0
-        Guna2CheckBox1.UncheckedState.FillColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        chkMonthlyReset.AutoSize = True
+        chkMonthlyReset.CheckedState.BorderColor = Color.Black
+        chkMonthlyReset.CheckedState.BorderRadius = 3
+        chkMonthlyReset.CheckedState.BorderThickness = 2
+        chkMonthlyReset.CheckedState.FillColor = Color.White
+        chkMonthlyReset.CheckMarkColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        chkMonthlyReset.Font = New Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        chkMonthlyReset.ForeColor = Color.Black
+        chkMonthlyReset.Location = New Point(45, 436)
+        chkMonthlyReset.Name = "chkMonthlyReset"
+        chkMonthlyReset.Size = New Size(353, 27)
+        chkMonthlyReset.TabIndex = 9
+        chkMonthlyReset.Text = "Enable auto password reset every 30 days"
+        chkMonthlyReset.UncheckedState.BorderColor = Color.Black
+        chkMonthlyReset.UncheckedState.BorderRadius = 3
+        chkMonthlyReset.UncheckedState.BorderThickness = 2
+        chkMonthlyReset.UncheckedState.FillColor = Color.White
         ' 
         ' lblConfirmPassword
         ' 
         lblConfirmPassword.AutoSize = True
         lblConfirmPassword.Font = New Font("Calibri", 14.25F)
         lblConfirmPassword.ForeColor = Color.FromArgb(CByte(51), CByte(51), CByte(51))
-        lblConfirmPassword.Location = New Point(39, 324)
+        lblConfirmPassword.Location = New Point(39, 347)
         lblConfirmPassword.Name = "lblConfirmPassword"
         lblConfirmPassword.Size = New Size(191, 23)
         lblConfirmPassword.TabIndex = 7
@@ -480,7 +543,7 @@ Partial Class SecurityPrivacyUserControl
         lblNewPassword.AutoSize = True
         lblNewPassword.Font = New Font("Calibri", 14.25F)
         lblNewPassword.ForeColor = Color.FromArgb(CByte(51), CByte(51), CByte(51))
-        lblNewPassword.Location = New Point(39, 240)
+        lblNewPassword.Location = New Point(39, 246)
         lblNewPassword.Name = "lblNewPassword"
         lblNewPassword.Size = New Size(125, 23)
         lblNewPassword.TabIndex = 5
@@ -491,7 +554,7 @@ Partial Class SecurityPrivacyUserControl
         lblCurrentPassword.AutoSize = True
         lblCurrentPassword.Font = New Font("Calibri", 14.25F)
         lblCurrentPassword.ForeColor = Color.FromArgb(CByte(51), CByte(51), CByte(51))
-        lblCurrentPassword.Location = New Point(39, 151)
+        lblCurrentPassword.Location = New Point(38, 136)
         lblCurrentPassword.Name = "lblCurrentPassword"
         lblCurrentPassword.Size = New Size(149, 23)
         lblCurrentPassword.TabIndex = 3
@@ -502,53 +565,11 @@ Partial Class SecurityPrivacyUserControl
         lblNote.AutoSize = True
         lblNote.BackColor = Color.Transparent
         lblNote.Font = New Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblNote.Location = New Point(36, 76)
+        lblNote.Location = New Point(34, 65)
         lblNote.Name = "lblNote"
         lblNote.Size = New Size(368, 46)
         lblNote.TabIndex = 2
         lblNote.Text = "Please enter your current password to change " & vbCrLf & "your password"
-        ' 
-        ' Guna2ImageButton1
-        ' 
-        Guna2ImageButton1.CheckedState.ImageSize = New Size(64, 64)
-        Guna2ImageButton1.HoverState.ImageSize = New Size(64, 64)
-        Guna2ImageButton1.Image = CType(resources.GetObject("Guna2ImageButton1.Image"), Image)
-        Guna2ImageButton1.ImageOffset = New Point(0, 0)
-        Guna2ImageButton1.ImageRotate = 0F
-        Guna2ImageButton1.Location = New Point(351, 180)
-        Guna2ImageButton1.Name = "Guna2ImageButton1"
-        Guna2ImageButton1.PressedState.ImageSize = New Size(64, 64)
-        Guna2ImageButton1.ShadowDecoration.CustomizableEdges = CustomizableEdges3
-        Guna2ImageButton1.Size = New Size(64, 46)
-        Guna2ImageButton1.TabIndex = 19
-        ' 
-        ' Guna2ImageButton2
-        ' 
-        Guna2ImageButton2.CheckedState.ImageSize = New Size(64, 64)
-        Guna2ImageButton2.HoverState.ImageSize = New Size(64, 64)
-        Guna2ImageButton2.Image = CType(resources.GetObject("Guna2ImageButton2.Image"), Image)
-        Guna2ImageButton2.ImageOffset = New Point(0, 0)
-        Guna2ImageButton2.ImageRotate = 0F
-        Guna2ImageButton2.Location = New Point(351, 267)
-        Guna2ImageButton2.Name = "Guna2ImageButton2"
-        Guna2ImageButton2.PressedState.ImageSize = New Size(64, 64)
-        Guna2ImageButton2.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        Guna2ImageButton2.Size = New Size(64, 46)
-        Guna2ImageButton2.TabIndex = 20
-        ' 
-        ' Guna2ImageButton3
-        ' 
-        Guna2ImageButton3.CheckedState.ImageSize = New Size(64, 64)
-        Guna2ImageButton3.HoverState.ImageSize = New Size(64, 64)
-        Guna2ImageButton3.Image = CType(resources.GetObject("Guna2ImageButton3.Image"), Image)
-        Guna2ImageButton3.ImageOffset = New Point(0, 0)
-        Guna2ImageButton3.ImageRotate = 0F
-        Guna2ImageButton3.Location = New Point(351, 351)
-        Guna2ImageButton3.Name = "Guna2ImageButton3"
-        Guna2ImageButton3.PressedState.ImageSize = New Size(64, 64)
-        Guna2ImageButton3.ShadowDecoration.CustomizableEdges = CustomizableEdges1
-        Guna2ImageButton3.Size = New Size(64, 46)
-        Guna2ImageButton3.TabIndex = 21
         ' 
         ' SecurityPrivacyUserControl
         ' 
@@ -559,6 +580,9 @@ Partial Class SecurityPrivacyUserControl
         Size = New Size(938, 798)
         pnlMain.ResumeLayout(False)
         pnlMain.PerformLayout()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Guna2Panel1.ResumeLayout(False)
         Guna2Panel1.PerformLayout()
         TableLayoutPanel1.ResumeLayout(False)
@@ -572,7 +596,7 @@ Partial Class SecurityPrivacyUserControl
     Friend WithEvents lblChangePass As Label
     Friend WithEvents pnlMain As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents lblCurrentPassword As Label
-    Friend WithEvents Guna2CheckBox1 As Guna.UI2.WinForms.Guna2CheckBox
+    Friend WithEvents chkMonthlyReset As Guna.UI2.WinForms.Guna2CheckBox
     Friend WithEvents lblConfirmPassword As Label
     Friend WithEvents lblNewPassword As Label
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
@@ -598,8 +622,10 @@ Partial Class SecurityPrivacyUserControl
     Friend WithEvents btnRecoveryEmail As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2TextBox4 As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents lblRecoveryEmail As Label
-    Friend WithEvents Guna2ImageButton3 As Guna.UI2.WinForms.Guna2ImageButton
-    Friend WithEvents Guna2ImageButton2 As Guna.UI2.WinForms.Guna2ImageButton
-    Friend WithEvents Guna2ImageButton1 As Guna.UI2.WinForms.Guna2ImageButton
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label10 As Label
 
 End Class
