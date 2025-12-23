@@ -54,9 +54,9 @@ Partial Class SecurityPrivacyUserControl
         Guna2TextBox4 = New Guna.UI2.WinForms.Guna2TextBox()
         lblRecoveryEmail = New Label()
         lblRecovery = New Label()
-        Guna2TextBox3 = New Guna.UI2.WinForms.Guna2TextBox()
-        Guna2TextBox2 = New Guna.UI2.WinForms.Guna2TextBox()
-        Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
+        txtConfirmNewPassword = New Guna.UI2.WinForms.Guna2TextBox()
+        txtNewPassword = New Guna.UI2.WinForms.Guna2TextBox()
+        txtCurrentPassword = New Guna.UI2.WinForms.Guna2TextBox()
         btnUpdatePassword = New Guna.UI2.WinForms.Guna2Button()
         Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Label9 = New Label()
@@ -113,9 +113,9 @@ Partial Class SecurityPrivacyUserControl
         pnlMain.Controls.Add(Guna2TextBox4)
         pnlMain.Controls.Add(lblRecoveryEmail)
         pnlMain.Controls.Add(lblRecovery)
-        pnlMain.Controls.Add(Guna2TextBox3)
-        pnlMain.Controls.Add(Guna2TextBox2)
-        pnlMain.Controls.Add(Guna2TextBox1)
+        pnlMain.Controls.Add(txtConfirmNewPassword)
+        pnlMain.Controls.Add(txtNewPassword)
+        pnlMain.Controls.Add(txtCurrentPassword)
         pnlMain.Controls.Add(btnUpdatePassword)
         pnlMain.Controls.Add(Guna2Panel1)
         pnlMain.Controls.Add(chkMonthlyReset)
@@ -251,74 +251,77 @@ Partial Class SecurityPrivacyUserControl
         lblRecovery.TabIndex = 15
         lblRecovery.Text = "Recovery Email"
         ' 
-        ' Guna2TextBox3
+        ' txtConfirmNewPassword
         ' 
-        Guna2TextBox3.BorderRadius = 10
-        Guna2TextBox3.CustomizableEdges = CustomizableEdges5
-        Guna2TextBox3.DefaultText = ""
-        Guna2TextBox3.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        Guna2TextBox3.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        Guna2TextBox3.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox3.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox3.FillColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Guna2TextBox3.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox3.Font = New Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Guna2TextBox3.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox3.Location = New Point(38, 374)
-        Guna2TextBox3.Margin = New Padding(3, 4, 3, 4)
-        Guna2TextBox3.Name = "Guna2TextBox3"
-        Guna2TextBox3.PasswordChar = "•"c
-        Guna2TextBox3.PlaceholderText = ""
-        Guna2TextBox3.SelectedText = ""
-        Guna2TextBox3.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        Guna2TextBox3.Size = New Size(306, 32)
-        Guna2TextBox3.TabIndex = 14
+        txtConfirmNewPassword.BorderRadius = 10
+        txtConfirmNewPassword.CharacterCasing = CharacterCasing.Upper
+        txtConfirmNewPassword.CustomizableEdges = CustomizableEdges5
+        txtConfirmNewPassword.DefaultText = ""
+        txtConfirmNewPassword.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        txtConfirmNewPassword.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        txtConfirmNewPassword.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        txtConfirmNewPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        txtConfirmNewPassword.FillColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        txtConfirmNewPassword.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        txtConfirmNewPassword.Font = New Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtConfirmNewPassword.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        txtConfirmNewPassword.Location = New Point(38, 374)
+        txtConfirmNewPassword.Margin = New Padding(3, 4, 3, 4)
+        txtConfirmNewPassword.Name = "txtConfirmNewPassword"
+        txtConfirmNewPassword.PasswordChar = "•"c
+        txtConfirmNewPassword.PlaceholderText = ""
+        txtConfirmNewPassword.SelectedText = ""
+        txtConfirmNewPassword.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        txtConfirmNewPassword.Size = New Size(306, 32)
+        txtConfirmNewPassword.TabIndex = 14
         ' 
-        ' Guna2TextBox2
+        ' txtNewPassword
         ' 
-        Guna2TextBox2.BorderRadius = 10
-        Guna2TextBox2.CustomizableEdges = CustomizableEdges7
-        Guna2TextBox2.DefaultText = ""
-        Guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        Guna2TextBox2.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        Guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox2.FillColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox2.Font = New Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Guna2TextBox2.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox2.Location = New Point(39, 273)
-        Guna2TextBox2.Margin = New Padding(3, 4, 3, 4)
-        Guna2TextBox2.Name = "Guna2TextBox2"
-        Guna2TextBox2.PasswordChar = "•"c
-        Guna2TextBox2.PlaceholderText = ""
-        Guna2TextBox2.SelectedText = ""
-        Guna2TextBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges8
-        Guna2TextBox2.Size = New Size(306, 32)
-        Guna2TextBox2.TabIndex = 13
+        txtNewPassword.BorderRadius = 10
+        txtNewPassword.CharacterCasing = CharacterCasing.Upper
+        txtNewPassword.CustomizableEdges = CustomizableEdges7
+        txtNewPassword.DefaultText = ""
+        txtNewPassword.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        txtNewPassword.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        txtNewPassword.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        txtNewPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        txtNewPassword.FillColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        txtNewPassword.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        txtNewPassword.Font = New Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtNewPassword.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        txtNewPassword.Location = New Point(39, 273)
+        txtNewPassword.Margin = New Padding(3, 4, 3, 4)
+        txtNewPassword.Name = "txtNewPassword"
+        txtNewPassword.PasswordChar = "•"c
+        txtNewPassword.PlaceholderText = ""
+        txtNewPassword.SelectedText = ""
+        txtNewPassword.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        txtNewPassword.Size = New Size(306, 32)
+        txtNewPassword.TabIndex = 13
         ' 
-        ' Guna2TextBox1
+        ' txtCurrentPassword
         ' 
-        Guna2TextBox1.BorderRadius = 10
-        Guna2TextBox1.CustomizableEdges = CustomizableEdges9
-        Guna2TextBox1.DefaultText = ""
-        Guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        Guna2TextBox1.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        Guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox1.FillColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox1.Font = New Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Guna2TextBox1.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox1.Location = New Point(39, 169)
-        Guna2TextBox1.Margin = New Padding(3, 4, 3, 4)
-        Guna2TextBox1.Name = "Guna2TextBox1"
-        Guna2TextBox1.PasswordChar = "•"c
-        Guna2TextBox1.PlaceholderText = ""
-        Guna2TextBox1.SelectedText = ""
-        Guna2TextBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges10
-        Guna2TextBox1.Size = New Size(302, 32)
-        Guna2TextBox1.TabIndex = 12
+        txtCurrentPassword.BorderRadius = 10
+        txtCurrentPassword.CharacterCasing = CharacterCasing.Upper
+        txtCurrentPassword.CustomizableEdges = CustomizableEdges9
+        txtCurrentPassword.DefaultText = ""
+        txtCurrentPassword.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        txtCurrentPassword.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        txtCurrentPassword.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        txtCurrentPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        txtCurrentPassword.FillColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        txtCurrentPassword.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        txtCurrentPassword.Font = New Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtCurrentPassword.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        txtCurrentPassword.Location = New Point(39, 169)
+        txtCurrentPassword.Margin = New Padding(3, 4, 3, 4)
+        txtCurrentPassword.Name = "txtCurrentPassword"
+        txtCurrentPassword.PasswordChar = "•"c
+        txtCurrentPassword.PlaceholderText = ""
+        txtCurrentPassword.SelectedText = ""
+        txtCurrentPassword.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        txtCurrentPassword.Size = New Size(302, 32)
+        txtCurrentPassword.TabIndex = 12
         ' 
         ' btnUpdatePassword
         ' 
@@ -615,9 +618,9 @@ Partial Class SecurityPrivacyUserControl
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents Guna2TextBox3 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2TextBox2 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtConfirmNewPassword As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtNewPassword As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtCurrentPassword As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents lblRecovery As Label
     Friend WithEvents btnRecoveryEmail As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2TextBox4 As Guna.UI2.WinForms.Guna2TextBox
