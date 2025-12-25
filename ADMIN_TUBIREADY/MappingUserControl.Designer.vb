@@ -540,7 +540,7 @@ Partial Class MappingUserControl
         AutoScaleMode = AutoScaleMode.Font
         Controls.Add(Guna2Panel11)
         Name = "MappingUserControl"
-        Size = New Size(1235, 924)
+        Size = New Size(1235, 982)
         Guna2Panel11.ResumeLayout(False)
         Guna2Panel11.PerformLayout()
         GunaPanelDetailsFam.ResumeLayout(False)

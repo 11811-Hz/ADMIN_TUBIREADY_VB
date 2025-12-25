@@ -38,7 +38,7 @@ Public Class DashboardUserControl
     End Sub
 
 
-    Private connectionString As String = "server=10.69.185.193\SQLEXPRESS,1433;user id=TubiReadyAdmin;password=123456789;database=TubiReadyDB;TrustServerCertificate=True;"
+    Private connectionString As String = "server=DESKTOP-011N7DN;user id=TubiReadyAdmin;password=123456789;database=TubiReadyDB;TrustServerCertificate=True;"
 
     ' === NEW: 5-minute database interval ===
     Private lastSaveTime As DateTime = DateTime.MinValue

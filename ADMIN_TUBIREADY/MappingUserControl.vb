@@ -438,7 +438,7 @@ Handles refreshTimer.Tick
 
         routingActive = True
 
-        DrawRoute()
+        DrawRoute
 
         btnClear.Visible = True
         btnDirections.Visible = False
@@ -471,7 +471,7 @@ Handles refreshTimer.Tick
     }
     ")
 
-        ResetMapView()
+        ResetMapView
 
         btnClear.Visible = False
         btnDone.Visible = True
@@ -488,14 +488,14 @@ Handles refreshTimer.Tick
         If lblFamID.Text = "" Then Exit Sub
 
         Using con As New SqlConnection(connectionString)
-            con.Open()
+            con.Open
 
-            Dim sql As String =
+            Dim sql =
             "UPDATE SafeStatus SET Status = 1 WHERE FamilyID = @id"
 
             Using cmd As New SqlCommand(sql, con)
                 cmd.Parameters.AddWithValue("@id", lblFamID.Text)
-                cmd.ExecuteNonQuery()
+                cmd.ExecuteNonQuery
             End Using
         End Using
 
@@ -514,12 +514,12 @@ Handles refreshTimer.Tick
         pinSelected = False
 
         ' Remove route + reset map
-        btnClear.PerformClick()
-        ResetMapView()
+        btnClear.PerformClick
+        ResetMapView
 
         ' Refresh map
-        ClearPins()
-        LoadUnsafePins()
+        ClearPins
+        LoadUnsafePins
 
         btnClear.Visible = False
         btnDone.Visible = True

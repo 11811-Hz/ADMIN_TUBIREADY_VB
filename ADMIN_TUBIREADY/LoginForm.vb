@@ -4,7 +4,7 @@ Imports System.Text
 Imports ADMIN_TUBIREADY.HashingModule
 
 Public Class LoginForm
-    Dim ConnString As String = "Data Source=DESKTOP-RT61FIB\SQLEXPRESS;Initial Catalog=TubiReadyDB;Integrated Security=True;TrustServerCertificate=True"
+    Dim ConnString As String = "server=DESKTOP-011N7DN;user id=TubiReadyAdmin;password=123456789;database=TubiReadyDB;TrustServerCertificate=True"
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         Dim inputUser As String = txtUsername.Text
         Dim inputPass As String = txtPassword.Text
@@ -107,12 +107,7 @@ Public Class LoginForm
         End Using
     End Sub
 
-
     Private Sub LoginForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CheckAndCreateDefaultUser()
-    End Sub
-
-    Private Sub pnlLogin_Paint(sender As Object, e As PaintEventArgs) Handles pnlLogin.Paint
-
     End Sub
 End Class

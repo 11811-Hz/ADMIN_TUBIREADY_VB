@@ -159,7 +159,6 @@ Partial Class MainForm
         btnReports.DisabledState.CustomBorderColor = Color.DarkGray
         btnReports.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnReports.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        btnReports.Enabled = False
         btnReports.FillColor = Color.Black
         btnReports.FocusedColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         btnReports.Font = New Font("Segoe UI", 11.25F, FontStyle.Bold)

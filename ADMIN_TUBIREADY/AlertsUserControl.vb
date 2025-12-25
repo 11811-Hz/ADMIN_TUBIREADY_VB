@@ -5,7 +5,7 @@ Imports MongoDB.Driver.Core.Configuration
 Imports Newtonsoft.Json.Linq
 
 Public Class AlertsUserControl
-    Public connectionString As String = "server=DESKTOP-RT61FIB\SQLEXPRESS;user id=TubiReadyAdmin;password=123456789;database=TubiReadyDB;TrustServerCertificate=True"
+    Public connectionString As String = "server=DESKTOP-011N7DN;user id=TubiReadyAdmin;password=123456789;database=TubiReadyDB;TrustServerCertificate=True"
 
     ' Send SMS via IPROG API code
     Public Async Function SendGeneralSMS(phone As String, messageContent As String) As Task(Of Boolean)
