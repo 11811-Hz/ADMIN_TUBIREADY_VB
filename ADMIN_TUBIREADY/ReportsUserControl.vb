@@ -1,8 +1,38 @@
 ﻿Public Class ReportsUserControl
 
+    Private contentHeight As Integer
+
     Private Sub ReportsUserControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SetupWaterLevelTable()
         LoadSampleData()
+
+        Me.BeginInvoke(Sub()
+                           SetupPageScroll()
+                       End Sub)
+    End Sub
+
+    Private Sub ReportsUserControl_Resize(sender As Object, e As EventArgs) Handles Me.Resize
+        SetupPageScroll()
+    End Sub
+
+    Private Sub SetupPageScroll()
+
+        contentHeight = pnlContent.Height
+        Dim visibleHeight As Integer = Me.ClientSize.Height
+
+        If contentHeight <= visibleHeight Then
+            Guna2vScrollBar1.Visible = False
+            pnlContent.Top = 0
+            Exit Sub
+        End If
+
+        Guna2vScrollBar1.Visible = True
+        Guna2vScrollBar1.Minimum = 0
+        Guna2vScrollBar1.Maximum = contentHeight - visibleHeight
+        Guna2vScrollBar1.LargeChange = 60
+        Guna2vScrollBar1.SmallChange = 20
+        Guna2vScrollBar1.Value = 0
+
     End Sub
 
     Private Sub SetupWaterLevelTable()
@@ -117,9 +147,9 @@
             e.Handled = True
             e.PaintBackground(e.ClipBounds, True)
 
-            Dim text As String = e.FormattedValue.ToString()
-            Dim bgColor As Color = Color.LightGray
-            Dim textColor As Color = Color.Black
+            Dim text = e.FormattedValue.ToString
+            Dim bgColor = Color.LightGray
+            Dim textColor = Color.Black
 
             Select Case text
                 Case "Normal"
@@ -138,8 +168,8 @@
                 e.CellBounds.Height - 16
             )
 
-            Using path As New Drawing2D.GraphicsPath()
-                Dim radius As Integer = 15
+            Using path As New Drawing2D.GraphicsPath
+                Dim radius = 15
                 path.AddArc(rect.X, rect.Y, radius, radius, 180, 90)
                 path.AddArc(rect.Right - radius, rect.Y, radius, radius, 270, 90)
                 path.AddArc(rect.Right - radius, rect.Bottom - radius, radius, radius, 0, 90)
@@ -161,6 +191,33 @@
             )
         End If
 
+    End Sub
+
+    ' ----- SCROLLBAR FUNCTIONALITY ----
+    Private Sub Guna2vScrollBar1_Scroll(
+    sender As Object,
+    e As ScrollEventArgs
+) Handles Guna2vScrollBar1.Scroll
+
+        pnlContent.SuspendLayout()
+        pnlContent.Location = New Point(pnlContent.Left, -e.NewValue)
+        pnlContent.ResumeLayout()
+    End Sub
+
+    Protected Overrides Sub OnMouseWheel(e As MouseEventArgs)
+        MyBase.OnMouseWheel(e)
+
+        If Not Guna2vScrollBar1.Visible Then Exit Sub
+
+        Dim stepSize As Integer = 40
+
+        Dim newValue = Guna2vScrollBar1.Value - Math.Sign(e.Delta) * stepSize
+
+        newValue = Math.Max(Guna2vScrollBar1.Minimum,
+                            Math.Min(Guna2vScrollBar1.Maximum, newValue))
+
+        Guna2vScrollBar1.Value = newValue
+        pnlContent.Location = New Point(pnlContent.Left, -newValue)
     End Sub
 
 End Class
