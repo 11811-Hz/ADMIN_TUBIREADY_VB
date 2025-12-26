@@ -1,22 +1,205 @@
-﻿Public Class ReportsUserControl
+﻿Imports System.Data.SqlClient
+Imports System.Drawing.Drawing2D
+Imports Microsoft.Data.SqlClient
+Imports Guna.Charts.WinForms
+
+Public Class ReportsUserControl
 
     Private contentHeight As Integer
 
+    Private connectionString As String =
+        "server=DESKTOP-011N7DN;user id=TubiReadyAdmin;password=123456789;database=TubiReadyDB;TrustServerCertificate=True;"
+
+    ' ===================== LOAD =====================
     Private Sub ReportsUserControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SetupWaterLevelTable()
-        LoadSampleData()
+        LoadWaterLevelData()
 
-        Me.BeginInvoke(Sub()
-                           SetupPageScroll()
-                       End Sub)
+        LoadWaterLevelSummary()
+
+        InitChartFilters()
+        LoadWaterLevelChart()
+
+        Me.BeginInvoke(Sub() SetupPageScroll())
     End Sub
 
     Private Sub ReportsUserControl_Resize(sender As Object, e As EventArgs) Handles Me.Resize
         SetupPageScroll()
     End Sub
 
-    Private Sub SetupPageScroll()
+    ' ===================== SUMMARY LABELS =====================
+    Private Sub LoadWaterLevelSummary()
 
+        Using con As New SqlConnection(connectionString)
+            con.Open()
+
+            Dim q As String =
+        "SELECT 
+            COUNT(*) AS TotalReadings,
+            AVG(WaterLevel) AS AvgLevel,
+            MIN(WaterLevel) AS MinLevel,
+            MAX(WaterLevel) AS MaxLevel,
+            SUM(CASE WHEN Severity = 'Low' THEN 1 ELSE 0 END) AS LowCnt,
+            SUM(CASE WHEN Severity = 'Normal' THEN 1 ELSE 0 END) AS NormalCnt,
+            SUM(CASE WHEN Severity = 'High' THEN 1 ELSE 0 END) AS HighCnt,
+            SUM(CASE WHEN Severity = 'Critical' THEN 1 ELSE 0 END) AS CriticalCnt
+         FROM Ultrasonic"
+
+            Using cmd As New SqlCommand(q, con)
+                Using rdr = cmd.ExecuteReader()
+                    If rdr.Read() Then
+
+                        lblReadings.Text = rdr("TotalReadings").ToString()
+
+                        lblLevel.Text =
+                        If(IsDBNull(rdr("AvgLevel")),
+                           "0 cm",
+                           Math.Round(CDbl(rdr("AvgLevel")), 2) & " cm")
+
+                        lblMinMax.Text =
+                        If(IsDBNull(rdr("MinLevel")),
+                           "0 / 0 cm",
+                           rdr("MinLevel").ToString() & " / " & rdr("MaxLevel").ToString() & " cm")
+
+                        lblLow.Text = rdr("LowCnt").ToString()
+                        lblNormal.Text = rdr("NormalCnt").ToString()
+                        lblHigh.Text = rdr("HighCnt").ToString()
+                        lblCritical.Text = rdr("CriticalCnt").ToString()
+
+                    End If
+                End Using
+            End Using
+        End Using
+
+    End Sub
+
+    ' ===================== CHART FILTERS =====================
+    Private Sub InitChartFilters()
+        cmbGunaDay.Items.Clear()
+        cmbGunaDay.Items.AddRange(New String() {
+            "Today",
+            "Yesterday",
+            "Last 7 Days",
+            "Last 30 Days"
+        })
+        cmbGunaDay.SelectedIndex = 0
+
+        cmbGunaTime.Items.Clear()
+        cmbGunaTime.Items.AddRange(New String() {
+            "Hourly",
+            "Daily",
+            "Weekly"
+        })
+        cmbGunaTime.SelectedIndex = 0
+    End Sub
+
+    ' ===================== GUNA BAR CHART =====================
+    Private Sub LoadWaterLevelChart()
+
+        chartWaterLevel.Datasets.Clear()
+
+        Dim bar As New GunaBarDataset()
+        bar.Label = "Water Level"
+        bar.FillColors.Add(Color.FromArgb(66, 133, 244)) ' blue bars
+
+        Dim startDate As DateTime
+        Dim endDate As DateTime = DateTime.Now
+
+        ' ===== DAY FILTER =====
+        Select Case cmbGunaDay.Text.Trim().ToLower()
+            Case "today"
+                startDate = Date.Today
+
+            Case "yesterday"
+                startDate = Date.Today.AddDays(-1)
+                endDate = Date.Today
+
+            Case "last 7 days"
+                startDate = Date.Today.AddDays(-7)
+
+            Case "last 30 days"
+                startDate = Date.Today.AddDays(-30)
+
+            Case Else
+                startDate = Date.Today
+        End Select
+
+        ' ===== TIME GROUPING =====
+        Dim query As String = ""
+
+        Select Case cmbGunaTime.Text.Trim().ToLower()
+            Case "hourly"
+                query =
+            "SELECT DATEPART(HOUR, ReadingTime) AS Lbl,
+                    AVG(WaterLevel) AS Val
+             FROM Ultrasonic
+             WHERE ReadingTime BETWEEN @s AND @e
+             GROUP BY DATEPART(HOUR, ReadingTime)
+             ORDER BY Lbl"
+
+            Case "daily"
+                query =
+            "SELECT CAST(ReadingTime AS DATE) AS Lbl,
+                    AVG(WaterLevel) AS Val
+             FROM Ultrasonic
+             WHERE ReadingTime BETWEEN @s AND @e
+             GROUP BY CAST(ReadingTime AS DATE)
+             ORDER BY Lbl"
+
+            Case "weekly"
+                query =
+            "SELECT DATEPART(WEEK, ReadingTime) AS Lbl,
+                    AVG(WaterLevel) AS Val
+             FROM Ultrasonic
+             WHERE ReadingTime BETWEEN @s AND @e
+             GROUP BY DATEPART(WEEK, ReadingTime)
+             ORDER BY Lbl"
+
+            Case Else
+                ' 🔐 fallback safety
+                query =
+            "SELECT DATEPART(HOUR, ReadingTime) AS Lbl,
+                    AVG(WaterLevel) AS Val
+             FROM Ultrasonic
+             WHERE ReadingTime BETWEEN @s AND @e
+             GROUP BY DATEPART(HOUR, ReadingTime)
+             ORDER BY Lbl"
+        End Select
+
+        Using con As New SqlConnection(connectionString)
+            con.Open()
+
+            Using cmd As New SqlCommand(query, con)
+                cmd.Parameters.AddWithValue("@s", startDate)
+                cmd.Parameters.AddWithValue("@e", endDate)
+
+                Using rdr = cmd.ExecuteReader()
+                    While rdr.Read()
+
+                        Dim label As String
+
+                        If cmbGunaTime.Text = "Hourly" Then
+                            label = rdr("Lbl").ToString().PadLeft(2, "0"c) & ":00"
+                        Else
+                            label = rdr("Lbl").ToString()
+                        End If
+
+                        ' ✅ GunaChart requires LPoint
+                        bar.DataPoints.Add(
+                        New LPoint(label, Math.Round(CDbl(rdr("Val")), 2))
+                    )
+
+                    End While
+                End Using
+            End Using
+        End Using
+
+        chartWaterLevel.Datasets.Add(bar)
+        chartWaterLevel.Update()
+    End Sub
+
+    ' ===================== PAGE SCROLL =====================
+    Private Sub SetupPageScroll()
         contentHeight = pnlContent.Height
         Dim visibleHeight As Integer = Me.ClientSize.Height
 
@@ -32,192 +215,100 @@
         Guna2vScrollBar1.LargeChange = 60
         Guna2vScrollBar1.SmallChange = 20
         Guna2vScrollBar1.Value = 0
-
     End Sub
 
+    ' ===================== TABLE SETUP =====================
     Private Sub SetupWaterLevelTable()
-
         dgvWaterLevel.Columns.Clear()
         dgvWaterLevel.Rows.Clear()
 
-        ' ❌ Remove header boxes / vertical lines
-        dgvWaterLevel.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
-
-        ' Behavior
-        dgvWaterLevel.AllowUserToAddRows = False
-        dgvWaterLevel.AllowUserToDeleteRows = False
         dgvWaterLevel.ReadOnly = True
         dgvWaterLevel.RowHeadersVisible = False
         dgvWaterLevel.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        dgvWaterLevel.ScrollBars = ScrollBars.Vertical
         dgvWaterLevel.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
-
-        ' Appearance
-        dgvWaterLevel.BackgroundColor = Color.White
-        dgvWaterLevel.BorderStyle = BorderStyle.None
         dgvWaterLevel.RowTemplate.Height = 42
 
-        dgvWaterLevel.DefaultCellStyle.SelectionBackColor = Color.White
-        dgvWaterLevel.DefaultCellStyle.SelectionForeColor = Color.Black
-
-        dgvWaterLevel.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
-        dgvWaterLevel.GridColor = Color.Gainsboro
-
-        ' Columns
         dgvWaterLevel.Columns.Add("Time", "Time")
-        dgvWaterLevel.Columns.Add("Level", "Level (m)")
+        dgvWaterLevel.Columns.Add("Level", "Level (cm)")
         dgvWaterLevel.Columns.Add("Status", "Status")
-
-        ' Header
-        dgvWaterLevel.ColumnHeadersVisible = True
-        dgvWaterLevel.ColumnHeadersHeight = 45
-        dgvWaterLevel.ColumnHeadersHeightSizeMode =
-            DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-
-        dgvWaterLevel.EnableHeadersVisualStyles = False
-        With dgvWaterLevel.ColumnHeadersDefaultCellStyle
-            .BackColor = Color.White
-            .ForeColor = Color.Black
-            .SelectionBackColor = Color.White
-            .SelectionForeColor = Color.Black
-            .Font = New Font("Segoe UI", 10, FontStyle.Bold)
-            .Alignment = DataGridViewContentAlignment.MiddleLeft
-        End With
-
-        ' Alignments
-        dgvWaterLevel.Columns("Time").DefaultCellStyle.Alignment =
-            DataGridViewContentAlignment.MiddleLeft
-
-        dgvWaterLevel.Columns("Level").DefaultCellStyle.Alignment =
-            DataGridViewContentAlignment.MiddleCenter
-        dgvWaterLevel.Columns("Level").HeaderCell.Style.Alignment =
-            DataGridViewContentAlignment.MiddleCenter
-
-        dgvWaterLevel.Columns("Status").DefaultCellStyle.Alignment =
-            DataGridViewContentAlignment.MiddleCenter
-        dgvWaterLevel.Columns("Status").HeaderCell.Style.Alignment =
-            DataGridViewContentAlignment.MiddleCenter
-
-        dgvWaterLevel.ClearSelection()
-        dgvWaterLevel.CurrentCell = Nothing
-
     End Sub
 
-    Private Sub LoadSampleData()
+    ' ===================== LOAD TABLE DATA =====================
+    Private Sub LoadWaterLevelData()
+        dgvWaterLevel.Rows.Clear()
 
-        dgvWaterLevel.Rows.Add("00:00", "45.2", "Normal")
-        dgvWaterLevel.Rows.Add("02:00", "46.8", "Normal")
-        dgvWaterLevel.Rows.Add("04:00", "48.3", "Normal")
-        dgvWaterLevel.Rows.Add("06:00", "52.1", "Warning")
-        dgvWaterLevel.Rows.Add("08:00", "55.7", "Critical")
-        dgvWaterLevel.Rows.Add("10:00", "58.2", "Critical")
+        Using con As New SqlConnection(connectionString)
+            con.Open()
 
-    End Sub
+            Dim q As String =
+                "SELECT ReadingTime, WaterLevel, Severity
+                 FROM Ultrasonic
+                 ORDER BY ReadingTime DESC"
 
-    Private Sub dgvWaterLevel_CellPainting(
-        sender As Object,
-        e As DataGridViewCellPaintingEventArgs
-    ) Handles dgvWaterLevel.CellPainting
-
-        ' ---------------- HEADER UNDERLINE ----------------
-        If e.RowIndex = -1 Then
-            e.PaintBackground(e.ClipBounds, False)
-            e.PaintContent(e.ClipBounds)
-
-            Using pen As New Pen(Color.Gainsboro, 1)
-                e.Graphics.DrawLine(
-                    pen,
-                    dgvWaterLevel.DisplayRectangle.Left,
-                    e.CellBounds.Bottom - 1,
-                    dgvWaterLevel.DisplayRectangle.Right,
-                    e.CellBounds.Bottom - 1
-                )
-            End Using
-
-            e.Handled = True
-            Exit Sub
-        End If
-
-        ' ---------------- SAFETY ----------------
-        If e.RowIndex < 0 OrElse e.ColumnIndex < 0 OrElse e.Value Is Nothing Then Exit Sub
-
-        ' ---------------- STATUS COLOR PILL ----------------
-        If dgvWaterLevel.Columns(e.ColumnIndex).Name = "Status" Then
-
-            e.Handled = True
-            e.PaintBackground(e.ClipBounds, True)
-
-            Dim text = e.FormattedValue.ToString
-            Dim bgColor = Color.LightGray
-            Dim textColor = Color.Black
-
-            Select Case text
-                Case "Normal"
-                    bgColor = Color.FromArgb(170, 240, 180)
-                Case "Warning"
-                    bgColor = Color.FromArgb(250, 235, 150)
-                Case "Critical"
-                    bgColor = Color.FromArgb(220, 90, 90)
-                    textColor = Color.White
-            End Select
-
-            Dim rect As New Rectangle(
-                e.CellBounds.X + 10,
-                e.CellBounds.Y + 8,
-                e.CellBounds.Width - 20,
-                e.CellBounds.Height - 16
-            )
-
-            Using path As New Drawing2D.GraphicsPath
-                Dim radius = 15
-                path.AddArc(rect.X, rect.Y, radius, radius, 180, 90)
-                path.AddArc(rect.Right - radius, rect.Y, radius, radius, 270, 90)
-                path.AddArc(rect.Right - radius, rect.Bottom - radius, radius, radius, 0, 90)
-                path.AddArc(rect.X, rect.Bottom - radius, radius, radius, 90, 90)
-                path.CloseFigure()
-
-                Using brush As New SolidBrush(bgColor)
-                    e.Graphics.FillPath(brush, path)
+            Using cmd As New SqlCommand(q, con)
+                Using rdr = cmd.ExecuteReader()
+                    While rdr.Read()
+                        dgvWaterLevel.Rows.Add(
+                            CType(rdr("ReadingTime"), DateTime).ToString("HH:mm"),
+                            rdr("WaterLevel"),
+                            rdr("Severity")
+                        )
+                    End While
                 End Using
             End Using
-
-            TextRenderer.DrawText(
-                e.Graphics,
-                text,
-                e.CellStyle.Font,
-                rect,
-                textColor,
-                TextFormatFlags.HorizontalCenter Or TextFormatFlags.VerticalCenter
-            )
-        End If
-
+        End Using
     End Sub
 
-    ' ----- SCROLLBAR FUNCTIONALITY ----
-    Private Sub Guna2vScrollBar1_Scroll(
-    sender As Object,
-    e As ScrollEventArgs
-) Handles Guna2vScrollBar1.Scroll
+    ' ===================== STATUS PILL =====================
+    Private Sub dgvWaterLevel_CellPainting(sender As Object,
+                                           e As DataGridViewCellPaintingEventArgs) _
+                                           Handles dgvWaterLevel.CellPainting
 
-        pnlContent.SuspendLayout()
-        pnlContent.Location = New Point(pnlContent.Left, -e.NewValue)
-        pnlContent.ResumeLayout()
+        If e.RowIndex < 0 OrElse e.ColumnIndex < 0 Then Exit Sub
+        If dgvWaterLevel.Columns(e.ColumnIndex).Name <> "Status" Then Exit Sub
+
+        e.Handled = True
+        e.PaintBackground(e.ClipBounds, True)
+
+        Dim text = e.FormattedValue.ToString()
+        Dim bgColor As Color = Color.LightGray
+        Dim textColor As Color = Color.Black
+
+        Select Case text.ToLower()
+            Case "normal" : bgColor = Color.FromArgb(170, 240, 180)
+            Case "warning", "high" : bgColor = Color.FromArgb(250, 235, 150)
+            Case "critical"
+                bgColor = Color.FromArgb(220, 90, 90)
+                textColor = Color.White
+        End Select
+
+        Dim rect As New Rectangle(e.CellBounds.X + 10, e.CellBounds.Y + 8,
+                                  e.CellBounds.Width - 20, e.CellBounds.Height - 16)
+
+        Using path As New GraphicsPath()
+            path.AddArc(rect.X, rect.Y, 15, 15, 180, 90)
+            path.AddArc(rect.Right - 15, rect.Y, 15, 15, 270, 90)
+            path.AddArc(rect.Right - 15, rect.Bottom - 15, 15, 15, 0, 90)
+            path.AddArc(rect.X, rect.Bottom - 15, 15, 15, 90, 90)
+            path.CloseFigure()
+
+            Using b As New SolidBrush(bgColor)
+                e.Graphics.FillPath(b, path)
+            End Using
+        End Using
+
+        TextRenderer.DrawText(e.Graphics, text, e.CellStyle.Font,
+                              rect, textColor,
+                              TextFormatFlags.HorizontalCenter Or TextFormatFlags.VerticalCenter)
     End Sub
 
-    Protected Overrides Sub OnMouseWheel(e As MouseEventArgs)
-        MyBase.OnMouseWheel(e)
+    ' ===================== COMBO EVENTS =====================
+    Private Sub cmbGunaDay_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbGunaDay.SelectedIndexChanged
+        LoadWaterLevelChart()
+    End Sub
 
-        If Not Guna2vScrollBar1.Visible Then Exit Sub
-
-        Dim stepSize As Integer = 40
-
-        Dim newValue = Guna2vScrollBar1.Value - Math.Sign(e.Delta) * stepSize
-
-        newValue = Math.Max(Guna2vScrollBar1.Minimum,
-                            Math.Min(Guna2vScrollBar1.Maximum, newValue))
-
-        Guna2vScrollBar1.Value = newValue
-        pnlContent.Location = New Point(pnlContent.Left, -newValue)
+    Private Sub cmbGunaTime_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbGunaTime.SelectedIndexChanged
+        LoadWaterLevelChart()
     End Sub
 
 End Class

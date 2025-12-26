@@ -22,24 +22,28 @@ Partial Class ReportsUserControl
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
@@ -58,16 +62,16 @@ Partial Class ReportsUserControl
         Dim ChartFont7 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
         Dim Tick3 As Guna.Charts.WinForms.Tick = New Guna.Charts.WinForms.Tick()
         Dim ChartFont8 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
-        Dim CustomizableEdges27 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges28 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges31 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges32 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges25 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges26 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges27 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges28 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges29 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges30 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As DataGridViewCellStyle = New DataGridViewCellStyle()
@@ -86,10 +90,10 @@ Partial Class ReportsUserControl
         Dim ChartFont15 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
         Dim Tick6 As Guna.Charts.WinForms.Tick = New Guna.Charts.WinForms.Tick()
         Dim ChartFont16 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
-        Dim CustomizableEdges43 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges44 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges41 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges42 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges47 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges48 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges45 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges46 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges33 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges34 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges35 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -98,6 +102,10 @@ Partial Class ReportsUserControl
         Dim CustomizableEdges38 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges39 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges40 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges41 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges42 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges43 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges44 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim ChartFont17 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
         Dim ChartFont18 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
         Dim ChartFont19 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
@@ -113,33 +121,36 @@ Partial Class ReportsUserControl
         Dim ChartFont23 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
         Dim Tick9 As Guna.Charts.WinForms.Tick = New Guna.Charts.WinForms.Tick()
         Dim ChartFont24 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
-        Dim CustomizableEdges31 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges32 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges29 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges30 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Label7 = New Label()
         Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
-        lbl_waterlevel = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Guna2ImageButton1 = New Guna.UI2.WinForms.Guna2ImageButton()
+        lblReadings = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-        Guna2HtmlLabel6 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Guna2ImageButton2 = New Guna.UI2.WinForms.Guna2ImageButton()
+        lblLevel = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
-        Guna2HtmlLabel7 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Guna2ImageButton3 = New Guna.UI2.WinForms.Guna2ImageButton()
+        lblMinMax = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
-        Guna2HtmlLabel8 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        lblCritical = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        lblHigh = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        lblLow = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Guna2ImageButton4 = New Guna.UI2.WinForms.Guna2ImageButton()
+        lblNormal = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel5 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2vScrollBar1 = New Guna.UI2.WinForms.Guna2VScrollBar()
         Guna2Panel11 = New Guna.UI2.WinForms.Guna2Panel()
-        Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
+        btnExport = New Guna.UI2.WinForms.Guna2Button()
         cmbGunaTime = New Guna.UI2.WinForms.Guna2ComboBox()
         cmbGunaDay = New Guna.UI2.WinForms.Guna2ComboBox()
         Guna2HtmlLabel9 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
         dgvWaterLevel = New Guna.UI2.WinForms.Guna2DataGridView()
-        GunaChart1 = New Guna.Charts.WinForms.GunaChart()
+        chartWaterLevel = New Guna.Charts.WinForms.GunaChart()
         Label1 = New Label()
         Guna2Panel6 = New Guna.UI2.WinForms.Guna2Panel()
         Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
@@ -152,22 +163,22 @@ Partial Class ReportsUserControl
         Label2 = New Label()
         pnlContent = New Guna.UI2.WinForms.Guna2Panel()
         Guna2Panel8 = New Guna.UI2.WinForms.Guna2Panel()
+        Guna2Panel12 = New Guna.UI2.WinForms.Guna2Panel()
+        Guna2HtmlLabel18 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Guna2HtmlLabel16 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Guna2HtmlLabel17 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Guna2Panel10 = New Guna.UI2.WinForms.Guna2Panel()
+        Guna2HtmlLabel14 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Guna2HtmlLabel15 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2Button3 = New Guna.UI2.WinForms.Guna2Button()
         Guna2ComboBox3 = New Guna.UI2.WinForms.Guna2ComboBox()
         Guna2ComboBox4 = New Guna.UI2.WinForms.Guna2ComboBox()
         Guna2HtmlLabel11 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2Panel9 = New Guna.UI2.WinForms.Guna2Panel()
+        Guna2HtmlLabel13 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Guna2HtmlLabel12 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         GunaChart2 = New Guna.Charts.WinForms.GunaChart()
         Label3 = New Label()
-        Guna2Panel10 = New Guna.UI2.WinForms.Guna2Panel()
-        Guna2Panel12 = New Guna.UI2.WinForms.Guna2Panel()
-        Guna2HtmlLabel12 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel13 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel14 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel15 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel16 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel17 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel18 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2Panel3.SuspendLayout()
         Guna2Panel1.SuspendLayout()
         Guna2Panel2.SuspendLayout()
@@ -180,9 +191,9 @@ Partial Class ReportsUserControl
         CType(minavemaxAnalysis, ComponentModel.ISupportInitialize).BeginInit()
         pnlContent.SuspendLayout()
         Guna2Panel8.SuspendLayout()
-        Guna2Panel9.SuspendLayout()
-        Guna2Panel10.SuspendLayout()
         Guna2Panel12.SuspendLayout()
+        Guna2Panel10.SuspendLayout()
+        Guna2Panel9.SuspendLayout()
         SuspendLayout()
         ' 
         ' Label7
@@ -209,30 +220,46 @@ Partial Class ReportsUserControl
         ' Guna2Panel3
         ' 
         Guna2Panel3.BackColor = Color.Transparent
-        Guna2Panel3.BorderColor = Color.FromArgb(CByte(220), CByte(235), CByte(253))
+        Guna2Panel3.BorderColor = Color.FromArgb(CByte(219), CByte(234), CByte(254))
         Guna2Panel3.BorderRadius = 10
         Guna2Panel3.BorderThickness = 1
-        Guna2Panel3.Controls.Add(lbl_waterlevel)
+        Guna2Panel3.Controls.Add(Guna2ImageButton1)
+        Guna2Panel3.Controls.Add(lblReadings)
         Guna2Panel3.Controls.Add(Guna2HtmlLabel2)
-        Guna2Panel3.CustomizableEdges = CustomizableEdges1
+        Guna2Panel3.CustomizableEdges = CustomizableEdges2
         Guna2Panel3.FillColor = Color.FromArgb(CByte(246), CByte(249), CByte(252))
         Guna2Panel3.Location = New Point(27, 85)
         Guna2Panel3.Name = "Guna2Panel3"
-        Guna2Panel3.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        Guna2Panel3.ShadowDecoration.CustomizableEdges = CustomizableEdges3
         Guna2Panel3.Size = New Size(291, 118)
         Guna2Panel3.TabIndex = 18
         ' 
-        ' lbl_waterlevel
+        ' Guna2ImageButton1
         ' 
-        lbl_waterlevel.BackColor = Color.Transparent
-        lbl_waterlevel.Font = New Font("Segoe UI", 25F, FontStyle.Bold)
-        lbl_waterlevel.ForeColor = Color.FromArgb(CByte(20), CByte(71), CByte(230))
-        lbl_waterlevel.IsSelectionEnabled = False
-        lbl_waterlevel.Location = New Point(21, 52)
-        lbl_waterlevel.Name = "lbl_waterlevel"
-        lbl_waterlevel.Size = New Size(50, 47)
-        lbl_waterlevel.TabIndex = 21
-        lbl_waterlevel.Text = "0.0"
+        Guna2ImageButton1.CheckedState.ImageSize = New Size(64, 64)
+        Guna2ImageButton1.HoverState.ImageSize = New Size(64, 64)
+        Guna2ImageButton1.Image = My.Resources.Resources.ix__graph
+        Guna2ImageButton1.ImageOffset = New Point(0, 0)
+        Guna2ImageButton1.ImageRotate = 0F
+        Guna2ImageButton1.ImageSize = New Size(25, 25)
+        Guna2ImageButton1.Location = New Point(252, 3)
+        Guna2ImageButton1.Name = "Guna2ImageButton1"
+        Guna2ImageButton1.PressedState.ImageSize = New Size(64, 64)
+        Guna2ImageButton1.ShadowDecoration.CustomizableEdges = CustomizableEdges1
+        Guna2ImageButton1.Size = New Size(36, 32)
+        Guna2ImageButton1.TabIndex = 27
+        ' 
+        ' lblReadings
+        ' 
+        lblReadings.BackColor = Color.Transparent
+        lblReadings.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
+        lblReadings.ForeColor = Color.FromArgb(CByte(20), CByte(71), CByte(230))
+        lblReadings.IsSelectionEnabled = False
+        lblReadings.Location = New Point(21, 52)
+        lblReadings.Name = "lblReadings"
+        lblReadings.Size = New Size(19, 39)
+        lblReadings.TabIndex = 21
+        lblReadings.Text = "0"
         ' 
         ' Guna2HtmlLabel2
         ' 
@@ -251,27 +278,43 @@ Partial Class ReportsUserControl
         Guna2Panel1.BorderColor = Color.FromArgb(CByte(206), CByte(250), CByte(254))
         Guna2Panel1.BorderRadius = 10
         Guna2Panel1.BorderThickness = 1
-        Guna2Panel1.Controls.Add(Guna2HtmlLabel6)
+        Guna2Panel1.Controls.Add(Guna2ImageButton2)
+        Guna2Panel1.Controls.Add(lblLevel)
         Guna2Panel1.Controls.Add(Guna2HtmlLabel3)
-        Guna2Panel1.CustomizableEdges = CustomizableEdges3
+        Guna2Panel1.CustomizableEdges = CustomizableEdges5
         Guna2Panel1.FillColor = Color.FromArgb(CByte(245), CByte(251), CByte(252))
         Guna2Panel1.Location = New Point(324, 85)
         Guna2Panel1.Name = "Guna2Panel1"
-        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         Guna2Panel1.Size = New Size(291, 118)
         Guna2Panel1.TabIndex = 19
         ' 
-        ' Guna2HtmlLabel6
+        ' Guna2ImageButton2
         ' 
-        Guna2HtmlLabel6.BackColor = Color.Transparent
-        Guna2HtmlLabel6.Font = New Font("Segoe UI", 25F, FontStyle.Bold)
-        Guna2HtmlLabel6.ForeColor = Color.FromArgb(CByte(0), CByte(117), CByte(149))
-        Guna2HtmlLabel6.IsSelectionEnabled = False
-        Guna2HtmlLabel6.Location = New Point(27, 52)
-        Guna2HtmlLabel6.Name = "Guna2HtmlLabel6"
-        Guna2HtmlLabel6.Size = New Size(89, 47)
-        Guna2HtmlLabel6.TabIndex = 22
-        Guna2HtmlLabel6.Text = "0.0 m"
+        Guna2ImageButton2.CheckedState.ImageSize = New Size(64, 64)
+        Guna2ImageButton2.HoverState.ImageSize = New Size(64, 64)
+        Guna2ImageButton2.Image = My.Resources.Resources.droplets
+        Guna2ImageButton2.ImageOffset = New Point(0, 0)
+        Guna2ImageButton2.ImageRotate = 0F
+        Guna2ImageButton2.ImageSize = New Size(25, 25)
+        Guna2ImageButton2.Location = New Point(252, 3)
+        Guna2ImageButton2.Name = "Guna2ImageButton2"
+        Guna2ImageButton2.PressedState.ImageSize = New Size(64, 64)
+        Guna2ImageButton2.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        Guna2ImageButton2.Size = New Size(36, 32)
+        Guna2ImageButton2.TabIndex = 28
+        ' 
+        ' lblLevel
+        ' 
+        lblLevel.BackColor = Color.Transparent
+        lblLevel.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
+        lblLevel.ForeColor = Color.FromArgb(CByte(0), CByte(117), CByte(149))
+        lblLevel.IsSelectionEnabled = False
+        lblLevel.Location = New Point(27, 52)
+        lblLevel.Name = "lblLevel"
+        lblLevel.Size = New Size(51, 39)
+        lblLevel.TabIndex = 22
+        lblLevel.Text = "0 m"
         ' 
         ' Guna2HtmlLabel3
         ' 
@@ -291,27 +334,43 @@ Partial Class ReportsUserControl
         Guna2Panel2.BorderColor = Color.FromArgb(CByte(243), CByte(232), CByte(255))
         Guna2Panel2.BorderRadius = 10
         Guna2Panel2.BorderThickness = 1
-        Guna2Panel2.Controls.Add(Guna2HtmlLabel7)
+        Guna2Panel2.Controls.Add(Guna2ImageButton3)
+        Guna2Panel2.Controls.Add(lblMinMax)
         Guna2Panel2.Controls.Add(Guna2HtmlLabel4)
-        Guna2Panel2.CustomizableEdges = CustomizableEdges5
+        Guna2Panel2.CustomizableEdges = CustomizableEdges8
         Guna2Panel2.FillColor = Color.FromArgb(CByte(249), CByte(249), CByte(252))
         Guna2Panel2.Location = New Point(621, 85)
         Guna2Panel2.Name = "Guna2Panel2"
-        Guna2Panel2.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        Guna2Panel2.ShadowDecoration.CustomizableEdges = CustomizableEdges9
         Guna2Panel2.Size = New Size(291, 118)
         Guna2Panel2.TabIndex = 19
         ' 
-        ' Guna2HtmlLabel7
+        ' Guna2ImageButton3
         ' 
-        Guna2HtmlLabel7.BackColor = Color.Transparent
-        Guna2HtmlLabel7.Font = New Font("Segoe UI", 25F, FontStyle.Bold)
-        Guna2HtmlLabel7.ForeColor = Color.FromArgb(CByte(130), CByte(43), CByte(229))
-        Guna2HtmlLabel7.IsSelectionEnabled = False
-        Guna2HtmlLabel7.Location = New Point(30, 52)
-        Guna2HtmlLabel7.Name = "Guna2HtmlLabel7"
-        Guna2HtmlLabel7.Size = New Size(169, 47)
-        Guna2HtmlLabel7.TabIndex = 22
-        Guna2HtmlLabel7.Text = "0.0 / 0.0 m"
+        Guna2ImageButton3.CheckedState.ImageSize = New Size(64, 64)
+        Guna2ImageButton3.HoverState.ImageSize = New Size(64, 64)
+        Guna2ImageButton3.Image = My.Resources.Resources.line_graph
+        Guna2ImageButton3.ImageOffset = New Point(0, 0)
+        Guna2ImageButton3.ImageRotate = 0F
+        Guna2ImageButton3.ImageSize = New Size(25, 25)
+        Guna2ImageButton3.Location = New Point(252, 3)
+        Guna2ImageButton3.Name = "Guna2ImageButton3"
+        Guna2ImageButton3.PressedState.ImageSize = New Size(64, 64)
+        Guna2ImageButton3.ShadowDecoration.CustomizableEdges = CustomizableEdges7
+        Guna2ImageButton3.Size = New Size(36, 32)
+        Guna2ImageButton3.TabIndex = 29
+        ' 
+        ' lblMinMax
+        ' 
+        lblMinMax.BackColor = Color.Transparent
+        lblMinMax.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
+        lblMinMax.ForeColor = Color.FromArgb(CByte(130), CByte(43), CByte(229))
+        lblMinMax.IsSelectionEnabled = False
+        lblMinMax.Location = New Point(30, 52)
+        lblMinMax.Name = "lblMinMax"
+        lblMinMax.Size = New Size(93, 39)
+        lblMinMax.TabIndex = 22
+        lblMinMax.Text = "0 / 0 m"
         ' 
         ' Guna2HtmlLabel4
         ' 
@@ -330,27 +389,82 @@ Partial Class ReportsUserControl
         Guna2Panel4.BorderColor = Color.FromArgb(CByte(255), CByte(237), CByte(212))
         Guna2Panel4.BorderRadius = 10
         Guna2Panel4.BorderThickness = 1
-        Guna2Panel4.Controls.Add(Guna2HtmlLabel8)
+        Guna2Panel4.Controls.Add(lblCritical)
+        Guna2Panel4.Controls.Add(lblHigh)
+        Guna2Panel4.Controls.Add(lblLow)
+        Guna2Panel4.Controls.Add(Guna2ImageButton4)
+        Guna2Panel4.Controls.Add(lblNormal)
         Guna2Panel4.Controls.Add(Guna2HtmlLabel5)
-        Guna2Panel4.CustomizableEdges = CustomizableEdges7
+        Guna2Panel4.CustomizableEdges = CustomizableEdges11
         Guna2Panel4.FillColor = Color.FromArgb(CByte(251), CByte(249), CByte(247))
         Guna2Panel4.Location = New Point(918, 85)
         Guna2Panel4.Name = "Guna2Panel4"
-        Guna2Panel4.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        Guna2Panel4.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         Guna2Panel4.Size = New Size(291, 118)
         Guna2Panel4.TabIndex = 19
         ' 
-        ' Guna2HtmlLabel8
+        ' lblCritical
         ' 
-        Guna2HtmlLabel8.BackColor = Color.Transparent
-        Guna2HtmlLabel8.Font = New Font("Segoe UI", 25F, FontStyle.Bold)
-        Guna2HtmlLabel8.ForeColor = Color.FromArgb(CByte(10), CByte(53), CByte(164))
-        Guna2HtmlLabel8.IsSelectionEnabled = False
-        Guna2HtmlLabel8.Location = New Point(29, 52)
-        Guna2HtmlLabel8.Name = "Guna2HtmlLabel8"
-        Guna2HtmlLabel8.Size = New Size(50, 47)
-        Guna2HtmlLabel8.TabIndex = 22
-        Guna2HtmlLabel8.Text = "0.0"
+        lblCritical.BackColor = Color.Transparent
+        lblCritical.Font = New Font("Segoe UI", 15F, FontStyle.Bold)
+        lblCritical.ForeColor = Color.FromArgb(CByte(219), CByte(2), CByte(9))
+        lblCritical.IsSelectionEnabled = False
+        lblCritical.Location = New Point(131, 72)
+        lblCritical.Name = "lblCritical"
+        lblCritical.Size = New Size(15, 30)
+        lblCritical.TabIndex = 36
+        lblCritical.Text = "0"
+        ' 
+        ' lblHigh
+        ' 
+        lblHigh.BackColor = Color.Transparent
+        lblHigh.Font = New Font("Segoe UI", 15F, FontStyle.Bold)
+        lblHigh.ForeColor = Color.FromArgb(CByte(255), CByte(173), CByte(117))
+        lblHigh.IsSelectionEnabled = False
+        lblHigh.Location = New Point(131, 43)
+        lblHigh.Name = "lblHigh"
+        lblHigh.Size = New Size(15, 30)
+        lblHigh.TabIndex = 33
+        lblHigh.Text = "0"
+        ' 
+        ' lblLow
+        ' 
+        lblLow.BackColor = Color.Transparent
+        lblLow.Font = New Font("Segoe UI", 15F, FontStyle.Bold)
+        lblLow.ForeColor = Color.FromArgb(CByte(37), CByte(173), CByte(3))
+        lblLow.IsSelectionEnabled = False
+        lblLow.Location = New Point(29, 43)
+        lblLow.Name = "lblLow"
+        lblLow.Size = New Size(15, 30)
+        lblLow.TabIndex = 31
+        lblLow.Text = "0"
+        ' 
+        ' Guna2ImageButton4
+        ' 
+        Guna2ImageButton4.CheckedState.ImageSize = New Size(64, 64)
+        Guna2ImageButton4.HoverState.ImageSize = New Size(64, 64)
+        Guna2ImageButton4.Image = My.Resources.Resources.icon_park_outline__caution
+        Guna2ImageButton4.ImageOffset = New Point(0, 0)
+        Guna2ImageButton4.ImageRotate = 0F
+        Guna2ImageButton4.ImageSize = New Size(25, 25)
+        Guna2ImageButton4.Location = New Point(252, 3)
+        Guna2ImageButton4.Name = "Guna2ImageButton4"
+        Guna2ImageButton4.PressedState.ImageSize = New Size(64, 64)
+        Guna2ImageButton4.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        Guna2ImageButton4.Size = New Size(36, 32)
+        Guna2ImageButton4.TabIndex = 30
+        ' 
+        ' lblNormal
+        ' 
+        lblNormal.BackColor = Color.Transparent
+        lblNormal.Font = New Font("Segoe UI", 15F, FontStyle.Bold)
+        lblNormal.ForeColor = Color.FromArgb(CByte(178), CByte(194), CByte(2))
+        lblNormal.IsSelectionEnabled = False
+        lblNormal.Location = New Point(29, 72)
+        lblNormal.Name = "lblNormal"
+        lblNormal.Size = New Size(15, 30)
+        lblNormal.TabIndex = 22
+        lblNormal.Text = "0"
         ' 
         ' Guna2HtmlLabel5
         ' 
@@ -380,46 +494,46 @@ Partial Class ReportsUserControl
         Guna2Panel11.BorderColor = Color.FromArgb(CByte(204), CByte(204), CByte(204))
         Guna2Panel11.BorderRadius = 10
         Guna2Panel11.BorderThickness = 1
-        Guna2Panel11.Controls.Add(Guna2Button2)
+        Guna2Panel11.Controls.Add(btnExport)
         Guna2Panel11.Controls.Add(cmbGunaTime)
         Guna2Panel11.Controls.Add(cmbGunaDay)
         Guna2Panel11.Controls.Add(Guna2HtmlLabel9)
         Guna2Panel11.Controls.Add(Guna2Panel5)
-        Guna2Panel11.Controls.Add(GunaChart1)
+        Guna2Panel11.Controls.Add(chartWaterLevel)
         Guna2Panel11.Controls.Add(Label1)
-        Guna2Panel11.CustomizableEdges = CustomizableEdges17
+        Guna2Panel11.CustomizableEdges = CustomizableEdges21
         Guna2Panel11.FillColor = Color.White
         Guna2Panel11.Location = New Point(27, 221)
         Guna2Panel11.Name = "Guna2Panel11"
-        Guna2Panel11.ShadowDecoration.CustomizableEdges = CustomizableEdges18
+        Guna2Panel11.ShadowDecoration.CustomizableEdges = CustomizableEdges22
         Guna2Panel11.Size = New Size(1182, 560)
         Guna2Panel11.TabIndex = 21
         ' 
-        ' Guna2Button2
+        ' btnExport
         ' 
-        Guna2Button2.BorderColor = Color.FromArgb(CByte(217), CByte(221), CByte(226))
-        Guna2Button2.BorderRadius = 8
-        Guna2Button2.BorderThickness = 1
-        Guna2Button2.CustomizableEdges = CustomizableEdges9
-        Guna2Button2.DisabledState.BorderColor = Color.DarkGray
-        Guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2Button2.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2Button2.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        Guna2Button2.FillColor = Color.White
-        Guna2Button2.Font = New Font("Segoe UI", 9F)
-        Guna2Button2.ForeColor = Color.Black
-        Guna2Button2.Location = New Point(1035, 27)
-        Guna2Button2.Name = "Guna2Button2"
-        Guna2Button2.ShadowDecoration.CustomizableEdges = CustomizableEdges10
-        Guna2Button2.Size = New Size(83, 32)
-        Guna2Button2.TabIndex = 26
-        Guna2Button2.Text = "Export"
+        btnExport.BorderColor = Color.FromArgb(CByte(217), CByte(221), CByte(226))
+        btnExport.BorderRadius = 8
+        btnExport.BorderThickness = 1
+        btnExport.CustomizableEdges = CustomizableEdges13
+        btnExport.DisabledState.BorderColor = Color.DarkGray
+        btnExport.DisabledState.CustomBorderColor = Color.DarkGray
+        btnExport.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnExport.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnExport.FillColor = Color.White
+        btnExport.Font = New Font("Segoe UI", 9F)
+        btnExport.ForeColor = Color.Black
+        btnExport.Location = New Point(1035, 27)
+        btnExport.Name = "btnExport"
+        btnExport.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        btnExport.Size = New Size(83, 32)
+        btnExport.TabIndex = 26
+        btnExport.Text = "Export"
         ' 
         ' cmbGunaTime
         ' 
         cmbGunaTime.BackColor = Color.Transparent
         cmbGunaTime.BorderRadius = 8
-        cmbGunaTime.CustomizableEdges = CustomizableEdges11
+        cmbGunaTime.CustomizableEdges = CustomizableEdges15
         cmbGunaTime.DrawMode = DrawMode.OwnerDrawFixed
         cmbGunaTime.DropDownStyle = ComboBoxStyle.DropDownList
         cmbGunaTime.FillColor = Color.WhiteSmoke
@@ -430,7 +544,7 @@ Partial Class ReportsUserControl
         cmbGunaTime.ItemHeight = 30
         cmbGunaTime.Location = New Point(891, 25)
         cmbGunaTime.Name = "cmbGunaTime"
-        cmbGunaTime.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        cmbGunaTime.ShadowDecoration.CustomizableEdges = CustomizableEdges16
         cmbGunaTime.Size = New Size(130, 36)
         cmbGunaTime.TabIndex = 24
         ' 
@@ -438,7 +552,7 @@ Partial Class ReportsUserControl
         ' 
         cmbGunaDay.BackColor = Color.Transparent
         cmbGunaDay.BorderRadius = 8
-        cmbGunaDay.CustomizableEdges = CustomizableEdges13
+        cmbGunaDay.CustomizableEdges = CustomizableEdges17
         cmbGunaDay.DrawMode = DrawMode.OwnerDrawFixed
         cmbGunaDay.DropDownStyle = ComboBoxStyle.DropDownList
         cmbGunaDay.FillColor = Color.WhiteSmoke
@@ -449,7 +563,7 @@ Partial Class ReportsUserControl
         cmbGunaDay.ItemHeight = 30
         cmbGunaDay.Location = New Point(755, 25)
         cmbGunaDay.Name = "cmbGunaDay"
-        cmbGunaDay.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        cmbGunaDay.ShadowDecoration.CustomizableEdges = CustomizableEdges18
         cmbGunaDay.Size = New Size(130, 36)
         cmbGunaDay.TabIndex = 23
         ' 
@@ -470,10 +584,10 @@ Partial Class ReportsUserControl
         Guna2Panel5.BorderRadius = 10
         Guna2Panel5.BorderThickness = 1
         Guna2Panel5.Controls.Add(dgvWaterLevel)
-        Guna2Panel5.CustomizableEdges = CustomizableEdges15
+        Guna2Panel5.CustomizableEdges = CustomizableEdges19
         Guna2Panel5.Location = New Point(32, 321)
         Guna2Panel5.Name = "Guna2Panel5"
-        Guna2Panel5.ShadowDecoration.CustomizableEdges = CustomizableEdges16
+        Guna2Panel5.ShadowDecoration.CustomizableEdges = CustomizableEdges20
         Guna2Panel5.Size = New Size(1112, 207)
         Guna2Panel5.TabIndex = 4
         ' 
@@ -531,39 +645,39 @@ Partial Class ReportsUserControl
         dgvWaterLevel.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
         dgvWaterLevel.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
         ' 
-        ' GunaChart1
+        ' chartWaterLevel
         ' 
         ChartFont1.FontName = "Arial"
-        GunaChart1.Legend.LabelFont = ChartFont1
-        GunaChart1.Location = New Point(32, 101)
-        GunaChart1.Name = "GunaChart1"
-        GunaChart1.Size = New Size(1112, 183)
-        GunaChart1.TabIndex = 3
+        chartWaterLevel.Legend.LabelFont = ChartFont1
+        chartWaterLevel.Location = New Point(32, 101)
+        chartWaterLevel.Name = "chartWaterLevel"
+        chartWaterLevel.Size = New Size(1112, 183)
+        chartWaterLevel.TabIndex = 3
         ChartFont2.FontName = "Arial"
         ChartFont2.Size = 12
         ChartFont2.Style = Guna.Charts.WinForms.ChartFontStyle.Bold
-        GunaChart1.Title.Font = ChartFont2
+        chartWaterLevel.Title.Font = ChartFont2
         ChartFont3.FontName = "Arial"
-        GunaChart1.Tooltips.BodyFont = ChartFont3
+        chartWaterLevel.Tooltips.BodyFont = ChartFont3
         ChartFont4.FontName = "Arial"
         ChartFont4.Size = 9
         ChartFont4.Style = Guna.Charts.WinForms.ChartFontStyle.Bold
-        GunaChart1.Tooltips.TitleFont = ChartFont4
-        GunaChart1.XAxes.GridLines = Grid1
+        chartWaterLevel.Tooltips.TitleFont = ChartFont4
+        chartWaterLevel.XAxes.GridLines = Grid1
         ChartFont5.FontName = "Arial"
         Tick1.Font = ChartFont5
-        GunaChart1.XAxes.Ticks = Tick1
-        GunaChart1.YAxes.GridLines = Grid2
+        chartWaterLevel.XAxes.Ticks = Tick1
+        chartWaterLevel.YAxes.GridLines = Grid2
         ChartFont6.FontName = "Arial"
         Tick2.Font = ChartFont6
-        GunaChart1.YAxes.Ticks = Tick2
-        GunaChart1.ZAxes.GridLines = Grid3
+        chartWaterLevel.YAxes.Ticks = Tick2
+        chartWaterLevel.ZAxes.GridLines = Grid3
         ChartFont7.FontName = "Arial"
         PointLabel1.Font = ChartFont7
-        GunaChart1.ZAxes.PointLabels = PointLabel1
+        chartWaterLevel.ZAxes.PointLabels = PointLabel1
         ChartFont8.FontName = "Arial"
         Tick3.Font = ChartFont8
-        GunaChart1.ZAxes.Ticks = Tick3
+        chartWaterLevel.ZAxes.Ticks = Tick3
         ' 
         ' Label1
         ' 
@@ -588,11 +702,11 @@ Partial Class ReportsUserControl
         Guna2Panel6.Controls.Add(Guna2Panel7)
         Guna2Panel6.Controls.Add(minmaxGraph)
         Guna2Panel6.Controls.Add(Label2)
-        Guna2Panel6.CustomizableEdges = CustomizableEdges27
+        Guna2Panel6.CustomizableEdges = CustomizableEdges31
         Guna2Panel6.FillColor = Color.White
         Guna2Panel6.Location = New Point(27, 797)
         Guna2Panel6.Name = "Guna2Panel6"
-        Guna2Panel6.ShadowDecoration.CustomizableEdges = CustomizableEdges28
+        Guna2Panel6.ShadowDecoration.CustomizableEdges = CustomizableEdges32
         Guna2Panel6.Size = New Size(1182, 560)
         Guna2Panel6.TabIndex = 27
         ' 
@@ -601,7 +715,7 @@ Partial Class ReportsUserControl
         Guna2Button1.BorderColor = Color.FromArgb(CByte(217), CByte(221), CByte(226))
         Guna2Button1.BorderRadius = 8
         Guna2Button1.BorderThickness = 1
-        Guna2Button1.CustomizableEdges = CustomizableEdges19
+        Guna2Button1.CustomizableEdges = CustomizableEdges23
         Guna2Button1.DisabledState.BorderColor = Color.DarkGray
         Guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -611,7 +725,7 @@ Partial Class ReportsUserControl
         Guna2Button1.ForeColor = Color.Black
         Guna2Button1.Location = New Point(1035, 27)
         Guna2Button1.Name = "Guna2Button1"
-        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges20
+        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges24
         Guna2Button1.Size = New Size(83, 32)
         Guna2Button1.TabIndex = 26
         Guna2Button1.Text = "Export"
@@ -620,7 +734,7 @@ Partial Class ReportsUserControl
         ' 
         Guna2ComboBox1.BackColor = Color.Transparent
         Guna2ComboBox1.BorderRadius = 8
-        Guna2ComboBox1.CustomizableEdges = CustomizableEdges21
+        Guna2ComboBox1.CustomizableEdges = CustomizableEdges25
         Guna2ComboBox1.DrawMode = DrawMode.OwnerDrawFixed
         Guna2ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList
         Guna2ComboBox1.FillColor = Color.WhiteSmoke
@@ -631,7 +745,7 @@ Partial Class ReportsUserControl
         Guna2ComboBox1.ItemHeight = 30
         Guna2ComboBox1.Location = New Point(891, 25)
         Guna2ComboBox1.Name = "Guna2ComboBox1"
-        Guna2ComboBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges22
+        Guna2ComboBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges26
         Guna2ComboBox1.Size = New Size(130, 36)
         Guna2ComboBox1.TabIndex = 24
         ' 
@@ -639,7 +753,7 @@ Partial Class ReportsUserControl
         ' 
         Guna2ComboBox2.BackColor = Color.Transparent
         Guna2ComboBox2.BorderRadius = 8
-        Guna2ComboBox2.CustomizableEdges = CustomizableEdges23
+        Guna2ComboBox2.CustomizableEdges = CustomizableEdges27
         Guna2ComboBox2.DrawMode = DrawMode.OwnerDrawFixed
         Guna2ComboBox2.DropDownStyle = ComboBoxStyle.DropDownList
         Guna2ComboBox2.FillColor = Color.WhiteSmoke
@@ -650,7 +764,7 @@ Partial Class ReportsUserControl
         Guna2ComboBox2.ItemHeight = 30
         Guna2ComboBox2.Location = New Point(755, 25)
         Guna2ComboBox2.Name = "Guna2ComboBox2"
-        Guna2ComboBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges24
+        Guna2ComboBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges28
         Guna2ComboBox2.Size = New Size(130, 36)
         Guna2ComboBox2.TabIndex = 23
         ' 
@@ -671,10 +785,10 @@ Partial Class ReportsUserControl
         Guna2Panel7.BorderRadius = 10
         Guna2Panel7.BorderThickness = 1
         Guna2Panel7.Controls.Add(minavemaxAnalysis)
-        Guna2Panel7.CustomizableEdges = CustomizableEdges25
+        Guna2Panel7.CustomizableEdges = CustomizableEdges29
         Guna2Panel7.Location = New Point(32, 321)
         Guna2Panel7.Name = "Guna2Panel7"
-        Guna2Panel7.ShadowDecoration.CustomizableEdges = CustomizableEdges26
+        Guna2Panel7.ShadowDecoration.CustomizableEdges = CustomizableEdges30
         Guna2Panel7.Size = New Size(1112, 207)
         Guna2Panel7.TabIndex = 4
         ' 
@@ -787,10 +901,10 @@ Partial Class ReportsUserControl
         pnlContent.Controls.Add(Guna2Panel4)
         pnlContent.Controls.Add(Guna2Panel11)
         pnlContent.Controls.Add(Guna2Panel6)
-        pnlContent.CustomizableEdges = CustomizableEdges43
+        pnlContent.CustomizableEdges = CustomizableEdges47
         pnlContent.Location = New Point(0, 0)
         pnlContent.Name = "pnlContent"
-        pnlContent.ShadowDecoration.CustomizableEdges = CustomizableEdges44
+        pnlContent.ShadowDecoration.CustomizableEdges = CustomizableEdges48
         pnlContent.Size = New Size(1235, 1980)
         pnlContent.TabIndex = 28
         ' 
@@ -809,20 +923,106 @@ Partial Class ReportsUserControl
         Guna2Panel8.Controls.Add(Guna2Panel9)
         Guna2Panel8.Controls.Add(GunaChart2)
         Guna2Panel8.Controls.Add(Label3)
-        Guna2Panel8.CustomizableEdges = CustomizableEdges41
+        Guna2Panel8.CustomizableEdges = CustomizableEdges45
         Guna2Panel8.FillColor = Color.White
         Guna2Panel8.Location = New Point(27, 1375)
         Guna2Panel8.Name = "Guna2Panel8"
-        Guna2Panel8.ShadowDecoration.CustomizableEdges = CustomizableEdges42
+        Guna2Panel8.ShadowDecoration.CustomizableEdges = CustomizableEdges46
         Guna2Panel8.Size = New Size(1182, 569)
         Guna2Panel8.TabIndex = 28
+        ' 
+        ' Guna2Panel12
+        ' 
+        Guna2Panel12.BorderColor = Color.FromArgb(CByte(255), CByte(214), CByte(167))
+        Guna2Panel12.BorderRadius = 10
+        Guna2Panel12.BorderThickness = 1
+        Guna2Panel12.Controls.Add(Guna2HtmlLabel18)
+        Guna2Panel12.Controls.Add(Guna2HtmlLabel16)
+        Guna2Panel12.Controls.Add(Guna2HtmlLabel17)
+        Guna2Panel12.CustomizableEdges = CustomizableEdges33
+        Guna2Panel12.FillColor = Color.FromArgb(CByte(255), CByte(252), CByte(248))
+        Guna2Panel12.Location = New Point(32, 468)
+        Guna2Panel12.Name = "Guna2Panel12"
+        Guna2Panel12.ShadowDecoration.CustomizableEdges = CustomizableEdges34
+        Guna2Panel12.Size = New Size(1112, 73)
+        Guna2Panel12.TabIndex = 5
+        ' 
+        ' Guna2HtmlLabel18
+        ' 
+        Guna2HtmlLabel18.BackColor = Color.Transparent
+        Guna2HtmlLabel18.Font = New Font("Segoe UI", 9F)
+        Guna2HtmlLabel18.ForeColor = Color.DimGray
+        Guna2HtmlLabel18.Location = New Point(67, 37)
+        Guna2HtmlLabel18.Name = "Guna2HtmlLabel18"
+        Guna2HtmlLabel18.Size = New Size(30, 17)
+        Guna2HtmlLabel18.TabIndex = 33
+        Guna2HtmlLabel18.Text = "Total"
+        ' 
+        ' Guna2HtmlLabel16
+        ' 
+        Guna2HtmlLabel16.BackColor = Color.Transparent
+        Guna2HtmlLabel16.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
+        Guna2HtmlLabel16.ForeColor = Color.FromArgb(CByte(212), CByte(53), CByte(0))
+        Guna2HtmlLabel16.Location = New Point(30, 32)
+        Guna2HtmlLabel16.Name = "Guna2HtmlLabel16"
+        Guna2HtmlLabel16.Size = New Size(21, 23)
+        Guna2HtmlLabel16.TabIndex = 32
+        Guna2HtmlLabel16.Text = "50"
+        ' 
+        ' Guna2HtmlLabel17
+        ' 
+        Guna2HtmlLabel17.BackColor = Color.Transparent
+        Guna2HtmlLabel17.Font = New Font("Segoe UI", 9F)
+        Guna2HtmlLabel17.ForeColor = Color.DimGray
+        Guna2HtmlLabel17.Location = New Point(30, 14)
+        Guna2HtmlLabel17.Name = "Guna2HtmlLabel17"
+        Guna2HtmlLabel17.Size = New Size(106, 17)
+        Guna2HtmlLabel17.TabIndex = 31
+        Guna2HtmlLabel17.Text = "Threshold Breaches"
+        ' 
+        ' Guna2Panel10
+        ' 
+        Guna2Panel10.BorderColor = Color.FromArgb(CByte(255), CByte(201), CByte(201))
+        Guna2Panel10.BorderRadius = 10
+        Guna2Panel10.BorderThickness = 1
+        Guna2Panel10.Controls.Add(Guna2HtmlLabel14)
+        Guna2Panel10.Controls.Add(Guna2HtmlLabel15)
+        Guna2Panel10.CustomizableEdges = CustomizableEdges35
+        Guna2Panel10.FillColor = Color.Snow
+        Guna2Panel10.Location = New Point(32, 389)
+        Guna2Panel10.Name = "Guna2Panel10"
+        Guna2Panel10.ShadowDecoration.CustomizableEdges = CustomizableEdges36
+        Guna2Panel10.Size = New Size(1112, 73)
+        Guna2Panel10.TabIndex = 5
+        ' 
+        ' Guna2HtmlLabel14
+        ' 
+        Guna2HtmlLabel14.BackColor = Color.Transparent
+        Guna2HtmlLabel14.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
+        Guna2HtmlLabel14.ForeColor = Color.FromArgb(CByte(193), CByte(0), CByte(7))
+        Guna2HtmlLabel14.Location = New Point(30, 31)
+        Guna2HtmlLabel14.Name = "Guna2HtmlLabel14"
+        Guna2HtmlLabel14.Size = New Size(40, 23)
+        Guna2HtmlLabel14.TabIndex = 30
+        Guna2HtmlLabel14.Text = "50 m"
+        ' 
+        ' Guna2HtmlLabel15
+        ' 
+        Guna2HtmlLabel15.BackColor = Color.Transparent
+        Guna2HtmlLabel15.Font = New Font("Segoe UI", 9F)
+        Guna2HtmlLabel15.ForeColor = Color.DimGray
+        Guna2HtmlLabel15.Location = New Point(30, 13)
+        Guna2HtmlLabel15.Name = "Guna2HtmlLabel15"
+        Guna2HtmlLabel15.Size = New Size(96, 17)
+        Guna2HtmlLabel15.TabIndex = 29
+        Guna2HtmlLabel15.Text = "Critical Threshold"
         ' 
         ' Guna2Button3
         ' 
         Guna2Button3.BorderColor = Color.FromArgb(CByte(217), CByte(221), CByte(226))
         Guna2Button3.BorderRadius = 8
         Guna2Button3.BorderThickness = 1
-        Guna2Button3.CustomizableEdges = CustomizableEdges33
+        Guna2Button3.CustomizableEdges = CustomizableEdges37
         Guna2Button3.DisabledState.BorderColor = Color.DarkGray
         Guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button3.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -832,7 +1032,7 @@ Partial Class ReportsUserControl
         Guna2Button3.ForeColor = Color.Black
         Guna2Button3.Location = New Point(1035, 27)
         Guna2Button3.Name = "Guna2Button3"
-        Guna2Button3.ShadowDecoration.CustomizableEdges = CustomizableEdges34
+        Guna2Button3.ShadowDecoration.CustomizableEdges = CustomizableEdges38
         Guna2Button3.Size = New Size(83, 32)
         Guna2Button3.TabIndex = 26
         Guna2Button3.Text = "Export"
@@ -841,7 +1041,7 @@ Partial Class ReportsUserControl
         ' 
         Guna2ComboBox3.BackColor = Color.Transparent
         Guna2ComboBox3.BorderRadius = 8
-        Guna2ComboBox3.CustomizableEdges = CustomizableEdges35
+        Guna2ComboBox3.CustomizableEdges = CustomizableEdges39
         Guna2ComboBox3.DrawMode = DrawMode.OwnerDrawFixed
         Guna2ComboBox3.DropDownStyle = ComboBoxStyle.DropDownList
         Guna2ComboBox3.FillColor = Color.WhiteSmoke
@@ -852,7 +1052,7 @@ Partial Class ReportsUserControl
         Guna2ComboBox3.ItemHeight = 30
         Guna2ComboBox3.Location = New Point(891, 25)
         Guna2ComboBox3.Name = "Guna2ComboBox3"
-        Guna2ComboBox3.ShadowDecoration.CustomizableEdges = CustomizableEdges36
+        Guna2ComboBox3.ShadowDecoration.CustomizableEdges = CustomizableEdges40
         Guna2ComboBox3.Size = New Size(130, 36)
         Guna2ComboBox3.TabIndex = 24
         ' 
@@ -860,7 +1060,7 @@ Partial Class ReportsUserControl
         ' 
         Guna2ComboBox4.BackColor = Color.Transparent
         Guna2ComboBox4.BorderRadius = 8
-        Guna2ComboBox4.CustomizableEdges = CustomizableEdges37
+        Guna2ComboBox4.CustomizableEdges = CustomizableEdges41
         Guna2ComboBox4.DrawMode = DrawMode.OwnerDrawFixed
         Guna2ComboBox4.DropDownStyle = ComboBoxStyle.DropDownList
         Guna2ComboBox4.FillColor = Color.WhiteSmoke
@@ -871,7 +1071,7 @@ Partial Class ReportsUserControl
         Guna2ComboBox4.ItemHeight = 30
         Guna2ComboBox4.Location = New Point(755, 25)
         Guna2ComboBox4.Name = "Guna2ComboBox4"
-        Guna2ComboBox4.ShadowDecoration.CustomizableEdges = CustomizableEdges38
+        Guna2ComboBox4.ShadowDecoration.CustomizableEdges = CustomizableEdges42
         Guna2ComboBox4.Size = New Size(130, 36)
         Guna2ComboBox4.TabIndex = 23
         ' 
@@ -893,13 +1093,35 @@ Partial Class ReportsUserControl
         Guna2Panel9.BorderThickness = 1
         Guna2Panel9.Controls.Add(Guna2HtmlLabel13)
         Guna2Panel9.Controls.Add(Guna2HtmlLabel12)
-        Guna2Panel9.CustomizableEdges = CustomizableEdges39
+        Guna2Panel9.CustomizableEdges = CustomizableEdges43
         Guna2Panel9.FillColor = Color.FromArgb(CByte(255), CByte(254), CByte(246))
         Guna2Panel9.Location = New Point(32, 310)
         Guna2Panel9.Name = "Guna2Panel9"
-        Guna2Panel9.ShadowDecoration.CustomizableEdges = CustomizableEdges40
+        Guna2Panel9.ShadowDecoration.CustomizableEdges = CustomizableEdges44
         Guna2Panel9.Size = New Size(1112, 73)
         Guna2Panel9.TabIndex = 4
+        ' 
+        ' Guna2HtmlLabel13
+        ' 
+        Guna2HtmlLabel13.BackColor = Color.Transparent
+        Guna2HtmlLabel13.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
+        Guna2HtmlLabel13.ForeColor = Color.FromArgb(CByte(229), CByte(176), CByte(40))
+        Guna2HtmlLabel13.Location = New Point(30, 30)
+        Guna2HtmlLabel13.Name = "Guna2HtmlLabel13"
+        Guna2HtmlLabel13.Size = New Size(40, 23)
+        Guna2HtmlLabel13.TabIndex = 28
+        Guna2HtmlLabel13.Text = "50 m"
+        ' 
+        ' Guna2HtmlLabel12
+        ' 
+        Guna2HtmlLabel12.BackColor = Color.Transparent
+        Guna2HtmlLabel12.Font = New Font("Segoe UI", 9F)
+        Guna2HtmlLabel12.ForeColor = Color.DimGray
+        Guna2HtmlLabel12.Location = New Point(30, 12)
+        Guna2HtmlLabel12.Name = "Guna2HtmlLabel12"
+        Guna2HtmlLabel12.Size = New Size(104, 17)
+        Guna2HtmlLabel12.TabIndex = 27
+        Guna2HtmlLabel12.Text = "Warning Threshold"
         ' 
         ' GunaChart2
         ' 
@@ -945,114 +1167,6 @@ Partial Class ReportsUserControl
         Label3.TabIndex = 0
         Label3.Text = "Threshold Monitoring"
         ' 
-        ' Guna2Panel10
-        ' 
-        Guna2Panel10.BorderColor = Color.FromArgb(CByte(255), CByte(201), CByte(201))
-        Guna2Panel10.BorderRadius = 10
-        Guna2Panel10.BorderThickness = 1
-        Guna2Panel10.Controls.Add(Guna2HtmlLabel14)
-        Guna2Panel10.Controls.Add(Guna2HtmlLabel15)
-        Guna2Panel10.CustomizableEdges = CustomizableEdges31
-        Guna2Panel10.FillColor = Color.Snow
-        Guna2Panel10.Location = New Point(32, 389)
-        Guna2Panel10.Name = "Guna2Panel10"
-        Guna2Panel10.ShadowDecoration.CustomizableEdges = CustomizableEdges32
-        Guna2Panel10.Size = New Size(1112, 73)
-        Guna2Panel10.TabIndex = 5
-        ' 
-        ' Guna2Panel12
-        ' 
-        Guna2Panel12.BorderColor = Color.FromArgb(CByte(255), CByte(214), CByte(167))
-        Guna2Panel12.BorderRadius = 10
-        Guna2Panel12.BorderThickness = 1
-        Guna2Panel12.Controls.Add(Guna2HtmlLabel18)
-        Guna2Panel12.Controls.Add(Guna2HtmlLabel16)
-        Guna2Panel12.Controls.Add(Guna2HtmlLabel17)
-        Guna2Panel12.CustomizableEdges = CustomizableEdges29
-        Guna2Panel12.FillColor = Color.FromArgb(CByte(255), CByte(252), CByte(248))
-        Guna2Panel12.Location = New Point(32, 468)
-        Guna2Panel12.Name = "Guna2Panel12"
-        Guna2Panel12.ShadowDecoration.CustomizableEdges = CustomizableEdges30
-        Guna2Panel12.Size = New Size(1112, 73)
-        Guna2Panel12.TabIndex = 5
-        ' 
-        ' Guna2HtmlLabel12
-        ' 
-        Guna2HtmlLabel12.BackColor = Color.Transparent
-        Guna2HtmlLabel12.Font = New Font("Segoe UI", 9F)
-        Guna2HtmlLabel12.ForeColor = Color.DimGray
-        Guna2HtmlLabel12.Location = New Point(30, 12)
-        Guna2HtmlLabel12.Name = "Guna2HtmlLabel12"
-        Guna2HtmlLabel12.Size = New Size(104, 17)
-        Guna2HtmlLabel12.TabIndex = 27
-        Guna2HtmlLabel12.Text = "Warning Threshold"
-        ' 
-        ' Guna2HtmlLabel13
-        ' 
-        Guna2HtmlLabel13.BackColor = Color.Transparent
-        Guna2HtmlLabel13.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
-        Guna2HtmlLabel13.ForeColor = Color.FromArgb(CByte(229), CByte(176), CByte(40))
-        Guna2HtmlLabel13.Location = New Point(30, 30)
-        Guna2HtmlLabel13.Name = "Guna2HtmlLabel13"
-        Guna2HtmlLabel13.Size = New Size(40, 23)
-        Guna2HtmlLabel13.TabIndex = 28
-        Guna2HtmlLabel13.Text = "50 m"
-        ' 
-        ' Guna2HtmlLabel14
-        ' 
-        Guna2HtmlLabel14.BackColor = Color.Transparent
-        Guna2HtmlLabel14.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
-        Guna2HtmlLabel14.ForeColor = Color.FromArgb(CByte(193), CByte(0), CByte(7))
-        Guna2HtmlLabel14.Location = New Point(30, 31)
-        Guna2HtmlLabel14.Name = "Guna2HtmlLabel14"
-        Guna2HtmlLabel14.Size = New Size(40, 23)
-        Guna2HtmlLabel14.TabIndex = 30
-        Guna2HtmlLabel14.Text = "50 m"
-        ' 
-        ' Guna2HtmlLabel15
-        ' 
-        Guna2HtmlLabel15.BackColor = Color.Transparent
-        Guna2HtmlLabel15.Font = New Font("Segoe UI", 9F)
-        Guna2HtmlLabel15.ForeColor = Color.DimGray
-        Guna2HtmlLabel15.Location = New Point(30, 13)
-        Guna2HtmlLabel15.Name = "Guna2HtmlLabel15"
-        Guna2HtmlLabel15.Size = New Size(96, 17)
-        Guna2HtmlLabel15.TabIndex = 29
-        Guna2HtmlLabel15.Text = "Critical Threshold"
-        ' 
-        ' Guna2HtmlLabel16
-        ' 
-        Guna2HtmlLabel16.BackColor = Color.Transparent
-        Guna2HtmlLabel16.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
-        Guna2HtmlLabel16.ForeColor = Color.FromArgb(CByte(212), CByte(53), CByte(0))
-        Guna2HtmlLabel16.Location = New Point(30, 32)
-        Guna2HtmlLabel16.Name = "Guna2HtmlLabel16"
-        Guna2HtmlLabel16.Size = New Size(21, 23)
-        Guna2HtmlLabel16.TabIndex = 32
-        Guna2HtmlLabel16.Text = "50"
-        ' 
-        ' Guna2HtmlLabel17
-        ' 
-        Guna2HtmlLabel17.BackColor = Color.Transparent
-        Guna2HtmlLabel17.Font = New Font("Segoe UI", 9F)
-        Guna2HtmlLabel17.ForeColor = Color.DimGray
-        Guna2HtmlLabel17.Location = New Point(30, 14)
-        Guna2HtmlLabel17.Name = "Guna2HtmlLabel17"
-        Guna2HtmlLabel17.Size = New Size(106, 17)
-        Guna2HtmlLabel17.TabIndex = 31
-        Guna2HtmlLabel17.Text = "Threshold Breaches"
-        ' 
-        ' Guna2HtmlLabel18
-        ' 
-        Guna2HtmlLabel18.BackColor = Color.Transparent
-        Guna2HtmlLabel18.Font = New Font("Segoe UI", 9F)
-        Guna2HtmlLabel18.ForeColor = Color.DimGray
-        Guna2HtmlLabel18.Location = New Point(67, 37)
-        Guna2HtmlLabel18.Name = "Guna2HtmlLabel18"
-        Guna2HtmlLabel18.Size = New Size(30, 17)
-        Guna2HtmlLabel18.TabIndex = 33
-        Guna2HtmlLabel18.Text = "Total"
-        ' 
         ' ReportsUserControl
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -1082,12 +1196,12 @@ Partial Class ReportsUserControl
         pnlContent.PerformLayout()
         Guna2Panel8.ResumeLayout(False)
         Guna2Panel8.PerformLayout()
-        Guna2Panel9.ResumeLayout(False)
-        Guna2Panel9.PerformLayout()
-        Guna2Panel10.ResumeLayout(False)
-        Guna2Panel10.PerformLayout()
         Guna2Panel12.ResumeLayout(False)
         Guna2Panel12.PerformLayout()
+        Guna2Panel10.ResumeLayout(False)
+        Guna2Panel10.PerformLayout()
+        Guna2Panel9.ResumeLayout(False)
+        Guna2Panel9.PerformLayout()
         ResumeLayout(False)
     End Sub
 
@@ -1101,20 +1215,20 @@ Partial Class ReportsUserControl
     Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel4 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel5 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents lbl_waterlevel As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel6 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel7 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel8 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblReadings As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblLevel As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblMinMax As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblNormal As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2vScrollBar1 As Guna.UI2.WinForms.Guna2VScrollBar
     Friend WithEvents Guna2Panel11 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Label1 As Label
-    Friend WithEvents GunaChart1 As Guna.Charts.WinForms.GunaChart
+    Friend WithEvents chartWaterLevel As Guna.Charts.WinForms.GunaChart
     Friend WithEvents Guna2Panel5 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents dgvWaterLevel As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents Guna2ComboBox2 As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents cmbGunaDay As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents Guna2HtmlLabel9 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnExport As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents cmbGunaTime As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents Guna2Panel6 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
@@ -1142,5 +1256,12 @@ Partial Class ReportsUserControl
     Friend WithEvents Guna2HtmlLabel13 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel12 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel18 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Guna2ImageButton1 As Guna.UI2.WinForms.Guna2ImageButton
+    Friend WithEvents Guna2ImageButton2 As Guna.UI2.WinForms.Guna2ImageButton
+    Friend WithEvents Guna2ImageButton3 As Guna.UI2.WinForms.Guna2ImageButton
+    Friend WithEvents Guna2ImageButton4 As Guna.UI2.WinForms.Guna2ImageButton
+    Friend WithEvents lblCritical As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblHigh As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblLow As Guna.UI2.WinForms.Guna2HtmlLabel
 
 End Class
