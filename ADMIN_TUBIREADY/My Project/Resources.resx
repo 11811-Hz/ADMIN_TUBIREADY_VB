@@ -124,6 +124,12 @@
   <data name="humidity" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\humidity.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="111qqqq" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\111qqqq.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="qqqqqqqeqeqeq" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\qqqqqqqeqeqeq.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="direction" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\direction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -190,6 +196,12 @@
   <data name="droplets" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\droplets.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="wawawawa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wawawawa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon-park-outline--caution" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-park-outline--caution.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="tabler--user-check" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tabler--user-check.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -205,7 +217,10 @@
   <data name="map" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\map.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon-park-outline--caution" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon-park-outline--caution.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="garaaga" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\garaaga.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="typcn--warning-outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\typcn--warning-outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

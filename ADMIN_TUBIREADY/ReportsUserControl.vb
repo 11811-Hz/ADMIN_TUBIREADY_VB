@@ -20,7 +20,29 @@ Public Class ReportsUserControl
         InitChartFilters()
         LoadWaterLevelChart()
 
+        LoadMinMaxGraph()
+        SetupMinAveMaxTable()
+        LoadMinAveMaxTable()
+
+        EnableMouseWheelScroll(Me)
+        RemoveHandler dgvWaterLevel.MouseWheel, AddressOf ForwardMouseWheel
+        RemoveHandler minavemaxAnalysis.MouseWheel, AddressOf ForwardMouseWheel
+        RemoveHandler minmaxGraph.MouseWheel, AddressOf ForwardMouseWheel
+
+        InitMinMaxFilters()
+        LoadMinMaxGraph()
+        LoadMinAveMaxTable()
+
         Me.BeginInvoke(Sub() SetupPageScroll())
+    End Sub
+
+    Protected Overrides Sub OnHandleCreated(e As EventArgs)
+        MyBase.OnHandleCreated(e)
+
+        Dim dgvType = GetType(DataGridView)
+        Dim prop = dgvType.GetProperty("DoubleBuffered",
+        Reflection.BindingFlags.Instance Or Reflection.BindingFlags.NonPublic)
+        prop.SetValue(dgvWaterLevel, True, Nothing)
     End Sub
 
     Private Sub ReportsUserControl_Resize(sender As Object, e As EventArgs) Handles Me.Resize
@@ -91,6 +113,25 @@ Public Class ReportsUserControl
             "Weekly"
         })
         cmbGunaTime.SelectedIndex = 0
+    End Sub
+
+    Private Sub InitMinMaxFilters()
+        cmbGunaDay2.Items.Clear()
+        cmbGunaDay2.Items.AddRange(New String() {
+        "Today",
+        "Yesterday",
+        "Last 7 Days",
+        "Last 30 Days"
+    })
+        cmbGunaDay2.SelectedIndex = 0
+
+        cmbGunaTime2.Items.Clear()
+        cmbGunaTime2.Items.AddRange(New String() {
+        "Hourly",
+        "Daily",
+        "Weekly"
+    })
+        cmbGunaTime2.SelectedIndex = 0
     End Sub
 
     ' ===================== GUNA BAR CHART =====================
@@ -215,22 +256,71 @@ Public Class ReportsUserControl
         Guna2vScrollBar1.LargeChange = 60
         Guna2vScrollBar1.SmallChange = 20
         Guna2vScrollBar1.Value = 0
+
+        Guna2vScrollBar1.LargeChange = 80
+        Guna2vScrollBar1.SmallChange = 25
     End Sub
 
     ' ===================== TABLE SETUP =====================
     Private Sub SetupWaterLevelTable()
+        dgvWaterLevel.SuspendLayout()
+
         dgvWaterLevel.Columns.Clear()
         dgvWaterLevel.Rows.Clear()
 
+        ' ===== BASIC SETTINGS =====
         dgvWaterLevel.ReadOnly = True
         dgvWaterLevel.RowHeadersVisible = False
         dgvWaterLevel.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         dgvWaterLevel.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvWaterLevel.RowTemplate.Height = 42
+        dgvWaterLevel.MultiSelect = False
 
+        ' ===== HEADER (FIXED & STABLE) =====
+        dgvWaterLevel.EnableHeadersVisualStyles = False
+        dgvWaterLevel.ColumnHeadersHeight = 40
+        dgvWaterLevel.ColumnHeadersHeightSizeMode =
+        DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        dgvWaterLevel.ColumnHeadersBorderStyle =
+        DataGridViewHeaderBorderStyle.Single
+
+        dgvWaterLevel.ColumnHeadersDefaultCellStyle.BackColor = Color.White
+        dgvWaterLevel.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black
+        dgvWaterLevel.ColumnHeadersDefaultCellStyle.Font =
+        New Font("Segoe UI", 10, FontStyle.Bold)
+        dgvWaterLevel.ColumnHeadersDefaultCellStyle.Alignment =
+        DataGridViewContentAlignment.MiddleLeft
+
+        ' ===== GRID & SCROLL STABILITY (IMPORTANT) =====
+        dgvWaterLevel.BorderStyle = BorderStyle.FixedSingle
+        dgvWaterLevel.CellBorderStyle = DataGridViewCellBorderStyle.Single
+        dgvWaterLevel.GridColor = Color.FromArgb(220, 220, 220)
+
+        ' ===== CELL STYLE =====
+        dgvWaterLevel.DefaultCellStyle.Font =
+        New Font("Segoe UI", 10, FontStyle.Regular)
+        dgvWaterLevel.DefaultCellStyle.SelectionBackColor = Color.White
+        dgvWaterLevel.DefaultCellStyle.SelectionForeColor = Color.Black
+        dgvWaterLevel.BackgroundColor = Color.White
+
+        ' ===== COLUMNS =====
         dgvWaterLevel.Columns.Add("Time", "Time")
         dgvWaterLevel.Columns.Add("Level", "Level (cm)")
         dgvWaterLevel.Columns.Add("Status", "Status")
+
+        dgvWaterLevel.Columns("Time").DefaultCellStyle.Alignment =
+        DataGridViewContentAlignment.MiddleLeft
+        dgvWaterLevel.Columns("Level").DefaultCellStyle.Alignment =
+        DataGridViewContentAlignment.MiddleCenter
+        dgvWaterLevel.Columns("Status").DefaultCellStyle.Alignment =
+        DataGridViewContentAlignment.MiddleCenter
+
+        ' ===== PREVENT JITTER =====
+        For Each col As DataGridViewColumn In dgvWaterLevel.Columns
+            col.SortMode = DataGridViewColumnSortMode.NotSortable
+        Next
+
+        dgvWaterLevel.ResumeLayout()
     End Sub
 
     ' ===================== LOAD TABLE DATA =====================
@@ -261,8 +351,8 @@ Public Class ReportsUserControl
 
     ' ===================== STATUS PILL =====================
     Private Sub dgvWaterLevel_CellPainting(sender As Object,
-                                           e As DataGridViewCellPaintingEventArgs) _
-                                           Handles dgvWaterLevel.CellPainting
+                                       e As DataGridViewCellPaintingEventArgs) _
+                                       Handles dgvWaterLevel.CellPainting
 
         If e.RowIndex < 0 OrElse e.ColumnIndex < 0 Then Exit Sub
         If dgvWaterLevel.Columns(e.ColumnIndex).Name <> "Status" Then Exit Sub
@@ -270,36 +360,285 @@ Public Class ReportsUserControl
         e.Handled = True
         e.PaintBackground(e.ClipBounds, True)
 
-        Dim text = e.FormattedValue.ToString()
+        Dim text As String = e.FormattedValue.ToString()
         Dim bgColor As Color = Color.LightGray
         Dim textColor As Color = Color.Black
 
         Select Case text.ToLower()
-            Case "normal" : bgColor = Color.FromArgb(170, 240, 180)
-            Case "warning", "high" : bgColor = Color.FromArgb(250, 235, 150)
+            Case "low"
+                bgColor = Color.FromArgb(76, 175, 80)     ' 🟢 Green
+                textColor = Color.White
+
+            Case "normal"
+                bgColor = Color.FromArgb(255, 235, 59)    ' 🟡 Yellow
+
+            Case "high"
+                bgColor = Color.FromArgb(255, 152, 0)     ' 🟠 Orange
+                textColor = Color.White
+
             Case "critical"
-                bgColor = Color.FromArgb(220, 90, 90)
+                bgColor = Color.FromArgb(244, 67, 54)     ' 🔴 Red
                 textColor = Color.White
         End Select
 
-        Dim rect As New Rectangle(e.CellBounds.X + 10, e.CellBounds.Y + 8,
-                                  e.CellBounds.Width - 20, e.CellBounds.Height - 16)
+        Dim rect As New Rectangle(
+        e.CellBounds.X + 10,
+        e.CellBounds.Y + 8,
+        e.CellBounds.Width - 20,
+        e.CellBounds.Height - 16
+    )
 
         Using path As New GraphicsPath()
-            path.AddArc(rect.X, rect.Y, 15, 15, 180, 90)
-            path.AddArc(rect.Right - 15, rect.Y, 15, 15, 270, 90)
-            path.AddArc(rect.Right - 15, rect.Bottom - 15, 15, 15, 0, 90)
-            path.AddArc(rect.X, rect.Bottom - 15, 15, 15, 90, 90)
+            path.AddArc(rect.X, rect.Y, 20, 20, 180, 90)
+            path.AddArc(rect.Right - 20, rect.Y, 20, 20, 270, 90)
+            path.AddArc(rect.Right - 20, rect.Bottom - 20, 20, 20, 0, 90)
+            path.AddArc(rect.X, rect.Bottom - 20, 20, 20, 90, 90)
             path.CloseFigure()
 
             Using b As New SolidBrush(bgColor)
+                e.Graphics.SmoothingMode = SmoothingMode.AntiAlias
                 e.Graphics.FillPath(b, path)
             End Using
         End Using
 
-        TextRenderer.DrawText(e.Graphics, text, e.CellStyle.Font,
-                              rect, textColor,
-                              TextFormatFlags.HorizontalCenter Or TextFormatFlags.VerticalCenter)
+        TextRenderer.DrawText(
+        e.Graphics,
+        text,
+        e.CellStyle.Font,
+        rect,
+        textColor,
+        TextFormatFlags.HorizontalCenter Or TextFormatFlags.VerticalCenter
+    )
+    End Sub
+
+    ' ===================== MIN / AVG / MAX TABLE SETUP =====================
+    Private Sub SetupMinAveMaxTable()
+
+        minavemaxAnalysis.SuspendLayout()
+        minavemaxAnalysis.Columns.Clear()
+        minavemaxAnalysis.Rows.Clear()
+
+        minavemaxAnalysis.ReadOnly = True
+        minavemaxAnalysis.RowHeadersVisible = False
+        minavemaxAnalysis.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        minavemaxAnalysis.RowTemplate.Height = 38
+        minavemaxAnalysis.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+
+        minavemaxAnalysis.EnableHeadersVisualStyles = False
+        minavemaxAnalysis.ColumnHeadersHeight = 38
+        minavemaxAnalysis.ColumnHeadersHeightSizeMode =
+        DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+
+        minavemaxAnalysis.ColumnHeadersDefaultCellStyle.Font =
+        New Font("Segoe UI", 10, FontStyle.Bold)
+        minavemaxAnalysis.ColumnHeadersDefaultCellStyle.BackColor = Color.White
+        minavemaxAnalysis.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black
+
+        minavemaxAnalysis.BorderStyle = BorderStyle.FixedSingle
+        minavemaxAnalysis.CellBorderStyle = DataGridViewCellBorderStyle.Single
+        minavemaxAnalysis.GridColor = Color.FromArgb(220, 220, 220)
+        minavemaxAnalysis.BackgroundColor = Color.White
+
+        minavemaxAnalysis.DefaultCellStyle.Font =
+        New Font("Segoe UI", 10)
+        minavemaxAnalysis.DefaultCellStyle.SelectionBackColor = Color.White
+        minavemaxAnalysis.DefaultCellStyle.SelectionForeColor = Color.Black
+
+        minavemaxAnalysis.Columns.Add("Time", "Time")
+        minavemaxAnalysis.Columns.Add("Min", "Min")
+        minavemaxAnalysis.Columns.Add("Avg", "Avg")
+        minavemaxAnalysis.Columns.Add("Max", "Max")
+
+        minavemaxAnalysis.Columns("Time").DefaultCellStyle.Alignment =
+        DataGridViewContentAlignment.MiddleLeft
+        minavemaxAnalysis.Columns("Min").DefaultCellStyle.Alignment =
+        DataGridViewContentAlignment.MiddleCenter
+        minavemaxAnalysis.Columns("Avg").DefaultCellStyle.Alignment =
+        DataGridViewContentAlignment.MiddleCenter
+        minavemaxAnalysis.Columns("Max").DefaultCellStyle.Alignment =
+        DataGridViewContentAlignment.MiddleCenter
+
+        minavemaxAnalysis.ResumeLayout()
+    End Sub
+
+    ' ===================== MIN / AVG / MAX GRAPH =====================
+    Private Sub LoadMinMaxGraph()
+
+        minmaxGraph.Datasets.Clear()
+
+        Dim minSet As New GunaLineDataset()
+        Dim avgSet As New GunaLineDataset()
+        Dim maxSet As New GunaLineDataset()
+
+        minSet.Label = "Min"
+        avgSet.Label = "Avg"
+        maxSet.Label = "Max"
+
+        minSet.PointRadius = 3
+        avgSet.PointRadius = 3
+        maxSet.PointRadius = 3
+
+        minSet.BorderColor = Color.FromArgb(76, 175, 80)
+        avgSet.BorderColor = Color.FromArgb(33, 150, 243)
+        maxSet.BorderColor = Color.FromArgb(244, 67, 54)
+
+        ' ===== DATE RANGE (USING cmbGunaDay2) =====
+        Dim startDate As DateTime
+        Dim endDate As DateTime = DateTime.Now
+
+        Select Case cmbGunaDay2.Text.Trim().ToLower()
+            Case "today"
+                startDate = Date.Today
+
+            Case "yesterday"
+                startDate = Date.Today.AddDays(-1)
+                endDate = Date.Today
+
+            Case "last 7 days"
+                startDate = Date.Today.AddDays(-7)
+
+            Case "last 30 days"
+                startDate = Date.Today.AddDays(-30)
+
+            Case Else
+                startDate = Date.Today
+        End Select
+
+        ' ===== TIME GROUPING (USING cmbGunaTime2) =====
+        Dim query As String = ""
+
+        Select Case cmbGunaTime2.Text.Trim().ToLower()
+
+            Case "hourly"
+                query =
+        "SELECT DATEPART(HOUR, ReadingTime) AS Lbl,
+                MIN(WaterLevel) AS MinVal,
+                AVG(WaterLevel) AS AvgVal,
+                MAX(WaterLevel) AS MaxVal
+         FROM Ultrasonic
+         WHERE ReadingTime BETWEEN @s AND @e
+         GROUP BY DATEPART(HOUR, ReadingTime)
+         ORDER BY Lbl"
+
+            Case "daily"
+                query =
+        "SELECT CAST(ReadingTime AS DATE) AS Lbl,
+                MIN(WaterLevel) AS MinVal,
+                AVG(WaterLevel) AS AvgVal,
+                MAX(WaterLevel) AS MaxVal
+         FROM Ultrasonic
+         WHERE ReadingTime BETWEEN @s AND @e
+         GROUP BY CAST(ReadingTime AS DATE)
+         ORDER BY Lbl"
+
+            Case "weekly"
+                query =
+        "SELECT DATEPART(WEEK, ReadingTime) AS Lbl,
+                MIN(WaterLevel) AS MinVal,
+                AVG(WaterLevel) AS AvgVal,
+                MAX(WaterLevel) AS MaxVal
+         FROM Ultrasonic
+         WHERE ReadingTime BETWEEN @s AND @e
+         GROUP BY DATEPART(WEEK, ReadingTime)
+         ORDER BY Lbl"
+
+            Case Else
+                ' ✅ SAFE FALLBACK (IMPORTANT)
+                query =
+        "SELECT DATEPART(HOUR, ReadingTime) AS Lbl,
+                MIN(WaterLevel) AS MinVal,
+                AVG(WaterLevel) AS AvgVal,
+                MAX(WaterLevel) AS MaxVal
+         FROM Ultrasonic
+         WHERE ReadingTime BETWEEN @s AND @e
+         GROUP BY DATEPART(HOUR, ReadingTime)
+         ORDER BY Lbl"
+        End Select
+
+        Using con As New SqlConnection(connectionString)
+            con.Open()
+
+            Using cmd As New SqlCommand(query, con)
+                cmd.Parameters.AddWithValue("@s", startDate)
+                cmd.Parameters.AddWithValue("@e", endDate)
+
+                Using rdr = cmd.ExecuteReader()
+                    While rdr.Read()
+
+                        Dim label As String
+
+                        If cmbGunaTime2.Text = "Hourly" Then
+                            label = rdr("Lbl").ToString().PadLeft(2, "0"c) & ":00"
+                        Else
+                            label = rdr("Lbl").ToString()
+                        End If
+
+                        minSet.DataPoints.Add(New LPoint(label, Math.Round(CDbl(rdr("MinVal")), 2)))
+                        avgSet.DataPoints.Add(New LPoint(label, Math.Round(CDbl(rdr("AvgVal")), 2)))
+                        maxSet.DataPoints.Add(New LPoint(label, Math.Round(CDbl(rdr("MaxVal")), 2)))
+
+                    End While
+                End Using
+            End Using
+        End Using
+
+        minmaxGraph.Datasets.Add(minSet)
+        minmaxGraph.Datasets.Add(avgSet)
+        minmaxGraph.Datasets.Add(maxSet)
+
+        minmaxGraph.Update()
+    End Sub
+
+    ' ===================== LOAD MIN / AVG / MAX DATA =====================
+    Private Sub LoadMinAveMaxTable()
+
+        minavemaxAnalysis.Rows.Clear()
+
+        Using con As New SqlConnection(connectionString)
+            con.Open()
+
+            Dim q As String =
+        "SELECT 
+            DATEPART(HOUR, ReadingTime) AS Hr,
+            MIN(WaterLevel) AS MinVal,
+            AVG(WaterLevel) AS AvgVal,
+            MAX(WaterLevel) AS MaxVal
+         FROM Ultrasonic
+         GROUP BY DATEPART(HOUR, ReadingTime)
+         ORDER BY Hr"
+
+            Using cmd As New SqlCommand(q, con)
+                Using rdr = cmd.ExecuteReader()
+                    While rdr.Read()
+
+                        minavemaxAnalysis.Rows.Add(
+                        rdr("Hr").ToString().PadLeft(2, "0"c) & ":00",
+                        Math.Round(CDbl(rdr("MinVal")), 1),
+                        Math.Round(CDbl(rdr("AvgVal")), 1),
+                        Math.Round(CDbl(rdr("MaxVal")), 1)
+                    )
+
+                    End While
+                End Using
+            End Using
+        End Using
+    End Sub
+
+    Private Sub minavemaxAnalysis_CellFormatting(
+    sender As Object,
+    e As DataGridViewCellFormattingEventArgs) _
+    Handles minavemaxAnalysis.CellFormatting
+
+        If e.RowIndex < 0 Then Exit Sub
+
+        Select Case minavemaxAnalysis.Columns(e.ColumnIndex).Name
+            Case "Min"
+                e.CellStyle.ForeColor = Color.FromArgb(76, 175, 80)   ' Green
+            Case "Avg"
+                e.CellStyle.ForeColor = Color.FromArgb(33, 150, 243)  ' Blue
+            Case "Max"
+                e.CellStyle.ForeColor = Color.FromArgb(244, 67, 54)   ' Red
+        End Select
     End Sub
 
     ' ===================== COMBO EVENTS =====================
@@ -309,6 +648,73 @@ Public Class ReportsUserControl
 
     Private Sub cmbGunaTime_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbGunaTime.SelectedIndexChanged
         LoadWaterLevelChart()
+    End Sub
+
+    Private Sub Guna2vScrollBar1_Scroll(
+        sender As Object,
+        e As ScrollEventArgs
+    ) Handles Guna2vScrollBar1.Scroll
+
+        ' Move the content panel vertically
+        pnlContent.Top = -Guna2vScrollBar1.Value
+
+    End Sub
+
+    Protected Overrides Sub OnMouseWheel(e As MouseEventArgs)
+        MyBase.OnMouseWheel(e)
+
+        If Not Guna2vScrollBar1.Visible Then Exit Sub
+
+        Dim newValue As Integer =
+        Guna2vScrollBar1.Value - (e.Delta \ 4)
+
+        newValue = Math.Max(Guna2vScrollBar1.Minimum,
+               Math.Min(Guna2vScrollBar1.Maximum, newValue))
+
+        Guna2vScrollBar1.Value = newValue
+        pnlContent.Top = -newValue
+    End Sub
+    Private Sub EnableMouseWheelScroll(ctrl As Control)
+        AddHandler ctrl.MouseWheel, AddressOf ForwardMouseWheel
+
+        For Each c As Control In ctrl.Controls
+            EnableMouseWheelScroll(c)
+        Next
+    End Sub
+    Private Sub ForwardMouseWheel(sender As Object, e As MouseEventArgs)
+        If TypeOf sender Is DataGridView _
+       OrElse TypeOf sender Is Guna.Charts.WinForms.GunaChart Then
+            Exit Sub
+        End If
+
+        If Not Guna2vScrollBar1.Visible Then Exit Sub
+
+        Dim newValue As Integer =
+        Guna2vScrollBar1.Value - (e.Delta \ 4)
+
+        newValue = Math.Max(Guna2vScrollBar1.Minimum,
+                        Math.Min(Guna2vScrollBar1.Maximum, newValue))
+
+        Guna2vScrollBar1.Value = newValue
+        pnlContent.Top = -newValue
+    End Sub
+
+    Private Sub cmbGunaDay2_SelectedIndexChanged(
+        sender As Object, e As EventArgs
+    ) Handles cmbGunaDay2.SelectedIndexChanged
+
+        LoadMinMaxGraph()
+        LoadMinAveMaxTable()
+
+    End Sub
+
+    Private Sub cmbGunaTime2_SelectedIndexChanged(
+        sender As Object, e As EventArgs
+    ) Handles cmbGunaTime2.SelectedIndexChanged
+
+        LoadMinMaxGraph()
+        LoadMinAveMaxTable()
+
     End Sub
 
 End Class
