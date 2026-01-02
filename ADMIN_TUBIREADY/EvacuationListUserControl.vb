@@ -210,4 +210,8 @@ Public Class EvacuationListUserControl
     Private Sub Label12_Click(sender As Object, e As EventArgs) Handles Label12.Click
 
     End Sub
+
+    Private Sub pnlMain_Paint(sender As Object, e As PaintEventArgs) Handles pnlMain.Paint
+
+    End Sub
 End Class

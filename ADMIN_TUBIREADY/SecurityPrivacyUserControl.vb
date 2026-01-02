@@ -37,7 +37,7 @@ Public Class SecurityPrivacyUserControl
         End If
 
         ' --- STEP 2: VERIFY CURRENT PASSWORD & UPDATE ---
-        Using conn As New SqlConnection(ConnString)
+        Using conn As New SqlConnection(ConnectionHelper.UniversalConnString)
             Try
                 conn.Open()
 
@@ -109,7 +109,7 @@ Public Class SecurityPrivacyUserControl
             Return
         End If
 
-        Using conn As New SqlConnection(ConnString)
+        Using conn As New SqlConnection(ConnectionHelper.UniversalConnString)
             Try
                 conn.Open()
                 Dim query As String = "UPDATE Users SET Email = @email WHERE Uname = @u"

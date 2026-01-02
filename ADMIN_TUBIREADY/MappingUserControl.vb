@@ -29,12 +29,7 @@ Public Class MappingUserControl
     Private ReadOnly defaultLng As Double = 121.034256
     Private ReadOnly defaultZoom As Integer = 15
 
-    Private ConnString As String =
-        "Server=DESKTOP-011N7DN;" &
-        "Database=TubiReadyDB;" &
-        "User ID=TubiReadyAdmin;" &
-        "Password=123456789;" &
-        "TrustServerCertificate=True;"
+    ' Private ConnString As String = "Server=DESKTOP-011N7DN;" &"Database=TubiReadyDB;" &"User ID=TubiReadyAdmin;" &"Password=123456789;" &"TrustServerCertificate=True;"
 
     ' ================= LOAD =================
     Private Async Sub MappingUserControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -210,7 +205,7 @@ window.blueIcon = L.icon({
     ' ================= LOAD UNSAFE USERS =================
     Private Sub LoadUnsafePins()
 
-        Using con As New SqlConnection(ConnString)
+        Using con As New SqlConnection(ConnectionHelper.UniversalConnString)
             con.Open()
 
             Dim sql As String =
@@ -487,15 +482,15 @@ Handles refreshTimer.Tick
 
         If lblFamID.Text = "" Then Exit Sub
 
-        Using con As New SqlConnection(ConnString)
-            con.Open
+        Using con As New SqlConnection(ConnectionHelper.UniversalConnString)
+            con.Open()
 
             Dim sql =
             "UPDATE SafeStatus SET Status = 1 WHERE FamilyID = @id"
 
             Using cmd As New SqlCommand(sql, con)
                 cmd.Parameters.AddWithValue("@id", lblFamID.Text)
-                cmd.ExecuteNonQuery
+                cmd.ExecuteNonQuery()
             End Using
         End Using
 

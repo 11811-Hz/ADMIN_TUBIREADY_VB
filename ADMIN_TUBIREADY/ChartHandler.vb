@@ -1,10 +1,8 @@
-﻿Imports System.Data.SqlClient
-Imports Guna.Charts.WinForms
+﻿Imports Guna.Charts.WinForms
 Imports Microsoft.Data.SqlClient
+' Removed 'Imports System.Data.SqlClient' to prevent conflicts with Microsoft.Data.SqlClient
 
 Module ChartHandler
-    ' 1. Centralized Connection String (Change once, updates everywhere)
-    Public ReadOnly ConnString As String = "Data Source=DESKTOP-RT61FIB\SQLEXPRESS;Initial Catalog=TubiReadyDB;Integrated Security=True;TrustServerCertificate=True"
 
     ''' <summary>
     ''' Feeds data from SQL Server into a Guna Chart Dataset.
@@ -16,7 +14,8 @@ Module ChartHandler
     ''' <param name="colValue">Name of the Value column in DB.</param>
     Public Sub FeedChart(targetChart As GunaChart, targetDataset As GunaAreaDataset, query As String, colTime As String, colValue As String)
 
-        Using conn As New SqlConnection(ConnString)
+        ' UPDATE: Use the universal string from your ConnectionHelper module
+        Using conn As New SqlConnection(ConnectionHelper.UniversalConnString)
             Dim cmd As New SqlCommand(query, conn)
             Try
                 conn.Open()

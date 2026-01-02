@@ -105,7 +105,7 @@ Public Class ReportsUserControl
     ' ===================== SUMMARY LABELS =====================
     Private Sub LoadWaterLevelSummary()
 
-        Using con As New SqlConnection(ConnString)
+        Using con As New SqlConnection(ConnectionHelper.UniversalConnString)
             con.Open()
 
             Dim q As String =
@@ -261,7 +261,7 @@ Public Class ReportsUserControl
              ORDER BY Lbl"
         End Select
 
-        Using con As New SqlConnection(ConnString)
+        Using con As New SqlConnection(ConnectionHelper.UniversalConnString)
             con.Open()
 
             Using cmd As New SqlCommand(query, con)
@@ -385,7 +385,7 @@ Public Class ReportsUserControl
     Private Sub LoadWaterLevelData()
         dgvWaterLevel.Rows.Clear()
 
-        Using con As New SqlConnection(ConnString)
+        Using con As New SqlConnection(ConnectionHelper.UniversalConnString)
             con.Open()
 
             Dim q As String =
@@ -619,7 +619,7 @@ Public Class ReportsUserControl
          ORDER BY Lbl"
         End Select
 
-        Using con As New SqlConnection(ConnString)
+        Using con As New SqlConnection(ConnectionHelper.UniversalConnString)
             con.Open()
 
             Using cmd As New SqlCommand(query, con)
@@ -664,7 +664,7 @@ Public Class ReportsUserControl
 
         minavemaxAnalysis.Rows.Clear()
 
-        Using con As New SqlConnection(ConnString)
+        Using con As New SqlConnection(ConnectionHelper.UniversalConnString)
             con.Open()
 
             Dim q As String =
@@ -882,7 +882,7 @@ Public Class ReportsUserControl
 
         Dim breachCount As Integer = 0
 
-        Using con As New SqlConnection(ConnString)
+        Using con As New SqlConnection(ConnectionHelper.UniversalConnString)
             con.Open()
 
             Using cmd As New SqlCommand(query, con)

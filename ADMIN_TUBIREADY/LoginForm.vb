@@ -2,17 +2,20 @@
 Imports System.Security.Cryptography
 Imports System.Text
 Imports ADMIN_TUBIREADY.HashingModule
+' Ensure this matches your actual Project Name namespace
 Imports ADMIN_TUBIREADY.ConnectionHelper
 
 Public Class LoginForm
-    ' FOR EASY SWITCHING BETWEEN DEVELOPER MACHINES. JUST COMMENT /UNCOMMENT AS NEEDED.
-    ' Dim ConnString As String = "server=DESKTOP-011N7DN;user id=TubiReadyAdmin;password=123456789;database=TubiReadyDB;TrustServerCertificate=True"
-    ' Dim ConnString As String = "Data Source=.;Initial Catalog=TubiReadyDB;User Id=TubiReadyAdmin;Password=123456789;TrustServerCertificate=True"
+
+    ' ---------------------------------------------------------
+    ' LOGIN BUTTON
+    ' ---------------------------------------------------------
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         Dim inputUser As String = txtUsername.Text
         Dim inputPass As String = txtPassword.Text
 
-        Using conn As New SqlConnection(ConnString)
+        ' UPDATE: Using UniversalConnString from your ConnectionHelper Module
+        Using conn As New SqlConnection(ConnectionHelper.UniversalConnString)
             Try
                 conn.Open()
                 ' Retrieve the Hash, Salt, and Password Change Date
@@ -38,15 +41,14 @@ Public Class LoginForm
 
                                 If daysDiff >= 30 Then
                                     MessageBox.Show("Your password has expired. Please change it now.", "Security Policy")
-                                    ' Redirect to ForceChangePassword Form
+                                    ' TODO: Redirect to ForceChangePassword Form
                                 Else
-                                    ' Update LastLogin Date (Optional but good for auditing)
+                                    ' Update LastLogin Date
                                     UpdateLastLogin(inputUser)
 
                                     MessageBox.Show("Welcome back, Admin.", "Success")
                                     MainForm.Show()
                                     Me.Hide()
-                                    ' Redirect to Dashboard
                                 End If
                             Else
                                 MessageBox.Show("Invalid Password.", "Error")
@@ -62,8 +64,12 @@ Public Class LoginForm
         End Using
     End Sub
 
+    ' ---------------------------------------------------------
+    ' UPDATE LAST LOGIN HELPER
+    ' ---------------------------------------------------------
     Private Sub UpdateLastLogin(username As String)
-        Using conn As New SqlConnection(ConnString)
+        ' UPDATE: Using UniversalConnString
+        Using conn As New SqlConnection(ConnectionHelper.UniversalConnString)
             conn.Open()
             Dim cmd As New SqlCommand("UPDATE Users SET LastLogin = GETDATE() WHERE Uname = @u", conn)
             cmd.Parameters.AddWithValue("@u", username)
@@ -71,8 +77,12 @@ Public Class LoginForm
         End Using
     End Sub
 
+    ' ---------------------------------------------------------
+    ' FIRST RUN CHECK (Create Default Admin)
+    ' ---------------------------------------------------------
     Private Sub CheckAndCreateDefaultUser()
-        Using conn As New SqlConnection(ConnString)
+        ' UPDATE: Using UniversalConnString
+        Using conn As New SqlConnection(ConnectionHelper.UniversalConnString)
             Try
                 conn.Open()
                 ' Check if table is empty
@@ -113,4 +123,5 @@ Public Class LoginForm
     Private Sub LoginForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CheckAndCreateDefaultUser()
     End Sub
+
 End Class
