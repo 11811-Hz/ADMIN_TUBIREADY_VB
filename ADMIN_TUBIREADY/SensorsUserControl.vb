@@ -8,7 +8,7 @@ Imports Guna.UI2.WinForms
 
 Public Class SensorsUserControl
 
-    Private connectionString As String = "server=DESKTOP-011N7DN;user id=TubiReadyAdmin;password=123456789;database=TubiReadyDB;TrustServerCertificate=True"
+    Private ConnString As String = "server=DESKTOP-011N7DN;user id=TubiReadyAdmin;password=123456789;database=TubiReadyDB;TrustServerCertificate=True"
 
     Private sensorTimer As System.Timers.Timer
     Private receiverIP As String = "10.148.172.199" ' Receiver IP
@@ -89,7 +89,7 @@ Public Class SensorsUserControl
                               "WHERE Sensor_ID = @SensorID " &
                               "ORDER BY ReadingTime DESC"
 
-        Using conn As New SqlConnection(connectionString)
+        Using conn As New SqlConnection(ConnString)
             Try
                 conn.Open()
                 Dim cmd As New SqlCommand(query, conn)

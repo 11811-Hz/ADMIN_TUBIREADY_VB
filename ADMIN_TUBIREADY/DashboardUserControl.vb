@@ -38,7 +38,7 @@ Public Class DashboardUserControl
     End Sub
 
 
-    Private connectionString As String = "server=DESKTOP-011N7DN;user id=TubiReadyAdmin;password=123456789;database=TubiReadyDB;TrustServerCertificate=True;"
+    Private ConnString As String = "server=DESKTOP-011N7DN;user id=TubiReadyAdmin;password=123456789;database=TubiReadyDB;TrustServerCertificate=True;"
 
     ' === NEW: 5-minute database interval ===
     Private lastSaveTime As DateTime = DateTime.MinValue
@@ -102,7 +102,7 @@ Public Class DashboardUserControl
 
     Private Sub SaveWaterLevelToDatabase(waterLevel As Double, severity As String)
         Try
-            Using conn As New SqlConnection(connectionString)
+            Using conn As New SqlConnection(ConnString)
                 conn.Open()
 
                 Dim query As String =

@@ -7,9 +7,6 @@ Public Class ReportsUserControl
 
     Private contentHeight As Integer
 
-    Private connectionString As String =
-        "server=DESKTOP-011N7DN;user id=TubiReadyAdmin;password=123456789;database=TubiReadyDB;TrustServerCertificate=True;"
-
     ' ===================== LOAD =====================
     Private Sub ReportsUserControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SetupWaterLevelTable()
@@ -108,7 +105,7 @@ Public Class ReportsUserControl
     ' ===================== SUMMARY LABELS =====================
     Private Sub LoadWaterLevelSummary()
 
-        Using con As New SqlConnection(connectionString)
+        Using con As New SqlConnection(ConnString)
             con.Open()
 
             Dim q As String =
@@ -264,7 +261,7 @@ Public Class ReportsUserControl
              ORDER BY Lbl"
         End Select
 
-        Using con As New SqlConnection(connectionString)
+        Using con As New SqlConnection(ConnString)
             con.Open()
 
             Using cmd As New SqlCommand(query, con)
@@ -388,7 +385,7 @@ Public Class ReportsUserControl
     Private Sub LoadWaterLevelData()
         dgvWaterLevel.Rows.Clear()
 
-        Using con As New SqlConnection(connectionString)
+        Using con As New SqlConnection(ConnString)
             con.Open()
 
             Dim q As String =
@@ -622,7 +619,7 @@ Public Class ReportsUserControl
          ORDER BY Lbl"
         End Select
 
-        Using con As New SqlConnection(connectionString)
+        Using con As New SqlConnection(ConnString)
             con.Open()
 
             Using cmd As New SqlCommand(query, con)
@@ -667,7 +664,7 @@ Public Class ReportsUserControl
 
         minavemaxAnalysis.Rows.Clear()
 
-        Using con As New SqlConnection(connectionString)
+        Using con As New SqlConnection(ConnString)
             con.Open()
 
             Dim q As String =
@@ -885,7 +882,7 @@ Public Class ReportsUserControl
 
         Dim breachCount As Integer = 0
 
-        Using con As New SqlConnection(connectionString)
+        Using con As New SqlConnection(ConnString)
             con.Open()
 
             Using cmd As New SqlCommand(query, con)

@@ -2,9 +2,12 @@
 Imports System.Security.Cryptography
 Imports System.Text
 Imports ADMIN_TUBIREADY.HashingModule
+Imports ADMIN_TUBIREADY.ConnectionHelper
 
 Public Class LoginForm
-    Dim ConnString As String = "server=DESKTOP-011N7DN;user id=TubiReadyAdmin;password=123456789;database=TubiReadyDB;TrustServerCertificate=True"
+    ' FOR EASY SWITCHING BETWEEN DEVELOPER MACHINES. JUST COMMENT /UNCOMMENT AS NEEDED.
+    ' Dim ConnString As String = "server=DESKTOP-011N7DN;user id=TubiReadyAdmin;password=123456789;database=TubiReadyDB;TrustServerCertificate=True"
+    ' Dim ConnString As String = "Data Source=.;Initial Catalog=TubiReadyDB;User Id=TubiReadyAdmin;Password=123456789;TrustServerCertificate=True"
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         Dim inputUser As String = txtUsername.Text
         Dim inputPass As String = txtPassword.Text

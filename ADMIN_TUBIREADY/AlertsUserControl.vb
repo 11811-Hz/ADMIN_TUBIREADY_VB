@@ -5,7 +5,7 @@ Imports MongoDB.Driver.Core.Configuration
 Imports Newtonsoft.Json.Linq
 
 Public Class AlertsUserControl
-    Public connectionString As String = "server=DESKTOP-011N7DN;user id=TubiReadyAdmin;password=123456789;database=TubiReadyDB;TrustServerCertificate=True"
+    Public ConnString As String = "server=DESKTOP-011N7DN;user id=TubiReadyAdmin;password=123456789;database=TubiReadyDB;TrustServerCertificate=True"
 
     ' Send SMS via IPROG API code
     Public Async Function SendGeneralSMS(phone As String, messageContent As String) As Task(Of Boolean)
@@ -68,7 +68,7 @@ Public Class AlertsUserControl
         ' 1. SQL Query to get unique streets
         Dim query As String = "SELECT DISTINCT street FROM Residents ORDER BY street ASC"
 
-        Using conn As New SqlConnection(connectionString)
+        Using conn As New SqlConnection(ConnString)
             Try
                 conn.Open()
                 Using cmd As New SqlCommand(query, conn)
@@ -106,7 +106,7 @@ Public Class AlertsUserControl
                         "VALUES (@UID, @Target, @Msg, 'Sent', GETDATE(), 'SMS'); " &
                         "SELECT SCOPE_IDENTITY();" ' This gets the ID of the row we just made
 
-        Using conn As New SqlConnection(connectionString)
+        Using conn As New SqlConnection(ConnString)
             conn.Open()
             Using cmd As New SqlCommand(sql, conn)
                 ' HARDCODED User_ID = 1 (Admin). Change this if you have a login system variable.
@@ -128,7 +128,7 @@ Public Class AlertsUserControl
         Dim sql As String = "INSERT INTO SMS_RECIPIENTS (Broadcast_ID, Resident_ID, DeliveryStatus) " &
                         "VALUES (@BID, @RID, @Status)"
 
-        Using conn As New SqlConnection(connectionString)
+        Using conn As New SqlConnection(ConnString)
             conn.Open()
             Using cmd As New SqlCommand(sql, conn)
                 cmd.Parameters.AddWithValue("@BID", broadcastID)
@@ -152,7 +152,7 @@ Public Class AlertsUserControl
         ' Performance: Stop drawing the layout while we add items (makes it much faster)
         flpContact.SuspendLayout()
 
-        Using conn As New SqlConnection(connectionString)
+        Using conn As New SqlConnection(ConnString)
             Try
                 conn.Open()
 

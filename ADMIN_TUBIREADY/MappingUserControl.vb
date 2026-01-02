@@ -29,7 +29,7 @@ Public Class MappingUserControl
     Private ReadOnly defaultLng As Double = 121.034256
     Private ReadOnly defaultZoom As Integer = 15
 
-    Private connectionString As String =
+    Private ConnString As String =
         "Server=DESKTOP-011N7DN;" &
         "Database=TubiReadyDB;" &
         "User ID=TubiReadyAdmin;" &
@@ -210,7 +210,7 @@ window.blueIcon = L.icon({
     ' ================= LOAD UNSAFE USERS =================
     Private Sub LoadUnsafePins()
 
-        Using con As New SqlConnection(connectionString)
+        Using con As New SqlConnection(ConnString)
             con.Open()
 
             Dim sql As String =
@@ -487,7 +487,7 @@ Handles refreshTimer.Tick
 
         If lblFamID.Text = "" Then Exit Sub
 
-        Using con As New SqlConnection(connectionString)
+        Using con As New SqlConnection(ConnString)
             con.Open
 
             Dim sql =
