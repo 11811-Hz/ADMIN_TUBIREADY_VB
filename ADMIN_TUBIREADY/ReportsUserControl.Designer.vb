@@ -172,20 +172,19 @@ Partial Class ReportsUserControl
         pnlContent = New Guna.UI2.WinForms.Guna2Panel()
         Guna2Panel8 = New Guna.UI2.WinForms.Guna2Panel()
         Guna2Panel12 = New Guna.UI2.WinForms.Guna2Panel()
-        Guna2HtmlLabel18 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel16 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        lblThresholdBreaches = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel17 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2Panel10 = New Guna.UI2.WinForms.Guna2Panel()
-        Guna2HtmlLabel14 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        lblCriticalThreshold = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel15 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2Button3 = New Guna.UI2.WinForms.Guna2Button()
-        cmbGuna = New Guna.UI2.WinForms.Guna2ComboBox()
+        cmbGunaTime1 = New Guna.UI2.WinForms.Guna2ComboBox()
         cmbGunaDay1 = New Guna.UI2.WinForms.Guna2ComboBox()
         Guna2HtmlLabel11 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2Panel9 = New Guna.UI2.WinForms.Guna2Panel()
-        Guna2HtmlLabel13 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        lblWarningThreshold = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel12 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        GunaChart2 = New Guna.Charts.WinForms.GunaChart()
+        GunaChartThreshold = New Guna.Charts.WinForms.GunaChart()
         Label3 = New Label()
         Guna2Panel3.SuspendLayout()
         CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -664,12 +663,12 @@ Partial Class ReportsUserControl
         DataGridViewCellStyle3.WrapMode = DataGridViewTriState.False
         dgvWaterLevel.DefaultCellStyle = DataGridViewCellStyle3
         dgvWaterLevel.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
-        dgvWaterLevel.Location = New Point(11, 3)
+        dgvWaterLevel.Location = New Point(3, 3)
         dgvWaterLevel.Name = "dgvWaterLevel"
         dgvWaterLevel.ReadOnly = True
         dgvWaterLevel.RowHeadersVisible = False
         dgvWaterLevel.ScrollBars = ScrollBars.Vertical
-        dgvWaterLevel.Size = New Size(1089, 201)
+        dgvWaterLevel.Size = New Size(1106, 201)
         dgvWaterLevel.TabIndex = 0
         dgvWaterLevel.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White
         dgvWaterLevel.ThemeStyle.AlternatingRowsStyle.Font = Nothing
@@ -865,12 +864,12 @@ Partial Class ReportsUserControl
         DataGridViewCellStyle6.WrapMode = DataGridViewTriState.False
         minavemaxAnalysis.DefaultCellStyle = DataGridViewCellStyle6
         minavemaxAnalysis.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
-        minavemaxAnalysis.Location = New Point(11, 3)
+        minavemaxAnalysis.Location = New Point(3, 3)
         minavemaxAnalysis.Name = "minavemaxAnalysis"
         minavemaxAnalysis.ReadOnly = True
         minavemaxAnalysis.RowHeadersVisible = False
         minavemaxAnalysis.ScrollBars = ScrollBars.Vertical
-        minavemaxAnalysis.Size = New Size(1089, 201)
+        minavemaxAnalysis.Size = New Size(1106, 201)
         minavemaxAnalysis.TabIndex = 0
         minavemaxAnalysis.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White
         minavemaxAnalysis.ThemeStyle.AlternatingRowsStyle.Font = Nothing
@@ -965,11 +964,11 @@ Partial Class ReportsUserControl
         Guna2Panel8.Controls.Add(Guna2Panel12)
         Guna2Panel8.Controls.Add(Guna2Panel10)
         Guna2Panel8.Controls.Add(Guna2Button3)
-        Guna2Panel8.Controls.Add(cmbGuna)
+        Guna2Panel8.Controls.Add(cmbGunaTime1)
         Guna2Panel8.Controls.Add(cmbGunaDay1)
         Guna2Panel8.Controls.Add(Guna2HtmlLabel11)
         Guna2Panel8.Controls.Add(Guna2Panel9)
-        Guna2Panel8.Controls.Add(GunaChart2)
+        Guna2Panel8.Controls.Add(GunaChartThreshold)
         Guna2Panel8.Controls.Add(Label3)
         Guna2Panel8.CustomizableEdges = CustomizableEdges49
         Guna2Panel8.FillColor = Color.White
@@ -984,8 +983,7 @@ Partial Class ReportsUserControl
         Guna2Panel12.BorderColor = Color.FromArgb(CByte(255), CByte(214), CByte(167))
         Guna2Panel12.BorderRadius = 10
         Guna2Panel12.BorderThickness = 1
-        Guna2Panel12.Controls.Add(Guna2HtmlLabel18)
-        Guna2Panel12.Controls.Add(Guna2HtmlLabel16)
+        Guna2Panel12.Controls.Add(lblThresholdBreaches)
         Guna2Panel12.Controls.Add(Guna2HtmlLabel17)
         Guna2Panel12.CustomizableEdges = CustomizableEdges37
         Guna2Panel12.FillColor = Color.FromArgb(CByte(255), CByte(252), CByte(248))
@@ -995,27 +993,16 @@ Partial Class ReportsUserControl
         Guna2Panel12.Size = New Size(1112, 73)
         Guna2Panel12.TabIndex = 5
         ' 
-        ' Guna2HtmlLabel18
+        ' lblThresholdBreaches
         ' 
-        Guna2HtmlLabel18.BackColor = Color.Transparent
-        Guna2HtmlLabel18.Font = New Font("Segoe UI", 9F)
-        Guna2HtmlLabel18.ForeColor = Color.DimGray
-        Guna2HtmlLabel18.Location = New Point(67, 37)
-        Guna2HtmlLabel18.Name = "Guna2HtmlLabel18"
-        Guna2HtmlLabel18.Size = New Size(30, 17)
-        Guna2HtmlLabel18.TabIndex = 33
-        Guna2HtmlLabel18.Text = "Total"
-        ' 
-        ' Guna2HtmlLabel16
-        ' 
-        Guna2HtmlLabel16.BackColor = Color.Transparent
-        Guna2HtmlLabel16.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
-        Guna2HtmlLabel16.ForeColor = Color.FromArgb(CByte(212), CByte(53), CByte(0))
-        Guna2HtmlLabel16.Location = New Point(30, 32)
-        Guna2HtmlLabel16.Name = "Guna2HtmlLabel16"
-        Guna2HtmlLabel16.Size = New Size(21, 23)
-        Guna2HtmlLabel16.TabIndex = 32
-        Guna2HtmlLabel16.Text = "50"
+        lblThresholdBreaches.BackColor = Color.Transparent
+        lblThresholdBreaches.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
+        lblThresholdBreaches.ForeColor = Color.FromArgb(CByte(212), CByte(53), CByte(0))
+        lblThresholdBreaches.Location = New Point(30, 32)
+        lblThresholdBreaches.Name = "lblThresholdBreaches"
+        lblThresholdBreaches.Size = New Size(21, 23)
+        lblThresholdBreaches.TabIndex = 32
+        lblThresholdBreaches.Text = "50"
         ' 
         ' Guna2HtmlLabel17
         ' 
@@ -1033,7 +1020,7 @@ Partial Class ReportsUserControl
         Guna2Panel10.BorderColor = Color.FromArgb(CByte(255), CByte(201), CByte(201))
         Guna2Panel10.BorderRadius = 10
         Guna2Panel10.BorderThickness = 1
-        Guna2Panel10.Controls.Add(Guna2HtmlLabel14)
+        Guna2Panel10.Controls.Add(lblCriticalThreshold)
         Guna2Panel10.Controls.Add(Guna2HtmlLabel15)
         Guna2Panel10.CustomizableEdges = CustomizableEdges39
         Guna2Panel10.FillColor = Color.Snow
@@ -1043,16 +1030,16 @@ Partial Class ReportsUserControl
         Guna2Panel10.Size = New Size(1112, 73)
         Guna2Panel10.TabIndex = 5
         ' 
-        ' Guna2HtmlLabel14
+        ' lblCriticalThreshold
         ' 
-        Guna2HtmlLabel14.BackColor = Color.Transparent
-        Guna2HtmlLabel14.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
-        Guna2HtmlLabel14.ForeColor = Color.FromArgb(CByte(193), CByte(0), CByte(7))
-        Guna2HtmlLabel14.Location = New Point(30, 31)
-        Guna2HtmlLabel14.Name = "Guna2HtmlLabel14"
-        Guna2HtmlLabel14.Size = New Size(40, 23)
-        Guna2HtmlLabel14.TabIndex = 30
-        Guna2HtmlLabel14.Text = "50 m"
+        lblCriticalThreshold.BackColor = Color.Transparent
+        lblCriticalThreshold.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
+        lblCriticalThreshold.ForeColor = Color.FromArgb(CByte(193), CByte(0), CByte(7))
+        lblCriticalThreshold.Location = New Point(30, 31)
+        lblCriticalThreshold.Name = "lblCriticalThreshold"
+        lblCriticalThreshold.Size = New Size(40, 23)
+        lblCriticalThreshold.TabIndex = 30
+        lblCriticalThreshold.Text = "50 m"
         ' 
         ' Guna2HtmlLabel15
         ' 
@@ -1085,24 +1072,24 @@ Partial Class ReportsUserControl
         Guna2Button3.TabIndex = 26
         Guna2Button3.Text = "Export"
         ' 
-        ' cmbGuna
+        ' cmbGunaTime1
         ' 
-        cmbGuna.BackColor = Color.Transparent
-        cmbGuna.BorderRadius = 8
-        cmbGuna.CustomizableEdges = CustomizableEdges43
-        cmbGuna.DrawMode = DrawMode.OwnerDrawFixed
-        cmbGuna.DropDownStyle = ComboBoxStyle.DropDownList
-        cmbGuna.FillColor = Color.WhiteSmoke
-        cmbGuna.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        cmbGuna.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        cmbGuna.Font = New Font("Segoe UI", 10F)
-        cmbGuna.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
-        cmbGuna.ItemHeight = 30
-        cmbGuna.Location = New Point(891, 25)
-        cmbGuna.Name = "cmbGuna"
-        cmbGuna.ShadowDecoration.CustomizableEdges = CustomizableEdges44
-        cmbGuna.Size = New Size(130, 36)
-        cmbGuna.TabIndex = 24
+        cmbGunaTime1.BackColor = Color.Transparent
+        cmbGunaTime1.BorderRadius = 8
+        cmbGunaTime1.CustomizableEdges = CustomizableEdges43
+        cmbGunaTime1.DrawMode = DrawMode.OwnerDrawFixed
+        cmbGunaTime1.DropDownStyle = ComboBoxStyle.DropDownList
+        cmbGunaTime1.FillColor = Color.WhiteSmoke
+        cmbGunaTime1.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        cmbGunaTime1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        cmbGunaTime1.Font = New Font("Segoe UI", 10F)
+        cmbGunaTime1.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
+        cmbGunaTime1.ItemHeight = 30
+        cmbGunaTime1.Location = New Point(891, 25)
+        cmbGunaTime1.Name = "cmbGunaTime1"
+        cmbGunaTime1.ShadowDecoration.CustomizableEdges = CustomizableEdges44
+        cmbGunaTime1.Size = New Size(130, 36)
+        cmbGunaTime1.TabIndex = 24
         ' 
         ' cmbGunaDay1
         ' 
@@ -1139,7 +1126,7 @@ Partial Class ReportsUserControl
         Guna2Panel9.BorderColor = Color.FromArgb(CByte(255), CByte(240), CByte(133))
         Guna2Panel9.BorderRadius = 10
         Guna2Panel9.BorderThickness = 1
-        Guna2Panel9.Controls.Add(Guna2HtmlLabel13)
+        Guna2Panel9.Controls.Add(lblWarningThreshold)
         Guna2Panel9.Controls.Add(Guna2HtmlLabel12)
         Guna2Panel9.CustomizableEdges = CustomizableEdges47
         Guna2Panel9.FillColor = Color.FromArgb(CByte(255), CByte(254), CByte(246))
@@ -1149,16 +1136,16 @@ Partial Class ReportsUserControl
         Guna2Panel9.Size = New Size(1112, 73)
         Guna2Panel9.TabIndex = 4
         ' 
-        ' Guna2HtmlLabel13
+        ' lblWarningThreshold
         ' 
-        Guna2HtmlLabel13.BackColor = Color.Transparent
-        Guna2HtmlLabel13.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
-        Guna2HtmlLabel13.ForeColor = Color.FromArgb(CByte(229), CByte(176), CByte(40))
-        Guna2HtmlLabel13.Location = New Point(30, 30)
-        Guna2HtmlLabel13.Name = "Guna2HtmlLabel13"
-        Guna2HtmlLabel13.Size = New Size(40, 23)
-        Guna2HtmlLabel13.TabIndex = 28
-        Guna2HtmlLabel13.Text = "50 m"
+        lblWarningThreshold.BackColor = Color.Transparent
+        lblWarningThreshold.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
+        lblWarningThreshold.ForeColor = Color.FromArgb(CByte(229), CByte(176), CByte(40))
+        lblWarningThreshold.Location = New Point(30, 30)
+        lblWarningThreshold.Name = "lblWarningThreshold"
+        lblWarningThreshold.Size = New Size(40, 23)
+        lblWarningThreshold.TabIndex = 28
+        lblWarningThreshold.Text = "50 m"
         ' 
         ' Guna2HtmlLabel12
         ' 
@@ -1171,39 +1158,39 @@ Partial Class ReportsUserControl
         Guna2HtmlLabel12.TabIndex = 27
         Guna2HtmlLabel12.Text = "Warning Threshold"
         ' 
-        ' GunaChart2
+        ' GunaChartThreshold
         ' 
         ChartFont17.FontName = "Arial"
-        GunaChart2.Legend.LabelFont = ChartFont17
-        GunaChart2.Location = New Point(32, 101)
-        GunaChart2.Name = "GunaChart2"
-        GunaChart2.Size = New Size(1112, 183)
-        GunaChart2.TabIndex = 3
+        GunaChartThreshold.Legend.LabelFont = ChartFont17
+        GunaChartThreshold.Location = New Point(32, 101)
+        GunaChartThreshold.Name = "GunaChartThreshold"
+        GunaChartThreshold.Size = New Size(1112, 183)
+        GunaChartThreshold.TabIndex = 3
         ChartFont18.FontName = "Arial"
         ChartFont18.Size = 12
         ChartFont18.Style = Guna.Charts.WinForms.ChartFontStyle.Bold
-        GunaChart2.Title.Font = ChartFont18
+        GunaChartThreshold.Title.Font = ChartFont18
         ChartFont19.FontName = "Arial"
-        GunaChart2.Tooltips.BodyFont = ChartFont19
+        GunaChartThreshold.Tooltips.BodyFont = ChartFont19
         ChartFont20.FontName = "Arial"
         ChartFont20.Size = 9
         ChartFont20.Style = Guna.Charts.WinForms.ChartFontStyle.Bold
-        GunaChart2.Tooltips.TitleFont = ChartFont20
-        GunaChart2.XAxes.GridLines = Grid7
+        GunaChartThreshold.Tooltips.TitleFont = ChartFont20
+        GunaChartThreshold.XAxes.GridLines = Grid7
         ChartFont21.FontName = "Arial"
         Tick7.Font = ChartFont21
-        GunaChart2.XAxes.Ticks = Tick7
-        GunaChart2.YAxes.GridLines = Grid8
+        GunaChartThreshold.XAxes.Ticks = Tick7
+        GunaChartThreshold.YAxes.GridLines = Grid8
         ChartFont22.FontName = "Arial"
         Tick8.Font = ChartFont22
-        GunaChart2.YAxes.Ticks = Tick8
-        GunaChart2.ZAxes.GridLines = Grid9
+        GunaChartThreshold.YAxes.Ticks = Tick8
+        GunaChartThreshold.ZAxes.GridLines = Grid9
         ChartFont23.FontName = "Arial"
         PointLabel3.Font = ChartFont23
-        GunaChart2.ZAxes.PointLabels = PointLabel3
+        GunaChartThreshold.ZAxes.PointLabels = PointLabel3
         ChartFont24.FontName = "Arial"
         Tick9.Font = ChartFont24
-        GunaChart2.ZAxes.Ticks = Tick9
+        GunaChartThreshold.ZAxes.Ticks = Tick9
         ' 
         ' Label3
         ' 
@@ -1275,8 +1262,6 @@ Partial Class ReportsUserControl
     Friend WithEvents Guna2Panel11 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents chartWaterLevel As Guna.Charts.WinForms.GunaChart
-    Friend WithEvents Guna2Panel5 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents dgvWaterLevel As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents cmbGunaDay2 As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents cmbGunaDay As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents Guna2HtmlLabel9 As Guna.UI2.WinForms.Guna2HtmlLabel
@@ -1295,19 +1280,18 @@ Partial Class ReportsUserControl
     Friend WithEvents Guna2Panel12 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2Panel10 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2Button3 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents cmbGuna As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents cmbGunaTime1 As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents cmbGunaDay1 As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents Guna2HtmlLabel11 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2Panel9 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents GunaChart2 As Guna.Charts.WinForms.GunaChart
+    Friend WithEvents GunaChartThreshold As Guna.Charts.WinForms.GunaChart
     Friend WithEvents Label3 As Label
-    Friend WithEvents Guna2HtmlLabel16 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblThresholdBreaches As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel17 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel14 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblCriticalThreshold As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel15 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel13 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblWarningThreshold As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel12 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel18 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents lblCritical As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents lblHigh As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents lblLow As Guna.UI2.WinForms.Guna2HtmlLabel
@@ -1319,5 +1303,7 @@ Partial Class ReportsUserControl
     Friend WithEvents Guna2PictureBox2 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2PictureBox3 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2PictureBox4 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents Guna2Panel5 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents dgvWaterLevel As Guna.UI2.WinForms.Guna2DataGridView
 
 End Class
