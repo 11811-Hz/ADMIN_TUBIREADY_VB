@@ -1,4 +1,3 @@
-﻿Imports System.Data.SqlClient
 Imports System.Drawing.Drawing2D
 Imports Microsoft.Data.SqlClient
 Imports Guna.Charts.WinForms
@@ -109,16 +108,17 @@ Public Class ReportsUserControl
             con.Open()
 
             Dim q As String =
-        "SELECT 
-            COUNT(*) AS TotalReadings,
-            AVG(WaterLevel) AS AvgLevel,
-            MIN(WaterLevel) AS MinLevel,
-            MAX(WaterLevel) AS MaxLevel,
-            SUM(CASE WHEN Severity = 'Low' THEN 1 ELSE 0 END) AS LowCnt,
-            SUM(CASE WHEN Severity = 'Normal' THEN 1 ELSE 0 END) AS NormalCnt,
-            SUM(CASE WHEN Severity = 'High' THEN 1 ELSE 0 END) AS HighCnt,
-            SUM(CASE WHEN Severity = 'Critical' THEN 1 ELSE 0 END) AS CriticalCnt
-         FROM Ultrasonic"
+            "SELECT 
+                Count(*) As TotalReadings,
+                AVG(WaterLevel) As AvgLevel,
+                MIN(WaterLevel) As MinLevel,
+                MAX(WaterLevel) As MaxLevel,
+                SUM(CASE WHEN Severity = 'Low' THEN 1 ELSE 0 END) AS LowCnt,
+                SUM(CASE WHEN Severity = 'Normal' THEN 1 ELSE 0 END) AS NormalCnt,
+                SUM(CASE WHEN Severity = 'High' THEN 1 ELSE 0 END) AS HighCnt,
+                SUM(CASE WHEN Severity = 'Critical' THEN 1 ELSE 0 END) AS CriticalCnt
+            From Ultrasonic
+            Where WaterLevel > 0"
 
             Using cmd As New SqlCommand(q, con)
                 Using rdr = cmd.ExecuteReader()
@@ -383,29 +383,26 @@ Public Class ReportsUserControl
 
     ' ===================== LOAD TABLE DATA =====================
     Private Sub LoadWaterLevelData()
+
         dgvWaterLevel.Rows.Clear()
 
         Using con As New SqlConnection(ConnectionHelper.UniversalConnString)
             con.Open()
 
             Dim q As String =
-                "SELECT ReadingTime, WaterLevel, Severity
-                 FROM Ultrasonic
-                 ORDER BY ReadingTime DESC"
+            "SELECT ReadingTime, WaterLevel, Severity
+             FROM Ultrasonic
+             WHERE WaterLevel > 0
+             ORDER BY ReadingTime DESC"
 
             Using cmd As New SqlCommand(q, con)
                 Using rdr = cmd.ExecuteReader()
                     While rdr.Read()
-
-                        Dim level As Double = CDbl(rdr("WaterLevel"))
-                        If level <= 0 Then Continue While   ' ✅ FILTER 0.00
-
                         dgvWaterLevel.Rows.Add(
                             CType(rdr("ReadingTime"), DateTime).ToString("HH:mm"),
-                            Math.Round(level, 2),
-                            rdr("Severity")
+                            Math.Round(CDbl(rdr("WaterLevel")), 2),
+                            rdr("Severity").ToString()
                         )
-
                     End While
                 End Using
             End Using
@@ -808,8 +805,8 @@ Public Class ReportsUserControl
         GunaChartThreshold.Datasets.Clear()
 
         ' ===== FIXED THRESHOLDS =====
-        Dim warningThreshold As Double = 50
-        Dim criticalThreshold As Double = 57
+        Dim warningThreshold As Double = 2.5     ' High
+        Dim criticalThreshold As Double = 3.0    ' Critical
 
         lblWarningThreshold.Text = warningThreshold & " m"
         lblCriticalThreshold.Text = criticalThreshold & " m"
