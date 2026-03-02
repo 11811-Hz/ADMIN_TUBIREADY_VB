@@ -1,42 +1,47 @@
 ﻿Imports Microsoft.Data.SqlClient
 
 Module ConnectionHelper
-    ' GLOBAL VARIABLE: Use this throughout your app instead of hardcoding
-    Public UniversalConnString As String = GetUniversalConnString()
 
-    Public Function GetUniversalConnString() As String
-        ' 1. Define the two most common connection strings
-        Dim connStrExpress As String = "Data Source=.\SQLEXPRESS;Initial Catalog=TubiReadyDB;Integrated Security=True;TrustServerCertificate=True"
-        Dim connStrDefault As String = "Data Source=.;Initial Catalog=TubiReadyDB;Integrated Security=True;TrustServerCertificate=True"
+    Private _universalConnString As String = Nothing
 
-        ' 2. Test the Express instance first (Your machine)
+    Public ReadOnly Property UniversalConnString As String
+        Get
+            If String.IsNullOrWhiteSpace(_universalConnString) Then
+                _universalConnString = ResolveConnectionString()
+            End If
+
+            Return _universalConnString
+        End Get
+    End Property
+
+    Private Function ResolveConnectionString() As String
+        Dim connStrExpress As String =
+            "Data Source=.\SQLEXPRESS;Initial Catalog=TubiReadyDB;Integrated Security=True;TrustServerCertificate=True"
+
+        Dim connStrDefault As String =
+            "Data Source=.;Initial Catalog=TubiReadyDB;Integrated Security=True;TrustServerCertificate=True"
+
         If CanConnect(connStrExpress) Then
-            Debug.WriteLine("Connected using SQLEXPRESS instance.")
+            Debug.WriteLine("Connected using SQLEXPRESS.")
             Return connStrExpress
         End If
 
-        ' 3. If that failed, test the Default instance (Partner's machine)
         If CanConnect(connStrDefault) Then
-            Debug.WriteLine("Connected using Default instance.")
+            Debug.WriteLine("Connected using Default SQL instance.")
             Return connStrDefault
         End If
 
-        ' 4. If both fail, return an empty string
-        Return ""
+        Throw New InvalidOperationException(
+            "No valid SQL Server instance found on this machine."
+        )
     End Function
 
-    ' Helper function to test connection quickly
     Private Function CanConnect(connStr As String) As Boolean
         Try
-            Using conn As New Microsoft.Data.SqlClient.SqlConnection(connStr)
-                ' FIXED: The class name is SqlConnectionStringBuilder (fully spelled out)
-                Dim builder As New Microsoft.Data.SqlClient.SqlConnectionStringBuilder(connStr)
-
-                builder.ConnectTimeout = 2 ' Wait only 2 seconds
-
-                ' FIXED: The property is .ConnectionString (fully spelled out)
+            Using conn As New SqlConnection(connStr)
+                Dim builder As New SqlConnectionStringBuilder(connStr)
+                builder.ConnectTimeout = 2
                 conn.ConnectionString = builder.ConnectionString
-
                 conn.Open()
                 Return True
             End Using
@@ -44,4 +49,5 @@ Module ConnectionHelper
             Return False
         End Try
     End Function
+
 End Module

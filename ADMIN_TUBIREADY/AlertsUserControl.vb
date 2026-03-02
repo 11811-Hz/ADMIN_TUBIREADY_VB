@@ -171,11 +171,11 @@ Public Class AlertsUserControl
                 If txtSearch.Text.Trim() <> "" AndAlso cboSearchBy.SelectedIndex >= 0 Then
                     Select Case cboSearchBy.Text
                         Case "Surname"
-                            searchColumn = "lastname" ' CHANGE THIS to your real column name
+                            searchColumn = "lastname"
                         Case "First Name"
-                            searchColumn = "firstname" ' CHANGE THIS to your real column name
+                            searchColumn = "firstname"
                         Case "Contact"
-                            searchColumn = "mobilenumber" ' CHANGE THIS to your real column name
+                            searchColumn = "mobilenumber"
                     End Select
 
                     If searchColumn <> "" Then

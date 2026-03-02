@@ -40,13 +40,25 @@ Public Class LoginForm
                                 Dim daysDiff As Integer = (Date.Now - lastChange).Days
 
                                 If daysDiff >= 30 Then
-                                    MessageBox.Show("Your password has expired. Please change it now.", "Security Policy")
-                                    ' TODO: Redirect to ForceChangePassword Form
+                                    MessageBox.Show(
+                                        "Your password has expired. You must change it before continuing.",
+                                        "Security Policy",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Warning
+                                    )
+
+                                    MainForm.ForcePasswordChange = True
+                                    MainForm.LoggedInUsername = inputUser
+
+                                    MainForm.Show()
+                                    Me.Hide()
                                 Else
-                                    ' Update LastLogin Date
                                     UpdateLastLogin(inputUser)
 
-                                    MessageBox.Show("Welcome back, Admin.", "Success")
+                                    MainForm.ForcePasswordChange = False
+                                    MainForm.LoggedInUsername = inputUser
+
+                                    MessageBox.Show("Welcome back.", "Success")
                                     MainForm.Show()
                                     Me.Hide()
                                 End If
@@ -92,7 +104,7 @@ Public Class LoginForm
                 If count = 0 Then
                     ' 1. Define Default Credentials
                     Dim defUser As String = "ADMIN"
-                    Dim defPass As String = "ADMIN123"
+                    Dim defPass As String = "ADMIN123!"
                     Dim defEmail As String = "admin@tubiready.com"
 
                     ' 2. Generate Salt & Hash
@@ -121,6 +133,13 @@ Public Class LoginForm
     End Sub
 
     Private Sub LoginForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Try
+            Dim connStr As String = ConnectionHelper.UniversalConnString
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Database Error")
+            Application.Exit()
+        End Try
+
         CheckAndCreateDefaultUser()
     End Sub
 
